@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFInferMsg | @choiceform/os-client-core</title>
+	<title>CFValidateOptBase | @choiceform/os-client-core</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfinfermsg.html">CFInferMsg</a>
+					<a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>
 				</li>
 			</ul>
-			<h1>Interface CFInferMsg</h1>
+			<h1>Interface CFValidateOptBase</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +71,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFInferMsg</span>
+						<span class="target">CFValidateOptBase</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="_index_d_.cfvalidateopt.html" class="tsd-signature-type">CFValidateOpt</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -82,13 +87,9 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfinfermsg.html#data" class="tsd-kind-icon">data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfinfermsg.html#ended" class="tsd-kind-icon">ended</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfinfermsg.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfinfermsg.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfinfermsg.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfinfermsg.html#round" class="tsd-kind-icon">round</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfinfermsg.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfvalidateoptbase.html#completegroups" class="tsd-kind-icon">complete<wbr>Groups</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfvalidateoptbase.html#defaultvalue" class="tsd-kind-icon">default<wbr>Value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfvalidateoptbase.html#selectlist" class="tsd-kind-icon">select<wbr>List</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,74 +98,59 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="data" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> data</h3>
-					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<a name="completegroups" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> complete<wbr>Groups</h3>
+					<div class="tsd-signature tsd-kind-icon">complete<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L6163">index.d.ts:6163</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4442">index.d.ts:4442</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>自动提示数据
+								当<a href="_index_d_.cfoption.html#inputrule">CFOption.inputRule</a>是<code>autoComplete</code>需要提供一个自动提示输入控件
+								该控件在输入任何字符内容时,需要到对应选项的该属性中进行搜查
+								搜查是否有某些项的triggers属性能匹配到用户输入的内容
+								如果有责将这些项目的name和icon属性显示为一个个标签到一个自动提示列表中供用户选择
+								用户选择以后,把选择到的标签的name当成真正的输入内容,用户可以选择多个标签,既可以输入多个
+							内容,之间的用半角逗号分隔.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="ended" class="tsd-anchor"></a>
-					<h3>ended</h3>
-					<div class="tsd-signature tsd-kind-icon">ended<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="defaultvalue" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> default<wbr>Value</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L6162">index.d.ts:6162</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4431">index.d.ts:4431</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>默认值</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="id" class="tsd-anchor"></a>
-					<h3>id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="selectlist" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> select<wbr>List</h3>
+					<div class="tsd-signature tsd-kind-icon">select<wbr>List<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L6160">index.d.ts:6160</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4415">index.d.ts:4415</a></li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"infer_worker"</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L6157">index.d.ts:6157</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="nodename" class="tsd-anchor"></a>
-					<h3>node<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">node<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L6161">index.d.ts:6161</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="round" class="tsd-anchor"></a>
-					<h3>round</h3>
-					<div class="tsd-signature tsd-kind-icon">round<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L6158">index.d.ts:6158</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="type" class="tsd-anchor"></a>
-					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L6159">index.d.ts:6159</a></li>
-						</ul>
-					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>供以选择的文字列表
+								当<a href="_index_d_.cfoption.html#inputrule">CFOption.inputRule</a>是<code>dropdown</code>需要提供一个下拉列表选择空间
+								空间中药展示的项目列表文字,就使用该属性的文字列表
+								当选中某一个项时,就将该项的文字当做输入内容,
+							可以选择多项,每项之间用半角逗号分隔.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -184,28 +170,16 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfinfermsg.html" class="tsd-kind-icon">CFInfer<wbr>Msg</a>
+						<a href="_index_d_.cfvalidateoptbase.html" class="tsd-kind-icon">CFValidate<wbr>Opt<wbr>Base</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfinfermsg.html#data" class="tsd-kind-icon">data</a>
+								<a href="_index_d_.cfvalidateoptbase.html#completegroups" class="tsd-kind-icon">complete<wbr>Groups</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfinfermsg.html#ended" class="tsd-kind-icon">ended</a>
+								<a href="_index_d_.cfvalidateoptbase.html#defaultvalue" class="tsd-kind-icon">default<wbr>Value</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfinfermsg.html#id" class="tsd-kind-icon">id</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfinfermsg.html#name" class="tsd-kind-icon">name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfinfermsg.html#nodename" class="tsd-kind-icon">node<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfinfermsg.html#round" class="tsd-kind-icon">round</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfinfermsg.html#type" class="tsd-kind-icon">type</a>
+								<a href="_index_d_.cfvalidateoptbase.html#selectlist" class="tsd-kind-icon">select<wbr>List</a>
 							</li>
 						</ul>
 					</li>

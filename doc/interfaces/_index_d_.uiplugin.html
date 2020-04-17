@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFCustomAborts | @choiceform/os-client-core</title>
+	<title>UiPlugin | @choiceform/os-client-core</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfcustomaborts.html">CFCustomAborts</a>
+					<a href="_index_d_.uiplugin.html">UiPlugin</a>
 				</li>
 			</ul>
-			<h1>Interface CFCustomAborts</h1>
+			<h1>Interface UiPlugin</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>自定义的中断错误合集</p>
+						<p>ui插件配置</p>
 					</div>
 				</div>
 			</section>
@@ -78,7 +78,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFCustomAborts</span>
+						<a href="_index_d_.uipluginbase.html" class="tsd-signature-type">UiPluginBase</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">UiPlugin</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -89,15 +94,10 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcustomaborts.html#authfirst" class="tsd-kind-icon">auth<wbr>First</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcustomaborts.html#authgift" class="tsd-kind-icon">auth<wbr>Gift</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcustomaborts.html#failedtoloadsurvey" class="tsd-kind-icon">failed<wbr>ToLoad<wbr>Survey</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcustomaborts.html#gotogift" class="tsd-kind-icon">go<wbr>ToGift</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcustomaborts.html#gotourl" class="tsd-kind-icon">go<wbr>ToUrl</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcustomaborts.html#initialverifyfailed" class="tsd-kind-icon">initial<wbr>Verify<wbr>Failed</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcustomaborts.html#lacksid" class="tsd-kind-icon">lack<wbr>Sid</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcustomaborts.html#nointrobeforesurvey" class="tsd-kind-icon">no<wbr>Intro<wbr>Before<wbr>Survey</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcustomaborts.html#verifyurljump" class="tsd-kind-icon">verify<wbr>Url<wbr>Jump</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.uiplugin.html#inst" class="tsd-kind-icon">inst</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.uiplugin.html#param" class="tsd-kind-icon">param</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.uiplugin.html#path" class="tsd-kind-icon">path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.uiplugin.html#target" class="tsd-kind-icon">target</a></li>
 							</ul>
 						</section>
 					</div>
@@ -106,92 +106,44 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="authfirst" class="tsd-anchor"></a>
-					<h3>auth<wbr>First</h3>
-					<div class="tsd-signature tsd-kind-icon">auth<wbr>First<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="inst" class="tsd-anchor"></a>
+					<h3>inst</h3>
+					<div class="tsd-signature tsd-kind-icon">inst<span class="tsd-signature-symbol">:</span> <a href="_index_d_.uiplugininst.html" class="tsd-signature-type">UiPluginInst</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L317">index.d.ts:317</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4842">index.d.ts:4842</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="param" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> param</h3>
+					<div class="tsd-signature tsd-kind-icon">param<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.uipluginbase.html">UiPluginBase</a>.<a href="_index_d_.uipluginbase.html#param">param</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4834">index.d.ts:4834</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="path" class="tsd-anchor"></a>
+					<h3>path</h3>
+					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.uipluginbase.html">UiPluginBase</a>.<a href="_index_d_.uipluginbase.html#path">path</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4833">index.d.ts:4833</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="authgift" class="tsd-anchor"></a>
-					<h3>auth<wbr>Gift</h3>
-					<div class="tsd-signature tsd-kind-icon">auth<wbr>Gift<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="target" class="tsd-anchor"></a>
+					<h3>target</h3>
+					<div class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#uiplugintarget" class="tsd-signature-type">UiPluginTarget</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L320">index.d.ts:320</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="failedtoloadsurvey" class="tsd-anchor"></a>
-					<h3>failed<wbr>ToLoad<wbr>Survey</h3>
-					<div class="tsd-signature tsd-kind-icon">failed<wbr>ToLoad<wbr>Survey<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L315">index.d.ts:315</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="gotogift" class="tsd-anchor"></a>
-					<h3>go<wbr>ToGift</h3>
-					<div class="tsd-signature tsd-kind-icon">go<wbr>ToGift<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L321">index.d.ts:321</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="gotourl" class="tsd-anchor"></a>
-					<h3>go<wbr>ToUrl</h3>
-					<div class="tsd-signature tsd-kind-icon">go<wbr>ToUrl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L318">index.d.ts:318</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="initialverifyfailed" class="tsd-anchor"></a>
-					<h3>initial<wbr>Verify<wbr>Failed</h3>
-					<div class="tsd-signature tsd-kind-icon">initial<wbr>Verify<wbr>Failed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L322">index.d.ts:322</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="lacksid" class="tsd-anchor"></a>
-					<h3>lack<wbr>Sid</h3>
-					<div class="tsd-signature tsd-kind-icon">lack<wbr>Sid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L323">index.d.ts:323</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="nointrobeforesurvey" class="tsd-anchor"></a>
-					<h3>no<wbr>Intro<wbr>Before<wbr>Survey</h3>
-					<div class="tsd-signature tsd-kind-icon">no<wbr>Intro<wbr>Before<wbr>Survey<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L316">index.d.ts:316</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="verifyurljump" class="tsd-anchor"></a>
-					<h3>verify<wbr>Url<wbr>Jump</h3>
-					<div class="tsd-signature tsd-kind-icon">verify<wbr>Url<wbr>Jump<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L319">index.d.ts:319</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4841">index.d.ts:4841</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -213,34 +165,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfcustomaborts.html" class="tsd-kind-icon">CFCustom<wbr>Aborts</a>
+						<a href="_index_d_.uiplugin.html" class="tsd-kind-icon">Ui<wbr>Plugin</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfcustomaborts.html#authfirst" class="tsd-kind-icon">auth<wbr>First</a>
+								<a href="_index_d_.uiplugin.html#inst" class="tsd-kind-icon">inst</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.uiplugin.html#param" class="tsd-kind-icon">param</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.uiplugin.html#path" class="tsd-kind-icon">path</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfcustomaborts.html#authgift" class="tsd-kind-icon">auth<wbr>Gift</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfcustomaborts.html#failedtoloadsurvey" class="tsd-kind-icon">failed<wbr>ToLoad<wbr>Survey</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfcustomaborts.html#gotogift" class="tsd-kind-icon">go<wbr>ToGift</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfcustomaborts.html#gotourl" class="tsd-kind-icon">go<wbr>ToUrl</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfcustomaborts.html#initialverifyfailed" class="tsd-kind-icon">initial<wbr>Verify<wbr>Failed</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfcustomaborts.html#lacksid" class="tsd-kind-icon">lack<wbr>Sid</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfcustomaborts.html#nointrobeforesurvey" class="tsd-kind-icon">no<wbr>Intro<wbr>Before<wbr>Survey</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfcustomaborts.html#verifyurljump" class="tsd-kind-icon">verify<wbr>Url<wbr>Jump</a>
+								<a href="_index_d_.uiplugin.html#target" class="tsd-kind-icon">target</a>
 							</li>
 						</ul>
 					</li>

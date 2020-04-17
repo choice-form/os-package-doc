@@ -64,6 +64,171 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#os-client-core核心模块" id="os-client-core核心模块" style="color: inherit; text-decoration: none;">
+							<h1>os-client-core核心模块</h1>
+						</a>
+					</div>
+					<p><a href="https://choice-form.github.io/os-client-doc/doc/modules/_index_d_.html">详细的API请看这里</a></p>
+					<p>该模块承载了巧思问卷答题客户端的核心逻辑流程，基于此模块可以单独开发自制的答题页面客户端，使用本模块以后，除了遵从一些简单的启动配置和接口交互之外，只需专注于开发每个题型的UI即可，后面会详细介绍如何基于此模块创建自己的答题客户端应用。</p>
+					<a href="#创建一个前端项目" id="创建一个前端项目" style="color: inherit; text-decoration: none;">
+						<h2>创建一个前端项目</h2>
+					</a>
+					<p>你可以使用任何方式来创建一个项目。</p>
+					<p>如使用纯javascript+html+css创建。</p>
+					<p>或基于<a href="https://github.com/facebook/react">react</a>，<a href="https://github.com/vuejs/vue">vue</a>，<a href="https://github.com/angular/angular">angular</a>， <a href="https://github.com/emberjs/ember.js/">emberjs</a>，<a href="https://github.com/angular/angular.js/">angularjs</a>等现代化库或框架创建。</p>
+					<p>这里有几个案列可用参考</p>
+					<ul>
+						<li><a href="https://github.com/choice-form/client-demo-ng-plus">基于angular的案列</a></li>
+					</ul>
+					<p>当创建好项目以后我们需要安装该核心包作为依赖。</p>
+					<a href="#安装与使用该模块" id="安装与使用该模块" style="color: inherit; text-decoration: none;">
+						<h2>安装与使用该模块</h2>
+					</a>
+					<pre><code><span class="hljs-selector-tag">npm</span> <span class="hljs-selector-tag">install</span> @<span class="hljs-keyword">choiceform</span>/<span class="hljs-keyword">os</span>-<span class="hljs-keyword">client</span>-<span class="hljs-keyword">core</span></code></pre><p>安装好该包以后再node_modules/@choiceform/os-client-core/dist目录中会有以下文件:</p>
+					<ul>
+						<li>esm.js<blockquote>
+								<p>以esm模块方式打包的核心文件，不携带多语言翻译功能。</p>
+							</blockquote>
+						</li>
+						<li>esm-with-i18n.js<blockquote>
+								<p>以esm模块方式打包的核心文件，携带多语言翻译功能。</p>
+							</blockquote>
+						</li>
+						<li>umd-es6.js<blockquote>
+								<p>以umd模块方式打包的es6版本核心文件，不携带多语言翻译功能。</p>
+							</blockquote>
+						</li>
+						<li>umd-es6-with-i18n.js<blockquote>
+								<p>以umd模块方式打包的es6版本核心文件，携带多语言翻译功能。</p>
+							</blockquote>
+						</li>
+						<li>umd-legacy.js<blockquote>
+								<p>以umd模块方式打包的es5版本核心文件，不携带多语言翻译功能。</p>
+							</blockquote>
+						</li>
+						<li>umd-legacy-with-i18n.js<blockquote>
+								<p>以umd模块方式打包的es5版本核心文件，携带多语言翻译功能。</p>
+							</blockquote>
+						</li>
+					</ul>
+					<p>需要根据自己的需要来决定要使用哪本文件，以及如何将这本文件加入到项目的依赖中。</p>
+					<p>关于js的模块方式可参照<a href="https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm">这里</a></p>
+					<p>后续携带<code>-with-i18n</code>的文件中都是包含多语言翻译功能的，不携带的则不包含多语言翻译功能，携带多语言翻译功能的文件会更大一点，
+					关于多语言翻译请参考<a href="#%E5%85%B3%E4%BA%8E%E5%A4%9A%E8%AF%AD%E8%A8%80%E7%BF%BB%E8%AF%91">关于多语言翻译</a>;</p>
+					<p>如果你使用typescript编写项目，则该安装包的更目录下有index.d.ts提供了核心中使用到的基本的数据类型。</p>
+					<a href="#使用规则" id="使用规则" style="color: inherit; text-decoration: none;">
+						<h2>使用规则</h2>
+					</a>
+					<a href="#几种引用核心包的方式" id="几种引用核心包的方式" style="color: inherit; text-decoration: none;">
+						<h3>几种引用核心包的方式</h3>
+					</a>
+					<p>核心包中提供了<a href="../interfaces/_index_d_.cfclient.html">CFClient</a>类型的<code>CFClient</code>对象，这个对象中最关键的属性是<code>CFClient.Core</code>，它是<a href="../interfaces/_index_d_.cfcore.html">CFCore</a>类型。</p>
+					<ul>
+						<li><p>如果是以传统全局方式引入的核心包，比如使用<code>script</code>标签直接引用了<code>umd-xxx.js</code>文件，则可以直接在window下面获得这个对象</p>
+							<pre><code class="language-typescript"><span class="hljs-keyword">const</span> {Core} = <span class="hljs-built_in">window</span>.CFClient;</code></pre>
+						</li>
+						<li><p>如果是以esm的方式引入了核心包，比如使用<code>script</code>标签以<code>type=module</code>方式引用了<code>esm-xxx.js</code>文件，则可以通过标准es模块方式引入这个对象</p>
+							<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Core} <span class="hljs-keyword">from</span> <span class="hljs-string">'esm-xxx.js'</span>;</code></pre>
+						</li>
+						<li><p>如果是以其他打包工具如webpack等打包了<code>umd-xxx.js</code>则通过你自己打包的模块方式导入该对象。</p>
+						</li>
+					</ul>
+					<p>当成功把依赖文件加入到自己的项目中之后，就要开始对答题客户端进行编程了。</p>
+					<a href="#了解流程" id="了解流程" style="color: inherit; text-decoration: none;">
+						<h3>了解流程</h3>
+					</a>
+					<p>这里说明答题客户端运行的主要流程</p>
+					<ol>
+						<li>访问答题页面，页面进行初始化配置</li>
+						<li>获取问卷封面信息并展示封面。</li>
+						<li>答题者点击封面的开始按钮</li>
+						<li>获取题目数据并展示初始的题目。</li>
+						<li>答题者对题目进行作答，如选中某个选项，在某个输入框中输入文字等</li>
+						<li>答题者可以作答完一道题后点击下一题按钮进入到下一题，或者点击上一题按钮回到之前的题目。</li>
+						<li>重复5，6两步操作，直到所有题目答完。</li>
+						<li>如果答题内容不符合要求，或答题过程中碰到严重错误，则会弹出提示消息或错误消息。</li>
+						<li>如果配置了奖励，则答完题目以后会跳转到奖励页面，这时需要获取奖励数据并展示奖励内容。</li>
+					</ol>
+					<p>基于核心包自制答题客户端时，除了专注于制作UI页面外，还需要在UI与核心包之间做出必要的交互，现在我们就以上面列出的答题流程为基础说明这两者之间要做哪些必要的交互。</p>
+					<ol>
+						<li><p>调用核心包提供的<a href="../interfaces/_index_d_.cfcore.html#setup">CFCore.setup</a>方法初始化页面配置，需要传入一个<a href="../interfaces/_index_d_.cfsetupoptions.html">CFSetupOptions</a>类型的参数，这个方法是一个异步方法，要等该方法执行完以后才能执行的操作。</p>
+						</li>
+						<li><p>初始化完成后，调用<a href="../interfaces/_index_d_.cfcore.html#fetchintro">CFCore.fetchIntro</a>方法可以获得问卷封面数据，这是一个<a href="../interfaces/_index_d_.cfintro.html">CFIntro</a>类型的数据，可以根据<a href="#%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">页面渲染说明</a>来渲染你的问卷封面。</p>
+						</li>
+						<li><p>当问卷封面的<code>开始答题</code>按钮被点击以后调用<a href="../interfaces/_index_d_.cfcore.html#fetchquestions">CFCore.fetchQuestions</a>方法可以获得题目数据，这个数据是一个<a href="../interfaces/_index_d_.cfstate.html">CFState</a>类型的对象，当前要渲染的题目是<a href="../interfaces/_index_d_.cfstate.html#nodes">CFState.nodes</a>属性然后可以根据<a href="#%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">页面渲染说明</a>来渲染题目。</p>
+						</li>
+						<li><p>当题目中的选项被点击或输入框被输入时，UI层需要按<a href="#UI%E4%B8%8E%E6%A0%B8%E5%BF%83%E4%BA%A4%E4%BA%92%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E8%AF%B4%E6%98%8E">UI与核心交互回调函数说明</a>的规则调用对应的回调函数通知核心模块。</p>
+						</li>
+						<li><p>在答题时点击上一题下一题时，UI层需要按<a href="#UI%E4%B8%8E%E6%A0%B8%E5%BF%83%E4%BA%A4%E4%BA%92%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E8%AF%B4%E6%98%8E">UI与核心交互回调函数说明</a>的规则调用对应的回调函数通知核心模块。</p>
+						</li>
+						<li><p>当有警告消息和错误消息时，核心模块会发出该消息，在初始化的时候需要设置<a href="../interfaces/_index_d_.cfsetupoptions.html#notify">CFSetupOptions.notify</a>,<a href="../interfaces/_index_d_.cfsetupoptions.html#error">CFSetupOptions.error</a>,<a href="../interfaces/_index_d_.cfsetupoptions.html#locateerror">CFSetupOptions.locateError</a>等几个方法来接受警告或错误消息，并在UI中以适当的方式将消息展示出来。</p>
+						</li>
+						<li><p>如果配置了奖励，到达奖励页面后需要调用<a href="../interfaces/_index_d_.cfcore.html#fetchreward">CFCore.fetchReward</a>方法来获取奖励数据，这个数据是一个<a href="../interfaces/_index_d_.cfrewardmodel.html">CFRewardModel</a>类型的对象，然后照<a href="#%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">页面渲染规则</a>来渲染奖励页面。</p>
+						</li>
+					</ol>
+					<a href="#页面渲染规则" id="页面渲染规则" style="color: inherit; text-decoration: none;">
+						<h3>页面渲染规则</h3>
+					</a>
+					<p>答题客户端主要包含问卷封面页面，题目或节点页面，奖励页面等。</p>
+					<ul>
+						<li><p>封面：封面数据是一个<a href="../interfaces/_index_d_.cfintro.html">CFIntro</a>类型的对象，在该类型的API文档<a href="../interfaces/_index_d_.cfintro.html">CFIntro</a>中说明了应该在页面中渲染那些内容。</p>
+						</li>
+						<li><p>题目或节点：问卷包含很多种题型和节点类型，每种要渲染的内容有同有异，他们各自应该要渲染的内容也在对应的数据类型的API文档中进行了说明，下面一一列出</p>
+							<ul>
+								<li>选择题：<a href="../interfaces/_index_d_.cfselectquestion.html">CFSelectQuestion</a></li>
+								<li>打分题：<a href="../interfaces/_index_d_.cfmarkquestion.html">CFMarkQuestion</a></li>
+								<li>演示评价题：<a href="../interfaces/_index_d_.cfslideratequestion.html">CFSlideRateQuestion</a></li>
+								<li>权重题：<a href="../interfaces/_index_d_.cfweightquestion.html">CFWeightQuestion</a></li>
+								<li>填空题：<a href="../interfaces/_index_d_.cffillquestion.html">CFFillQuestion</a></li>
+								<li>排序题：<a href="../interfaces/_index_d_.cfsequencequestion.html">CFSequenceQuestion</a></li>
+								<li>菜单题：<a href="../interfaces/_index_d_.cfmenuquestion.html">CFMenuQuestion</a></li>
+								<li>级联菜单题：<a href="../interfaces/_index_d_.cfcascadequestion.html">CFCascadeQuestion</a></li>
+								<li>图标题：<a href="../interfaces/_index_d_.cficonquestion.html">CFIconQuestion</a></li>
+								<li>图片选择题： <a href="../interfaces/_index_d_.cfselectpicquestion.html">CFSelectPicQuestion</a></li>
+								<li>图片热点题： <a href="../interfaces/_index_d_.cfhotspotquestion.html">CFHotSpotQuestion</a></li>
+								<li>描述节点：<a href="../interfaces/_index_d_.cfquestion.html">CFQuestion</a></li>
+								<li>上传题：<a href="../interfaces/_index_d_.cfuploadquestion.html">CFUploadQuestion</a></li>
+								<li>定位题：<a href="../interfaces/_index_d_.cflocatequestion.html">CFLocateQuestion</a></li>
+								<li>范围定位题：<a href="../interfaces/_index_d_.cfsitequestion.html">CFSiteQuestion</a></li>
+								<li>矩阵题：<a href="../interfaces/_index_d_.cfmatrixquestion.html">CFMatrixQuestion</a></li>
+								<li>结束节点：<a href="../interfaces/_index_d_.cfendquestion.html">CFEndQuestion</a></li>
+								<li>抽奖节点：<a href="../interfaces/_index_d_.cflotteryquestion.html">CFLotteryQuestion</a></li>
+								<li>验证节点: <a href="../interfaces/_index_d_.cfvalidatequestion.html">CFValidateQuestion</a></li>
+							</ul>
+						</li>
+						<li><p>奖励页面：该页面的数据是一个<a href="../interfaces/_index_d_.cfrewardmodel.html">CFRewardModel</a>的对象，在该类型的API文档<a href="../interfaces/_index_d_.cfrewardmodel.html">CFRewardModel</a>中说明了应该在页面中渲染那些内容。</p>
+						</li>
+					</ul>
+					<a href="#ui与核心交互回调函数" id="ui与核心交互回调函数" style="color: inherit; text-decoration: none;">
+						<h3>UI与核心交互回调函数</h3>
+					</a>
+					<p>各个页面和题目的UI被渲染出来以后，答题者可以在上面进行一些操作，当进行这些操作的时候，UI层需要调用对应的回调函数来通知核心模块。</p>
+					<p>这些回调函数的规则在<a href="../interfaces/_index_d_.cfuieventhandler.html">CFUIEventHandler</a>类型中有详细的说明。</p>
+					<a href="#关于多语言翻译" id="关于多语言翻译" style="color: inherit; text-decoration: none;">
+						<h2>关于多语言翻译</h2>
+					</a>
+					<p>UI渲染时，有些内容是需要多语言化的，比如提示信息的文字，当在英文环境下应该显示英文的提示内容，当在中文环境下，应该显示中文的提示内容，这就需要配置多语言翻译。</p>
+					<p>如同<a href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%E8%AF%A5%E6%A8%A1%E5%9D%97">安装与使用该模块</a>中所描述的那样，安装包里面提供了带翻译功能的文件和不带翻译功能的文件，所以在处理多语言翻译你可以选择以下三种方式中的一种</p>
+					<a href="#1完全使用核心模块提供的翻译功能" id="1完全使用核心模块提供的翻译功能" style="color: inherit; text-decoration: none;">
+						<h3>1.完全使用核心模块提供的翻译功能</h3>
+					</a>
+					<p>这种方式最简单，要想使用这种方式，必须使用安装包中提供的<code>xxx-i18n.js</code>格式的（即携带多语言翻译功能）的文件，并且在调用初始化方法<a href="../interfaces/_index_d_.cfcore.html#setup">CFCore.setup</a>方法时，不要设置<a href="../interfaces/_index_d_.cfsetupoptions.html#langsrcmap">CFSetupOptions.langSrcMap</a>和<a href="../interfaces/_index_d_.cfsetupoptions.html#translate">CFSetupOptions.translate</a>这两个内容。</p>
+					<a href="#2使用核心模块提供的翻译功能，但自定义翻译文本" id="2使用核心模块提供的翻译功能，但自定义翻译文本" style="color: inherit; text-decoration: none;">
+						<h3>2.使用核心模块提供的翻译功能，但自定义翻译文本</h3>
+					</a>
+					<p>这种方式仍需使用安装包中提供的<code>xxx-i18n.js</code>格式的（即携带多语言翻译功能）的文件
+						如果想使用核心模块自带的翻译功能，但是对默认的翻译结果不太满意，可以配置自己的翻译文本。
+					配置规则在<a href="../interfaces/_index_d_.cfsetupoptions.html#langsrcmap">CFSetupOptions.langSrcMap</a>中有全面的说明。</p>
+					<a href="#3不使用核心模块的翻译功能，完全由自己处理翻译问题。" id="3不使用核心模块的翻译功能，完全由自己处理翻译问题。" style="color: inherit; text-decoration: none;">
+						<h3>3.不使用核心模块的翻译功能，完全由自己处理翻译问题。</h3>
+					</a>
+					<p>这种方式下使用<code>xxx.js</code>的核心文件即可，这种方式的文件，不携带多语言翻译功能，相比<code>xxx-i18n.js</code>文件更小50kb左右。
+					这种方式下需要配置一个方法来处理全自主的翻译，在<a href="../interfaces/_index_d_.cfsetupoptions.html#translate">CFSetupOptions.translate</a>方法中有全面说明。</p>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -96,7 +261,6 @@
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcascadequestion.html" class="tsd-kind-icon">CFCascade<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_index_d_.cfclient.html" class="tsd-kind-icon">CFClient</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcore.html" class="tsd-kind-icon">CFCore</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcustomaborts.html" class="tsd-kind-icon">CFCustom<wbr>Aborts</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcustomlogo.html" class="tsd-kind-icon">CFCustom<wbr>Logo</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfendnode.html" class="tsd-kind-icon">CFEnd<wbr>Node</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfendquestion.html" class="tsd-kind-icon">CFEnd<wbr>Question</a></li>
@@ -109,14 +273,15 @@
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfgiftnode.html" class="tsd-kind-icon">CFGift<wbr>Node</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfhostconfig.html" class="tsd-kind-icon">CFHost<wbr>Config</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfhotspotnode.html" class="tsd-kind-icon">CFHot<wbr>Spot<wbr>Node</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfhotspotoption.html" class="tsd-kind-icon">CFHot<wbr>Spot<wbr>Option</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfhotspotquestion.html" class="tsd-kind-icon">CFHot<wbr>Spot<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfi18n.html" class="tsd-kind-icon">CFI18n</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cficonoption.html" class="tsd-kind-icon">CFIcon<wbr>Option</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cficonquestion.html" class="tsd-kind-icon">CFIcon<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfinoutnodemixin.html" class="tsd-kind-icon">CFIn<wbr>Out<wbr>Node<wbr>Mixin</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfinfermsg.html" class="tsd-kind-icon">CFInfer<wbr>Msg</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfinputnodemixin.html" class="tsd-kind-icon">CFInput<wbr>Node<wbr>Mixin</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfintro.html" class="tsd-kind-icon">CFIntro</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cflang.html" class="tsd-kind-icon">CFLang</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cflocatequestion.html" class="tsd-kind-icon">CFLocate<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cflotterynode.html" class="tsd-kind-icon">CFLottery<wbr>Node</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cflotteryoption.html" class="tsd-kind-icon">CFLottery<wbr>Option</a></li>
@@ -143,7 +308,7 @@
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfport.html" class="tsd-kind-icon">CFPort</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfqueryparams.html" class="tsd-kind-icon">CFQuery<wbr>Params</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfquestion.html" class="tsd-kind-icon">CFQuestion</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfrealtime.html" class="tsd-kind-icon">CFReal<wbr>Time</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfrateitem.html" class="tsd-kind-icon">CFRate<wbr>Item</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfregionnode.html" class="tsd-kind-icon">CFRegion<wbr>Node</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfregionquestion.html" class="tsd-kind-icon">CFRegion<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfrewardinfo.html" class="tsd-kind-icon">CFReward<wbr>Info</a></li>
@@ -173,21 +338,30 @@
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuploadresult.html" class="tsd-kind-icon">CFUpload<wbr>Result</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfutil.html" class="tsd-kind-icon">CFUtil</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidatenode.html" class="tsd-kind-icon">CFValidate<wbr>Node</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidateoptmixin.html" class="tsd-kind-icon">CFValidate<wbr>Opt<wbr>Mixin</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidateopt.html" class="tsd-kind-icon">CFValidate<wbr>Opt</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidateoptbase.html" class="tsd-kind-icon">CFValidate<wbr>Opt<wbr>Base</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidatequestion.html" class="tsd-kind-icon">CFValidate<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidationnodemixin.html" class="tsd-kind-icon">CFValidation<wbr>Node<wbr>Mixin</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvideo.html" class="tsd-kind-icon">CFVideo</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfweightoption.html" class="tsd-kind-icon">CFWeight<wbr>Option</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfweightquestion.html" class="tsd-kind-icon">CFWeight<wbr>Question</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.flatitem.html" class="tsd-kind-icon">Flat<wbr>Item</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.flatresult.html" class="tsd-kind-icon">Flat<wbr>Result</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.icacheholder.html" class="tsd-kind-icon">ICache<wbr>Holder</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.icacherandom.html" class="tsd-kind-icon">ICache<wbr>Random</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.iimageinnode.html" class="tsd-kind-icon">IImage<wbr>InNode</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.lang_en_us.html" class="tsd-kind-icon">LANG_<wbr>EN_<wbr>US</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.lang_zh_cn.html" class="tsd-kind-icon">LANG_<wbr>ZH_<wbr>CN</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.matrixitem.html" class="tsd-kind-icon">Matrix<wbr>Item</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.matrixresult.html" class="tsd-kind-icon">Matrix<wbr>Result</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.regioncity.html" class="tsd-kind-icon">Region<wbr>City</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.regioncounty.html" class="tsd-kind-icon">Region<wbr>County</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.regiondict.html" class="tsd-kind-icon">Region<wbr>Dict</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.regionprovince.html" class="tsd-kind-icon">Region<wbr>Province</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.typeinfo.html" class="tsd-kind-icon">Type<wbr>Info</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.uiplugin.html" class="tsd-kind-icon">Ui<wbr>Plugin</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.uipluginbase.html" class="tsd-kind-icon">Ui<wbr>Plugin<wbr>Base</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.uiplugininst.html" class="tsd-kind-icon">Ui<wbr>Plugin<wbr>Inst</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.window.html" class="tsd-kind-icon">Window</a></li>
 							</ul>
 						</section>
@@ -200,8 +374,11 @@
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfpropsetfn" class="tsd-kind-icon">CFProp<wbr>Set<wbr>Fn</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfquerykeys" class="tsd-kind-icon">CFQuery<wbr>Keys</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#imatrixdisplaytype" class="tsd-kind-icon">IMatrix<wbr>Display<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#ioptinputtype" class="tsd-kind-icon">IOpt<wbr>Input<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#ioptmappingkeys" class="tsd-kind-icon">IOpt<wbr>Mapping<wbr>Keys</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#iquestypevalue" class="tsd-kind-icon">IQues<wbr>Type<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#inputtolerance" class="tsd-kind-icon">Input<wbr>Tolerance</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#uiplugintarget" class="tsd-kind-icon">Ui<wbr>Plugin<wbr>Target</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
@@ -221,7 +398,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2040">index.d.ts:2040</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1215">index.d.ts:1215</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -270,7 +447,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFFont<wbr>Weight<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"normal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"bold"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2160">index.d.ts:2160</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1304">index.d.ts:1304</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -287,7 +464,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFOpt<wbr>Align<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"vertical"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"horizontal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"column"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"auto"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2153">index.d.ts:2153</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1297">index.d.ts:1297</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -306,7 +483,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFProp<wbr>Set<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L517">index.d.ts:517</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L320">index.d.ts:320</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -364,7 +541,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFQuery<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFQueryParams</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L1082">index.d.ts:1082</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L623">index.d.ts:623</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -379,7 +556,7 @@
 					<div class="tsd-signature tsd-kind-icon">IMatrix<wbr>Display<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"auto"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stretch"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2736">index.d.ts:2736</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1884">index.d.ts:1884</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -392,12 +569,32 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="ioptinputtype" class="tsd-anchor"></a>
+					<h3>IOpt<wbr>Input<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">IOpt<wbr>Input<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"select"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"input"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select-input"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4098">index.d.ts:4098</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="ioptmappingkeys" class="tsd-anchor"></a>
+					<h3>IOpt<wbr>Mapping<wbr>Keys</h3>
+					<div class="tsd-signature tsd-kind-icon">IOpt<wbr>Mapping<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof IOptMapping</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4096">index.d.ts:4096</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="iquestypevalue" class="tsd-anchor"></a>
 					<h3>IQues<wbr>Type<wbr>Value</h3>
 					<div class="tsd-signature tsd-kind-icon">IQues<wbr>Type<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"choice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"region"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"intro-page"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"end-page"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"short-text"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"gender"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"reward"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"icon"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"location"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"lottery"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"rating"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"range"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"dropdown"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"picture-choice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ranking"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"file-upload"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"verification"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"weight"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cascade"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hot-spot"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"slide-rate"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L3745">index.d.ts:3745</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L2901">index.d.ts:2901</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -412,7 +609,17 @@
 					<div class="tsd-signature tsd-kind-icon">Input<wbr>Tolerance<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"number"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"alphabet"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chinese"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L5919">index.d.ts:5919</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4373">index.d.ts:4373</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="uiplugintarget" class="tsd-anchor"></a>
+					<h3>Ui<wbr>Plugin<wbr>Target</h3>
+					<div class="tsd-signature tsd-kind-icon">Ui<wbr>Plugin<wbr>Target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"body"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"head"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4827">index.d.ts:4827</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -425,7 +632,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFClient<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_index_d_.cfclient.html" class="tsd-signature-type">CFClient</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L165">index.d.ts:165</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L167">index.d.ts:167</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -487,9 +694,6 @@
 						<a href="../interfaces/_index_d_.cfcore.html" class="tsd-kind-icon">CFCore</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/_index_d_.cfcustomaborts.html" class="tsd-kind-icon">CFCustom<wbr>Aborts</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfcustomlogo.html" class="tsd-kind-icon">CFCustom<wbr>Logo</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -526,6 +730,9 @@
 						<a href="../interfaces/_index_d_.cfhotspotnode.html" class="tsd-kind-icon">CFHot<wbr>Spot<wbr>Node</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfhotspotoption.html" class="tsd-kind-icon">CFHot<wbr>Spot<wbr>Option</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfhotspotquestion.html" class="tsd-kind-icon">CFHot<wbr>Spot<wbr>Question</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -541,13 +748,13 @@
 						<a href="../interfaces/_index_d_.cfinoutnodemixin.html" class="tsd-kind-icon">CFIn<wbr>Out<wbr>Node<wbr>Mixin</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/_index_d_.cfinfermsg.html" class="tsd-kind-icon">CFInfer<wbr>Msg</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfinputnodemixin.html" class="tsd-kind-icon">CFInput<wbr>Node<wbr>Mixin</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfintro.html" class="tsd-kind-icon">CFIntro</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cflang.html" class="tsd-kind-icon">CFLang</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cflocatequestion.html" class="tsd-kind-icon">CFLocate<wbr>Question</a>
@@ -628,7 +835,7 @@
 						<a href="../interfaces/_index_d_.cfquestion.html" class="tsd-kind-icon">CFQuestion</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/_index_d_.cfrealtime.html" class="tsd-kind-icon">CFReal<wbr>Time</a>
+						<a href="../interfaces/_index_d_.cfrateitem.html" class="tsd-kind-icon">CFRate<wbr>Item</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfregionnode.html" class="tsd-kind-icon">CFRegion<wbr>Node</a>
@@ -718,7 +925,10 @@
 						<a href="../interfaces/_index_d_.cfvalidatenode.html" class="tsd-kind-icon">CFValidate<wbr>Node</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/_index_d_.cfvalidateoptmixin.html" class="tsd-kind-icon">CFValidate<wbr>Opt<wbr>Mixin</a>
+						<a href="../interfaces/_index_d_.cfvalidateopt.html" class="tsd-kind-icon">CFValidate<wbr>Opt</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfvalidateoptbase.html" class="tsd-kind-icon">CFValidate<wbr>Opt<wbr>Base</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfvalidatequestion.html" class="tsd-kind-icon">CFValidate<wbr>Question</a>
@@ -736,7 +946,16 @@
 						<a href="../interfaces/_index_d_.cfweightquestion.html" class="tsd-kind-icon">CFWeight<wbr>Question</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.flatitem.html" class="tsd-kind-icon">Flat<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.flatresult.html" class="tsd-kind-icon">Flat<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.icacheholder.html" class="tsd-kind-icon">ICache<wbr>Holder</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.icacherandom.html" class="tsd-kind-icon">ICache<wbr>Random</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.iimageinnode.html" class="tsd-kind-icon">IImage<wbr>InNode</a>
@@ -746,6 +965,12 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.lang_zh_cn.html" class="tsd-kind-icon">LANG_<wbr>ZH_<wbr>CN</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.matrixitem.html" class="tsd-kind-icon">Matrix<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.matrixresult.html" class="tsd-kind-icon">Matrix<wbr>Result</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.regioncity.html" class="tsd-kind-icon">Region<wbr>City</a>
@@ -761,6 +986,15 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.typeinfo.html" class="tsd-kind-icon">Type<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.uiplugin.html" class="tsd-kind-icon">Ui<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.uipluginbase.html" class="tsd-kind-icon">Ui<wbr>Plugin<wbr>Base</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.uiplugininst.html" class="tsd-kind-icon">Ui<wbr>Plugin<wbr>Inst</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.window.html" class="tsd-kind-icon">Window</a>
@@ -784,10 +1018,19 @@
 						<a href="_index_d_.html#imatrixdisplaytype" class="tsd-kind-icon">IMatrix<wbr>Display<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#ioptinputtype" class="tsd-kind-icon">IOpt<wbr>Input<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#ioptmappingkeys" class="tsd-kind-icon">IOpt<wbr>Mapping<wbr>Keys</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#iquestypevalue" class="tsd-kind-icon">IQues<wbr>Type<wbr>Value</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#inputtolerance" class="tsd-kind-icon">Input<wbr>Tolerance</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#uiplugintarget" class="tsd-kind-icon">Ui<wbr>Plugin<wbr>Target</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cfclient-1" class="tsd-kind-icon">CFClient</a>

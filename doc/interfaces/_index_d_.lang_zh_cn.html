@@ -72,7 +72,7 @@
 					<div class="lead">
 						<p>每个语言的多语言翻译属性名集合是一一对应的，只是对应的真实翻译内容不同</p>
 					</div>
-					<p>这里是 zh-cn 的多语言文本翻译一览</p>
+					<p>这里是 zh_cn 的多语言文本翻译一览</p>
 					<p>如果你需要自定义多语言翻译功能，确保你能够翻译这里准备的所有的多语言属性名</p>
 					<pre><code class="language-typescript">{
   upload: {
@@ -213,7 +213,7 @@
     <span class="hljs-keyword">get</span>: <span class="hljs-string">"领取奖励"</span>
   },
   global: {
-    timeOver: <span class="hljs-string">"时间到，未能按时完成答题！"</span>,
+    timeOver: <span class="hljs-string">"问卷回复时长超时，未能按时完成答题！"</span>,
     readClause: <span class="hljs-string">"抽奖前请阅读条款！"</span>,
     answerRequired: <span class="hljs-string">"必答题，答题后继续。"</span>,
     antiAgain: <span class="hljs-string">"不允许再次回复"</span>,
@@ -224,7 +224,7 @@
     previous: <span class="hljs-string">"上一题"</span>,
     go: <span class="hljs-string">"前往"</span>,
     done: <span class="hljs-string">"完成"</span>,
-    notTarget: <span class="hljs-string">"抱歉，您不符合这项调查的条件。我们真诚地感谢您为此付出的时间，并期望您继续参与我们的在线调查活动！"</span>,
+    notTarget: <span class="hljs-string">"抱歉，您暂时不符合当前调查的条件。我们真诚地感谢您的参与，并期望您继续参与我们的在线调查活动！"</span>,
     backTest: <span class="hljs-string">"返回测试"</span>,
     invalidUrl: <span class="hljs-string">"不是有效问卷地址"</span>,
     tryAgain: <span class="hljs-string">"操作失败，请稍后重试。"</span>
@@ -237,24 +237,24 @@
     validateAgain: <span class="hljs-string">"验证题需重新验证"</span>
   },
   backEnd: {
-    collector_full: <span class="hljs-string">"抱歉，这个调查问卷的收集器已经满足了最大回复数。我们真诚地感谢您为此付出的时间，并期望您继续参与我们的在线调查活动！"</span>,
+    collector_full: <span class="hljs-string">"抱歉，当前调查问卷的收集器已经达到最大回复数。我们真诚地感谢您的参与，并期望您继续参与我们的在线调查活动！"</span>,
     survey_not_exist: <span class="hljs-string">"抱歉，这个调查可能已经关闭、重命名或删除。"</span>,
     response_status_error: <span class="hljs-string">"操作被拒绝"</span>,
     quota_not_match: <span class="hljs-string">"配额失败"</span>,
     internal_server_error: <span class="hljs-string">"服务器未知错误"</span>,
-    survey_offline: <span class="hljs-string">"抱歉，这个调查可能已经关闭。"</span>,
-    diagram_has_errors: <span class="hljs-string">"部分逻辑没有通过测试。在解决错误之前，该调查问卷不能被发布。"</span>,
+    survey_offline: <span class="hljs-string">"本次调查可能已经结束并关闭，感谢您的参与。"</span>,
+    diagram_has_errors: <span class="hljs-string">"部分逻辑存在错误，请修正后再发布调查问卷。"</span>,
     interviewee_missing_error: <span class="hljs-string">"渠道不匹配"</span>,
     interviewee_invalid_error: <span class="hljs-string">"该渠道下不允许回复"</span>,
-    multi_responses_error: <span class="hljs-string">"抱歉，您已经回复过这个调查问卷了。"</span>,
+    multi_responses_error: <span class="hljs-string">"您已参与过本次调研活动，无法再次回复。感谢您的参与。"</span>,
     api_rate_limit_error: <span class="hljs-string">"API 连接过于频繁"</span>,
     response_already_examined: <span class="hljs-string">"抱歉，您不符合这项调查的条件。我们真诚地感谢您为此付出的时间，并期望您继续参与我们的在线调查活动！"</span>,
     question_missing_error: <span class="hljs-string">"没找到验证对象"</span>,
     gen_validation_error: <span class="hljs-string">"获取验证码图片失败"</span>,
     invalid_phone_number_error: <span class="hljs-string">"提供的电话号码格式不正确。"</span>,
-    sms_gateway_error: <span class="hljs-string">"短信发送失败."</span>,
+    sms_gateway_error: <span class="hljs-string">"短信发送失败"</span>,
     invalid_code_error: <span class="hljs-string">"输入内容无效，验证失败。"</span>,
-    quota_full: <span class="hljs-string">"抱歉，这个调查问卷的配额已经满足了最大回复数。我们真诚地感谢您为此付出的时间，并期望您继续参与我们的在线调查活动！"</span>,
+    quota_full: <span class="hljs-string">"抱歉，这个调查问卷的配额已经达到最大设定数。我们真诚地感谢您的参与，并期望您继续参与我们的在线调查活动！"</span>,
     reward_type_error: <span class="hljs-string">"无效的奖励类型"</span>,
     already_been_verificated: <span class="hljs-string">"奖品已核销,不可再次使用"</span>,
     duplicated_red_envelope: <span class="hljs-string">"不可重复领取红包"</span>,

@@ -87,16 +87,11 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#customaborts" class="tsd-kind-icon">custom<wbr>Aborts</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#forceupdatedevice" class="tsd-kind-icon">force<wbr>Update<wbr>Device</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#getplatform" class="tsd-kind-icon">get<wbr>Platform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#getsidofstandardurl" class="tsd-kind-icon">get<wbr>Sid<wbr>OfStandard<wbr>Url</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#initpreviewuploader" class="tsd-kind-icon">init<wbr>Preview<wbr>Uploader</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#isautorun" class="tsd-kind-icon">is<wbr>Auto<wbr>Run</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#isinfer" class="tsd-kind-icon">is<wbr>Infer</a></li>
@@ -105,24 +100,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter tsd-is-not-exported"><a href="_index_d_.cfutil.html#wrapsafefn" class="tsd-kind-icon">wrap<wbr>Safe<wbr>Fn</a></li>
 							</ul>
 						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="customaborts" class="tsd-anchor"></a>
-					<h3>custom<wbr>Aborts</h3>
-					<div class="tsd-signature tsd-kind-icon">custom<wbr>Aborts<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfcustomaborts.html" class="tsd-signature-type">CFCustomAborts</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L291">index.d.ts:291</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>自定义中断错误集合</p>
-						</div>
 					</div>
 				</section>
 			</section>
@@ -138,7 +115,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L281">index.d.ts:281</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L280">index.d.ts:280</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -168,7 +145,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L276">index.d.ts:276</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L275">index.d.ts:275</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -190,6 +167,34 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="getsidofstandardurl" class="tsd-anchor"></a>
+					<h3>get<wbr>Sid<wbr>OfStandard<wbr>Url</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Sid<wbr>OfStandard<wbr>Url<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L296">index.d.ts:296</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>获得标准URL下的问卷ID
+										标准URL对query部分的格式有要求
+										比如问卷id是xxxx
+										则标准1: ?xxxx&amp;key1=1&amp;key2=2
+										标准2:?sid=xxx&amp;key1=1&amp;ke2=1
+										如果你的CLinet没有使用用上述的标准规则地址
+									则不能使用该方法,而是需要自己从你自定的query中提取问卷id</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="initpreviewuploader" class="tsd-anchor"></a>
 					<h3>init<wbr>Preview<wbr>Uploader</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -199,7 +204,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L300">index.d.ts:300</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L305">index.d.ts:305</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -221,7 +226,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L304">index.d.ts:304</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L309">index.d.ts:309</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -243,7 +248,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L308">index.d.ts:308</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L313">index.d.ts:313</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -265,7 +270,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L287">index.d.ts:287</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L286">index.d.ts:286</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -297,7 +302,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L296">index.d.ts:296</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L301">index.d.ts:301</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -328,7 +333,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L271">index.d.ts:271</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L270">index.d.ts:270</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -373,14 +378,14 @@
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.cfutil.html" class="tsd-kind-icon">CFUtil</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfutil.html#customaborts" class="tsd-kind-icon">custom<wbr>Aborts</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfutil.html#forceupdatedevice" class="tsd-kind-icon">force<wbr>Update<wbr>Device</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfutil.html#getplatform" class="tsd-kind-icon">get<wbr>Platform</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfutil.html#getsidofstandardurl" class="tsd-kind-icon">get<wbr>Sid<wbr>OfStandard<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfutil.html#initpreviewuploader" class="tsd-kind-icon">init<wbr>Preview<wbr>Uploader</a>

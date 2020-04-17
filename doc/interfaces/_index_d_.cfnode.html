@@ -124,10 +124,12 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnode.html#groupid" class="tsd-kind-icon">group<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnode.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnode.html#layout" class="tsd-kind-icon">layout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnode.html#lockloopcount" class="tsd-kind-icon">lock<wbr>Loop<wbr>Count</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnode.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnode.html#nodeuuid" class="tsd-kind-icon">node<wbr>Uuid</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnode.html#pageend" class="tsd-kind-icon">page<wbr>End</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnode.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnode.html#shadownodes" class="tsd-kind-icon">shadow<wbr>Nodes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnode.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
@@ -139,10 +141,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="groupid" class="tsd-anchor"></a>
 					<h3>group<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">group<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<div class="tsd-signature tsd-kind-icon">group<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2403">index.d.ts:2403</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1548">index.d.ts:1548</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,7 +159,7 @@
 					<div class="tsd-signature tsd-kind-icon">group<wbr>Single<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2407">index.d.ts:2407</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1552">index.d.ts:1552</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -172,7 +174,7 @@
 					<div class="tsd-signature tsd-kind-icon">layout<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfnodelayout.html" class="tsd-signature-type">CFNodeLayout</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2374">index.d.ts:2374</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1515">index.d.ts:1515</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -184,12 +186,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="lockloopcount" class="tsd-anchor"></a>
+					<h3>lock<wbr>Loop<wbr>Count</h3>
+					<div class="tsd-signature tsd-kind-icon">lock<wbr>Loop<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1582">index.d.ts:1582</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>锁定循环次数</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="nodename" class="tsd-anchor"></a>
 					<h3>node<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2419">index.d.ts:2419</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1564">index.d.ts:1564</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -204,7 +221,7 @@
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2433">index.d.ts:2433</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1578">index.d.ts:1578</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -219,7 +236,7 @@
 					<div class="tsd-signature tsd-kind-icon">page<wbr>End<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2415">index.d.ts:2415</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1560">index.d.ts:1560</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -234,7 +251,7 @@
 					<div class="tsd-signature tsd-kind-icon">page<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2411">index.d.ts:2411</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1556">index.d.ts:1556</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -244,12 +261,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="shadownodes" class="tsd-anchor"></a>
+					<h3>shadow<wbr>Nodes</h3>
+					<div class="tsd-signature tsd-kind-icon">shadow<wbr>Nodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1524">index.d.ts:1524</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>仅在预览时显示</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.node_type.html" class="tsd-signature-type">NODE_TYPE</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d30053b/index.d.ts#L2424">index.d.ts:2424</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1569">index.d.ts:1569</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -289,6 +321,9 @@
 								<a href="_index_d_.cfnode.html#layout" class="tsd-kind-icon">layout</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfnode.html#lockloopcount" class="tsd-kind-icon">lock<wbr>Loop<wbr>Count</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfnode.html#nodename" class="tsd-kind-icon">node<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
@@ -299,6 +334,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfnode.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfnode.html#shadownodes" class="tsd-kind-icon">shadow<wbr>Nodes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfnode.html#type" class="tsd-kind-icon">type</a>
