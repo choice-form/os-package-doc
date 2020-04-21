@@ -172,11 +172,49 @@
 					<a href="#页面渲染规则" id="页面渲染规则" style="color: inherit; text-decoration: none;">
 						<h3>页面渲染规则</h3>
 					</a>
-					<p>答题客户端主要包含问卷封面页面，题目或节点页面，奖励页面等。</p>
+					<p>答题客户端主要包含问卷封面页面，答题页面页面，奖励页面等。</p>
+					<a href="#路由规则" id="路由规则" style="color: inherit; text-decoration: none;">
+						<h4>路由规则</h4>
+					</a>
+					<p>这三个页面的路由要遵循一定的规则</p>
+					<ul>
+						<li>封面必须遵守形如:<code>http://your.host.com?xxxx-survey-id</code>的规则,问号前面是网站地址,后面的参数名是问卷id,例如我们当前的答题端访问某份问卷的的时候,地址是这样的:<code>https://q.choiceform.com?s7YdjgT3</code>,其中<code>https://q.choiceform.com</code>是网站地址,问号后面的<code>s7YdjgT3</code>是问卷id,在调用<a href="../interfaces/_index_d_.cfcore.html#setup">CFCore.setup</a>的时候,参数中需要制定indexUrl,就是制定的这个地址:<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Core, Util } <span class="hljs-keyword">from</span> <span class="hljs-string">'@choiceform/os-client-core'</span>
+<span class="hljs-comment">// 从工具的这个方法中可以获取到问卷id</span>
+<span class="hljs-keyword">const</span> surveyId = Util.getSidOfStandardUrl();
+Core.setup({
+<span class="hljs-comment">// ... 其他参数的指定此处省略</span>
+<span class="hljs-comment">// 指定封面地址规则</span>
+indexUrl: location.origin + <span class="hljs-string">'?'</span> + surveyId
+})</code></pre>
+						</li>
+						<li>答题页面的路由形如:<code>http://your.host.com/route_name?sid=xxxx-survey-id</code>的规则,前面的依然是网站地址,<code>route_name</code>是你为答题页面配置的你的路由名称,后面的<code>sid</code>参数名是写死的,然后<code>xxxx-survey-id</code>是问卷id,这个地址的形式不需要在<a href="../interfaces/_index_d_.cfcore.html#setup">CFCore.setup</a>的参数中指定,但是在封面点击开始按钮是,需要你自己控制跳转路由到该地址,并且保证携带原有的所有参数(注意问卷id的携带方式和封面的规则不一样).例如我们当前的答题端答题页面的地址是这样的<code>https://q.choiceform.com/questions?sid=s7YdjgT3</code>,从中可以看出我们的答题路由名称叫做<code>questions</code>.</li>
+					</ul>
+					<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Util } <span class="hljs-keyword">from</span> <span class="hljs-string">'@choiceform/os-client-core'</span>
+<span class="hljs-comment">// 点击封面的开始按钮后需要你自己驱动路由跳转到答题页面</span>
+<span class="hljs-comment">// 以下是一些辅助方法,当然你也不用这些辅助方法,完全靠自己组装好答题页面的路由地址.</span>
+<span class="hljs-comment">// 可以使用工具对象中的该方法获取答题页面的地址</span>
+<span class="hljs-keyword">const</span> questionsPageUrl = Util.getQuestionsPageUrl(<span class="hljs-string">'questions'</span>)
+<span class="hljs-comment">// 也可以或的一个参数对象再自行组装</span>
+<span class="hljs-keyword">const</span> questionsParam = Util.getQuestionsPageParam();
+<span class="hljs-comment">// 组装好url后使用你所有的框架的路由跳转方法驱动路由跳转即可.</span></code></pre>
+					<ul>
+						<li>奖励页面的路由形式: <code>http://your.host.com/route_name?sid=xxxx-survey-id</code>的规则,和答题页面的额格式一样,但是该地址需要在<a href="../interfaces/_index_d_.cfcore.html#setup">CFCore.setup</a>的参数中指定,<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { Core, Util } <span class="hljs-keyword">from</span> <span class="hljs-string">'@choiceform/os-client-core'</span>
+<span class="hljs-comment">// 从工具的这个方法中可以获取到问卷id</span>
+<span class="hljs-keyword">const</span> surveyId = Util.getSidOfStandardUrl();
+Core.setup({
+<span class="hljs-comment">// ... 其他参数的指定此处省略</span>
+<span class="hljs-comment">// 指定奖励页面</span>
+rewardUrl: location.origin + <span class="hljs-string">'/reward_route_name?sid='</span> + surveyId
+})</code></pre>
+						</li>
+					</ul>
+					<a href="#数据结果规则" id="数据结果规则" style="color: inherit; text-decoration: none;">
+						<h4>数据结果规则</h4>
+					</a>
 					<ul>
 						<li><p>封面：封面数据是一个<a href="../interfaces/_index_d_.cfintro.html">CFIntro</a>类型的对象，在该类型的API文档<a href="../interfaces/_index_d_.cfintro.html">CFIntro</a>中说明了应该在页面中渲染那些内容。</p>
 						</li>
-						<li><p>题目或节点：问卷包含很多种题型和节点类型，每种要渲染的内容有同有异，他们各自应该要渲染的内容也在对应的数据类型的API文档中进行了说明，下面一一列出</p>
+						<li><p>答题页面：问卷包含很多种题型和节点类型，每种要渲染的内容有同有异，他们各自应该要渲染的内容也在对应的数据类型的API文档中进行了说明，下面一一列出</p>
 							<ul>
 								<li>选择题：<a href="../interfaces/_index_d_.cfselectquestion.html">CFSelectQuestion</a></li>
 								<li>打分题：<a href="../interfaces/_index_d_.cfmarkquestion.html">CFMarkQuestion</a></li>
@@ -261,6 +299,7 @@
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcascadequestion.html" class="tsd-kind-icon">CFCascade<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_index_d_.cfclient.html" class="tsd-kind-icon">CFClient</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcore.html" class="tsd-kind-icon">CFCore</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcorebase.html" class="tsd-kind-icon">CFCore<wbr>Base</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcustomlogo.html" class="tsd-kind-icon">CFCustom<wbr>Logo</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfendnode.html" class="tsd-kind-icon">CFEnd<wbr>Node</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfendquestion.html" class="tsd-kind-icon">CFEnd<wbr>Question</a></li>
@@ -369,6 +408,7 @@
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfeventhubcb" class="tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfeventnames" class="tsd-kind-icon">CFEvent<wbr>Names</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cffontweightvalue" class="tsd-kind-icon">CFFont<wbr>Weight<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfoptalignvalue" class="tsd-kind-icon">CFOpt<wbr>Align<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfpropsetfn" class="tsd-kind-icon">CFProp<wbr>Set<wbr>Fn</a></li>
@@ -398,7 +438,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1215">index.d.ts:1215</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1268">index.d.ts:1268</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -442,12 +482,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="cfeventnames" class="tsd-anchor"></a>
+					<h3>CFEvent<wbr>Names</h3>
+					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"REALTIME_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ANSWER_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LANG_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NEXT_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PREV_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NEXT_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"STRETCH_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ERROR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHECK_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHECK_SUBMIT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"QUOTA_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FULL_SUBMIT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SAMPLER_TRANSFER"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END_REQ"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"UPDATE_THEME"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ERROR_ABORT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SET_PROPS"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1278">index.d.ts:1278</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>事件名称</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="cffontweightvalue" class="tsd-anchor"></a>
 					<h3>CFFont<wbr>Weight<wbr>Value</h3>
 					<div class="tsd-signature tsd-kind-icon">CFFont<wbr>Weight<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"normal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"bold"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1304">index.d.ts:1304</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1364">index.d.ts:1364</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -464,7 +519,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFOpt<wbr>Align<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"vertical"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"horizontal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"column"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"auto"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1297">index.d.ts:1297</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1357">index.d.ts:1357</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -483,7 +538,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFProp<wbr>Set<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L320">index.d.ts:320</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L368">index.d.ts:368</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -541,7 +596,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFQuery<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFQueryParams</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L623">index.d.ts:623</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L671">index.d.ts:671</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -556,7 +611,7 @@
 					<div class="tsd-signature tsd-kind-icon">IMatrix<wbr>Display<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"auto"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stretch"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L1884">index.d.ts:1884</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1944">index.d.ts:1944</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -574,7 +629,7 @@
 					<div class="tsd-signature tsd-kind-icon">IOpt<wbr>Input<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"select"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"input"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select-input"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4098">index.d.ts:4098</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L4158">index.d.ts:4158</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -584,7 +639,7 @@
 					<div class="tsd-signature tsd-kind-icon">IOpt<wbr>Mapping<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof IOptMapping</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4096">index.d.ts:4096</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L4156">index.d.ts:4156</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -594,7 +649,7 @@
 					<div class="tsd-signature tsd-kind-icon">IQues<wbr>Type<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"choice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"region"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"intro-page"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"end-page"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"short-text"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"gender"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"reward"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"icon"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"location"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"lottery"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"rating"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"range"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"dropdown"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"picture-choice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ranking"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"file-upload"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"verification"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"weight"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cascade"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hot-spot"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"slide-rate"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L2901">index.d.ts:2901</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L2961">index.d.ts:2961</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -609,7 +664,7 @@
 					<div class="tsd-signature tsd-kind-icon">Input<wbr>Tolerance<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"number"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"alphabet"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"chinese"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4373">index.d.ts:4373</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L4433">index.d.ts:4433</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -619,7 +674,7 @@
 					<div class="tsd-signature tsd-kind-icon">Ui<wbr>Plugin<wbr>Target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"body"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"head"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L4827">index.d.ts:4827</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L4887">index.d.ts:4887</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -632,7 +687,7 @@
 					<div class="tsd-signature tsd-kind-icon">CFClient<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_index_d_.cfclient.html" class="tsd-signature-type">CFClient</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L167">index.d.ts:167</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L206">index.d.ts:206</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -692,6 +747,9 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfcore.html" class="tsd-kind-icon">CFCore</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfcorebase.html" class="tsd-kind-icon">CFCore<wbr>Base</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfcustomlogo.html" class="tsd-kind-icon">CFCustom<wbr>Logo</a>
@@ -1001,6 +1059,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cfeventhubcb" class="tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#cfeventnames" class="tsd-kind-icon">CFEvent<wbr>Names</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cffontweightvalue" class="tsd-kind-icon">CFFont<wbr>Weight<wbr>Value</a>

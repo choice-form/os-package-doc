@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FlatItem | @choiceform/os-client-core</title>
+	<title>CFCoreBase | @choiceform/os-client-core</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.flatitem.html">FlatItem</a>
+					<a href="_index_d_.cfcorebase.html">CFCoreBase</a>
 				</li>
 			</ul>
-			<h1>Interface FlatItem</h1>
+			<h1>Interface CFCoreBase</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>摊开的矩阵</p>
+						<p>核心基础数据</p>
 					</div>
 				</div>
 			</section>
@@ -78,7 +78,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FlatItem</span>
+						<span class="target">CFCoreBase</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="_index_d_.cfcore.html" class="tsd-signature-type">CFCore</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -89,9 +94,14 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.flatitem.html#length" class="tsd-kind-icon">length</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.flatitem.html#list" class="tsd-kind-icon">list</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.flatitem.html#text" class="tsd-kind-icon">text</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcorebase.html#crashed" class="tsd-kind-icon">crashed</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcorebase.html#initialized" class="tsd-kind-icon">initialized</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcorebase.html#intro" class="tsd-kind-icon">intro</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcorebase.html#needpreviewflag" class="tsd-kind-icon">need<wbr>Preview<wbr>Flag</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcorebase.html#preview" class="tsd-kind-icon">preview</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcorebase.html#questions" class="tsd-kind-icon">questions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcorebase.html#realtime" class="tsd-kind-icon">realtime</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfcorebase.html#reward" class="tsd-kind-icon">reward</a></li>
 							</ul>
 						</section>
 					</div>
@@ -100,34 +110,124 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="length" class="tsd-anchor"></a>
-					<h3>length</h3>
-					<div class="tsd-signature tsd-kind-icon">length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="crashed" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> crashed</h3>
+					<div class="tsd-signature tsd-kind-icon">crashed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1976">index.d.ts:1976</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L908">index.d.ts:908</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否已经终止运行</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="list" class="tsd-anchor"></a>
-					<h3>list</h3>
-					<div class="tsd-signature tsd-kind-icon">list<span class="tsd-signature-symbol">:</span> <a href="_index_d_.matrixitem.html" class="tsd-signature-type">MatrixItem</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="initialized" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> initialized</h3>
+					<div class="tsd-signature tsd-kind-icon">initialized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1975">index.d.ts:1975</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L904">index.d.ts:904</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否初始化成功了</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="text" class="tsd-anchor"></a>
-					<h3>text</h3>
-					<div class="tsd-signature tsd-kind-icon">text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="intro" class="tsd-anchor"></a>
+					<h3>intro</h3>
+					<div class="tsd-signature tsd-kind-icon">intro<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfintro.html" class="tsd-signature-type">CFIntro</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1977">index.d.ts:1977</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L912">index.d.ts:912</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>封面数据</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="needpreviewflag" class="tsd-anchor"></a>
+					<h3>need<wbr>Preview<wbr>Flag</h3>
+					<div class="tsd-signature tsd-kind-icon">need<wbr>Preview<wbr>Flag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L900">index.d.ts:900</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否禁用预览工具条</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="preview" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> preview</h3>
+					<div class="tsd-signature tsd-kind-icon">preview<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L896">index.d.ts:896</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否为预览模式</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="questions" class="tsd-anchor"></a>
+					<h3>questions</h3>
+					<div class="tsd-signature tsd-kind-icon">questions<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfstate.html" class="tsd-signature-type">CFState</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L916">index.d.ts:916</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>答题页面数据</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="realtime" class="tsd-anchor"></a>
+					<h3>realtime</h3>
+					<div class="tsd-signature tsd-kind-icon">realtime<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">CFRealTime</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L924">index.d.ts:924</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>实时预览页面数据</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="reward" class="tsd-anchor"></a>
+					<h3>reward</h3>
+					<div class="tsd-signature tsd-kind-icon">reward<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfrewardmodel.html" class="tsd-signature-type">CFRewardModel</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L920">index.d.ts:920</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>奖励页面数据</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -147,16 +247,31 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.flatitem.html" class="tsd-kind-icon">Flat<wbr>Item</a>
+						<a href="_index_d_.cfcorebase.html" class="tsd-kind-icon">CFCore<wbr>Base</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.flatitem.html#length" class="tsd-kind-icon">length</a>
+								<a href="_index_d_.cfcorebase.html#crashed" class="tsd-kind-icon">crashed</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.flatitem.html#list" class="tsd-kind-icon">list</a>
+								<a href="_index_d_.cfcorebase.html#initialized" class="tsd-kind-icon">initialized</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.flatitem.html#text" class="tsd-kind-icon">text</a>
+								<a href="_index_d_.cfcorebase.html#intro" class="tsd-kind-icon">intro</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfcorebase.html#needpreviewflag" class="tsd-kind-icon">need<wbr>Preview<wbr>Flag</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfcorebase.html#preview" class="tsd-kind-icon">preview</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfcorebase.html#questions" class="tsd-kind-icon">questions</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfcorebase.html#realtime" class="tsd-kind-icon">realtime</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfcorebase.html#reward" class="tsd-kind-icon">reward</a>
 							</li>
 						</ul>
 					</li>

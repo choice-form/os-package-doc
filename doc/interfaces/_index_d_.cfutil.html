@@ -91,6 +91,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#forceupdatedevice" class="tsd-kind-icon">force<wbr>Update<wbr>Device</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#getplatform" class="tsd-kind-icon">get<wbr>Platform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#getquestionspageparam" class="tsd-kind-icon">get<wbr>Questions<wbr>Page<wbr>Param</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#getquestionspageurl" class="tsd-kind-icon">get<wbr>Questions<wbr>Page<wbr>Url</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#getsidofstandardurl" class="tsd-kind-icon">get<wbr>Sid<wbr>OfStandard<wbr>Url</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#initpreviewuploader" class="tsd-kind-icon">init<wbr>Preview<wbr>Uploader</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfutil.html#isautorun" class="tsd-kind-icon">is<wbr>Auto<wbr>Run</a></li>
@@ -115,7 +117,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L280">index.d.ts:280</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L319">index.d.ts:319</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -145,7 +147,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L275">index.d.ts:275</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L314">index.d.ts:314</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -167,6 +169,59 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="getquestionspageparam" class="tsd-anchor"></a>
+					<h3>get<wbr>Questions<wbr>Page<wbr>Param</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Questions<wbr>Page<wbr>Param<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_index_d_.cfqueryparams.html" class="tsd-signature-type">CFQueryParams</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L339">index.d.ts:339</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>获取答题页面的查询参数</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="_index_d_.cfqueryparams.html" class="tsd-signature-type">CFQueryParams</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="getquestionspageurl" class="tsd-anchor"></a>
+					<h3>get<wbr>Questions<wbr>Page<wbr>Url</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Questions<wbr>Page<wbr>Url<span class="tsd-signature-symbol">(</span>routeName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L344">index.d.ts:344</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>获取答题页面的地址,会自动拼接上参数</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>routeName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>你为答题页配置的路由名称</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="getsidofstandardurl" class="tsd-anchor"></a>
 					<h3>get<wbr>Sid<wbr>OfStandard<wbr>Url</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -176,7 +231,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L296">index.d.ts:296</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L335">index.d.ts:335</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -204,7 +259,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L305">index.d.ts:305</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L353">index.d.ts:353</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -226,7 +281,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L309">index.d.ts:309</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L357">index.d.ts:357</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -248,7 +303,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L313">index.d.ts:313</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L361">index.d.ts:361</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -270,7 +325,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L286">index.d.ts:286</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L325">index.d.ts:325</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -302,7 +357,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L301">index.d.ts:301</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L349">index.d.ts:349</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -333,7 +388,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/58b7233/index.d.ts#L270">index.d.ts:270</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L309">index.d.ts:309</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -383,6 +438,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfutil.html#getplatform" class="tsd-kind-icon">get<wbr>Platform</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfutil.html#getquestionspageparam" class="tsd-kind-icon">get<wbr>Questions<wbr>Page<wbr>Param</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfutil.html#getquestionspageurl" class="tsd-kind-icon">get<wbr>Questions<wbr>Page<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfutil.html#getsidofstandardurl" class="tsd-kind-icon">get<wbr>Sid<wbr>OfStandard<wbr>Url</a>
