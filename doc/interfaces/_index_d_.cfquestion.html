@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFQuestion | @choiceform/os-client-core</title>
+	<title>CFQuestion | @choiceform/os-client-core - v1.0.49</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v1.0.49</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -78,10 +78,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="_index_d_.cfnode.html" class="tsd-signature-type">CFNode</a>
+						<span class="tsd-signature-type">ICFNode</span>
 					</li>
 					<li>
-						<a href="_index_d_.typeinfo.html" class="tsd-signature-type">TypeInfo</a>
+						<span class="tsd-signature-type">ICFTypeInfo</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">CFQuestion</span>
@@ -90,13 +90,13 @@
 										<a href="_index_d_.cfsubjectquestion.html" class="tsd-signature-type">CFSubjectQuestion</a>
 									</li>
 									<li>
-										<a href="_index_d_.cfvalidatequestion.html" class="tsd-signature-type">CFValidateQuestion</a>
+										<a href="_index_d_.cfverificationquestion.html" class="tsd-signature-type">CFVerificationQuestion</a>
 									</li>
 									<li>
-										<a href="_index_d_.cfendquestion.html" class="tsd-signature-type">CFEndQuestion</a>
+										<a href="_index_d_.cfendpage.html" class="tsd-signature-type">CFEndPage</a>
 									</li>
 									<li>
-										<a href="_index_d_.cflotteryquestion.html" class="tsd-signature-type">CFLotteryQuestion</a>
+										<a href="_index_d_.cflotterypage.html" class="tsd-signature-type">CFLotteryPage</a>
 									</li>
 								</ul>
 							</li>
@@ -114,29 +114,24 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#asterisks" class="tsd-kind-icon">asterisks</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#description" class="tsd-kind-icon">description</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#groupid" class="tsd-kind-icon">group<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#layout" class="tsd-kind-icon">layout</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#lockloopcount" class="tsd-kind-icon">lock<wbr>Loop<wbr>Count</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#next" class="tsd-kind-icon">next</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#nodeuuid" class="tsd-kind-icon">node<wbr>Uuid</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#number" class="tsd-kind-icon">number</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#parent" class="tsd-kind-icon">parent</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#prev" class="tsd-kind-icon">prev</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#readonly" class="tsd-kind-icon">readonly</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#shadownodes" class="tsd-kind-icon">shadow<wbr>Nodes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#template" class="tsd-kind-icon">template</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#title" class="tsd-kind-icon">title</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfquestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#uiplugin" class="tsd-kind-icon">ui<wbr>Plugin</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfquestion.html#value" class="tsd-kind-icon">value</a></li>
 							</ul>
 						</section>
@@ -151,13 +146,13 @@
 					<div class="tsd-signature tsd-kind-icon">asterisks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1763">index.d.ts:1763</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1732">index.d.ts:1732</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>是否显示必答标记
-							当该属性为true,应该在题目中标记该题为必答题</p>
+							<p>是否显示必答标星
+							如果该属性为true,则UI上需要显示一个标志告知该题是必答题</p>
 						</div>
 					</div>
 				</section>
@@ -167,7 +162,7 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1779">index.d.ts:1779</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1742">index.d.ts:1742</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -183,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">error<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1845">index.d.ts:1845</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1810">index.d.ts:1810</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -191,23 +186,8 @@
 							<p>关联的错误消息
 								当单页存在很多题目,点击下一题按钮时,如果有些题目的回答内容不符合规范,
 								这些题目的该属性会被设置为一个错误消息,这时候UI需要在该题目的某个渲染该错误消息
-							让答题者知道为什么错了.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="groupid" class="tsd-anchor"></a>
-					<h3>group<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">group<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfnode.html">CFNode</a>.<a href="_index_d_.cfnode.html#groupid">groupId</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1608">index.d.ts:1608</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>所属组id</p>
+								让答题者知道为什么错了.
+							单题的时候一般不用渲染</p>
 						</div>
 					</div>
 				</section>
@@ -216,9 +196,9 @@
 					<h3>group<wbr>Single</h3>
 					<div class="tsd-signature tsd-kind-icon">group<wbr>Single<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfnode.html">CFNode</a>.<a href="_index_d_.cfnode.html#groupsingle">groupSingle</a></p>
+						<p>Inherited from ICFNode.groupSingle</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1612">index.d.ts:1612</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1580">index.d.ts:1580</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -233,12 +213,12 @@
 					<div class="tsd-signature tsd-kind-icon">has<wbr>Answer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1732">index.d.ts:1732</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1705">index.d.ts:1705</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>是否包含答案</p>
+							<p>是否已经被恢复包含了答案</p>
 						</div>
 					</div>
 				</section>
@@ -247,9 +227,9 @@
 					<h3>layout</h3>
 					<div class="tsd-signature tsd-kind-icon">layout<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfnodelayout.html" class="tsd-signature-type">CFNodeLayout</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfnode.html">CFNode</a>.<a href="_index_d_.cfnode.html#layout">layout</a></p>
+						<p>Inherited from ICFNode.layout</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1575">index.d.ts:1575</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1521">index.d.ts:1521</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -260,66 +240,18 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="lockloopcount" class="tsd-anchor"></a>
-					<h3>lock<wbr>Loop<wbr>Count</h3>
-					<div class="tsd-signature tsd-kind-icon">lock<wbr>Loop<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfnode.html">CFNode</a>.<a href="_index_d_.cfnode.html#lockloopcount">lockLoopCount</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1642">index.d.ts:1642</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>锁定循环次数</p>
-						</div>
-					</div>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="next" class="tsd-anchor"></a>
 					<h3>next</h3>
 					<div class="tsd-signature tsd-kind-icon">next<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1817">index.d.ts:1817</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1781">index.d.ts:1781</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>后一道题</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="nodename" class="tsd-anchor"></a>
-					<h3>node<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">node<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfnode.html">CFNode</a>.<a href="_index_d_.cfnode.html#nodename">nodeName</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1624">index.d.ts:1624</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>节点名称</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="nodeuuid" class="tsd-anchor"></a>
-					<h3>node<wbr>Uuid</h3>
-					<div class="tsd-signature tsd-kind-icon">node<wbr>Uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfnode.html">CFNode</a>.<a href="_index_d_.cfnode.html#nodeuuid">nodeUuid</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1638">index.d.ts:1638</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>节点id</p>
 						</div>
 					</div>
 				</section>
@@ -329,12 +261,12 @@
 					<div class="tsd-signature tsd-kind-icon">number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1822">index.d.ts:1822</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1786">index.d.ts:1786</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>编号,代表当前是第几题
+							<p>编号,该题的唯一代号
 							如果有该属性,UI要渲染</p>
 						</div>
 					</div>
@@ -344,9 +276,9 @@
 					<h3>page<wbr>End</h3>
 					<div class="tsd-signature tsd-kind-icon">page<wbr>End<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfnode.html">CFNode</a>.<a href="_index_d_.cfnode.html#pageend">pageEnd</a></p>
+						<p>Inherited from ICFNode.pageEnd</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1620">index.d.ts:1620</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1588">index.d.ts:1588</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -360,9 +292,9 @@
 					<h3>page<wbr>Start</h3>
 					<div class="tsd-signature tsd-kind-icon">page<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfnode.html">CFNode</a>.<a href="_index_d_.cfnode.html#pagestart">pageStart</a></p>
+						<p>Inherited from ICFNode.pageStart</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1616">index.d.ts:1616</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1584">index.d.ts:1584</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -374,15 +306,16 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="parent" class="tsd-anchor"></a>
 					<h3>parent</h3>
-					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfstate.html" class="tsd-signature-type">CFState</a></div>
+					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1783">index.d.ts:1783</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1747">index.d.ts:1747</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>总状态引用</p>
+							<p>总状态引用
+							通过该属性可以访问到上一层数据</p>
 						</div>
 					</div>
 				</section>
@@ -392,7 +325,7 @@
 					<div class="tsd-signature tsd-kind-icon">prev<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1813">index.d.ts:1813</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1777">index.d.ts:1777</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -404,20 +337,35 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="questype" class="tsd-anchor"></a>
 					<h3>ques<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">ques<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#iquestypevalue" class="tsd-signature-type">IQuesTypeValue</a></div>
+					<div class="tsd-signature tsd-kind-icon">ques<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#cfquestypevalue" class="tsd-signature-type">CFQuesTypeValue</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1751">index.d.ts:1751</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1720">index.d.ts:1720</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>自动提供好的题目渲染类型
-							你可以根据这个属性来决定渲染不同题目的模板,</p>
+								你可以根据这个属性来决定渲染不同题目的模板,
+							如choice的时候渲染选择题,short-text的时候渲染成填空题</p>
 						</div>
-						<p>如choice的时候渲染选择题,short-text的时候渲染成填空题</p>
-						<p>也可以不依照此类型,而是依照<a href="_index_d_.cfquestion.html#type">CFQuestion.type</a>来决定如何渲染
-						相比之下使用<a href="_index_d_.cfquestion.html#type">CFQuestion.type</a>的方式更自由</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="readonly" class="tsd-anchor"></a>
+					<h3>readonly</h3>
+					<div class="tsd-signature tsd-kind-icon">readonly<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ICFNode.readonly</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1551">index.d.ts:1551</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>该题目只需要显示,不能更改答案
+							UI上要禁用用户操作</p>
+						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
@@ -426,7 +374,7 @@
 					<div class="tsd-signature tsd-kind-icon">realtime<wbr>Preview<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1736">index.d.ts:1736</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1709">index.d.ts:1709</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -441,7 +389,7 @@
 					<div class="tsd-signature tsd-kind-icon">render<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1809">index.d.ts:1809</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1773">index.d.ts:1773</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -458,7 +406,7 @@
 					<div class="tsd-signature tsd-kind-icon">select<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"checkbox"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"radio"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1758">index.d.ts:1758</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1727">index.d.ts:1727</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -471,18 +419,20 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="shadownodes" class="tsd-anchor"></a>
-					<h3>shadow<wbr>Nodes</h3>
-					<div class="tsd-signature tsd-kind-icon">shadow<wbr>Nodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="template" class="tsd-anchor"></a>
+					<h3>template</h3>
+					<div class="tsd-signature tsd-kind-icon">template<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfnodetemplate.html" class="tsd-signature-type">CFNodeTemplate</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfnode.html">CFNode</a>.<a href="_index_d_.cfnode.html#shadownodes">shadowNodes</a></p>
+						<p>Inherited from ICFNode.template</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1584">index.d.ts:1584</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1527">index.d.ts:1527</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>仅在预览时显示</p>
+							<p>模板信息,如果是动态加载组件的答题客户端
+								问题页面中不是主角判断节点类型来渲染不同的节点组件的
+							而是要通过该属性获取设计端配置好的组件,然后用该组件渲染</p>
 						</div>
 					</div>
 				</section>
@@ -492,7 +442,7 @@
 					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1774">index.d.ts:1774</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1737">index.d.ts:1737</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -503,30 +453,13 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="type" class="tsd-anchor"></a>
-					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.node_type.html" class="tsd-signature-type">NODE_TYPE</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfnode.html">CFNode</a>.<a href="_index_d_.cfnode.html#type">type</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1629">index.d.ts:1629</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>节点类型
-							UI可以根据该类型来决定如何渲染一道题目</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="typedescription" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> type<wbr>Description</h3>
 					<div class="tsd-signature tsd-kind-icon">type<wbr>Description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.typeinfo.html">TypeInfo</a>.<a href="_index_d_.typeinfo.html#typedescription">typeDescription</a></p>
+						<p>Inherited from ICFTypeInfo.typeDescription</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L2955">index.d.ts:2955</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L3331">index.d.ts:3331</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -541,9 +474,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> type<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">type<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.typeinfo.html">TypeInfo</a>.<a href="_index_d_.typeinfo.html#typename">typeName</a></p>
+						<p>Inherited from ICFTypeInfo.typeName</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L2950">index.d.ts:2950</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L3326">index.d.ts:3326</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -554,27 +487,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="uiplugin" class="tsd-anchor"></a>
-					<h3>ui<wbr>Plugin</h3>
-					<div class="tsd-signature tsd-kind-icon">ui<wbr>Plugin<span class="tsd-signature-symbol">:</span> <a href="_index_d_.uiplugin.html" class="tsd-signature-type">UiPlugin</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1864">index.d.ts:1864</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>ui插件对象</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="value" class="tsd-anchor"></a>
 					<h3>value</h3>
 					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L1828">index.d.ts:1828</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1792">index.d.ts:1792</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -594,7 +512,7 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_index_d_.html">"index.d"</a>
+						<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -615,9 +533,6 @@
 								<a href="_index_d_.cfquestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfquestion.html#groupid" class="tsd-kind-icon">group<wbr>Id</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfquestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
@@ -626,17 +541,8 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfquestion.html#layout" class="tsd-kind-icon">layout</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfquestion.html#lockloopcount" class="tsd-kind-icon">lock<wbr>Loop<wbr>Count</a>
-							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfquestion.html#next" class="tsd-kind-icon">next</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfquestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfquestion.html#nodeuuid" class="tsd-kind-icon">node<wbr>Uuid</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfquestion.html#number" class="tsd-kind-icon">number</a>
@@ -656,6 +562,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfquestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfquestion.html#readonly" class="tsd-kind-icon">readonly</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfquestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a>
 							</li>
@@ -666,22 +575,16 @@
 								<a href="_index_d_.cfquestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfquestion.html#shadownodes" class="tsd-kind-icon">shadow<wbr>Nodes</a>
+								<a href="_index_d_.cfquestion.html#template" class="tsd-kind-icon">template</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfquestion.html#title" class="tsd-kind-icon">title</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfquestion.html#type" class="tsd-kind-icon">type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfquestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfquestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfquestion.html#uiplugin" class="tsd-kind-icon">ui<wbr>Plugin</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfquestion.html#value" class="tsd-kind-icon">value</a>

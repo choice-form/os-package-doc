@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFSetupOptions | @choiceform/os-client-core</title>
+	<title>CFSetupOptions | @choiceform/os-client-core - v1.0.49</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v1.0.49</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -94,15 +94,14 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#clientname" class="tsd-kind-icon">client<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#dynamic" class="tsd-kind-icon">dynamic</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#hostconfig" class="tsd-kind-icon">host<wbr>Config</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#indexurl" class="tsd-kind-icon">index<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#key" class="tsd-kind-icon">key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#langsrcmap" class="tsd-kind-icon">lang<wbr>Src<wbr>Map</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#realtimepreview" class="tsd-kind-icon">real<wbr>Time<wbr>Preview</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#rewardurl" class="tsd-kind-icon">reward<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#setter" class="tsd-kind-icon">setter</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#surenosetter" class="tsd-kind-icon">sure<wbr>NoSetter</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#surveyid" class="tsd-kind-icon">survey<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#templatepath" class="tsd-kind-icon">template<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#treeurl" class="tsd-kind-icon">tree<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#usewxsdk" class="tsd-kind-icon">use<wbr>WxSdk</a></li>
 							</ul>
 						</section>
@@ -117,7 +116,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#setlocale" class="tsd-kind-icon">set<wbr>Locale</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#settheme" class="tsd-kind-icon">set<wbr>Theme</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#suspendnotify" class="tsd-kind-icon">suspend<wbr>Notify</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#translate" class="tsd-kind-icon">translate</a></li>
 							</ul>
 						</section>
 					</div>
@@ -126,12 +124,45 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="clientname" class="tsd-anchor"></a>
+					<h3>client<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">client<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L916">index.d.ts:916</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>所代表的的客户端名称
+								会用验证问卷是否适合使用当前客户端渲染
+								只有问卷中指定的客户端名称和自己的该名称相同时,才能渲染
+							否则会报错</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="dynamic" class="tsd-anchor"></a>
+					<h3>dynamic</h3>
+					<div class="tsd-signature tsd-kind-icon">dynamic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L920">index.d.ts:920</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>指定该客户端是不是动态加载模板的</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="hostconfig" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> host<wbr>Config</h3>
 					<div class="tsd-signature tsd-kind-icon">host<wbr>Config<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfhostconfig.html" class="tsd-signature-type">CFHostConfig</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L790">index.d.ts:790</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L942">index.d.ts:942</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -141,32 +172,17 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="indexurl" class="tsd-anchor"></a>
-					<h3>index<wbr>Url</h3>
-					<div class="tsd-signature tsd-kind-icon">index<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L786">index.d.ts:786</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>首页地址，必须设置</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="key" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> key</h3>
 					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L770">index.d.ts:770</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L938">index.d.ts:938</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>os-client的开发者凭证</p>
+							<p>os-client的开发者凭证,暂时可以不设置</p>
 						</div>
 					</div>
 				</section>
@@ -176,31 +192,31 @@
 					<div class="tsd-signature tsd-kind-icon">lang<wbr>Src<wbr>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L856">index.d.ts:856</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1008">index.d.ts:1008</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>如果使用了核心模块自带的翻译功能，但是觉得核心模块提供翻译文本内容不好，或者支持的语言不够多
-								则可以配置该属性指定使用自己准备的翻译文本，这个配置的每个属性的属性名是语言代号，
+							<p>如果觉得核心包中逻辑相关的提示文字多语言翻译不满足你的要求，或者支持的语言不够多
+								你可以配置该属性指定使用自己准备的翻译文本，这个配置的每个属性的属性名是语言代号，
 								其属性值是该语言翻译文本（json格式）所在的网络地址
-								比如，如核心模块当前仅提供了中文（zh-CN）和英文（en-US）的多语言文本
+								比如，核心模块当前仅提供了中文（zh_cn）和英文（en_us）的多语言文本
 								现在你对核心模块的中文翻译是满意的但是对核心模块的英文的翻译内容不满意，
 							这样你就可以配置该属性如下内容</p>
 						</div>
 						<p>(我们假设你将多语言文本放到了下面这个网址中)</p>
 						<pre><code>{
- <span class="hljs-string">"en-US"</span>: <span class="hljs-symbol">'https</span>:<span class="hljs-comment">//yousite.com/your-os-client/es-us.json'</span>
-}</code></pre><p>以上配置会覆盖掉默认的英文翻译，当进行因为英文翻译是，会只用你提供的这本json作为翻译依据，
+ <span class="hljs-attr">"en_us"</span>: 'https:<span class="hljs-comment">//yousite.com/your-os-client/es_us.json'</span>
+}</code></pre><p>以上配置会覆盖掉默认的英文翻译，当进行英文翻译时，会只用你提供的这本json作为翻译依据，
 						核心模块提供的英文翻译会被丢弃</p>
-						<p>如果同时你希望有日文版的多语言翻译，但是默认的翻译只包含了中文和英文，这是你可以添加配置日文翻译文本</p>
+						<p>如果在此基础上,同时你希望有日文版的多语言翻译，这时你可以添加配置日文翻译文本</p>
 						<pre><code>{
- <span class="hljs-string">"en-US"</span>: <span class="hljs-symbol">'https</span>:<span class="hljs-comment">//yousite.com/your-os-client/es-us.json',</span>
- <span class="hljs-string">"ja-JP"</span>: <span class="hljs-symbol">'https</span>:<span class="hljs-comment">//yousite.com/your-os-client/ja-jp.json',</span>
+ <span class="hljs-attr">"en_us"</span>: 'https:<span class="hljs-comment">//yousite.com/your-os-client/es_us.json',</span>
+ <span class="hljs-string">"ja_jp"</span>: 'https:<span class="hljs-comment">//yousite.com/your-os-client/ja_jp.json',</span>
 }</code></pre><p>以上的配置覆盖了英文翻译，同时新增了日文翻译。</p>
 						<p>每本json要准备的数据格式在<a href="_index_d_.lang_zh_cn.html">LANG_ZH_CN</a>和<a href="_index_d_.lang_en_us.html">LANG_EN_US</a>中做出了示范.</p>
 						<p>各种语言的代号可参照<a href="https://en.wikipedia.org/wiki/Language_localisation">百科全书</a></p>
-						<p>如果同时设置了<a href="_index_d_.cfsetupoptions.html#translate">CFSetupOptions.translate</a>方法，则该配置会失效</p>
+						<p>我们统一使用<code>xx_xx</code>小写字母加下划线形式的代号</p>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -212,42 +228,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="realtimepreview" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> real<wbr>Time<wbr>Preview</h3>
-					<div class="tsd-signature tsd-kind-icon">real<wbr>Time<wbr>Preview<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L778">index.d.ts:778</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>如果使用来实时预览，可以设置该属性为true</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="rewardurl" class="tsd-anchor"></a>
-					<h3>reward<wbr>Url</h3>
-					<div class="tsd-signature tsd-kind-icon">reward<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L782">index.d.ts:782</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>奖励页面地址，必须设置</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="setter" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> setter</h3>
 					<div class="tsd-signature tsd-kind-icon">setter<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#cfpropsetfn" class="tsd-signature-type">CFPropSetFn</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L757">index.d.ts:757</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L909">index.d.ts:909</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -265,52 +251,70 @@
 							逻辑中提供的选项点击回调函数，在该函数中会将option.selected改为true，
 							但是UI模板并不知道这个属性发生了变化，所以依然渲染成了灰色，这时就需要用的这个配置方法。
 						如使用emberjs的时候我们将该方法配置为EmberObject的setProperties方法，</p>
-						<pre><code class="language-typescript">
+						<pre><code class="language-typescript">  <span class="hljs-keyword">import</span> {setProperties} <span class="hljs-keyword">from</span> <span class="hljs-string">'@ember/object'</span>;
   options.setter = setProperties</code></pre>
 						<p>使用angularjs(version 1.x)是我们可以使用$scope.digest或$timeout来触发变化</p>
-						<pre><code class="language-typescript"> options.setter = <span class="hljs-function">(<span class="hljs-params">obj, props</span>) =&gt;</span> {
-    <span class="hljs-built_in">Object</span>.assign(obj, props);
+						<pre><code class="language-typescript"> options.setter = <span class="hljs-function">(<span class="hljs-params">toObj, propsObj</span>) =&gt;</span> {
+    <span class="hljs-built_in">Object</span>.assign(toObj, propsObj);
     $timeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})
     <span class="hljs-comment">// 或者</span>
     $rootScope.digest();
  }</code></pre>
 						<p>使用angular(version 2+)时，我们可以使用app.tick()来触发变化</p>
-						<pre><code class="language-typescript"> options.setter = <span class="hljs-function">(<span class="hljs-params">obj, props</span>) =&gt;</span> {
-    <span class="hljs-built_in">Object</span>.assign(obj, props);
+						<pre><code class="language-typescript"> options.setter = <span class="hljs-function">(<span class="hljs-params">toObj, propsObj</span>) =&gt;</span> {
+    <span class="hljs-built_in">Object</span>.assign(toObj, propsObj);
     app.tick()
  }</code></pre>
+						<p>使用react时，我们可以使用顶层的setState来触发变化</p>
+						<pre><code class="language-typescript"> options.setter = <span class="hljs-function">(<span class="hljs-params">toObj, propsObj</span>) =&gt;</span> {
+    <span class="hljs-built_in">Object</span>.assign(toObj, propsObj);
+    <span class="hljs-keyword">this</span>.setState({});
+ }</code></pre>
+						<p>每次更改都会调用这个方法,可能每次操作会触发多次调用,可能会有性能影响
+							所以可以考虑使用debounce过的方法,来作为回调方法,减少触发更新的次数,减少性能上的影响.
+							也可以不设置这个方法,而是使用<a href="_index_d_.cfclient.html#eventhub">CFClient.EventHub</a>监听<code>SET_PROPS</code>事件,
+						然后在个事件的回调中,驱动框架更新状态</p>
+						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {EventHub} <span class="hljs-keyword">from</span> <span class="hljs-string">"@choiceform/os-client-core"</span>;
+EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-comment">// 这里放置驱动框架更新的代码</span>
+  <span class="hljs-comment">// 如:this.setState();</span>
+  <span class="hljs-comment">// 如:app.tick();</span>
+  <span class="hljs-comment">// 如:$rootScope.digest();</span>
+  <span class="hljs-comment">// 等等...</span>
+})</code></pre>
 						<p>具体的使用方式在各个框架的client-demo中也会展示。
 						如果你使用的模板引擎能自动检查到外部数据的变化，则可以不配置该方法</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="surenosetter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> sure<wbr>NoSetter</h3>
-					<div class="tsd-signature tsd-kind-icon">sure<wbr>NoSetter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="templatepath" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> template<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">template<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L762">index.d.ts:762</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L925">index.d.ts:925</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>如果没有配置setter，控制台会报出警告，以防你忘记配置setter方法了
-							当你确定不需要配置setter的话，通过将该属性设置为true可以禁用警告信息</p>
+							<p>动态加载的模板文件夹所在路径
+							如果是动态加载的,则一定要准备好改属性</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="surveyid" class="tsd-anchor"></a>
-					<h3>survey<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">survey<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="treeurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tree<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">tree<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L774">index.d.ts:774</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L930">index.d.ts:930</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>问卷id，必须设置</p>
+							<p>模板树所在地址
+							如果是动态加载的,则一定要准备好改属性</p>
 						</div>
 					</div>
 				</section>
@@ -320,7 +324,7 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>WxSdk<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L766">index.d.ts:766</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L934">index.d.ts:934</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -342,7 +346,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L887">index.d.ts:887</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1028">index.d.ts:1028</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -370,7 +374,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L814">index.d.ts:814</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L966">index.d.ts:966</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -400,13 +404,13 @@
 					<a name="locateerror" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> locate<wbr>Error</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">locate<wbr>Error<span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CFValidateResult</span>, state<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfstate.html" class="tsd-signature-type">CFState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">locate<wbr>Error<span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ICFValidateResult</span>, state<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L823">index.d.ts:823</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L975">index.d.ts:975</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -420,13 +424,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>result: <span class="tsd-signature-type">CFValidateResult</span></h5>
+									<h5>result: <span class="tsd-signature-type">ICFValidateResult</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>错误信息</p>
 									</div>
 								</li>
 								<li>
-									<h5>state: <a href="_index_d_.cfstate.html" class="tsd-signature-type">CFState</a></h5>
+									<h5>state: <a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>总状态</p>
 									</div>
@@ -446,7 +450,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L804">index.d.ts:804</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L956">index.d.ts:956</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -480,7 +484,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L883">index.d.ts:883</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1024">index.d.ts:1024</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -494,7 +498,7 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="setlocale" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> set<wbr>Locale</h3>
+					<h3>set<wbr>Locale</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">set<wbr>Locale<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
@@ -502,13 +506,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L873">index.d.ts:873</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1016">index.d.ts:1016</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>如果配置了该方法，当前使用的语言发生变化时该方法会被调用，
-									如有需要，你可以在这个方法做些额外的处理来应对语言的变化。</p>
+									<p>设置该方法来监听核心包的多语言变化,当核心包多语言切换时,会调用该方法
+										UI程序中监听到这个变化后也要切换多语言,
+									才能做到核心包提示的信息和UI组件中自己的显示内容使用了同一种语言</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -534,7 +539,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L796">index.d.ts:796</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L948">index.d.ts:948</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -566,7 +571,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L878">index.d.ts:878</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c6e0827/index.d.ts#L1020">index.d.ts:1020</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -575,47 +580,6 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="translate" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> translate</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">translate<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cdedaf4/index.d.ts#L867">index.d.ts:867</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>如果不项使用内置的多语言翻译则可以配置这个方式，这个方法接收到翻译完的文本代号，
-									你可以使用你像样的任何方式将它翻译好得到翻译好的文本内容并返回即可</p>
-								</div>
-								<p>注意：即使你使用的是携带了默认翻译的的核心包文件，但是你只要配置了该方法，默认翻译功能就会停用。
-								一般只有你使用的是不携带默认翻译的核心包文件时才配置该方法。</p>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>message: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>翻译之前的文本代号</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>如果这个文本代号要求使用变量，则这里是变量信息</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-							<p>翻译好了的文本内容</p>
 						</li>
 					</ul>
 				</section>
@@ -628,7 +592,7 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_index_d_.html">"index.d"</a>
+						<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -640,10 +604,13 @@
 						<a href="_index_d_.cfsetupoptions.html" class="tsd-kind-icon">CFSetup<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfsetupoptions.html#hostconfig" class="tsd-kind-icon">host<wbr>Config</a>
+								<a href="_index_d_.cfsetupoptions.html#clientname" class="tsd-kind-icon">client<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfsetupoptions.html#indexurl" class="tsd-kind-icon">index<wbr>Url</a>
+								<a href="_index_d_.cfsetupoptions.html#dynamic" class="tsd-kind-icon">dynamic</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfsetupoptions.html#hostconfig" class="tsd-kind-icon">host<wbr>Config</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfsetupoptions.html#key" class="tsd-kind-icon">key</a>
@@ -652,19 +619,13 @@
 								<a href="_index_d_.cfsetupoptions.html#langsrcmap" class="tsd-kind-icon">lang<wbr>Src<wbr>Map</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfsetupoptions.html#realtimepreview" class="tsd-kind-icon">real<wbr>Time<wbr>Preview</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfsetupoptions.html#rewardurl" class="tsd-kind-icon">reward<wbr>Url</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfsetupoptions.html#setter" class="tsd-kind-icon">setter</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfsetupoptions.html#surenosetter" class="tsd-kind-icon">sure<wbr>NoSetter</a>
+								<a href="_index_d_.cfsetupoptions.html#templatepath" class="tsd-kind-icon">template<wbr>Path</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfsetupoptions.html#surveyid" class="tsd-kind-icon">survey<wbr>Id</a>
+								<a href="_index_d_.cfsetupoptions.html#treeurl" class="tsd-kind-icon">tree<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfsetupoptions.html#usewxsdk" class="tsd-kind-icon">use<wbr>WxSdk</a>
@@ -692,9 +653,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfsetupoptions.html#suspendnotify" class="tsd-kind-icon">suspend<wbr>Notify</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfsetupoptions.html#translate" class="tsd-kind-icon">translate</a>
 							</li>
 						</ul>
 					</li>
