@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFLangTableItem | @choiceform/os-client-core - v2.0.0</title>
+	<title>CFValidateResult | @choiceform/os-client-core - v2.0.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cflangtableitem.html">CFLangTableItem</a>
+					<a href="_index_d_.cfvalidateresult.html">CFValidateResult</a>
 				</li>
 			</ul>
-			<h1>Interface CFLangTableItem</h1>
+			<h1>Interface CFValidateResult</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>多语言项数据</p>
+						<p>答案验证结果</p>
 					</div>
 				</div>
 			</section>
@@ -78,7 +78,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFLangTableItem</span>
+						<span class="tsd-signature-type">ICFRequestResult</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">CFValidateResult</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -89,8 +94,12 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cflangtableitem.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cflangtableitem.html#value" class="tsd-kind-icon">value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#duetonode" class="tsd-kind-icon">due<wbr>ToNode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#duetooption" class="tsd-kind-icon">due<wbr>ToOption</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#result" class="tsd-kind-icon">result</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#valid" class="tsd-kind-icon">valid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#vital" class="tsd-kind-icon">vital</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,32 +108,95 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="id" class="tsd-anchor"></a>
-					<h3>id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="duetonode" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> due<wbr>ToNode</h3>
+					<div class="tsd-signature tsd-kind-icon">due<wbr>ToNode<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/69180de/index.d.ts#L5445">index.d.ts:5445</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/69180de/index.d.ts#L5354">index.d.ts:5354</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>语言id</p>
+							<p>归咎的题目</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="value" class="tsd-anchor"></a>
-					<h3>value</h3>
-					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="duetooption" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> due<wbr>ToOption</h3>
+					<div class="tsd-signature tsd-kind-icon">due<wbr>ToOption<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfoption.html" class="tsd-signature-type">CFOption</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/69180de/index.d.ts#L5449">index.d.ts:5449</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/69180de/index.d.ts#L5358">index.d.ts:5358</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>语言名称</p>
+							<p>归咎的选项</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="message" class="tsd-anchor"></a>
+					<h3>message</h3>
+					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ICFRequestResult.message</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/69180de/index.d.ts#L5340">index.d.ts:5340</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>错误消息</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="result" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> result</h3>
+					<div class="tsd-signature tsd-kind-icon">result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ICFRequestResult.result</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/69180de/index.d.ts#L5332">index.d.ts:5332</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>结果</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="valid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> valid</h3>
+					<div class="tsd-signature tsd-kind-icon">valid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/69180de/index.d.ts#L5350">index.d.ts:5350</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>答案是否符合要求</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="vital" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> vital</h3>
+					<div class="tsd-signature tsd-kind-icon">vital<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ICFRequestResult.vital</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/69180de/index.d.ts#L5336">index.d.ts:5336</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否发生验证错误</p>
 						</div>
 					</div>
 				</section>
@@ -146,13 +218,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cflangtableitem.html" class="tsd-kind-icon">CFLang<wbr>Table<wbr>Item</a>
+						<a href="_index_d_.cfvalidateresult.html" class="tsd-kind-icon">CFValidate<wbr>Result</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cflangtableitem.html#id" class="tsd-kind-icon">id</a>
+								<a href="_index_d_.cfvalidateresult.html#duetonode" class="tsd-kind-icon">due<wbr>ToNode</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cflangtableitem.html#value" class="tsd-kind-icon">value</a>
+								<a href="_index_d_.cfvalidateresult.html#duetooption" class="tsd-kind-icon">due<wbr>ToOption</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfvalidateresult.html#message" class="tsd-kind-icon">message</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfvalidateresult.html#result" class="tsd-kind-icon">result</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfvalidateresult.html#valid" class="tsd-kind-icon">valid</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfvalidateresult.html#vital" class="tsd-kind-icon">vital</a>
 							</li>
 						</ul>
 					</li>
