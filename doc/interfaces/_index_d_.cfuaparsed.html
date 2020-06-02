@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFPreviewTool | @choiceform/os-client-core - v2.0.3</title>
+	<title>CFUAParsed | @choiceform/os-client-core - v2.0.3</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfpreviewtool.html">CFPreviewTool</a>
+					<a href="_index_d_.cfuaparsed.html">CFUAParsed</a>
 				</li>
 			</ul>
-			<h1>Interface CFPreviewTool</h1>
+			<h1>Interface CFUAParsed</h1>
 		</div>
 	</div>
 </header>
@@ -70,23 +70,15 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>预览工具
-							答题页面在预览模式(<a href="_index_d_.cfsurveystate.html#preview">CFSurveyState.preview</a>取值为真)下,需要渲染一个预览工具
-						这时候<a href="_index_d_.cfsurveystate.html#previewtool">CFSurveyState.previewTool</a>属性会有值,就是当前类型.</p>
+						<p>设备信息探测结果</p>
 					</div>
-					<p>一开是一般只渲染一个开关按钮,点击开关后调用<a href="_index_d_.cfpreviewtool.html#handletoggleopen">CFPreviewTool.handleToggleOpen</a>方法,
-					当<a href="_index_d_.cfpreviewtool.html#opened">CFPreviewTool.opened</a>为true的时候,需要渲染预览工具面板,其中应该包含以下两部分功能</p>
-					<ol>
-						<li>预览历史工具,参照<a href="_index_d_.cfpreviewhistory.html">CFPreviewHistory</a>进行渲染</li>
-						<li>预览时间工具,参照<a href="_index_d_.cfpreviewtime.html">CFPreviewTime</a>进行渲染</li>
-					</ol>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFPreviewTool</span>
+						<span class="target">CFUAParsed</span>
 					</li>
 				</ul>
 			</section>
@@ -97,16 +89,10 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewtool.html#history" class="tsd-kind-icon">history</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewtool.html#opened" class="tsd-kind-icon">opened</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewtool.html#time" class="tsd-kind-icon">time</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewtool.html#close" class="tsd-kind-icon">close</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewtool.html#handletoggleopen" class="tsd-kind-icon">handle<wbr>Toggle<wbr>Open</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfuaparsed.html#browser" class="tsd-kind-icon">browser</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfuaparsed.html#device" class="tsd-kind-icon">device</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfuaparsed.html#engine" class="tsd-kind-icon">engine</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfuaparsed.html#os" class="tsd-kind-icon">os</a></li>
 							</ul>
 						</section>
 					</div>
@@ -115,96 +101,91 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="history" class="tsd-anchor"></a>
-					<h3>history</h3>
-					<div class="tsd-signature tsd-kind-icon">history<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfpreviewhistory.html" class="tsd-signature-type">CFPreviewHistory</a></div>
+					<a name="browser" class="tsd-anchor"></a>
+					<h3>browser</h3>
+					<div class="tsd-signature tsd-kind-icon">browser<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L5232">index.d.ts:5232</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L5562">index.d.ts:5562</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>预览历史工具</p>
-						</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>version<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="opened" class="tsd-anchor"></a>
-					<h3>opened</h3>
-					<div class="tsd-signature tsd-kind-icon">opened<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="device" class="tsd-anchor"></a>
+					<h3>device</h3>
+					<div class="tsd-signature tsd-kind-icon">device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L5240">index.d.ts:5240</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L5566">index.d.ts:5566</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>是否已经开启</p>
-						</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>model<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"console"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"mobile"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"tablet"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"smarttv"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"wearable"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"embedded"</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>vendor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="time" class="tsd-anchor"></a>
-					<h3>time</h3>
-					<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfpreviewtime.html" class="tsd-signature-type">CFPreviewTime</a></div>
+					<a name="engine" class="tsd-anchor"></a>
+					<h3>engine</h3>
+					<div class="tsd-signature tsd-kind-icon">engine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L5236">index.d.ts:5236</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L5571">index.d.ts:5571</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>预览时间工具</p>
-						</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>version<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="close" class="tsd-anchor"></a>
-					<h3>close</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">close<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L5244">index.d.ts:5244</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>点击关闭的回调函数</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="handletoggleopen" class="tsd-anchor"></a>
-					<h3>handle<wbr>Toggle<wbr>Open</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Toggle<wbr>Open<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L5248">index.d.ts:5248</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>切换打开/关闭的回调函数</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="os" class="tsd-anchor"></a>
+					<h3>os</h3>
+					<div class="tsd-signature tsd-kind-icon">os<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L5575">index.d.ts:5575</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>version<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -224,22 +205,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfpreviewtool.html" class="tsd-kind-icon">CFPreview<wbr>Tool</a>
+						<a href="_index_d_.cfuaparsed.html" class="tsd-kind-icon">CFUAParsed</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewtool.html#history" class="tsd-kind-icon">history</a>
+								<a href="_index_d_.cfuaparsed.html#browser" class="tsd-kind-icon">browser</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewtool.html#opened" class="tsd-kind-icon">opened</a>
+								<a href="_index_d_.cfuaparsed.html#device" class="tsd-kind-icon">device</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewtool.html#time" class="tsd-kind-icon">time</a>
+								<a href="_index_d_.cfuaparsed.html#engine" class="tsd-kind-icon">engine</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewtool.html#close" class="tsd-kind-icon">close</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewtool.html#handletoggleopen" class="tsd-kind-icon">handle<wbr>Toggle<wbr>Open</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfuaparsed.html#os" class="tsd-kind-icon">os</a>
 							</li>
 						</ul>
 					</li>
