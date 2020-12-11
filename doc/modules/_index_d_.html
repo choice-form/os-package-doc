@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;index.d&quot; | @choiceform/os-client-core - v2.0.3</title>
+	<title>&quot;index.d&quot; | @choiceform/os-client-core - v2.0.62</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.3</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.62</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -89,9 +89,24 @@
 					<a href="#安装核心逻辑依赖包" id="安装核心逻辑依赖包" style="color: inherit; text-decoration: none;">
 						<h2>安装核心逻辑依赖包</h2>
 					</a>
+					<p>我们的核心包包含两种，一个是纯核心包，web适配包
+					安装纯核心包：</p>
+					<pre><code class="language-shell">npm install @choiceform/os-client-mini-core</code></pre>
+					<p>或</p>
+					<pre><code class="language-shell">yarn add @choiceform/os-client-mini-core</code></pre>
+					<p>安装web适配包:</p>
 					<pre><code class="language-shell">npm install @choiceform/os-client-core</code></pre>
 					<p>或</p>
 					<pre><code class="language-shell">yarn add @choiceform/os-client-core</code></pre>
+					<a href="#运行环境适配" id="运行环境适配" style="color: inherit; text-decoration: none;">
+						<h2>运行环境适配</h2>
+					</a>
+					<p>纯核心包中只包含题目解析和答题控制流程，并不包含运行环境适配的功能，比如运行时需要使用缓存，需要使用获取远程数据，需要获取系统当前语言等，这些东西在不同的运行环境中实现是不一样的，纯核心包期待每个使用它的地方为它适配好这些东西。</p>
+					<p>比如核心包可以用于微信小程序中来开发一个答题小程序，这时候就可以把微信小程序的<code>wx.getStorage()</code>配置为缓存获取方法，把<code>wx.request()</code>配置为获取远程数据的方法等。</p>
+					<p>再比如用于web方面时，<code>localStorage</code>配置为缓存适配，<code>xmlHttpRequest</code>配置为网络请求适配。</p>
+					<p>web适配包是在纯核心包功能的基础上默认加入了web方面的适配的包，在开发web端的答题程序时，无需再次进行web适配，即可调用包中的接口开始启动答题流程。</p>
+					<p>对于其他环境上的开发则需先添加好环境适配在启动答题流程。</p>
+					<p>具体的适配规则请参照<a href="../interfaces/_index_d_.cfcore.html#registerenv">CFCore.registerEnv</a>方法和<a href="../interfaces/_index_d_.cfenvoptions.html">CFEnvOptions</a>中的说明。</p>
 					<p>如果你使用typescript编写项目，则该安装包的更目录下有index.d.ts提供基本的数据类型。强烈建议使用typescript来编写答题UI程序,这样在编程的时候就能通过编辑器的智能提示就能知道UI使用的数据源的数据结构,和相关说明.</p>
 					<a href="#使用核心逻辑依赖包" id="使用核心逻辑依赖包" style="color: inherit; text-decoration: none;">
 						<h2>使用核心逻辑依赖包</h2>
@@ -487,24 +502,41 @@ class MyOption extends React.Component {
 							<h3>Modules</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.__choiceform_os_client_core_.html" class="tsd-kind-icon">&quot;@choiceform/os-<wbr>client-<wbr>core&quot;</a></li>
+								<li class="tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_._atcp_.html" class="tsd-kind-icon">&quot;atcp&quot;</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfanswerresumer.html" class="tsd-kind-icon">CFAnswer<wbr>Resumer</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfapireqconfig.html" class="tsd-kind-icon">CFApi<wbr>Req<wbr>Config</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfapireqresult.html" class="tsd-kind-icon">CFApi<wbr>Req<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfassistprops.html" class="tsd-kind-icon">CFAssist<wbr>Props</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfatcp.html" class="tsd-kind-icon">CFAtcp</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfautocpltdata.html" class="tsd-kind-icon">CFAuto<wbr>Cplt<wbr>Data</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfautocptlresult.html" class="tsd-kind-icon">CFAuto<wbr>Cptl<wbr>Result</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcascade.html" class="tsd-kind-icon">CFCascade</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcascadeclickresult.html" class="tsd-kind-icon">CFCascade<wbr>Click<wbr>Result</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcascadeoption.html" class="tsd-kind-icon">CFCascade<wbr>Option</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcascadequestion.html" class="tsd-kind-icon">CFCascade<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfchoicequestion.html" class="tsd-kind-icon">CFChoice<wbr>Question</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_index_d_.cfclient.html" class="tsd-kind-icon">CFClient</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfclient.html" class="tsd-kind-icon">CFClient</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcore.html" class="tsd-kind-icon">CFCore</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfdropdownquestion.html" class="tsd-kind-icon">CFDropdown<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfendpage.html" class="tsd-kind-icon">CFEnd<wbr>Page</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvauth.html" class="tsd-kind-icon">CFEnv<wbr>Auth</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvbasic.html" class="tsd-kind-icon">CFEnv<wbr>Basic</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvdoc.html" class="tsd-kind-icon">CFEnv<wbr>Doc</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvhook.html" class="tsd-kind-icon">CFEnv<wbr>Hook</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvload.html" class="tsd-kind-icon">CFEnv<wbr>Load</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvoptions.html" class="tsd-kind-icon">CFEnv<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvsocket.html" class="tsd-kind-icon">CFEnv<wbr>Socket</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvstorage.html" class="tsd-kind-icon">CFEnv<wbr>Storage</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvstyle.html" class="tsd-kind-icon">CFEnv<wbr>Style</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvurl.html" class="tsd-kind-icon">CFEnv<wbr>Url</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfeventhub.html" class="tsd-kind-icon">CFEvent<wbr>Hub</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfeventparam.html" class="tsd-kind-icon">CFEvent<wbr>Param</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cffakeserver.html" class="tsd-kind-icon">CFFake<wbr>Server</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cffileuploadoption.html" class="tsd-kind-icon">CFFile<wbr>Upload<wbr>Option</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cffileuploadquestion.html" class="tsd-kind-icon">CFFile<wbr>Upload<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfflatitem.html" class="tsd-kind-icon">CFFlat<wbr>Item</a></li>
@@ -515,6 +547,7 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cficonoption.html" class="tsd-kind-icon">CFIcon<wbr>Option</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cficonquestion.html" class="tsd-kind-icon">CFIcon<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfimageinnode.html" class="tsd-kind-icon">CFImage<wbr>InNode</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfimagesize.html" class="tsd-kind-icon">CFImage<wbr>Size</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cflangtableitem.html" class="tsd-kind-icon">CFLang<wbr>Table<wbr>Item</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cflocatequestion.html" class="tsd-kind-icon">CFLocate<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cflotteryoption.html" class="tsd-kind-icon">CFLottery<wbr>Option</a></li>
@@ -529,8 +562,10 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfnodelayout.html" class="tsd-kind-icon">CFNode<wbr>Layout</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfnodetemplate.html" class="tsd-kind-icon">CFNode<wbr>Template</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfoption.html" class="tsd-kind-icon">CFOption</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfparamitem.html" class="tsd-kind-icon">CFParam<wbr>Item</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfpicturechoiceoption.html" class="tsd-kind-icon">CFPicture<wbr>Choice<wbr>Option</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfpicturechoicequestion.html" class="tsd-kind-icon">CFPicture<wbr>Choice<wbr>Question</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfplugin.html" class="tsd-kind-icon">CFPlugin</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfpreviewhistory.html" class="tsd-kind-icon">CFPreview<wbr>History</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfpreviewhistorydata.html" class="tsd-kind-icon">CFPreview<wbr>History<wbr>Data</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfpreviewtime.html" class="tsd-kind-icon">CFPreview<wbr>Time</a></li>
@@ -554,6 +589,7 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfregionprovince.html" class="tsd-kind-icon">CFRegion<wbr>Province</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfregionquestion.html" class="tsd-kind-icon">CFRegion<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfrewardstate.html" class="tsd-kind-icon">CFReward<wbr>State</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfrichtextnode.html" class="tsd-kind-icon">CFRich<wbr>Text<wbr>Node</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfrouteswitchparam.html" class="tsd-kind-icon">CFRoute<wbr>Switch<wbr>Param</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfsetupoptions.html" class="tsd-kind-icon">CFSetup<wbr>Options</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfshorttextquestion.html" class="tsd-kind-icon">CFShort<wbr>Text<wbr>Question</a></li>
@@ -569,13 +605,20 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuieventhandler.html" class="tsd-kind-icon">CFUIEvent<wbr>Handler</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuicomgroups.html" class="tsd-kind-icon">CFUi<wbr>Com<wbr>Groups</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuicomponent.html" class="tsd-kind-icon">CFUi<wbr>Component</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuserinfo.html" class="tsd-kind-icon">CFUser<wbr>Info</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidatedata.html" class="tsd-kind-icon">CFValidate<wbr>Data</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidateopt.html" class="tsd-kind-icon">CFValidate<wbr>Opt</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidateresult.html" class="tsd-kind-icon">CFValidate<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvarstyle.html" class="tsd-kind-icon">CFVar<wbr>Style</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvarstylegroup.html" class="tsd-kind-icon">CFVar<wbr>Style<wbr>Group</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfverificationquestion.html" class="tsd-kind-icon">CFVerification<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvideo.html" class="tsd-kind-icon">CFVideo</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfweightoption.html" class="tsd-kind-icon">CFWeight<wbr>Option</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfweightquestion.html" class="tsd-kind-icon">CFWeight<wbr>Question</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.icfdatatransfer.html" class="tsd-kind-icon">ICFData<wbr>Transfer</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.icfminmax.html" class="tsd-kind-icon">ICFMin<wbr>Max</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.icfnumstartend.html" class="tsd-kind-icon">ICFNum<wbr>Start<wbr>End</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.icfstartend.html" class="tsd-kind-icon">ICFStart<wbr>End</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.lang_en_us.html" class="tsd-kind-icon">LANG_<wbr>EN_<wbr>US</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.lang_zh_cn.html" class="tsd-kind-icon">LANG_<wbr>ZH_<wbr>CN</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.window.html" class="tsd-kind-icon">Window</a></li>
@@ -584,25 +627,29 @@ class MyOption extends React.Component {
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfapireqtype" class="tsd-kind-icon">CFApi<wbr>Req<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfassistpropkeys" class="tsd-kind-icon">CFAssist<wbr>Prop<wbr>Keys</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfenvname" class="tsd-kind-icon">CFEnv<wbr>Name</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfeventhubcb" class="tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfeventnames" class="tsd-kind-icon">CFEvent<wbr>Names</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cffontweightvalue" class="tsd-kind-icon">CFFont<wbr>Weight<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfinfereventnames" class="tsd-kind-icon">CFInfer<wbr>Event<wbr>Names</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cflinktype" class="tsd-kind-icon">CFLink<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfmappingprops" class="tsd-kind-icon">CFMapping<wbr>Props</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfmappingvalue" class="tsd-kind-icon">CFMapping<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfoptalignvalue" class="tsd-kind-icon">CFOpt<wbr>Align<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfoptinputtype" class="tsd-kind-icon">CFOpt<wbr>Input<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfoptioninputdata" class="tsd-kind-icon">CFOption<wbr>Input<wbr>Data</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfpinyinrule" class="tsd-kind-icon">CFPinyin<wbr>Rule</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfpropsetfn" class="tsd-kind-icon">CFProp<wbr>Set<wbr>Fn</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfquerykeys" class="tsd-kind-icon">CFQuery<wbr>Keys</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfquestypevalue" class="tsd-kind-icon">CFQues<wbr>Type<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfquestioninputdata" class="tsd-kind-icon">CFQuestion<wbr>Input<wbr>Data</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfrewardtype" class="tsd-kind-icon">CFReward<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#icfdatatransferkey" class="tsd-kind-icon">ICFData<wbr>Transfer<wbr>Key</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#icfstretchtype" class="tsd-kind-icon">ICFStretch<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#imatrixdisplaytype" class="tsd-kind-icon">IMatrix<wbr>Display<wbr>Type</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Variables</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfclient-1" class="tsd-kind-icon">CFClient</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported"><a href="_index_d_.html#replacereturntype" class="tsd-kind-icon">Replace<wbr>Return<wbr>Type</a></li>
 							</ul>
 						</section>
 					</div>
@@ -611,12 +658,52 @@ class MyOption extends React.Component {
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="cfapireqtype" class="tsd-anchor"></a>
+					<h3>CFApi<wbr>Req<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">CFApi<wbr>Req<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"GET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"POST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PUT"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L986">index.d.ts:986</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="cfassistpropkeys" class="tsd-anchor"></a>
+					<h3>CFAssist<wbr>Prop<wbr>Keys</h3>
+					<div class="tsd-signature tsd-kind-icon">CFAssist<wbr>Prop<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFAssistProps</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5391">index.d.ts:5391</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>辅助属性名称</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="cfenvname" class="tsd-anchor"></a>
+					<h3>CFEnv<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">CFEnv<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"node"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"web"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"wechat"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"wechat_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ali_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"toutiao_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"other"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L2008">index.d.ts:2008</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>运行环境名称</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="cfeventhubcb" class="tsd-anchor"></a>
 					<h3>CFEvent<wbr>Hub<wbr>Cb</h3>
 					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L1205">index.d.ts:1205</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L1790">index.d.ts:1790</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -662,10 +749,10 @@ class MyOption extends React.Component {
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="cfeventnames" class="tsd-anchor"></a>
 					<h3>CFEvent<wbr>Names</h3>
-					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"REALTIME_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ANSWER_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LANG_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NEXT_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PREV_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NEXT_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"STRETCH_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ERROR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHECK_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHECK_SUBMIT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"QUOTA_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FULL_SUBMIT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SAMPLER_TRANSFER"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END_REQ"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"UPDATE_THEME"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ERROR_ABORT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SET_PROPS"</span></div>
+					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"SAMPLER_TRANSFER"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"REALTIME_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ANSWER_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LANG_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NEXT_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PREV_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NEXT_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"STRETCH_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ERROR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHECK_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHECK_SUBMIT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"QUOTA_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FULL_SUBMIT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END_REQ"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"UPDATE_THEME"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ERROR_ABORT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SET_PROPS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SWITCH_NODE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"START_MEMORY"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END_MEMORY"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L1235">index.d.ts:1235</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L1820">index.d.ts:1820</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -700,7 +787,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFFont<wbr>Weight<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"normal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"bold"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L1335">index.d.ts:1335</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L1937">index.d.ts:1937</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -719,7 +806,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFInfer<wbr>Event<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"CHECK_END"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TIMEOUT"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L1247">index.d.ts:1247</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L1849">index.d.ts:1849</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -734,12 +821,57 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="cflinktype" class="tsd-anchor"></a>
+					<h3>CFLink<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">CFLink<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"realtime_preview"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"preview"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"formal"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L6129">index.d.ts:6129</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>连接类型</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="cfmappingprops" class="tsd-anchor"></a>
+					<h3>CFMapping<wbr>Props</h3>
+					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AllKeyToType</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_d_.cfassistprops.html" class="tsd-signature-type">CFAssistProps</a><span class="tsd-signature-symbol">, </span><a href="_index_d_.html#cfmappingvalue" class="tsd-signature-type">CFMappingValue</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L7975">index.d.ts:7975</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>映射属性</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="cfmappingvalue" class="tsd-anchor"></a>
+					<h3>CFMapping<wbr>Value</h3>
+					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfimageinnode.html" class="tsd-signature-type">CFImageInNode</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L7970">index.d.ts:7970</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>映射属性的值</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="cfoptalignvalue" class="tsd-anchor"></a>
 					<h3>CFOpt<wbr>Align<wbr>Value</h3>
 					<div class="tsd-signature tsd-kind-icon">CFOpt<wbr>Align<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"vertical"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"horizontal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"column"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"auto"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L1328">index.d.ts:1328</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L1930">index.d.ts:1930</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -760,7 +892,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOpt<wbr>Input<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"select"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"input"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select-input"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4686">index.d.ts:4686</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5399">index.d.ts:5399</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -780,7 +912,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOption<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ICFUploadResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L485">index.d.ts:485</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L583">index.d.ts:583</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -790,12 +922,27 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="cfpinyinrule" class="tsd-anchor"></a>
+					<h3>CFPinyin<wbr>Rule</h3>
+					<div class="tsd-signature tsd-kind-icon">CFPinyin<wbr>Rule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"partial"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"start"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"full"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L423">index.d.ts:423</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>拼音匹配方式</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="cfpropsetfn" class="tsd-anchor"></a>
 					<h3>CFProp<wbr>Set<wbr>Fn</h3>
 					<div class="tsd-signature tsd-kind-icon">CFProp<wbr>Set<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L456">index.d.ts:456</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L554">index.d.ts:554</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -853,7 +1000,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFQuery<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFQueryParams</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L801">index.d.ts:801</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L915">index.d.ts:915</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -868,7 +1015,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFQues<wbr>Type<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"choice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"region"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"intro-page"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"end-page"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"short-text"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"reward"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"icon"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"location"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"lottery"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"rating"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"range"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"dropdown"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"picture-choice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ranking"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"file-upload"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"verification"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"weight"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cascade"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hot-spot"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"slide-rate"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"no-view"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L3397">index.d.ts:3397</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L4108">index.d.ts:4108</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -906,7 +1053,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFQuestion<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfvalidatedata.html" class="tsd-signature-type">CFValidateData</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfmaplocation.html" class="tsd-signature-type">CFMapLocation</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L480">index.d.ts:480</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L578">index.d.ts:578</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -921,7 +1068,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFReward<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"wechat"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"custom"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L3539">index.d.ts:3539</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L4250">index.d.ts:4250</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -935,12 +1082,37 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="icfdatatransferkey" class="tsd-anchor"></a>
+					<h3>ICFData<wbr>Transfer<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">ICFData<wbr>Transfer<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof ICFDataTransfer</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L7572">index.d.ts:7572</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>数据转移属性列表</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="icfstretchtype" class="tsd-anchor"></a>
+					<h3>ICFStretch<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">ICFStretch<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"page-inner-refresh"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"page-next"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L6726">index.d.ts:6726</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="imatrixdisplaytype" class="tsd-anchor"></a>
 					<h3>IMatrix<wbr>Display<wbr>Type</h3>
 					<div class="tsd-signature tsd-kind-icon">IMatrix<wbr>Display<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"auto"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stretch"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L1954">index.d.ts:1954</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L2676">index.d.ts:2676</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -954,22 +1126,44 @@ class MyOption extends React.Component {
 						</div>
 					</div>
 				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="cfclient-1" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> CFClient</h3>
-					<div class="tsd-signature tsd-kind-icon">CFClient<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_index_d_.cfclient.html" class="tsd-signature-type">CFClient</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported">
+					<a name="replacereturntype" class="tsd-anchor"></a>
+					<h3>Replace<wbr>Return<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Replace<wbr>Return<wbr>Type&lt;T, TNewReturn&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L382">index.d.ts:382</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L409">index.d.ts:409</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>核心包导出的对象</p>
-						</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></h4>
+						</li>
+						<li>
+							<h4>TNewReturn</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Parameters</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TNewReturn</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>a: <span class="tsd-signature-type">Parameters</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TNewReturn</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -991,7 +1185,22 @@ class MyOption extends React.Component {
 						<a href="../interfaces/_index_d_.cfanswerresumer.html" class="tsd-kind-icon">CFAnswer<wbr>Resumer</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfapireqconfig.html" class="tsd-kind-icon">CFApi<wbr>Req<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfapireqresult.html" class="tsd-kind-icon">CFApi<wbr>Req<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfassistprops.html" class="tsd-kind-icon">CFAssist<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfatcp.html" class="tsd-kind-icon">CFAtcp</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfautocpltdata.html" class="tsd-kind-icon">CFAuto<wbr>Cplt<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfautocptlresult.html" class="tsd-kind-icon">CFAuto<wbr>Cptl<wbr>Result</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfcascade.html" class="tsd-kind-icon">CFCascade</a>
@@ -1008,7 +1217,7 @@ class MyOption extends React.Component {
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfchoicequestion.html" class="tsd-kind-icon">CFChoice<wbr>Question</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfclient.html" class="tsd-kind-icon">CFClient</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -1021,10 +1230,43 @@ class MyOption extends React.Component {
 						<a href="../interfaces/_index_d_.cfendpage.html" class="tsd-kind-icon">CFEnd<wbr>Page</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvauth.html" class="tsd-kind-icon">CFEnv<wbr>Auth</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvbasic.html" class="tsd-kind-icon">CFEnv<wbr>Basic</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvdoc.html" class="tsd-kind-icon">CFEnv<wbr>Doc</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvhook.html" class="tsd-kind-icon">CFEnv<wbr>Hook</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvload.html" class="tsd-kind-icon">CFEnv<wbr>Load</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvoptions.html" class="tsd-kind-icon">CFEnv<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvsocket.html" class="tsd-kind-icon">CFEnv<wbr>Socket</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvstorage.html" class="tsd-kind-icon">CFEnv<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvstyle.html" class="tsd-kind-icon">CFEnv<wbr>Style</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvurl.html" class="tsd-kind-icon">CFEnv<wbr>Url</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfeventhub.html" class="tsd-kind-icon">CFEvent<wbr>Hub</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfeventparam.html" class="tsd-kind-icon">CFEvent<wbr>Param</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cffakeserver.html" class="tsd-kind-icon">CFFake<wbr>Server</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cffileuploadoption.html" class="tsd-kind-icon">CFFile<wbr>Upload<wbr>Option</a>
@@ -1055,6 +1297,9 @@ class MyOption extends React.Component {
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfimageinnode.html" class="tsd-kind-icon">CFImage<wbr>InNode</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfimagesize.html" class="tsd-kind-icon">CFImage<wbr>Size</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cflangtableitem.html" class="tsd-kind-icon">CFLang<wbr>Table<wbr>Item</a>
@@ -1099,10 +1344,16 @@ class MyOption extends React.Component {
 						<a href="../interfaces/_index_d_.cfoption.html" class="tsd-kind-icon">CFOption</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfparamitem.html" class="tsd-kind-icon">CFParam<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfpicturechoiceoption.html" class="tsd-kind-icon">CFPicture<wbr>Choice<wbr>Option</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfpicturechoicequestion.html" class="tsd-kind-icon">CFPicture<wbr>Choice<wbr>Question</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfplugin.html" class="tsd-kind-icon">CFPlugin</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfpreviewhistory.html" class="tsd-kind-icon">CFPreview<wbr>History</a>
@@ -1174,6 +1425,9 @@ class MyOption extends React.Component {
 						<a href="../interfaces/_index_d_.cfrewardstate.html" class="tsd-kind-icon">CFReward<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfrichtextnode.html" class="tsd-kind-icon">CFRich<wbr>Text<wbr>Node</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfrouteswitchparam.html" class="tsd-kind-icon">CFRoute<wbr>Switch<wbr>Param</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -1219,6 +1473,9 @@ class MyOption extends React.Component {
 						<a href="../interfaces/_index_d_.cfuicomponent.html" class="tsd-kind-icon">CFUi<wbr>Component</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfuserinfo.html" class="tsd-kind-icon">CFUser<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfvalidatedata.html" class="tsd-kind-icon">CFValidate<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -1226,6 +1483,12 @@ class MyOption extends React.Component {
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfvalidateresult.html" class="tsd-kind-icon">CFValidate<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfvarstyle.html" class="tsd-kind-icon">CFVar<wbr>Style</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfvarstylegroup.html" class="tsd-kind-icon">CFVar<wbr>Style<wbr>Group</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfverificationquestion.html" class="tsd-kind-icon">CFVerification<wbr>Question</a>
@@ -1240,6 +1503,18 @@ class MyOption extends React.Component {
 						<a href="../interfaces/_index_d_.cfweightquestion.html" class="tsd-kind-icon">CFWeight<wbr>Question</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.icfdatatransfer.html" class="tsd-kind-icon">ICFData<wbr>Transfer</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.icfminmax.html" class="tsd-kind-icon">ICFMin<wbr>Max</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.icfnumstartend.html" class="tsd-kind-icon">ICFNum<wbr>Start<wbr>End</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.icfstartend.html" class="tsd-kind-icon">ICFStart<wbr>End</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.lang_en_us.html" class="tsd-kind-icon">LANG_<wbr>EN_<wbr>US</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -1247,6 +1522,15 @@ class MyOption extends React.Component {
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.window.html" class="tsd-kind-icon">Window</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#cfapireqtype" class="tsd-kind-icon">CFApi<wbr>Req<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#cfassistpropkeys" class="tsd-kind-icon">CFAssist<wbr>Prop<wbr>Keys</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#cfenvname" class="tsd-kind-icon">CFEnv<wbr>Name</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cfeventhubcb" class="tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb</a>
@@ -1261,6 +1545,15 @@ class MyOption extends React.Component {
 						<a href="_index_d_.html#cfinfereventnames" class="tsd-kind-icon">CFInfer<wbr>Event<wbr>Names</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#cflinktype" class="tsd-kind-icon">CFLink<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#cfmappingprops" class="tsd-kind-icon">CFMapping<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#cfmappingvalue" class="tsd-kind-icon">CFMapping<wbr>Value</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cfoptalignvalue" class="tsd-kind-icon">CFOpt<wbr>Align<wbr>Value</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
@@ -1268,6 +1561,9 @@ class MyOption extends React.Component {
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cfoptioninputdata" class="tsd-kind-icon">CFOption<wbr>Input<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#cfpinyinrule" class="tsd-kind-icon">CFPinyin<wbr>Rule</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cfpropsetfn" class="tsd-kind-icon">CFProp<wbr>Set<wbr>Fn</a>
@@ -1285,10 +1581,16 @@ class MyOption extends React.Component {
 						<a href="_index_d_.html#cfrewardtype" class="tsd-kind-icon">CFReward<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#icfdatatransferkey" class="tsd-kind-icon">ICFData<wbr>Transfer<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#icfstretchtype" class="tsd-kind-icon">ICFStretch<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#imatrixdisplaytype" class="tsd-kind-icon">IMatrix<wbr>Display<wbr>Type</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.html#cfclient-1" class="tsd-kind-icon">CFClient</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported">
+						<a href="_index_d_.html#replacereturntype" class="tsd-kind-icon">Replace<wbr>Return<wbr>Type</a>
 					</li>
 				</ul>
 			</nav>

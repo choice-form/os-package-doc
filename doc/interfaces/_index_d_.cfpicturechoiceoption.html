@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFPictureChoiceOption | @choiceform/os-client-core - v2.0.3</title>
+	<title>CFPictureChoiceOption | @choiceform/os-client-core - v2.0.62</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.3</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.62</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -99,11 +99,15 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#assistvalue" class="tsd-kind-icon">assist<wbr>Value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#disabled" class="tsd-kind-icon">disabled</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#icon" class="tsd-kind-icon">icon</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#image" class="tsd-kind-icon">image</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#inputrule" class="tsd-kind-icon">input<wbr>Rule</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#inputtype" class="tsd-kind-icon">input<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#isother" class="tsd-kind-icon">is<wbr>Other</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#mapping" class="tsd-kind-icon">mapping</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#placeholder" class="tsd-kind-icon">placeholder</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#renderid" class="tsd-kind-icon">render<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfpicturechoiceoption.html#selected" class="tsd-kind-icon">selected</a></li>
@@ -118,13 +122,46 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="assistvalue" class="tsd-anchor"></a>
+					<h3>assist<wbr>Value</h3>
+					<div class="tsd-signature tsd-kind-icon">assist<wbr>Value<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfassistprops.html" class="tsd-signature-type">CFAssistProps</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#assistvalue">assistValue</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5414">index.d.ts:5414</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>辅助输入数据</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="disabled" class="tsd-anchor"></a>
+					<h3>disabled</h3>
+					<div class="tsd-signature tsd-kind-icon">disabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#disabled">disabled</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5410">index.d.ts:5410</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否处于不可用状态
+							如果取值为true,则UI要渲染该选项,但是禁用操作.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="errormessage" class="tsd-anchor"></a>
 					<h3>error<wbr>Message</h3>
 					<div class="tsd-signature tsd-kind-icon">error<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#errormessage">errorMessage</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4747">index.d.ts:4747</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5469">index.d.ts:5469</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -141,7 +178,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#icon">icon</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4696">index.d.ts:4696</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5418">index.d.ts:5418</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -156,7 +193,7 @@
 					<div class="tsd-signature tsd-kind-icon">image<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfimageinnode.html" class="tsd-signature-type">CFImageInNode</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4603">index.d.ts:4603</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5313">index.d.ts:5313</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -169,11 +206,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="inputrule" class="tsd-anchor"></a>
 					<h3>input<wbr>Rule</h3>
-					<div class="tsd-signature tsd-kind-icon">input<wbr>Rule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"count"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"date"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"dataRage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"email"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"float"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"int"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"mobile"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"postCode"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"timeRange"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"timeSpan"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"link"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"autoComplete"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"dropdown"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"noValidation"</span></div>
+					<div class="tsd-signature tsd-kind-icon">input<wbr>Rule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"count"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"date"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"dateRange"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"email"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"float"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"int"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"time"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"mobile"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"postCode"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"timeRange"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"timeSpan"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"link"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"autoComplete"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"dropdown"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"noValidation"</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#inputrule">inputRule</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4827">index.d.ts:4827</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5548">index.d.ts:5548</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -205,7 +242,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#inputtype">inputType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4775">index.d.ts:4775</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5497">index.d.ts:5497</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -219,13 +256,45 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="isother" class="tsd-anchor"></a>
+					<h3>is<wbr>Other</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#isother">isOther</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5505">index.d.ts:5505</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否为其他选项</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="mapping" class="tsd-anchor"></a>
+					<h3>mapping</h3>
+					<div class="tsd-signature tsd-kind-icon">mapping<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#cfmappingprops" class="tsd-signature-type">CFMappingProps</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#mapping">mapping</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5430">index.d.ts:5430</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>映射属性</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="placeholder" class="tsd-anchor"></a>
 					<h3>placeholder</h3>
 					<div class="tsd-signature tsd-kind-icon">placeholder<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#placeholder">placeholder</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4789">index.d.ts:4789</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5510">index.d.ts:5510</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -242,7 +311,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#renderid">renderId</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4742">index.d.ts:4742</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5464">index.d.ts:5464</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -259,7 +328,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#selected">selected</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4733">index.d.ts:4733</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5455">index.d.ts:5455</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -277,7 +346,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#text">text</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4717">index.d.ts:4717</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5439">index.d.ts:5439</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -294,7 +363,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFPort.uuid</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L7198">index.d.ts:7198</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L8044">index.d.ts:8044</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -310,7 +379,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#value">value</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/e098a2a/index.d.ts#L4723">index.d.ts:4723</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5445">index.d.ts:5445</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -342,6 +411,12 @@
 						<a href="_index_d_.cfpicturechoiceoption.html" class="tsd-kind-icon">CFPicture<wbr>Choice<wbr>Option</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfpicturechoiceoption.html#assistvalue" class="tsd-kind-icon">assist<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfpicturechoiceoption.html#disabled" class="tsd-kind-icon">disabled</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfpicturechoiceoption.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
@@ -355,6 +430,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfpicturechoiceoption.html#inputtype" class="tsd-kind-icon">input<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfpicturechoiceoption.html#isother" class="tsd-kind-icon">is<wbr>Other</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfpicturechoiceoption.html#mapping" class="tsd-kind-icon">mapping</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfpicturechoiceoption.html#placeholder" class="tsd-kind-icon">placeholder</a>
