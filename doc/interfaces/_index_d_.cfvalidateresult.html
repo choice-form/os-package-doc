@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFValidateResult | @choiceform/os-client-core - v2.0.62</title>
+	<title>CFValidateResult | @choiceform/os-client-core - v2.0.72</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.62</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.72</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -98,8 +98,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#duetooption" class="tsd-kind-icon">due<wbr>ToOption</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#message" class="tsd-kind-icon">message</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#result" class="tsd-kind-icon">result</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#valid" class="tsd-kind-icon">valid</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateresult.html#vital" class="tsd-kind-icon">vital</a></li>
 							</ul>
 						</section>
 					</div>
@@ -113,7 +113,7 @@
 					<div class="tsd-signature tsd-kind-icon">due<wbr>ToNode<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L6119">index.d.ts:6119</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6218">index.d.ts:6218</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -128,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">due<wbr>ToOption<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfoption.html" class="tsd-signature-type">CFOption</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L6123">index.d.ts:6123</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6222">index.d.ts:6222</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -144,7 +144,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFRequestResult.message</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L6105">index.d.ts:6105</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6197">index.d.ts:6197</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -156,11 +156,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="result" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> result</h3>
-					<div class="tsd-signature tsd-kind-icon">result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<div class="tsd-signature tsd-kind-icon">result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFRequestResult.result</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L6097">index.d.ts:6097</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6193">index.d.ts:6193</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -170,33 +170,35 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="type" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"alert"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"vital"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6214">index.d.ts:6214</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>结果类型
+								alert: 消息应该以弹框方式出现，用户点击确定以后可以关闭继续答题
+								vital: 严重错误，应该显示错误，并终止答题。
+							空或无 常规消息,直接提示一下即可</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="valid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> valid</h3>
 					<div class="tsd-signature tsd-kind-icon">valid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L6115">index.d.ts:6115</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6207">index.d.ts:6207</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>答案是否符合要求</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="vital" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> vital</h3>
-					<div class="tsd-signature tsd-kind-icon">vital<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from ICFRequestResult.vital</p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L6101">index.d.ts:6101</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>是否发生验证错误</p>
 						</div>
 					</div>
 				</section>
@@ -233,10 +235,10 @@
 								<a href="_index_d_.cfvalidateresult.html#result" class="tsd-kind-icon">result</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfvalidateresult.html#valid" class="tsd-kind-icon">valid</a>
+								<a href="_index_d_.cfvalidateresult.html#type" class="tsd-kind-icon">type</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfvalidateresult.html#vital" class="tsd-kind-icon">vital</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfvalidateresult.html#valid" class="tsd-kind-icon">valid</a>
 							</li>
 						</ul>
 					</li>

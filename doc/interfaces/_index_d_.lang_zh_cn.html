@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LANG_ZH_CN | @choiceform/os-client-core - v2.0.62</title>
+	<title>LANG_ZH_CN | @choiceform/os-client-core - v2.0.72</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.62</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.72</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -138,6 +138,8 @@
     name: <span class="hljs-string">"菜单"</span>,
     clickToSelect: <span class="hljs-string">"请点击选择..."</span>,
     required: <span class="hljs-string">"{text}: 列表中必须选择。"</span>,
+    inputRule: <span class="hljs-string">"{text}:{rule}"</span>,
+    inputReq: <span class="hljs-string">"{text}: 必须填写内容。"</span>,
     requiredBetween: <span class="hljs-string">"{text}: 列表中必须选择{min}到{max}项。"</span>,
     topList: <span class="hljs-string">"顶层列表"</span>,
     listItem: <span class="hljs-string">"列表项"</span>,
@@ -235,7 +237,7 @@
     message: <span class="hljs-string">"检测到未完成的回复记录，是否恢复记录？"</span>,
     sure: <span class="hljs-string">"恢复记录"</span>,
     deny: <span class="hljs-string">"重新开始"</span>,
-    validateAgain: <span class="hljs-string">"验证题需重新验证"</span>
+    validateAgain: <span class="hljs-string">"因题目发生变化或验证失效，此处需要重新填入答案点击下一题后才能继续。"</span>
   },
   backEnd: {
     collector_full: <span class="hljs-string">"抱歉，当前调查问卷的收集器已经达到最大回复数。我们真诚地感谢您的参与，并期望您继续参与我们的在线调查活动！"</span>,

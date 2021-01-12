@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFPreviewHistory | @choiceform/os-client-core - v2.0.62</title>
+	<title>CFPreviewHistory | @choiceform/os-client-core - v2.0.72</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.62</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.72</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -73,16 +73,16 @@
 						<p>预览历史工具</p>
 					</div>
 					<p>该工具可以用来恢复之前的预览书签,快速跳回到之前预览过的某道题.</p>
-					<p><a href="_index_d_.cfpreviewhistory.html#histories">CFPreviewHistory.histories</a>中包含了之前保存的所有预览书签,
+					<p><a href="_index_d_.cfpreviewhistory.html#histories">CFPreviewHistory.histories</a>中包含了之前保存的所有预览书签
 						需要使用一个列表将这些书签渲染出来,每个列表项中显示书签名称,一个删除按钮,一个导入按钮
 						点击删除按钮后调用<a href="_index_d_.cfpreviewhistory.html#handledeletehistory">CFPreviewHistory.handleDeleteHistory</a>方法,可以删除该书签
 					点击导入按钮后调用<a href="_index_d_.cfpreviewhistory.html#handleimporthistory">CFPreviewHistory.handleImportHistory</a>方法,可以导入该书签,导入书签后会恢复到该书签最后预览的地方</p>
 					<p>导入书签需要一定的时间,在该时间内<a href="_index_d_.cfpreviewhistory.html#loading">CFPreviewHistory.loading</a>属性会变成true,同时<a href="_index_d_.cfpreviewhistory.html#progress">CFPreviewHistory.progress</a>会是一个一直
 					变化的导入进度,导入的时候,可以渲染这个导入中的状态以及导入进度.</p>
-					<p>需要渲染一个输入框一个保存按钮,允许用户输入一个书签命并且点击保存书签,
+					<p>需要渲染一个输入框一个保存按钮,允许用户输入一个书签命并且点击保存书签
 					点击保存后,需要调用<a href="_index_d_.cfpreviewhistory.html#handlesavehistories">CFPreviewHistory.handleSaveHistories</a>方法,会将当前的预览进度保存为一个书签,以供后续使用.</p>
 					<p>在<a href="_index_d_.cfpreviewhistory.html#nodelist">CFPreviewHistory.nodeList</a>保存了当前所有预览过的题目,需要将这些题目渲染成一个列表.
-						列表中的每一项显示题目的编号和一个调转按钮,点击改跳转按钮后调用<a href="_index_d_.cfpreviewhistory.html#handlepicknode">CFPreviewHistory.handlePickNode</a>方法,
+						列表中的每一项显示题目的编号和一个调转按钮,点击改跳转按钮后调用<a href="_index_d_.cfpreviewhistory.html#handlepicknode">CFPreviewHistory.handlePickNode</a>方法
 					之后将会调转到该题.</p>
 				</div>
 			</section>
@@ -127,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">histories<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfpreviewhistorydata.html" class="tsd-signature-type">CFPreviewHistoryData</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5902">index.d.ts:5902</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L5998">index.d.ts:5998</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -142,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">loading<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5890">index.d.ts:5890</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L5986">index.d.ts:5986</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,7 +157,7 @@
 					<div class="tsd-signature tsd-kind-icon">node<wbr>List<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5898">index.d.ts:5898</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L5994">index.d.ts:5994</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -172,7 +172,7 @@
 					<div class="tsd-signature tsd-kind-icon">progress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5894">index.d.ts:5894</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L5990">index.d.ts:5990</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -194,7 +194,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5919">index.d.ts:5919</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6015">index.d.ts:6015</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -225,7 +225,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5913">index.d.ts:5913</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6009">index.d.ts:6009</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -256,7 +256,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5908">index.d.ts:5908</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6004">index.d.ts:6004</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -288,7 +288,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3b29017/index.d.ts#L5924">index.d.ts:5924</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6020">index.d.ts:6020</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
