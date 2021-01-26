@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFEnvStyle | @choiceform/os-client-core - v2.0.72</title>
+	<title>CFEnvSystem | @choiceform/os-client-core - v2.1.3</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.72</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.3</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfenvstyle.html">CFEnvStyle</a>
+					<a href="_index_d_.cfenvsystem.html">CFEnvSystem</a>
 				</li>
 			</ul>
-			<h1>Interface CFEnvStyle</h1>
+			<h1>Interface CFEnvSystem</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>环境配置样式</p>
+						<p>运行系统相关信息</p>
 					</div>
 				</div>
 			</section>
@@ -78,7 +78,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFEnvStyle</span>
+						<span class="target">CFEnvSystem</span>
 					</li>
 				</ul>
 			</section>
@@ -87,82 +87,174 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvsystem.html#functionconstructor" class="tsd-kind-icon">function<wbr>Constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvstyle.html#setglobalstyle" class="tsd-kind-icon">set<wbr>Global<wbr>Style</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvstyle.html#setvarstyle" class="tsd-kind-icon">set<wbr>Var<wbr>Style</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvsystem.html#decodebase64" class="tsd-kind-icon">decode<wbr>Base64</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvsystem.html#getlang" class="tsd-kind-icon">get<wbr>Lang</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvsystem.html#getreferer" class="tsd-kind-icon">get<wbr>Referer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvsystem.html#translate" class="tsd-kind-icon">translate</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="functionconstructor" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> function<wbr>Constructor</h3>
+					<div class="tsd-signature tsd-kind-icon">function<wbr>Constructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">FunctionConstructor</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L561">index.d.ts:561</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>这个运行平台的Js的Function构造函数
+								一般只有小程序中的答题端需要指定，因为小程序的禁止动态执行脚本，所以其中的Function构造函数被阉割掉了。
+								我们为了能在小程序执行动态方法，可以自己加载解释器重新构建了一个Function构造函数配置到这个属性
+								其他没有这种情形的可以不用配置这个属性
+							不配置则使用默认值：系统自带的构造函数</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="setglobalstyle" class="tsd-anchor"></a>
-					<h3>set<wbr>Global<wbr>Style</h3>
+					<a name="decodebase64" class="tsd-anchor"></a>
+					<h3>decode<wbr>Base64</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Global<wbr>Style<span class="tsd-signature-symbol">(</span>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">decode<wbr>Base64<span class="tsd-signature-symbol">(</span>s<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1187">index.d.ts:1187</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L567">index.d.ts:567</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>设置全局样式的方法</p>
+									<p>解压base64的方法，相当于浏览器中有window.atob方法的功能
+									该方法必须配置，不配置则会无法运行</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>style: <span class="tsd-signature-type">string</span></h5>
+									<h5>s: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>样式：css字符形式</p>
+										<p>原始base64内容</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="setvarstyle" class="tsd-anchor"></a>
-					<h3>set<wbr>Var<wbr>Style</h3>
+					<a name="getlang" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> get<wbr>Lang</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Var<wbr>Style<span class="tsd-signature-symbol">(</span>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, styleGroup<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfvarstylegroup.html" class="tsd-signature-type">CFVarStyleGroup</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Lang<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1193">index.d.ts:1193</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L553">index.d.ts:553</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>设置变量自定义样式方法</p>
+									<p>获取当前系统语言的方法，答题核心获取系统语言后会尽量优先尝试加载与当前系统的默认语言相匹配的问卷内容
+									如果不配置则会优先尝试加载中文问卷内容</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="getreferer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> get<wbr>Referer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Referer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L536">index.d.ts:536</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>获取进入该程序的来源的方法
+										用于记录日志，可以知道使用者是从哪个网址或哪个应用跳转过来的。
+										浏览器中一般时注意document.referer.
+										其他终端则依照自己的情况设置，尽可能可以提供者信息。
+										如果获取不到来源信息则可不提供
+									如果不配置则使用默认值:空字符串</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="translate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> translate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">translate<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, option<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L548">index.d.ts:548</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>多语言翻译方法，核心包提供了基本的翻译实现，但是不支持messageFormat方式的高级翻译功能。
+										一般对中文翻译无影响
+										比如，有个多语言对应的翻译原始内容为：&quot;Please enter at least {min, plural, one {# item} other {# items} }&quot;
+										则核心默认的翻译因为不支持messageformat，所以无法正确处理单复数问题。
+										所以无论数值是多少都会翻译成：1/2/3/n items 这种形式
+										如果你对默认的翻译实现方式不满意，可以配置该方法提供自己的实现方法
+									如果不配置则使用默认值：核心包自带的简易翻译方法</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>style: <span class="tsd-signature-type">string</span></h5>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>样式：css字符形式</p>
+										<p>内容代号</p>
 									</div>
 								</li>
 								<li>
-									<h5>styleGroup: <a href="_index_d_.cfvarstylegroup.html" class="tsd-signature-type">CFVarStyleGroup</a></h5>
+									<h5>option: <span class="tsd-signature-type">object</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>样式信息：JSON形式</p>
+										<p>替代变量组</p>
 									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-index-signature">
+											<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -184,13 +276,22 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfenvstyle.html" class="tsd-kind-icon">CFEnv<wbr>Style</a>
+						<a href="_index_d_.cfenvsystem.html" class="tsd-kind-icon">CFEnv<wbr>System</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvstyle.html#setglobalstyle" class="tsd-kind-icon">set<wbr>Global<wbr>Style</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfenvsystem.html#functionconstructor" class="tsd-kind-icon">function<wbr>Constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvstyle.html#setvarstyle" class="tsd-kind-icon">set<wbr>Var<wbr>Style</a>
+								<a href="_index_d_.cfenvsystem.html#decodebase64" class="tsd-kind-icon">decode<wbr>Base64</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfenvsystem.html#getlang" class="tsd-kind-icon">get<wbr>Lang</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfenvsystem.html#getreferer" class="tsd-kind-icon">get<wbr>Referer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfenvsystem.html#translate" class="tsd-kind-icon">translate</a>
 							</li>
 						</ul>
 					</li>

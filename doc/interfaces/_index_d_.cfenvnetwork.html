@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFEnvLoad | @choiceform/os-client-core - v2.0.72</title>
+	<title>CFEnvNetWork | @choiceform/os-client-core - v2.1.3</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.72</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.3</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfenvload.html">CFEnvLoad</a>
+					<a href="_index_d_.cfenvnetwork.html">CFEnvNetWork</a>
 				</li>
 			</ul>
-			<h1>Interface CFEnvLoad</h1>
+			<h1>Interface CFEnvNetWork</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>环境配置资源加载</p>
+						<p>环境配置：网络连接与资源加载</p>
 					</div>
 				</div>
 			</section>
@@ -78,7 +78,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFEnvLoad</span>
+						<span class="target">CFEnvNetWork</span>
 					</li>
 				</ul>
 			</section>
@@ -89,12 +89,13 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvload.html#getfakehost" class="tsd-kind-icon">get<wbr>Fake<wbr>Host</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvload.html#loadfakefile" class="tsd-kind-icon">load<wbr>Fake<wbr>File</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvload.html#parserealurl" class="tsd-kind-icon">parse<wbr>Real<wbr>Url</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvload.html#request" class="tsd-kind-icon">request</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvload.html#tryinituploader" class="tsd-kind-icon">try<wbr>Init<wbr>Uploader</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvload.html#upload" class="tsd-kind-icon">upload</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvnetwork.html#closesocket" class="tsd-kind-icon">close<wbr>Socket</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvnetwork.html#connectsocket" class="tsd-kind-icon">connect<wbr>Socket</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvnetwork.html#getfakehost" class="tsd-kind-icon">get<wbr>Fake<wbr>Host</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvnetwork.html#inituploader" class="tsd-kind-icon">init<wbr>Uploader</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvnetwork.html#loadfakefile" class="tsd-kind-icon">load<wbr>Fake<wbr>File</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvnetwork.html#request" class="tsd-kind-icon">request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvnetwork.html#upload" class="tsd-kind-icon">upload</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,6 +103,69 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="closesocket" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> close<wbr>Socket</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">close<wbr>Socket<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L735">index.d.ts:735</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>断开socket的方法
+										当提交问卷后，不再需要接受服务器的即时通信，核心包会调用这个方法断开socket
+										和connectSocket方法配合工作，
+									默认行为：什么也不做</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="connectsocket" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> connect<wbr>Socket</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">connect<wbr>Socket<span class="tsd-signature-symbol">(</span>responseId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, collectorId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L728">index.d.ts:728</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>通服务器建立socket连接的的方法，连通后是的客户端可以即时通信接受服务器的一些推送消息：如配额满
+										各个运行平台socket连接方式不同，配置到这个方法中。
+										核心包需要连接的时候会调用这个方法进行连接。
+										和closeSocket方法配合工作，
+										实现的规则参照web核心包中的实现。
+									默认行为：什么也不做，不会建立socket连接</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>responseId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>collectorId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="getfakehost" class="tsd-anchor"></a>
 					<h3>get<wbr>Fake<wbr>Host</h3>
@@ -112,15 +176,51 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1278">index.d.ts:1278</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L704">index.d.ts:704</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>获取伪造接口应该依附的对象</p>
+									<p>获取伪造接口应该依附的对象
+										<a href="_index_d_.cfenvnetwork.html#loadfakefile">CFEnvNetWork.loadFakeFile</a>成功将伪造接口加载成功后会粘附到一个对象上。
+										这个方法返回这个对象，当核心需要调用某个伪造接口时，就会通过这个方法获取到接口。
+									这个方法必须实现，不实现则无法运行伪造接口</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="_index_d_.cfplugin.html" class="tsd-signature-type">CFPlugin</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="inituploader" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> init<wbr>Uploader</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Uploader<span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L711">index.d.ts:711</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>初始化上传插件的方法，配合<a href="_index_d_.cfenvnetwork.html#upload">CFEnvNetWork.upload</a>方法，
+										一般的上传插件需要被初始化一些状态才方便后续调用<a href="_index_d_.cfenvnetwork.html#upload">CFEnvNetWork.upload</a>方法进行上传
+									如果不配置则什么都不做</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>state: <a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>答题总状态</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -134,12 +234,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1274">index.d.ts:1274</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L697">index.d.ts:697</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>加载伪造接口文件的方法</p>
+									<p>加载伪造接口文件的方法，伪造的接口是放在网络上的某本js中的，当需要使用这些接口时，核心包需要
+										加载这些js文件并运行其中的方法。在不同平台上，加载js的方式不一样，而且伪造接口的初始化流程也需要处理
+										需要配合<a href="_index_d_.cfenvnetwork.html#getfakehost">CFEnvNetWork.getFakeHost</a>方法一起运作。
+										平台需要提供这个方法，将远程脚本加载后，运行这个脚本，将运行脚本得到的对象依附在一个对象上，这个对象就是
+										<a href="_index_d_.cfenvnetwork.html#getfakehost">CFEnvNetWork.getFakeHost</a>需要返回的对象。
+										在web这种这个流程非常简单：直接将js脚本加载到head中，就会自动运行，js脚本中的对象是默认依附到window.CFPlugin上的。
+										<a href="_index_d_.cfenvnetwork.html#getfakehost">CFEnvNetWork.getFakeHost</a>就直接返回window.CFPlugin就实现了整个流程。
+										在其他平台上则可能需要自行动态执行脚本，且在执行前需要把加载到的脚本内容中window.CFPlugin整个关键字改成自己想要
+										依附的对象在全局的名字，具体的实现方式要见机行事。
+									该方法必须实现，不实现则无法运行伪造接口</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -162,49 +271,21 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="parserealurl" class="tsd-anchor"></a>
-					<h3>parse<wbr>Real<wbr>Url</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">parse<wbr>Real<wbr>Url<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1282">index.d.ts:1282</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>转化加载真实接口的地址</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>url: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="request" class="tsd-anchor"></a>
 					<h3>request</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfapireqconfig.html" class="tsd-signature-type">CFApiReqConfig</a>, cb<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfapireqconfig.html" class="tsd-signature-type">CFApiReqConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_index_d_.cfapireqresult.html" class="tsd-signature-type">CFApiReqResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1294">index.d.ts:1294</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L717">index.d.ts:717</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>发起网络请求的方法</p>
+									<p>发起网络请求的方法，不同的平台请求网络资源的方式不同，需要通过该方法配置。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -221,89 +302,8 @@
 										<p>请求参数</p>
 									</div>
 								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cb: <span class="tsd-signature-type">object</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>回调参数</p>
-									</div>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> reject<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span></h5>
-											<ul class="tsd-parameters">
-												<li class="tsd-parameter-siganture">
-													<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
-														<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-													</ul>
-													<ul class="tsd-descriptions">
-														<li class="tsd-description">
-															<h4 class="tsd-parameters-title">Parameters</h4>
-															<ul class="tsd-parameters">
-																<li>
-																	<h5>err: <span class="tsd-signature-type">any</span></h5>
-																</li>
-															</ul>
-															<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> resolve<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span></h5>
-											<ul class="tsd-parameters">
-												<li class="tsd-parameter-siganture">
-													<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable tsd-is-not-exported">
-														<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfapireqresult.html" class="tsd-signature-type">CFApiReqResult</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-													</ul>
-													<ul class="tsd-descriptions">
-														<li class="tsd-description">
-															<h4 class="tsd-parameters-title">Parameters</h4>
-															<ul class="tsd-parameters">
-																<li>
-																	<h5>req: <a href="_index_d_.cfapireqresult.html" class="tsd-signature-type">CFApiReqResult</a></h5>
-																</li>
-															</ul>
-															<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="tryinituploader" class="tsd-anchor"></a>
-					<h3>try<wbr>Init<wbr>Uploader</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">try<wbr>Init<wbr>Uploader<span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1287">index.d.ts:1287</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>尝试初始化上传器的方法</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>state: <a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>答题总状态</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_index_d_.cfapireqresult.html" class="tsd-signature-type">CFApiReqResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -311,24 +311,27 @@
 					<a name="upload" class="tsd-anchor"></a>
 					<h3>upload</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">upload<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ICFUploadConfig</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ICFUploadResult</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">upload<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfuploadconfig.html" class="tsd-signature-type">CFUploadConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ICFUploadResult</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1253">index.d.ts:1253</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L682">index.d.ts:682</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>上传文件的方法</p>
+									<p>上传文件的方法，答题端的上传题需要上传文件，在不同的平台上上传机制不同
+										需要独立实现这个方法将文件正确上传到服务器
+										如果答题端要实现上传题，则该方法必须实现，否则会无法上传。
+									如果你的上传需要初始化，则可以配置<a href="_index_d_.cfenvnetwork.html#inituploader">CFEnvNetWork.initUploader</a>方法先初始化一下状态</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>config: <span class="tsd-signature-type">ICFUploadConfig</span></h5>
+									<h5>config: <a href="_index_d_.cfuploadconfig.html" class="tsd-signature-type">CFUploadConfig</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>上传配置信息</p>
 									</div>
@@ -356,25 +359,28 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfenvload.html" class="tsd-kind-icon">CFEnv<wbr>Load</a>
+						<a href="_index_d_.cfenvnetwork.html" class="tsd-kind-icon">CFEnv<wbr>Net<wbr>Work</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvload.html#getfakehost" class="tsd-kind-icon">get<wbr>Fake<wbr>Host</a>
+								<a href="_index_d_.cfenvnetwork.html#closesocket" class="tsd-kind-icon">close<wbr>Socket</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvload.html#loadfakefile" class="tsd-kind-icon">load<wbr>Fake<wbr>File</a>
+								<a href="_index_d_.cfenvnetwork.html#connectsocket" class="tsd-kind-icon">connect<wbr>Socket</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvload.html#parserealurl" class="tsd-kind-icon">parse<wbr>Real<wbr>Url</a>
+								<a href="_index_d_.cfenvnetwork.html#getfakehost" class="tsd-kind-icon">get<wbr>Fake<wbr>Host</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvload.html#request" class="tsd-kind-icon">request</a>
+								<a href="_index_d_.cfenvnetwork.html#inituploader" class="tsd-kind-icon">init<wbr>Uploader</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvload.html#tryinituploader" class="tsd-kind-icon">try<wbr>Init<wbr>Uploader</a>
+								<a href="_index_d_.cfenvnetwork.html#loadfakefile" class="tsd-kind-icon">load<wbr>Fake<wbr>File</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvload.html#upload" class="tsd-kind-icon">upload</a>
+								<a href="_index_d_.cfenvnetwork.html#request" class="tsd-kind-icon">request</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfenvnetwork.html#upload" class="tsd-kind-icon">upload</a>
 							</li>
 						</ul>
 					</li>

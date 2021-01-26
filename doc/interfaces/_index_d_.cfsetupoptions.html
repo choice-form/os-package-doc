@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFSetupOptions | @choiceform/os-client-core - v2.0.72</title>
+	<title>CFSetupOptions | @choiceform/os-client-core - v2.1.3</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.72</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.3</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -113,10 +113,9 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#error" class="tsd-kind-icon">error</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#locateerror" class="tsd-kind-icon">locate<wbr>Error</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#notify" class="tsd-kind-icon">notify</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#resumenotify" class="tsd-kind-icon">resume<wbr>Notify</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#setlocale" class="tsd-kind-icon">set<wbr>Locale</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#settheme" class="tsd-kind-icon">set<wbr>Theme</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#suspendnotify" class="tsd-kind-icon">suspend<wbr>Notify</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfsetupoptions.html#switchroute" class="tsd-kind-icon">switch<wbr>Route</a></li>
 							</ul>
 						</section>
 					</div>
@@ -126,34 +125,45 @@
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="clientname" class="tsd-anchor"></a>
-					<h3>client<wbr>Name</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> client<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">client<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1522">index.d.ts:1522</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1586">index.d.ts:1586</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>所代表的的客户端名称
-								会用验证问卷是否适合使用当前客户端渲染
-								只有问卷中指定的客户端名称和自己的该名称相同时,才能渲染
-							否则会报错</p>
+								当我们有多个答题客户端时，在设计端发布问卷之前，可以选择使用哪个答题端来渲染问卷。
+								一般选好以后，按需求这份问卷就只能使用这个客户端来渲染，因为如果不限制仅能在该客户端渲染，
+								可能会导致不知不觉中误用其他客户端来访问这份文件的情况，
+								这样就会：
+								一方面：不是所有的客户端都实现了所有题型，用错客户端可能导致有些题目无法渲染。
+							另一方面，不同客户端对相同题型渲染方式不同，用错客户端可能导致渲染出来的样子不是客户需要的样子。</p>
 						</div>
+						<p>但事实上默认情况下，是所有客户端都能访问该问卷的</p>
+						<p>为了避免上面的两个错误出现，我们可以通过这个属性为每个客户端设置一个唯一的名称。</p>
+						<p>访问某份问卷前核心包会检查当前客户端名字是否和该问卷在设计端选择的客户端名字相同，只有相同才能访问。</p>
+						<p>如果名称为ALL则表示这个客户端能访问所有问卷</p>
+						<p>默认值：ALL</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="dynamic" class="tsd-anchor"></a>
-					<h3>dynamic</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> dynamic</h3>
 					<div class="tsd-signature tsd-kind-icon">dynamic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1526">index.d.ts:1526</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1618">index.d.ts:1618</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>指定该客户端是不是动态加载模板的</p>
+							<p>指定该客户端是不是动态加载模板的
+								对支持动态加载的客户端，核心会尝试去动态模板服务器上加载动态的模板。
+								当前只有web版客户端有可能支持动态模板功能，小程序和本地应用不支持该功能，所以无需配置。
+							默认：false</p>
 						</div>
 					</div>
 				</section>
@@ -163,12 +173,15 @@
 					<div class="tsd-signature tsd-kind-icon">host<wbr>Config<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfhostconfig.html" class="tsd-signature-type">CFHostConfig</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1548">index.d.ts:1548</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1654">index.d.ts:1654</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>如果要重新配置服务器地址，使用该属性配置</p>
+							<p>资源访问地址配置
+								默认情况下都指向正式环境服务器的资源地址，如果想访问其他服务器的资源
+								则需要重写该配置，详情请看每个具体的属性说明
+							默认：正式环境服务的资源地址</p>
 						</div>
 					</div>
 				</section>
@@ -178,12 +191,13 @@
 					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1544">index.d.ts:1544</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1647">index.d.ts:1647</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>os-client的开发者凭证,暂时可以不设置</p>
+							<p>os-client的开发者凭证，这是个保留属性，暂时可以不设置
+							默认：空字符串</p>
 						</div>
 					</div>
 				</section>
@@ -193,7 +207,7 @@
 					<div class="tsd-signature tsd-kind-icon">lang<wbr>Src<wbr>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1620">index.d.ts:1620</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1729">index.d.ts:1729</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -218,6 +232,7 @@
 						<p>每本json要准备的数据格式在<a href="_index_d_.lang_zh_cn.html">LANG_ZH_CN</a>和<a href="_index_d_.lang_en_us.html">LANG_EN_US</a>中做出了示范.</p>
 						<p>各种语言的代号可参照<a href="https://en.wikipedia.org/wiki/Language_localisation">百科全书</a></p>
 						<p>我们统一使用<code>xx_xx</code>小写字母加下划线形式的代号</p>
+						<p>默认值：空</p>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -234,65 +249,32 @@
 					<div class="tsd-signature tsd-kind-icon">setter<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#cfpropsetfn" class="tsd-signature-type">CFPropSetFn</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1515">index.d.ts:1515</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1611">index.d.ts:1611</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>属性设置辅助方法
-								由于UI中绑定了核心提供的数据结构的某些值，UI中进行操作后回调了核心提供的回调函数
-								核心中的逻辑会更改数据结构中的这些值，核心逻辑中默认是直接更改这些值的。
-								这样的话，大部分框架的UI模板引擎是无法觉察到这个更改的，从而UI上的内容不会正常更新。
-							这时候可以通过设置该方法来使得模板引擎觉察到内容的更改达到更新页面的目的。</p>
-						</div>
-						<p>举例：UI中渲染选项时背景颜色绑定了<a href="_index_d_.cfoption.html#selected">CFOption.selected</a>属性，
-							选中的选项（option.selected为true）渲染成红色，
-							未选中的选项（option.selected为false）渲染成灰色，
-							现在某个选项初始时是未选中的，根据绑定规则，渲染成了灰色，现在点击该选项，会回调核心
-							逻辑中提供的选项点击回调函数，在该函数中会将option.selected改为true，
-							但是UI模板并不知道这个属性发生了变化，所以依然渲染成了灰色，这时就需要用的这个配置方法。
-							如使用emberjs的时候我们将该方法配置为EmberObject的setProperties方法,如果不配置则
-						UI不会得到更新.</p>
-						<pre><code class="language-typescript">  <span class="hljs-keyword">import</span> {setProperties} <span class="hljs-keyword">from</span> <span class="hljs-string">'@ember/object'</span>;
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>该属性仅为兼容老版UI中使用的emberjs的setProperties暂时保留，即将移除，不要使用这个属性</p>
+								<p>该属性已废除，请使用最新标准：使用<a href="_index_d_.cfeventhub.html">CFEventHub</a>来监听<code>SET_PROPS</code>来监听变化重新更新UI
+									属性设置辅助方法
+									由于UI中绑定了核心提供的数据结构的某些值，UI中进行操作后回调了核心提供的回调函数
+									核心中的逻辑会更改数据结构中的这些值，核心逻辑中默认是直接更改这些值的。
+									这样的话，大部分框架的UI模板引擎是无法觉察到这个更改的，从而UI上的内容不会正常更新。
+								这时候可以通过设置该方法来使得模板引擎觉察到内容的更改达到更新页面的目的。</p>
+								<p>举例：UI中渲染选项时背景颜色绑定了<a href="_index_d_.cfoption.html#selected">CFOption.selected</a>属性，
+									选中的选项（option.selected为true）渲染成红色，
+									未选中的选项（option.selected为false）渲染成灰色，
+									现在某个选项初始时是未选中的，根据绑定规则，渲染成了灰色，现在点击该选项，会回调核心
+									逻辑中提供的选项点击回调函数，在该函数中会将option.selected改为true，
+									但是UI模板并不知道这个属性发生了变化，所以依然渲染成了灰色，这时就需要用的这个配置方法。
+									如使用emberjs的时候我们将该方法配置为EmberObject的setProperties方法,如果不配置则
+								UI不会得到更新.</p>
+								<pre><code class="language-typescript">  <span class="hljs-keyword">import</span> {setProperties} <span class="hljs-keyword">from</span> <span class="hljs-string">'@ember/object'</span>;
   options.setter = setProperties</code></pre>
-						<p>使用angularjs(version 1.x)时,由于angularjs有基于进入框架事件流的用户操作事件的变化感知
-							所有如果你的时间是以<code>ng-</code>开头属性注册的(如ng-click,ng-change等),则这部分操作发生的变化将会自动
-							更新UI,但是非<code>ng-</code>开头属性注册的时间,以及系统的微任务(如Promise等),宏任务(如setTimeout),还有各种
-						异步回调中发生的变化无法被感知,这些地方的变化不会触发UI更更新</p>
-						<p>所以保险起见,我们仍然能需要使用$scope.digest或$timeout来触发变化</p>
-						<pre><code class="language-typescript"> options.setter = <span class="hljs-function">(<span class="hljs-params">toObj, propsObj</span>) =&gt;</span> {
-    <span class="hljs-built_in">Object</span>.assign(toObj, propsObj);
-    $timeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})
-    <span class="hljs-comment">// 或者</span>
-    $rootScope.digest();
- }</code></pre>
-						<p>使用angular(version 2+)时，因为angular能感知到用户操作/微任务,宏任务,回调函数等
-						流程中的数据变化(zone.js),所以无需注册setter,UI也会得到更新.</p>
-						<p>如果你不放心,仍然可以使用app.tick()来触发变化</p>
-						<pre><code class="language-typescript"> options.setter = <span class="hljs-function">(<span class="hljs-params">toObj, propsObj</span>) =&gt;</span> {
-    <span class="hljs-built_in">Object</span>.assign(toObj, propsObj);
-    app.tick()
- }</code></pre>
-						<p>使用react时，我们可以使用顶层的setState来触发变化</p>
-						<pre><code class="language-typescript"> options.setter = <span class="hljs-function">(<span class="hljs-params">toObj, propsObj</span>) =&gt;</span> {
-    <span class="hljs-built_in">Object</span>.assign(toObj, propsObj);
-    <span class="hljs-keyword">this</span>.setState({});
- }</code></pre>
-						<p>其他框架的更新机制和触发方法暂未研究,请自行研究.</p>
-						<p>每次更改都会调用这个方法,可能每次操作会触发多次调用,可能会有性能影响
-						所以可以考虑使用debounce过的方法,来作为回调方法,减少触发更新的次数,减少性能上的影响.</p>
-						<p>也可以不设置这个方法,而是使用<a href="_index_d_.cfclient.html#eventhub">CFClient.EventHub</a>监听<code>SET_PROPS</code>事件
-						然后在个事件的回调中,驱动框架更新状态</p>
-						<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {EventHub} <span class="hljs-keyword">from</span> <span class="hljs-string">"@choiceform/os-client-core"</span>;
-EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  <span class="hljs-comment">// 这里放置驱动框架更新的代码</span>
-  <span class="hljs-comment">// 如:this.setState();</span>
-  <span class="hljs-comment">// 如:app.tick();</span>
-  <span class="hljs-comment">// 如:$rootScope.digest();</span>
-  <span class="hljs-comment">// 等等...</span>
-})</code></pre>
-						<p>具体的使用方式在各个框架的client-demo中也会展示。
-						如果你使用的模板引擎能自动检查到外部数据的变化，则可以不配置该方法</p>
+								<p>默认行为：只更新数据，不做其他任何行为。</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
@@ -301,13 +283,17 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 					<div class="tsd-signature tsd-kind-icon">template<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1531">index.d.ts:1531</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1627">index.d.ts:1627</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>动态加载的模板文件夹所在路径
-							如果是动态加载的,则一定要准备好改属性</p>
+								如果是动态加载的,则一定要准备好该属性，
+								核心会去这个路径寻找动态模板文件，
+								如果dynamic属性指定为true，而不提供这个路径，初始化时会报错。
+								当前只有web版客户端有可能支持动态模板功能，小程序和本地应用不支持该功能，所以无需配置。
+							默认：空字符串</p>
 						</div>
 					</div>
 				</section>
@@ -317,13 +303,17 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 					<div class="tsd-signature tsd-kind-icon">tree<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1536">index.d.ts:1536</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1636">index.d.ts:1636</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>模板树所在地址
-							如果是动态加载的,则一定要准备好改属性</p>
+								如果是动态加载的,则一定要准备好该属性
+								核心会去获取这个文件来了解动态模板的依赖情况，
+								如果dynamic属性指定为true，而不提供这个路径，初始化时会报错。
+								当前只有web版客户端有可能支持动态模板功能，小程序和本地应用不支持该功能，所以无需配置。
+							默认：空字符串</p>
 						</div>
 					</div>
 				</section>
@@ -333,12 +323,14 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 					<div class="tsd-signature tsd-kind-icon">use<wbr>WxSdk<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1540">index.d.ts:1540</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1642">index.d.ts:1642</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>是否要使用wxsdk</p>
+							<p>是否要使用wxsdk
+								当前只有web版可能支持，小程序和本地应用不支持该功能，所以无需配置。
+							默认：false</p>
 						</div>
 					</div>
 				</section>
@@ -355,13 +347,12 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1568">index.d.ts:1568</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1675">index.d.ts:1675</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>弹框方式提示消息，比提示消息更重要一些，需要弹框，并且用户点击后才消失
-									如果没有配置该方法，消息会在调试控制台中以警告消息方式输出。</p>
+									<p>弹框方式提示消息，比提示消息更重要一些，需要弹框，并且用户点击后才消失</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -386,12 +377,15 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1640">index.d.ts:1640</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1746">index.d.ts:1746</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>自定义中断回调方法</p>
+									<p>自定义中断回调方法
+										当核心包中运行发生异常，或者需要去往外部程序时，会中断答题流程，同时触发调用这个方法
+										客户端中可以配置该方法来在此时机做一些自定义的事情。
+									默认行为：什么也不做</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -414,7 +408,7 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1578">index.d.ts:1578</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1684">index.d.ts:1684</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -422,9 +416,8 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 									<p>严重错误消息提示方法
 										如尝试下载某份问卷进行作答，但这份问卷已经下线，则不会得到问卷内容
 										而是会发出一个类似”问卷已下线“的错误消息
-										通过配置该方法来决定在UI中展示这些错误消息。
-										发生任何错误后，不允许继续操作。
-									如果没有配置该方法，消息会在调试控制台中以错误消息方式输出。</p>
+										通过配置该方法来决定如何在UI中展示这些错误消息。
+									发生任何错误后，不允许继续操作。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -450,7 +443,7 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1587">index.d.ts:1587</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1694">index.d.ts:1694</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -458,7 +451,8 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 									<p>如果在单页模式中有很多题目，进行作答后点击下一题，其中某道题目的答案不满足要求，
 										这时候可能这道题目不再滚动条所在的可见范围内，
 										通过配置该方法，可以自定义定位错误的方式。
-									比如：可以移动滚动条到有错误的题目位置。</p>
+										比如：可以移动滚动条到有错误的题目位置。
+									默认行为：什么都不做</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -490,15 +484,14 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1562">index.d.ts:1562</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1670">index.d.ts:1670</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>常规消息提示方法，如果一道必答题还没有进行作答就点击下一题按钮
 										这时候不会进入下一题，而是会发出类似”必须作答“这样的提示消息，
-										通过配置该方法来决定在UI中展示这些提示消息。
-									如果没有配置该方法，消息会在调试控制台中以警告消息方式输出。</p>
+									通过配置该方法来决定如何在UI中展示这些提示消息。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -515,30 +508,8 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="resumenotify" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> resume<wbr>Notify</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">resume<wbr>Notify<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1636">index.d.ts:1636</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>恢复提示消息</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="setlocale" class="tsd-anchor"></a>
-					<h3>set<wbr>Locale</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> set<wbr>Locale</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">set<wbr>Locale<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
@@ -546,14 +517,16 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1628">index.d.ts:1628</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1739">index.d.ts:1739</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>设置该方法来监听核心包的多语言变化,当核心包多语言切换时,会调用该方法
 										UI程序中监听到这个变化后也要切换多语言
-									才能做到核心包提示的信息和UI组件中自己的显示内容使用了同一种语言</p>
+										才能做到核心包提示的信息和UI组件中自己的显示内容使用了同一种语言
+										不支持多语言的客户端可以不配置这个方法
+									默认行为：什么都不做</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -579,13 +552,15 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1554">index.d.ts:1554</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1662">index.d.ts:1662</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>如果有配置该方法，问卷主题发生变化时，该方法会被调用。
-									然后可以做一些自定义的事情。</p>
+										然后可以做一些自定义的事情。
+										不支持系统主题的客户端不需要配置这个方法
+									默认行为：什么也不做</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -602,23 +577,37 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="suspendnotify" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> suspend<wbr>Notify</h3>
+					<a name="switchroute" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> switch<wbr>Route</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">suspend<wbr>Notify<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">switch<wbr>Route<span class="tsd-signature-symbol">(</span>routeParam<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfrouteswitchparam.html" class="tsd-signature-type">CFRouteSwitchParam</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1632">index.d.ts:1632</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1756">index.d.ts:1756</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>挂起提示消息</p>
+									<p>自定义的去往开始页面方法,只有使用web核心包是需要关注这个方法
+										非web核心包使用者无需配置该方法。
+										web定制核心包中配置的页面切换方法是使用的浏览器原始location.replace方法实现的
+										当使用了单页引用页面的框架实现web客户端时，原生的跳转方法可能会导致页面刷新，是的单页应用的状态丢失。
+										而不同的框架在单页面内控制路由控制的方式是不一样的，所以需要用该方法提供。
+									默认行为：浏览器原生location.replace跳转</p>
 								</div>
 							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>routeParam: <a href="_index_d_.cfrouteswitchparam.html" class="tsd-signature-type">CFRouteSwitchParam</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>路由信息</p>
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -686,16 +675,13 @@ EventHub.on(<span class="hljs-string">'SET_PROPS'</span>, <span class="hljs-func
 								<a href="_index_d_.cfsetupoptions.html#notify" class="tsd-kind-icon">notify</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfsetupoptions.html#resumenotify" class="tsd-kind-icon">resume<wbr>Notify</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfsetupoptions.html#setlocale" class="tsd-kind-icon">set<wbr>Locale</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfsetupoptions.html#settheme" class="tsd-kind-icon">set<wbr>Theme</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfsetupoptions.html#suspendnotify" class="tsd-kind-icon">suspend<wbr>Notify</a>
+								<a href="_index_d_.cfsetupoptions.html#switchroute" class="tsd-kind-icon">switch<wbr>Route</a>
 							</li>
 						</ul>
 					</li>

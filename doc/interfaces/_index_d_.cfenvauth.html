@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFEnvAuth | @choiceform/os-client-core - v2.0.72</title>
+	<title>CFEnvAuth | @choiceform/os-client-core - v2.1.3</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.72</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.3</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -70,7 +70,9 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>环境配置授权</p>
+						<p>授权相关的配置，不同的运行平台有不同的账户系统，所以授权方式也不一样。
+							如果你构建的答题端有用户系统需要授权则这这个规则进行配置。
+						如果无账户系统，也不需授权则无需配置这个规则</p>
 					</div>
 				</div>
 			</section>
@@ -110,12 +112,13 @@
 					<div class="tsd-signature tsd-kind-icon">user<wbr>Info<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfuserinfo.html" class="tsd-signature-type">CFUserInfo</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1319">index.d.ts:1319</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L747">index.d.ts:747</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>用户信息</p>
+							<p>用户信息，在有些平台上，可能开始答问卷时，用户已经登录了。
+							这种情形下把用户的昵称和id按改规则配置到此处即可。</p>
 						</div>
 					</div>
 				</section>
@@ -124,7 +127,7 @@
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="authorize" class="tsd-anchor"></a>
-					<h3>authorize</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> authorize</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 						<li class="tsd-signature tsd-kind-icon">authorize<span class="tsd-signature-symbol">(</span>appId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, componentAppId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, authorizeId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
@@ -132,12 +135,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1333">index.d.ts:1333</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L765">index.d.ts:765</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>普通授权方法</p>
+									<p>普通授权方法，该方法仅用于那些需要在微信浏览器中运行且需要获取微信信息的答题端
+										web核心包中一般需要配置该方法。
+									其他方式的答题端无需配置这个方法。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -160,20 +165,22 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="authorizegift" class="tsd-anchor"></a>
-					<h3>authorize<wbr>Gift</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> authorize<wbr>Gift</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">authorize<wbr>Gift<span class="tsd-signature-symbol">(</span>appId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, componentAppId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, redirectUrl<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">authorize<wbr>Gift<span class="tsd-signature-symbol">(</span>appId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, componentAppId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfqueryparams.html" class="tsd-signature-type">CFQueryParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1326">index.d.ts:1326</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L756">index.d.ts:756</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>授权领奖的方法</p>
+									<p>授权领奖的方法，该方法仅用于那些需要在微信浏览器中运行微信红包领奖流程的答题端
+										web核心包中一般需要配置该方法。
+									其他方式的答题端无需配置这个方法。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -185,9 +192,7 @@
 									<h5>componentAppId: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> redirectUrl: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
+									<h5>params: <a href="_index_d_.cfqueryparams.html" class="tsd-signature-type">CFQueryParams</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>

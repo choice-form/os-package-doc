@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;index.d&quot; | @choiceform/os-client-core - v2.0.72</title>
+	<title>&quot;index.d&quot; | @choiceform/os-client-core - v2.1.3</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.0.72</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.3</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -71,26 +71,19 @@
 							<h1>os-client-core核心模块</h1>
 						</a>
 					</div>
-					<p>该模块承载了巧思问卷答题客户端的核心逻辑流程，基于此模块可以单独开发自制的答题页面客户端，使用本模块以后，除了遵从一些简单的启动配置和接口交互之外，只需专注于开发每个题型的UI即可，下面会详细介绍如何基于此模块创建自己的答题客户端应用。</p>
-					<a href="#创建一个前端项目" id="创建一个前端项目" style="color: inherit; text-decoration: none;">
-						<h2>创建一个前端项目</h2>
-					</a>
-					<p>你可以使用任何方式来创建一个项目,
-					或基于常见框架或库:</p>
-					<ul>
-						<li><a href="https://github.com/facebook/react">react</a>，</li>
-						<li><a href="https://github.com/vuejs/vue">vue</a>，</li>
-						<li><a href="https://github.com/angular/angular">angular</a>，</li>
-						<li><a href="https://github.com/emberjs/ember.js/">emberjs</a>，</li>
-						<li><a href="https://github.com/angular/angular.js/">angularjs</a></li>
-					</ul>
-					<p>对于这些常见的库和框架,我们写了一些项目案例放到了<a href="#%E6%A1%88%E4%BE%8B%E9%A1%B9%E7%9B%AE">这里</a>,你可以以这些案例项目为模板仓库创建自己的项目</p>
-					<p>当创建好项目以后我们需要安装该核心包作为依赖。</p>
+					<p>该模块承载了巧思问卷答题客户端的核心逻辑流程，基于此模块可以单独开发自制的答题页面客户端，使用本模块以后，除了遵从一些启动配置和接口交互之外，只需专注于开发每个题型的UI即可，下面会详细介绍如何基于此模块创建自己的答题客户端应用。</p>
 					<a href="#安装核心逻辑依赖包" id="安装核心逻辑依赖包" style="color: inherit; text-decoration: none;">
 						<h2>安装核心逻辑依赖包</h2>
 					</a>
-					<p>我们的核心包包含两种，一个是纯核心包，web适配包
-					安装纯核心包：</p>
+					<p>我们的核心包包含两种：</p>
+					<ol>
+						<li><p>一个是纯核心包，只有与运行环境无关纯答题逻辑流程，无法直接运行，需要参照<a href="#%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">运行环境配置</a>的规则，基于该纯核心包适配一些环境运行规则，然后才能在你希望的环境上运行起来。</p>
+						</li>
+						<li><p>另一个是web适配包，该包是参照<a href="#%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">运行环境配置</a>的规则，基于纯核心包设配了web运行环境环境规则，可以直接使用与构建web端的答题客户端</p>
+						</li>
+					</ol>
+					<p>如果你想构建基于web的答题客户端，建议直接使用web适配包，免去环境适配的工作，如果你要构建非web端（如小程序，原生app）的答题客户端，则只能使用纯纯核心包，然后自行按规则配置好环境运行规则，再继续。</p>
+					<p>安装纯核心包：</p>
 					<pre><code class="language-shell">npm install @choiceform/os-client-mini-core</code></pre>
 					<p>或</p>
 					<pre><code class="language-shell">yarn add @choiceform/os-client-mini-core</code></pre>
@@ -106,17 +99,39 @@
 					<p>再比如用于web方面时，<code>localStorage</code>配置为缓存适配，<code>xmlHttpRequest</code>配置为网络请求适配。</p>
 					<p>web适配包是在纯核心包功能的基础上默认加入了web方面的适配的包，在开发web端的答题程序时，无需再次进行web适配，即可调用包中的接口开始启动答题流程。</p>
 					<p>对于其他环境上的开发则需先添加好环境适配在启动答题流程。</p>
-					<p>具体的适配规则请参照<a href="../interfaces/_index_d_.cfcore.html#registerenv">CFCore.registerEnv</a>方法和<a href="../interfaces/_index_d_.cfenvoptions.html">CFEnvOptions</a>中的说明。</p>
-					<p>如果你使用typescript编写项目，则该安装包的更目录下有index.d.ts提供基本的数据类型。强烈建议使用typescript来编写答题UI程序,这样在编程的时候就能通过编辑器的智能提示就能知道UI使用的数据源的数据结构,和相关说明.</p>
+					<p>具体的适配规则请参照<a href="../interfaces/_index_d_.cfcore.html#registerenv">CFCore.registerEnv</a>方法和<a href="../interfaces/_index_d_.cfenvoptions.html">CFEnvOptions</a>中的说明。
+					也可以参照一下两个资源了解如何而配置环境运行规则：</p>
+					<ol>
+						<li><a href="https://github.com/choice-form/os-client-core/tree/staging/src/web">自带的web核心环境适配</a></li>
+						<li><a href="https://github.com/choice-form/os-client-taro/blob/master/src/compatible/env">小程序的环境适配</a></li>
+					</ol>
+					<p>如果你使用typescript编写项目，则该安装包的更目录下有index.d.ts提供基本的数据类型。强烈建议使用typescript来编写答题UI程序，这样在编程的时候就能通过编辑器的智能提示就能知道UI使用的数据源的数据结构，和相关说明.</p>
+					<a href="#开始创建答题客户端" id="开始创建答题客户端" style="color: inherit; text-decoration: none;">
+						<h2>开始创建答题客户端</h2>
+					</a>
+					<blockquote>
+						<p>我们将主要以web端为例进行说明，所以略过了环境适配，但是UI渲染的规则是通用的。</p>
+					</blockquote>
+					<blockquote>
+						<p>对于非web端的可以参考<a href="https://github.com/choice-form/os-client-taro">小程序答题端</a>这个项目</p>
+					</blockquote>
+					<p>你可以使用任何方式来创建一个项目，建议基于常见框架或库来创建:</p>
+					<ul>
+						<li><a href="https://github.com/facebook/react">react</a>，</li>
+						<li><a href="https://github.com/vuejs/vue">vue</a>，</li>
+						<li><a href="https://github.com/angular/angular">angular</a>，</li>
+					</ul>
+					<p>对于这些常见的库和框架，我们写了一些项目案例放到了<a href="#%E6%A1%88%E4%BE%8B%E9%A1%B9%E7%9B%AE">这里</a>，你可以以这些案例项目为模板仓库创建自己的项目</p>
+					<p>当创建好项目以后我们需要安装该核心包作为依赖。</p>
 					<a href="#使用核心逻辑依赖包" id="使用核心逻辑依赖包" style="color: inherit; text-decoration: none;">
-						<h2>使用核心逻辑依赖包</h2>
+						<h3>使用核心逻辑依赖包</h3>
 					</a>
 					<p>核心包中提供了<a href="../interfaces/_index_d_.cfclient.html">CFClient</a>类型的<code>CFClient</code>对象，里面包含四个对象:</p>
 					<ul>
 						<li>核心<code>CFClient.Core</code>，它是<a href="../interfaces/_index_d_.cfcore.html">CFCore</a>类型。</li>
 						<li>多语言模块<code>CFClient.I18n</code>，它是<a href="../interfaces/_index_d_.cfi18n.html">CFI18n</a>类型</li>
-						<li>事件中心<code>CFClient.EventHub</code>，它是<a href="../interfaces/_index_d_.cfeventhub.html">CFEventHub</a>类型<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Core, I18n, EventHub} <span class="hljs-keyword">from</span> <span class="hljs-string">`@choiceform/os-client-core`</span>;
-<span class="hljs-built_in">console</span>.log(Core, I18n, EventHub);</code></pre>
+						<li>事件中心<code>CFClient.EventHub</code>，它是<a href="../interfaces/_index_d_.cfeventhub.html">CFEventHub</a>类型<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Core， I18n， EventHub} <span class="hljs-keyword">from</span> <span class="hljs-string">`@choiceform/os-client-core`</span>;
+<span class="hljs-built_in">console</span>.log(Core， I18n， EventHub);</code></pre>
 						</li>
 					</ul>
 					<p>当成功把依赖加入到自己的项目中之后，就要开始对答题客户端进行编程了。</p>
@@ -137,63 +152,61 @@
 					</ol>
 					<p>基于核心包自制答题客户端时，除了专注于制作UI页面外，还需要在UI与核心包之间做出必要的交互，后面我们会以上面列出的答题流程为基础说明这两者之间要做哪些必要的交互。</p>
 					<p>下面具体说明各个流程与页面的渲染</p>
-					<a href="#答题程序路由规则" id="答题程序路由规则" style="color: inherit; text-decoration: none;">
-						<h3>答题程序路由规则</h3>
+					<a href="#web端答题程序路由规则（仅适用于web核心适配包）" id="web端答题程序路由规则（仅适用于web核心适配包）" style="color: inherit; text-decoration: none;">
+						<h3>web端答题程序路由规则（仅适用于web核心适配包）</h3>
 					</a>
-					<p>一般情况下,答题程序应该实现下面四个路由:</p>
+					<p>一般情况下，web端答题程序应该实现下面四个路由:</p>
+					<blockquote>
+						<p>为了简单起见，web核心包适配环境时已经固定好了路由名称，使用web核心包时需要按照这个规则路由</p>
+					</blockquote>
+					<p>以下是说明中，xxxx就是问卷id</p>
 					<ul>
-						<li>1.开始页面路由,即主路由:<code>/</code></li>
+						<li>1.开始页面路由，即主路由:<code>/</code>，地址是形如:<code>http://your.host.com?sid=xxxx</code>的规则</li>
 					</ul>
 					<blockquote>
-						<p>你可以观察到:开始页面路由地址是形如:<code>http://your.host.com?xxxx</code>的规则,问号前面是网站地址,后面的参数名是问卷id,例如我们当前的答题端访问某份问卷的的时候,地址是这样的:<code>https://q.choiceform.com?s7YdjgT3</code>,其中<code>https://q.choiceform.com</code>是网站地址,问号后面的<code>s7YdjgT3</code>是问卷id</p>
+						<p>由于历史遗留问题，会兼容支持<code>http://your.host.com?xxxx</code>格式的开始页面地址。</p>
 					</blockquote>
 					<blockquote>
-						<p>该路由必须实现,该路由应该是程序启动后默认进入的路由</p>
+						<p>该路由必须实现，该路由应该是程序启动后默认进入的路由</p>
 					</blockquote>
 					<ul>
-						<li>答题页面路由:<code>/survey</code></li>
+						<li>答题页面路由:<code>/survey</code>，地址形如：<code>http://your.host.com/survey?sid=xxxx</code></li>
 					</ul>
-					<blockquote>
-						<p>你可以观察到:答题页面的路由是形如:<code>http://your.host.com/survey?sid=xxxx</code>的规则,前面的依然是网站地址,后面的<code>sid</code>参数名是定死的,然后<code>xxxx</code>是问卷id.例如我们当前的答题端答题页面的地址是这样的<code>https://q.choiceform.com/survey?sid=s7YdjgT3</code></p>
-					</blockquote>
 					<blockquote>
 						<p>该路由必须实现</p>
 					</blockquote>
 					<ul>
-						<li>奖励页面路由:<code>/reward</code>,展示奖励结果,</li>
+						<li>奖励页面路由:<code>/reward</code>，展示奖励结果，地址形如: <code>http://your.host.com/reward?sid=xxxx</code>的规则，和答题页面的格式一样</li>
 					</ul>
 					<blockquote>
-						<p>你可以观察到:奖励页面的路由形式是: <code>http://your.host.com/route_name?sid=xxxx-survey-id</code>的规则,和答题页面的格式一样</p>
-					</blockquote>
-					<blockquote>
-						<p>如果你的答题程序从来不考虑奖励和抽奖,则可以不实现该路由.</p>
+						<p>如果你的答题程序从来不考虑奖励和抽奖，则可以不实现该路由.</p>
 					</blockquote>
 					<ul>
-						<li>实时预览页面路由<code>/themes</code>,用于内嵌到问卷编辑器内部,让问卷设计者在设计问卷时可以实施查看某个问题在答题页面的UI展现.</li>
+						<li>实时预览页面路由<code>/themes</code>，用于内嵌到问卷编辑器内部，让问卷设计者在设计问卷时可以实施查看某个问题在答题页面的UI展现.</li>
 					</ul>
 					<blockquote>
-						<p>如果你的答题程序不提供查看实时预览效果,则可以不实现该路由.</p>
+						<p>如果你的答题程序不提供查看实时预览效果，则可以不实现该路由.</p>
 					</blockquote>
 					<a href="#答题程序运行启动流程" id="答题程序运行启动流程" style="color: inherit; text-decoration: none;">
 						<h3>答题程序运行启动流程</h3>
 					</a>
 					<ol>
-						<li>进入程序后,调用核心包提供的<a href="../interfaces/_index_d_.cfcore.html#setup">CFCore.setup</a>方法初始化页面配置，需要传入一个<a href="../interfaces/_index_d_.cfsetupoptions.html">CFSetupOptions</a>类型的参数，这个方法是一个异步方法，要等该方法执行完以后才能执后续的的操作。</li>
+						<li>进入程序后，调用核心包提供的<a href="../interfaces/_index_d_.cfcore.html#setup">CFCore.setup</a>方法初始化页面配置，需要传入一个<a href="../interfaces/_index_d_.cfsetupoptions.html">CFSetupOptions</a>类型的参数，这个方法是一个异步方法，要等该方法执行完以后才能执后续的的操作。</li>
 					</ol>
 					<ol start="2">
-						<li><p>初始化完成后，会进入默认的主路由<code>/</code>即开始页面路由,调用<a href="../interfaces/_index_d_.cfcore.html#fetchstartstate">CFCore.fetchStartState</a>方法可以获得问卷封面数据，这是一个<a href="../interfaces/_index_d_.cfstartstate.html">CFStartState</a>类型的数据，然后根据<a href="#%E5%BC%80%E5%A7%8B%E9%A1%B5%E9%9D%A2/%E5%B0%81%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">开始页面/封面渲染规则</a>进行页面渲染.</p>
+						<li><p>初始化完成后，需要打开开始页面，在开始页面中需要调用<a href="../interfaces/_index_d_.cfcore.html#fetchstartstate">CFCore.fetchStartState</a>方法获得问卷封面数据，这是一个<a href="../interfaces/_index_d_.cfstartstate.html">CFStartState</a>类型的数据，然后根据<a href="#%E5%BC%80%E5%A7%8B%E9%A1%B5%E9%9D%A2/%E5%B0%81%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">开始页面/封面渲染规则</a>进行页面渲染.</p>
 						</li>
-						<li><p>当问卷封面的<code>开始答题</code>按钮被点击以后,会进入到答题路由<code>/survey</code>,在这个路由总调用<a href="../interfaces/_index_d_.cfcore.html#fetchsurveystate">CFCore.fetchSurveyState</a>方法可以获得题目数据，这个数据是一个<a href="../interfaces/_index_d_.cfsurveystate.html">CFSurveyState</a>类型的对象，当前要渲染的题目是<a href="../interfaces/_index_d_.cfsurveystate.html#nodes">CFSurveyState.nodes</a>属性,然后可以根据<a href="#%E7%AD%94%E9%A2%98%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">答题页面渲染规则</a>来渲染题目。</p>
+						<li><p>当问卷封面的<code>开始答题</code>按钮被点击以后，需要进入到答题页面，在这进入答题页面后调用<a href="../interfaces/_index_d_.cfcore.html#fetchsurveystate">CFCore.fetchSurveyState</a>方法可以获得题目数据，这个数据是一个<a href="../interfaces/_index_d_.cfsurveystate.html">CFSurveyState</a>类型的对象，当前要渲染的题目是<a href="../interfaces/_index_d_.cfsurveystate.html#nodes">CFSurveyState.nodes</a>属性，然后可以根据<a href="#%E7%AD%94%E9%A2%98%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">答题页面渲染规则</a>来渲染题目。</p>
 						</li>
-						<li><p>当题目中的选项被点击或输入框被输入时，UI层需要按<a href="#UI%E4%B8%8E%E6%A0%B8%E5%BF%83%E4%BA%A4%E4%BA%92%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E8%AF%B4%E6%98%8E">UI与核心交互回调函数说明</a>的规则调用对应的回调函数通知核心模块,这个在<a href="#%E7%AD%94%E9%A2%98%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">答题页面渲染规则</a>中对个各个题目的渲染规则说明中也有详细的解释.</p>
+						<li><p>当题目中的选项被点击或输入框被输入时，UI层需要按<a href="#UI%E4%B8%8E%E6%A0%B8%E5%BF%83%E4%BA%A4%E4%BA%92%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E8%AF%B4%E6%98%8E">UI与核心交互回调函数说明</a>的规则调用对应的回调函数通知核心模块，这个在<a href="#%E7%AD%94%E9%A2%98%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">答题页面渲染规则</a>中对个各个题目的渲染规则说明中也有详细的解释.</p>
 						</li>
 						<li><p>在答题时点击上一题下一题时，UI层需要按<a href="#UI%E4%B8%8E%E6%A0%B8%E5%BF%83%E4%BA%A4%E4%BA%92%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E8%AF%B4%E6%98%8E">UI与核心交互回调函数说明</a>的规则调用对应的回调函数通知核心模块。</p>
 						</li>
-						<li><p>当有警告消息和错误消息时，核心模块会发出该消息，在初始化的时候需要设置<a href="../interfaces/_index_d_.cfsetupoptions.html#notify">CFSetupOptions.notify</a>,<a href="../interfaces/_index_d_.cfsetupoptions.html#error">CFSetupOptions.error</a>,<a href="../interfaces/_index_d_.cfsetupoptions.html#locateerror">CFSetupOptions.locateError</a>等几个方法来接受警告或错误消息，并在UI中以适当的方式将消息展示出来。</p>
+						<li><p>当有警告消息和错误消息时，核心模块会发出该消息，在初始化的时候需要设置<a href="../interfaces/_index_d_.cfsetupoptions.html#notify">CFSetupOptions.notify</a>，<a href="../interfaces/_index_d_.cfsetupoptions.html#alert">CFSetupOptions.alert</a>，<a href="../interfaces/_index_d_.cfsetupoptions.html#error">CFSetupOptions.error</a>，<a href="../interfaces/_index_d_.cfsetupoptions.html#locateerror">CFSetupOptions.locateError</a>等几个方法来接受警告或错误消息，并在UI中以适当的方式将消息展示出来。</p>
 						</li>
-						<li><p>如果配置了奖励，则在答题路由回答完了所有问题后,点击领奖按钮会进入到奖励路由<code>/reward</code>,到达奖励页面后需要调用<a href="../interfaces/_index_d_.cfcore.html#fetchrewardstate">CFCore.fetchRewardState</a>方法来获取奖励数据，这个数据是一个<a href="../interfaces/_index_d_.cfrewardstate.html">CFRewardState</a>类型的对象，然后照<a href="#%E5%A5%96%E5%8A%B1%E9%A1%B5%E9%9D%A2/%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">奖励页面/页面渲染规则</a>来渲染奖励页面。</p>
+						<li><p>（适用于web端）如果配置了奖励，则在答题页面回答完了所有问题后，点击领奖按钮需要进入到奖励页面，到达奖励页面后需要调用<a href="../interfaces/_index_d_.cfcore.html#fetchrewardstate">CFCore.fetchRewardState</a>方法来获取奖励数据，这个数据是一个<a href="../interfaces/_index_d_.cfrewardstate.html">CFRewardState</a>类型的对象，然后照<a href="#%E5%A5%96%E5%8A%B1%E9%A1%B5%E9%9D%A2/%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">奖励页面/页面渲染规则</a>来渲染奖励页面。</p>
 						</li>
-						<li><p>实时预览路由<code>/themes</code>是一个独立的路由,不在正式答题的流程内,也不会和其他几个路由发生跳转关系,他用于嵌入到问卷编辑器中提供实时预览功能,具体的渲染规则请参照<a href="#%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">实时预览页面渲染规则</a></p>
+						<li><p>(仅使用web端)实时预览页面是一个独立页面，不在正式答题的流程内，也不会和其他几个页面发生跳转关系，他用于嵌入到问卷编辑器中提供实时预览功能，具体的渲染规则请参照<a href="#%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%A7%84%E5%88%99">实时预览页面渲染规则</a></p>
 						</li>
 					</ol>
 					<a href="#开始页面封面渲染规则" id="开始页面封面渲染规则" style="color: inherit; text-decoration: none;">
@@ -201,17 +214,17 @@
 					</a>
 					<p>封面数据是一个<a href="../interfaces/_index_d_.cfstartstate.html">CFStartState</a>类型的对象，在该类型的API文档<a href="../interfaces/_index_d_.cfstartstate.html">CFStartState</a>中说明了应该在页面中渲染那些内容。</p>
 					<ul>
-						<li>如果问卷内容支持多种语言,需要渲染<a href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8">多语言切换下拉列表</a></li>
+						<li>如果问卷内容支持多种语言，需要渲染<a href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8">多语言切换下拉列表</a></li>
 						<li>开始答题按钮</li>
 					</ul>
 					<a href="#答题页面渲染渲染规则" id="答题页面渲染渲染规则" style="color: inherit; text-decoration: none;">
 						<h3>答题页面渲染渲染规则</h3>
 					</a>
-					<p>答题页面的数据是一个<a href="../interfaces/_index_d_.cfsurveystate.html">CFSurveyState</a>类型的对象,在答题页面中主要要渲染以下一些内容.</p>
+					<p>答题页面的数据是一个<a href="../interfaces/_index_d_.cfsurveystate.html">CFSurveyState</a>类型的对象，在答题页面中主要要渲染以下一些内容.</p>
 					<ul>
 						<li>题目</li>
 					</ul>
-					<p>关联属性:<a href="../interfaces/_index_d_.cfsurveystate.html#nodes">CFSurveyState.nodes</a>,这个属性是一个题目列表,之中有时候包含一个题目,有时候包含多个题目,需要一一渲染这些题目,其中可能出现以下这些题目类型,点击每个类型的链接可以查看该类型的渲染规则.</p>
+					<p>关联属性:<a href="../interfaces/_index_d_.cfsurveystate.html#nodes">CFSurveyState.nodes</a>，这个属性是一个题目列表，之中有时候包含一个题目，有时候包含多个题目，需要一一渲染这些题目，其中可能出现以下这些题目类型，点击每个类型的链接可以查看该类型的渲染规则.</p>
 					<ul>
 						<li>选择题：<a href="../interfaces/_index_d_.cfchoicequestion.html">CFChoiceQuestion</a></li>
 						<li>分值打分题：<a href="../interfaces/_index_d_.cfrangequestion.html">CFRangeQuestion</a></li>
@@ -237,64 +250,64 @@
 					<ul>
 						<li>断点续答恢复确认面板</li>
 					</ul>
-					<p>关联属性<a href="../interfaces/_index_d_.cfsurveystate.html#answerresumer">CFSurveyState.answerResumer</a>,是<a href="../interfaces/_index_d_.cfanswerresumer.html">CFAnswerResumer</a>类型,如果该属性有值,且<a href="../interfaces/_index_d_.cfanswerresumer.html#show">CFAnswerResumer.show</a>的值为<code>true</code>,则先不要渲染题目,而是先渲染一个断点续答恢复确认面板,让答题者选择是基于之前缓存的答题记录继续做答,还是重新开始做答.
+					<p>关联属性<a href="../interfaces/_index_d_.cfsurveystate.html#answerresumer">CFSurveyState.answerResumer</a>，是<a href="../interfaces/_index_d_.cfanswerresumer.html">CFAnswerResumer</a>类型，如果该属性有值，且<a href="../interfaces/_index_d_.cfanswerresumer.html#show">CFAnswerResumer.show</a>的值为<code>true</code>，则先不要渲染题目，而是先渲染一个断点续答恢复确认面板，让答题者选择是基于之前缓存的答题记录继续做答，还是重新开始做答.
 					具体的渲染细节参照<a href="../interfaces/_index_d_.cfanswerresumer.html">CFAnswerResumer</a>类型中的说明;</p>
 					<ul>
 						<li>预览工具</li>
 					</ul>
-					<p>关联属性<a href="../interfaces/_index_d_.cfsurveystate.html#previewtool">CFSurveyState.previewTool</a>,是<a href="../interfaces/_index_d_.cfpreviewtool.html">CFPreviewTool</a>类型,如果该属性有值,说明是预览模式,需要渲染一个预览辅助工具,使得测试答题的人在预览模式下能进行一些调试操作,具体的渲染规则查看<a href="../interfaces/_index_d_.cfpreviewtool.html">CFPreviewTool</a>类型中的说明.</p>
+					<p>关联属性<a href="../interfaces/_index_d_.cfsurveystate.html#previewtool">CFSurveyState.previewTool</a>，是<a href="../interfaces/_index_d_.cfpreviewtool.html">CFPreviewTool</a>类型，如果该属性有值，说明是预览模式，需要渲染一个预览辅助工具，使得测试答题的人在预览模式下能进行一些调试操作，具体的渲染规则查看<a href="../interfaces/_index_d_.cfpreviewtool.html">CFPreviewTool</a>类型中的说明.</p>
 					<ul>
 						<li>计时器</li>
 					</ul>
-					<p>关联式属性<a href="../interfaces/_index_d_.cfsurveystate.html#resttime">CFSurveyState.restTime</a>,如果该属性有值,则需要在答题页面的某个地方渲染这个值作为剩余时间的提示,这个值是一秒一秒地减少的.</p>
+					<p>关联式属性<a href="../interfaces/_index_d_.cfsurveystate.html#resttime">CFSurveyState.restTime</a>，如果该属性有值，则需要在答题页面的某个地方渲染这个值作为剩余时间的提示，这个值是一秒一秒地减少的.</p>
 					<ul>
 						<li>进度条</li>
 					</ul>
-					<p>关联属性<a href="../interfaces/_index_d_.cfsurveystate.html#needprogressbar">CFSurveyState.needProgressBar</a>和<a href="../interfaces/_index_d_.cfsurveystate.html#progress">CFSurveyState.progress</a>,如果<a href="../interfaces/_index_d_.cfsurveystate.html#needprogressbar">CFSurveyState.needProgressBar</a>的值为true,则需要渲染当前答题进度,进度就是<a href="../interfaces/_index_d_.cfsurveystate.html#progress">CFSurveyState.progress</a>的值</p>
+					<p>关联属性<a href="../interfaces/_index_d_.cfsurveystate.html#needprogressbar">CFSurveyState.needProgressBar</a>和<a href="../interfaces/_index_d_.cfsurveystate.html#progress">CFSurveyState.progress</a>，如果<a href="../interfaces/_index_d_.cfsurveystate.html#needprogressbar">CFSurveyState.needProgressBar</a>的值为true，则需要渲染当前答题进度，进度就是<a href="../interfaces/_index_d_.cfsurveystate.html#progress">CFSurveyState.progress</a>的值</p>
 					<ul>
 						<li>前进后退按钮
-							如果<a href="../interfaces/_index_d_.cfsurveystate.html#prevbutton">CFSurveyState.prevButton</a>属性有值,则需渲染后退(返回上一题)按钮,按钮的文字就是该属性的值,
+							如果<a href="../interfaces/_index_d_.cfsurveystate.html#prevbutton">CFSurveyState.prevButton</a>属性有值，则需渲染后退(返回上一题)按钮，按钮的文字就是该属性的值，
 						点击以后需要调用<a href="../interfaces/_index_d_.cfuieventhandler.html#handleprevclick">CFUIEventHandler.handlePrevClick</a>方法</li>
 					</ul>
-					<p>如果<a href="../interfaces/_index_d_.cfsurveystate.html#nextbutton">CFSurveyState.nextButton</a>属性有值,则需渲染前进(下一题)按钮,按钮的文字就是该属性的值,
+					<p>如果<a href="../interfaces/_index_d_.cfsurveystate.html#nextbutton">CFSurveyState.nextButton</a>属性有值，则需渲染前进(下一题)按钮，按钮的文字就是该属性的值，
 					点击以后需要调用<a href="../interfaces/_index_d_.cfuieventhandler.html#handlenextclick">CFUIEventHandler.handleNextClick</a>方法</p>
 					<ul>
-						<li>如果问卷内容支持多种语言,需要渲染<a href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8">多语言切换下拉列表</a></li>
+						<li>如果问卷内容支持多种语言，需要渲染<a href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8">多语言切换下拉列表</a></li>
 					</ul>
-					<a href="#奖励页面页面渲染规则" id="奖励页面页面渲染规则" style="color: inherit; text-decoration: none;">
-						<h3>奖励页面/页面渲染规则</h3>
+					<a href="#奖励页面页面渲染规则（适用于web端）" id="奖励页面页面渲染规则（适用于web端）" style="color: inherit; text-decoration: none;">
+						<h3>奖励页面/页面渲染规则（适用于web端）</h3>
 					</a>
 					<p>该页面的数据是一个<a href="../interfaces/_index_d_.cfrewardstate.html">CFRewardState</a>的对象，在该类型的API文档<a href="../interfaces/_index_d_.cfrewardstate.html">CFRewardState</a>中说明了应该在页面中渲染那些内容。</p>
-					<a href="#实时预览页面渲染规则" id="实时预览页面渲染规则" style="color: inherit; text-decoration: none;">
-						<h3>实时预览页面渲染规则</h3>
+					<a href="#实时预览页面渲染规则（适用于web端）" id="实时预览页面渲染规则（适用于web端）" style="color: inherit; text-decoration: none;">
+						<h3>实时预览页面渲染规则（适用于web端）</h3>
 					</a>
-					<p>该页面的数据是一个<a href="../interfaces/_index_d_.cfrealtime.html">CFRealtime</a>类型的数据,真正要渲染的数据躲在<a href="../interfaces/_index_d_.cfrealtime.html#data">CFRealtime.data</a>中,它是<a href="../interfaces/_index_d_.cfrealtimestate.html">CFRealtimeState</a>类型,它有几个变化:</p>
+					<p>该页面的数据是一个<a href="../interfaces/_index_d_.cfrealtime.html">CFRealtime</a>类型的数据，真正要渲染的数据躲在<a href="../interfaces/_index_d_.cfrealtime.html#data">CFRealtime.data</a>中，它是<a href="../interfaces/_index_d_.cfrealtimestate.html">CFRealtimeState</a>类型，它有几个变化:</p>
 					<ul>
-						<li><p>当<a href="../interfaces/_index_d_.cfrealtimestate.html#isstart">CFRealtimeState.isStart</a>的值为<code>true</code>时,当成开始页面渲染</p>
+						<li><p>当<a href="../interfaces/_index_d_.cfrealtimestate.html#isstart">CFRealtimeState.isStart</a>的值为<code>true</code>时，当成开始页面渲染</p>
 						</li>
-						<li><p>当<a href="../interfaces/_index_d_.cfrealtimestate.html#isgift">CFRealtimeState.isGift</a>的值为<code>true</code>时,当成奖励页面渲染</p>
+						<li><p>当<a href="../interfaces/_index_d_.cfrealtimestate.html#isgift">CFRealtimeState.isGift</a>的值为<code>true</code>时，当成奖励页面渲染</p>
 						</li>
-						<li><p>如果以上皆不是,则当成答题页面渲染.</p>
+						<li><p>如果以上皆不是，则当成答题页面渲染.</p>
 						</li>
-						<li><p>如果问卷内容支持多种语言,需要渲染<a href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8">多语言切换下拉列表</a>,无论当成那个页面渲染,都需要.</p>
+						<li><p>如果问卷内容支持多种语言，需要渲染<a href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8">多语言切换下拉列表</a>，无论当成那个页面渲染，都需要.</p>
 						</li>
-						<li><p>如果问卷中要求使用计时器或进度条,当以答题页面方式渲染的时候可以渲染一个不动的时间或进度调效果,供预览.当以开始页面和奖励页面渲染的时候则不需要.</p>
+						<li><p>如果问卷中要求使用计时器或进度条，当以答题页面方式渲染的时候可以渲染一个不动的时间或进度调效果，供预览.当以开始页面和奖励页面渲染的时候则不需要.</p>
 						</li>
-						<li><p>前进后退按钮,同答题页规则相同</p>
+						<li><p>前进后退按钮，同答题页规则相同</p>
 						</li>
 					</ul>
 					<a href="#多语言切换下拉列表" id="多语言切换下拉列表" style="color: inherit; text-decoration: none;">
 						<h3>多语言切换下拉列表</h3>
 					</a>
-					<p>如果问卷支持多种语言的内容,则在开始页面,答题页面和实时预览页面中都需要添加一个问卷内容语言切换下拉列表
+					<p>如果问卷支持多种语言的内容，则在开始页面，答题页面和实时预览页面中都需要添加一个问卷内容语言切换下拉列表
 					下拉列表的内容源自于:</p>
 					<ul>
-						<li>开始页面:<a href="../interfaces/_index_d_.cfstartstate.html#langtable">CFStartState.langTable</a>是支持的语言列表,<a href="../interfaces/_index_d_.cfstartstate.html#language">CFStartState.language</a>是当前展示的语言</li>
-						<li>答题页面:<a href="../interfaces/_index_d_.cfsurveystate.html#langtable">CFSurveyState.langTable</a>是支持的语言列表,<a href="../interfaces/_index_d_.cfsurveystate.html#language">CFSurveyState.language</a>是当前展示的语言</li>
-						<li>实时预览页面<a href="../interfaces/_index_d_.cfrealtimestate.html#langtable">CFRealtimeState.langTable</a>是支持的语言列表,<a href="../interfaces/_index_d_.cfrealtimestate.html#language">CFRealtimeState.language</a>是当前展示的语言</li>
+						<li>开始页面:<a href="../interfaces/_index_d_.cfstartstate.html#langtable">CFStartState.langTable</a>是支持的语言列表，<a href="../interfaces/_index_d_.cfstartstate.html#language">CFStartState.language</a>是当前展示的语言</li>
+						<li>答题页面:<a href="../interfaces/_index_d_.cfsurveystate.html#langtable">CFSurveyState.langTable</a>是支持的语言列表，<a href="../interfaces/_index_d_.cfsurveystate.html#language">CFSurveyState.language</a>是当前展示的语言</li>
+						<li>实时预览页面<a href="../interfaces/_index_d_.cfrealtimestate.html#langtable">CFRealtimeState.langTable</a>是支持的语言列表，<a href="../interfaces/_index_d_.cfrealtimestate.html#language">CFRealtimeState.language</a>是当前展示的语言</li>
 					</ul>
-					<p>当<code>langTable</code>中包含两个或两个以上语言是就渲染语言选择列表,没有<code>langTable</code>属性,或<code>langTable</code>中包含的语言只有一个则不要渲染语言选择列表.</p>
-					<p>当答题者点击预览列表切换语言时,需要回调<a href="../interfaces/_index_d_.cfuieventhandler.html#handlelangchange">CFUIEventHandler.handleLangChange</a>方法.</p>
+					<p>当<code>langTable</code>中包含两个或两个以上语言是就渲染语言选择列表，没有<code>langTable</code>属性，或<code>langTable</code>中包含的语言只有一个则不要渲染语言选择列表.</p>
+					<p>当答题者点击预览列表切换语言时，需要回调<a href="../interfaces/_index_d_.cfuieventhandler.html#handlelangchange">CFUIEventHandler.handleLangChange</a>方法.</p>
 					<a href="#ui与核心交互回调函数" id="ui与核心交互回调函数" style="color: inherit; text-decoration: none;">
 						<h3>UI与核心交互回调函数</h3>
 					</a>
@@ -303,84 +316,87 @@
 					<a href="#强化ui和逻辑分离的概念" id="强化ui和逻辑分离的概念" style="color: inherit; text-decoration: none;">
 						<h2>强化UI和逻辑分离的概念</h2>
 					</a>
-					<p>平时我们使用react,vue,angular,emberjs等库或框架编写前端项目时,我们的数据源和业务逻辑都是自己管理的,他们或者作为组件的状态,或者作为传入组件的属性,但是无论哪种,我们在项目中都有地方对他们的值进行修改和控制,用框架的更新属性的方法更改了这些值以后,框架就能感知到变化,就会驱动页面更新</p>
-					<p>但是当我们基于<code>@choiceform/os-client-core</code>开发答题页面程序时,答题程序的数据源和业务逻辑都是在这个包里的,答题页面程序负责开发的只是UI程序,UI程序里面对业务逻辑是一无所知值的,对于数据源中某些属性的变化也是无感知的.所以就无法驱动页面更新,我们需要制定一些规则,UI程序需要遵循这些规则,才能让核心逻辑程序包和UI程序可以正常地相互协作.</p>
+					<p>平时我们使用react，vue，angular等库或框架编写前端项目时，我们的数据源和业务逻辑都是自己管理的，他们或者作为组件的状态，或者作为传入组件的属性，但是无论哪种，我们在项目中都有地方对他们的值进行修改和控制，用框架的更新属性的方法更改了这些值以后，框架就能感知到变化，就会驱动页面更新</p>
+					<p>但是当我们基于<code>@choiceform/os-client-core</code>开发答题页面程序时，答题程序的数据源和业务逻辑都是在这个包里的，答题页面程序负责开发的只是UI程序，UI程序里面对业务逻辑是一无所知值的，对于数据源中某些属性的变化也是无感知的.所以就无法驱动页面更新，我们需要制定一些规则，UI程序需要遵循这些规则，才能让核心逻辑程序包和UI程序可以正常地相互协作.</p>
 					<p>规则:</p>
 					<ul>
-						<li><p>UI程序中使用了核心包以后,每个路由都可以通过特定的数据获取方法从核心包中取到当前页面的数据,数据层次从页面到题目,从题目到选项一层层下去,UI中可以绑定这个数据上的各种属性渲染出页面内容.(这一步没有障碍)</p>
+						<li><p>UI程序中使用了核心包以后，每个页面都可以通过特定的数据获取方法从核心包中取到当前页面的数据，数据层次从页面到题目，从题目到选项一层层下去，UI中可以绑定这个数据上的各种属性渲染出页面内容.(这一步没有障碍)</p>
 						</li>
-						<li><p>UI永远只可以使用数据源中的内容,永远不要更改数据源中的任何内容.我们以选项的操作和渲染举例说明,我们用react代码片段举例,其中的<code>option</code>是一个<a href="../interfaces/_index_d_.cfoption.html">CFOption</a>选项,<code>question</code>是一个<a href="../interfaces/_index_d_.cfquestion.html">CFQuestion</a>问题,
-							<code>handler</code>是一个<a href="../interfaces/_index_d_.cfuieventhandler.html">CFUIEventHandler</a>事件处理器,我们假设他是从state中读取出来的,真实情况下可能是从上层props中传进来的,</p>
+						<li><p>UI永远只可以使用数据源中的内容，永远不要更改数据源中的任何内容.我们以选项的操作和渲染举例说明，我们用react代码片段举例，其中的<code>option</code>是一个<a href="../interfaces/_index_d_.cfoption.html">CFOption</a>选项，<code>question</code>是一个<a href="../interfaces/_index_d_.cfquestion.html">CFQuestion</a>问题，
+							<code>handler</code>是一个<a href="../interfaces/_index_d_.cfuieventhandler.html">CFUIEventHandler</a>事件处理器，我们假设他是从state中读取出来的，真实情况下可能是从上层props中传进来的，</p>
 							<p><code>option</code>就是数据源</p>
 							<pre><code class="language-typescript">import React from 'react';
 class MyOption extends React.Component {
   render(){
-   const {handler, option, question} = this.state;
+   const {handler， option， question} = this.state;
    return &lt;div className='option-item'
       style={{ background: option.selected ? 'red' : 'gray' }}&gt;
       &lt;span&gt;{option.text}&lt;/span&gt;
       &lt;input type="checkbox"
         checked={option.selected}
-        onClick={() =&gt; handler.handleOptionClick(option, question)}
+        onClick={() =&gt; handler.handleOptionClick(option， question)}
       /&gt;
     &lt;/div&gt;
   }
 }</code></pre>
-							<p>在上述的代码中,我们渲染了一个选项,</p>
+							<p>在上述的代码中，我们渲染了一个选项，</p>
 							<ul>
-								<li><p>我们绑定了<code>option.selected</code>属性(依靠<a href="../interfaces/_index_d_.cfoption.html#selected">CFOption.selected</a>来判断选项是否被选中,当选项未被选中时,背景渲染成<code>gray</code>色,<code>checkbox</code>处于不被<code>check</code>的状态,</p>
-									<p>当选项选中时,背景渲染成<code>red</code>色,<code>checkbox</code>处于被<code>check</code>的状态</p>
+								<li><p>我们绑定了<code>option.selected</code>属性(依靠<a href="../interfaces/_index_d_.cfoption.html#selected">CFOption.selected</a>来判断选项是否被选中，当选项未被选中时，背景渲染成<code>gray</code>色，<code>checkbox</code>处于不被<code>check</code>的状态，</p>
+									<p>当选项选中时，背景渲染成<code>red</code>色，<code>checkbox</code>处于被<code>check</code>的状态</p>
 								</li>
-								<li><p>当选项被点击时,选项应该在选中与被选中的状态之间切换,这时候我们监听<code>onClick</code>事件,我们第一想法就是要使用<code>setState</code>方法把把<code>option.selected</code>属性的值从<code>true</code>改成<code>false</code>,或者从<code>false</code>改为<code>true</code>,这样UI页面就自然而然更新了,但是我们上面说了UI永远不能改数据源中的内容,所以UI程序中不能直接去改写<code>option.selected</code>属性,而是通过调用<a href="../interfaces/_index_d_.cfuieventhandler.html#handleoptionclick">CFUIEventHandler.handleOptionClick</a>方法告诉核心逻辑层,核心逻辑层会去改写<code>option.selected</code>的值</p>
+								<li><p>当选项被点击时，选项应该在选中与被选中的状态之间切换，这时候我们监听<code>onClick</code>事件，我们第一想法就是要使用<code>setState</code>方法把把<code>option.selected</code>属性的值从<code>true</code>改成<code>false</code>，或者从<code>false</code>改为<code>true</code>，这样UI页面就自然而然更新了，但是我们上面说了UI永远不能改数据源中的内容，所以UI程序中不能直接去改写<code>option.selected</code>属性，而是通过调用<a href="../interfaces/_index_d_.cfuieventhandler.html#handleoptionclick">CFUIEventHandler.handleOptionClick</a>方法告诉核心逻辑层，核心逻辑层会去改写<code>option.selected</code>的值</p>
 								</li>
-								<li><p>但是这样会出现一个问题,核心层去改动了数据源中的内容时用的是非UI驱动的方法,UI对此是无感知的.导致更改以后,UI页面不会更新,这个问题在下一点中进行说明和解决.</p>
+								<li><p>但是这样会出现一个问题，核心层去改动了数据源中的内容时用的是非UI驱动的方法，UI对此是无感知的.导致更改以后，UI页面不会更新，这个问题在下一点中进行说明和解决.</p>
 									<blockquote>
-										<p>为什么不让UI修改数据源:核心包中的逻辑是非常复杂的,就是为了让UI层能够专注于UI的开发,不参与答题流程的逻辑,我们才抽出的核心逻辑包,所以UI中对答题流程是一无所知的,就以上面选项选中的行为为例,简单想来,点击后不就是切换<code>option.selected</code>属性是<code>false</code>或<code>true</code>吗,但是真实场合下,如果是单选题,你这个选项被选中后,之前另外被选中的某个选项应该被取消选中,如果是多选题,因为选中数量已经达到多选最大限制数量,再去点击某个未选中的选项,其实是不能把该选项变为选中状态的,其他的还有选项排他,选项互斥的各种复杂逻辑,所以UI层即使想改,也是无法正确更改数据源上的内容的,如要正确更改,就必须把所有逻辑都考虑进来,一丝不漏,这样就把逻辑和UI混在一起了,就偏离了我们UI层和逻辑层分离的初衷.</p>
+										<p>为什么不让UI修改数据源:核心包中的逻辑是非常复杂的，就是为了让UI层能够专注于UI的开发，不参与答题流程的逻辑，我们才抽出的核心逻辑包，所以UI中对答题流程是一无所知的，就以上面选项选中的行为为例，简单想来，点击后不就是切换<code>option.selected</code>属性是<code>false</code>或<code>true</code>吗，但是真实场合下，如果是单选题，你这个选项被选中后，之前另外被选中的某个选项应该被取消选中，如果是多选题，因为选中数量已经达到多选最大限制数量，再去点击某个未选中的选项，其实是不能把该选项变为选中状态的，其他的还有选项排他，选项互斥的各种复杂逻辑，所以UI层即使想改，也是无法正确更改数据源上的内容的，如要正确更改，就必须把所有逻辑都考虑进来，一丝不漏，这样就把逻辑和UI混在一起了，就偏离了我们UI层和逻辑层分离的初衷.</p>
 									</blockquote>
 									<blockquote>
-										<p>抽出逻辑层以后,才能方便我们对同样的逻辑(只要导入核心包即可)建立不限个UI项目,定制各种各种风格的答题程序.</p>
+										<p>抽出逻辑层以后，才能方便我们对同样的逻辑(只要导入核心包即可)建立不限个UI项目，定制各种各种风格的答题程序.</p>
 									</blockquote>
 								</li>
 							</ul>
 						</li>
 						<li><p>怎样让UI层知道核心逻辑改动了数据源?</p>
 							<ul>
-								<li><p>在前面我们强调了UI不直接更改数据源的规则,以及UI和逻辑分离的原因,但是当UI和逻辑分离以后,UI发生操作后委托逻辑层的的回调函数中对数据源进行更改以后,UI是不知道的,导致数据源中数据虽然发生了变化,但是UI页面没有被更新</p>
+								<li><p>在前面我们强调了UI不直接更改数据源的规则，以及UI和逻辑分离的原因，但是当UI和逻辑分离以后，UI发生操作后委托逻辑层的的回调函数中对数据源进行更改以后，UI是不知道的，导致数据源中数据虽然发生了变化，但是UI页面没有被更新</p>
 								</li>
-								<li><p>为了解决这个问题,核心包中在更改任何可能影响UI渲染的数据时,都会通过一个<code>setter</code>方法去修改,而这个<code>setter</code>可以被UI程序配置,通过注册这个<code>setter</code>方法,UI层可以知道数据发生了变化,然后使用一些手段驱动UI页面的更新,详情请查看<a href="../interfaces/_index_d_.cfsetupoptions.html#setter">CFSetupOptions.setter</a>属性的说明</p>
-								</li>
-								<li><p>除了上面说的<code>setter</code>方法之外,我们也可以不注册<code>setter</code>方法,而是监听<a href="../interfaces/_index_d_.cfeventhub.html">CFEventHub</a>中的<code>SET_PROPS</code>事件,然后再驱动UI页面更新,核心包中每次更改UI相关的属性时,都会触发这个事件,可能一次UI操作会触发多次,可以考虑debuouce处理监听方法在驱动UI更新,这样减少对性能的影响.关于<code>SET_PROPS</code>事件的监听,在<a href="../interfaces/_index_d_.cfsetupoptions.html#setter">CFSetupOptions.setter</a>属性中也有说明.</p>
-								</li>
-								<li><p>取决于你使用的前端框架UI更新机制,有些框架更适用于配置<code>setter</code>方法来驱动更新,有些框架更适用于监听<code>SET_PROPS</code>,我们自己使用下来的经验是,当使用<code>emberjs</code>时,配置<code>setter</code>非常合适,当使用<code>vue</code>,<code>react</code>,<code>angular</code>时,使用<code>SET_PROPS</code>更为合适.</p>
-								</li>
-								<li><p>你可以尝试:UI中发生操作时,只调用<a href="../interfaces/_index_d_.cfuieventhandler.html">CFUIEventHandler</a>中的回调方法,但是不配置<code>setter</code>方法或监听<code>SET_PROPS</code>事件来驱动UI,观察UI会不会更新,然后加上<code>setter</code>或<code>SET_PROPS</code>,再观察UI会不会更新</p>
+								<li><p>为了解决这个问题，核心包中在更改任何可能影响UI渲染的数据时，都会在<a href="../interfaces/_index_d_.cfeventhub.html">CFEventHub</a>发出一个<code>SET_PROPS</code>事件，监听<a href="../interfaces/_index_d_.cfeventhub.html">CFEventHub</a>中的<code>SET_PROPS</code>事件，然后再驱动UI页面更新。</p>
 								</li>
 							</ul>
 						</li>
-					</ul>
-					<ul>
-						<li><p>编写UI答题程序时要习惯UI和逻辑分离的思维,否则你很容易犯<code>在UI中更改数据源</code>的错误,一旦UI中改动了数据源中的属性,逻辑层再基于被UI中改坏的数据进行逻辑处理时,可能得到一个错误的结果,会导致数据结果出错.</p>
+						<li><p>编写UI答题程序时要习惯UI和逻辑分离的思维，否则你很容易犯<code>在UI中更改数据源</code>的错误，一旦UI中改动了数据源中的属性，逻辑层再基于被UI中改坏的数据进行逻辑处理时，可能得到一个错误的结果，会导致数据结果出错.</p>
 						</li>
-						<li><p>UI组件自己内部的状态不是<code>数据源</code>,当然是由你自己任意管理,随意更改啦,不要混淆了概念哦.</p>
+						<li><p>UI组件自己内部的状态不是<code>数据源</code>，当然是由你自己任意管理，随意更改啦，不要混淆了概念哦.</p>
 						</li>
 						<li><p>如果你对核心包的工作流程的理解达到炉火纯青的地步，其实你也是可以在UI中偶尔改一下数据源的内容，因为你知道这个改动不会影响到整个答题答题流程，这个在定制UI中临时解决一些特殊需求时非常有用。</p>
+						</li>
+						<li><p>建议使用typescript构建答题客户端，这时候核心包中的类型提示说明能帮助你快速了解各个属性的用途，同时大部分不可变更的属性都加了readonly修饰，可以很大程度上防止你在UI中修改数据源上的属性</p>
 						</li>
 					</ul>
 					<a href="#关于多语言翻译" id="关于多语言翻译" style="color: inherit; text-decoration: none;">
 						<h2>关于多语言翻译</h2>
 					</a>
-					<p>核心包中自己适应的多语言已经翻译好了,如果你对现有的核心包中翻译的内容不满意,则可以在调用初始化方法:[CFCore.setup]的参数中配置<a href="../interfaces/_index_d_.cfsetupoptions.html#langsrcmap">CFSetupOptions.langSrcMap</a>属性来把核心包使用的多语言内容变成你想要的方式.</p>
-					<p>关于UI的多语言,需要UI中自行解决,其中核心包中导出了一个<code>I18n</code>对象,里面包含<a href="../interfaces/_index_d_.cfi18n.html#messageformat">CFI18n.MessageFormat</a>属性,是一个通用的多语言翻译工具,UI程序中可以沿用.在之前列出的例子项目中,也展示了如何解决UI程序自身的多语言问题.
-						如果要新增支持的多语言,代号请参照<a href="https://en.wikipedia.org/wiki/Language_localisation">百科全书</a>,
+					<p>核心包中自己适应的多语言已经翻译好了，如果你对现有的核心包中翻译的内容不满意，则可以在调用初始化方法:[CFCore.setup]的参数中配置<a href="../interfaces/_index_d_.cfsetupoptions.html#langsrcmap">CFSetupOptions.langSrcMap</a>属性来把核心包使用的多语言内容变成你想要的方式.</p>
+					<p>关于UI的多语言，需要UI中自行解决，其中核心包中导出了一个<code>I18n</code>对象，里面包含<a href="../interfaces/_index_d_.cfi18n.html#messageformat">CFI18n.MessageFormat</a>属性，是一个通用的多语言翻译工具，UI程序中可以沿用.在之前列出的例子项目中，也展示了如何解决UI程序自身的多语言问题.
+						如果要新增支持的多语言，代号请参照<a href="https://en.wikipedia.org/wiki/Language_localisation">百科全书</a>，
 					我们居于其中的代号改为使用<code>xx_xx</code>这样小写字母加下划线的方式的代号.</p>
 					<a href="#案例项目" id="案例项目" style="color: inherit; text-decoration: none;">
 						<h2>案例项目</h2>
 					</a>
+					<a href="#小程序" id="小程序" style="color: inherit; text-decoration: none;">
+						<h3>小程序</h3>
+					</a>
+					<ul>
+						<li><a href="https://github.com/choice-form/os-client-taro">os-client-taro</a></li>
+					</ul>
+					<a href="#web端（仅适用于web端）" id="web端（仅适用于web端）" style="color: inherit; text-decoration: none;">
+						<h3>web端（仅适用于web端）</h3>
+					</a>
 					<p>UI答题程序可以做成一下两种方式:各自的方式和优缺点在下面列出来.</p>
 					<ul>
-						<li><p>常规的前端程序,一个常规的前端项目,自由编程.</p>
+						<li><p>常规的前端程序，一个常规的前端项目，自由编程.</p>
 						</li>
-						<li><p>动态模板加载的组件,常规的前端项目+模板插件程序,必须按照规定的方式编程.在下面的动态模板案例中都有编程规则的说明</p>
+						<li><p>动态模板加载的组件，常规的前端项目+模板插件程序，必须按照规定的方式编程.在下面的动态模板案例中都有编程规则的说明</p>
 						</li>
 						<li><p>比较:</p>
 						</li>
@@ -395,37 +411,37 @@ class MyOption extends React.Component {
 						</thead>
 						<tbody><tr>
 								<td>复杂度</td>
-								<td>简单,搭建一个常规前端项目即可</td>
-								<td>较复杂 ,需要分前端主项目和插件程序,并且有编程规则</td>
+								<td>简单，搭建一个常规前端项目即可</td>
+								<td>较复杂 ，需要分前端主项目和插件程序，并且有编程规则</td>
 							</tr>
 							<tr>
 								<td>横向扩展能力</td>
-								<td>很弱,只能在现有组件上增加判断来增加UI风格</td>
-								<td>很强,可随意为题型添加独立风格的UI组件且对现有组件没有任何影响</td>
+								<td>很弱，只能在现有组件上增加判断来增加UI风格</td>
+								<td>很强，可随意为题型添加独立风格的UI组件且对现有组件没有任何影响</td>
 							</tr>
 							<tr>
 								<td>初始资源加载量</td>
-								<td>很大,所有题型的所有可用的UI都打包到一个程序中,再加上各个题型依赖的插件,都全部要加载</td>
-								<td>很小,初始只会加载主程序包和通用程序包</td>
+								<td>很大，所有题型的所有可用的UI都打包到一个程序中，再加上各个题型依赖的插件，都全部要加载</td>
+								<td>很小，初始只会加载主程序包和通用程序包</td>
 							</tr>
 							<tr>
 								<td>动态按需加载</td>
-								<td>不支持,每次都会加所有题型的所有UI组件和依赖插件,即使问卷中只有一道题目</td>
-								<td>支持,当要渲染一个题目的时候,才会去加载该题目的组件和依赖插件</td>
+								<td>不支持，每次都会加所有题型的所有UI组件和依赖插件，即使问卷中只有一道题目</td>
+								<td>支持，当要渲染一个题目的时候，才会去加载该题目的组件和依赖插件</td>
 							</tr>
 							<tr>
 								<td>动态选择UI风格</td>
-								<td>不支持,或仅支持系统内置的一些定制选择</td>
-								<td>全自由支持,在问卷编辑器中可以为某道题目选择该题支持的所有UI风格</td>
+								<td>不支持，或仅支持系统内置的一些定制选择</td>
+								<td>全自由支持，在问卷编辑器中可以为某道题目选择该题支持的所有UI风格</td>
 							</tr>
 							<tr>
 								<td>遵循特定编程规则</td>
 								<td>不需要</td>
-								<td>需要,参照后面的动态模板加载方案</td>
+								<td>需要，参照后面的动态模板加载方案</td>
 							</tr>
 					</tbody></table>
-					<p>下面是放到github上的模板仓库,在这些仓库中,已经做好了基本的项目轮廓,你只需要修改其中的组件代码即可,这样可以节省很多初始的配置和架构流程.</p>
-					<p>如果你想基于某个模板仓库创建自己的新仓库,可以进入到模板仓库页面,点击<code>Use this template</code>按钮可以基于此仓库新建一个仓库,这个新建的仓库会包含和源仓库一模一样的内容,但是不会包含源仓库的提交信息.具体请参考<a href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template">github的模板仓库说明</a></p>
+					<p>下面是放到github上的模板仓库，在这些仓库中，已经做好了基本的项目轮廓，你只需要修改其中的组件代码即可，这样可以节省很多初始的配置和架构流程.</p>
+					<p>如果你想基于某个模板仓库创建自己的新仓库，可以进入到模板仓库页面，点击<code>Use this template</code>按钮可以基于此仓库新建一个仓库，这个新建的仓库会包含和源仓库一模一样的内容，但是不会包含源仓库的提交信息.具体请参考<a href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template">github的模板仓库说明</a></p>
 					<p>常规方案案例:</p>
 					<blockquote>
 						<p>各种框架或库都适合创建常会案列</p>
@@ -434,62 +450,59 @@ class MyOption extends React.Component {
 						<li><a href="">基于vue的案例</a> 正在准备...</li>
 						<li><a href="">基于react的案例</a> 正在准备...</li>
 						<li><a href="https://github.com/choice-form/os-client-demo-angular">基于angular的案例</a></li>
-						<li><a href="">基于emberjs的案例</a> 正在准备...</li>
-						<li><a href="">基于angularjs的案例</a> 正在准备...</li>
 					</ul>
 					<p>动态模板方案案例:</p>
 					<blockquote>
-						<p>因为动态模板方案需要完全自行编写构建流程所以<code>emberjs</code>和<code>angular</code>这种默认集成的大型框架不适合编写动态模板方案,而<code>react</code>,<code>vue</code>,<code>angularjs</code>这种适合零散组装功能的库则非常适合</p>
+						<p>因为动态模板方案需要完全自行编写构建流程所以<code>angular</code>这种默认集成的大型框架不适合编写动态模板方案，而<code>react</code>，<code>vue</code>这种适合零散组装功能的库则非常适合</p>
 					</blockquote>
 					<ul>
 						<li><a href="https://github.com/choice-form/os-client-demo-react-dynamic">基于react的案例</a></li>
 						<li><a href="">基于vue的案例</a> 正在准备...</li>
-						<li><a href="">基于angularjs的案例</a> 正在准备...</li>
 					</ul>
-					<a href="#项目部署和注册" id="项目部署和注册" style="color: inherit; text-decoration: none;">
-						<h2>项目部署和注册</h2>
+					<a href="#项目部署和注册（仅适用于web端）" id="项目部署和注册（仅适用于web端）" style="color: inherit; text-decoration: none;">
+						<h2>项目部署和注册（仅适用于web端）</h2>
 					</a>
-					<p>答题程序做完以后,需要做以下事情,才能使你的答题程序和巧思调研系统结合起来一起工作.</p>
+					<p>答题程序做完以后，需要做以下事情，才能使你的答题程序和巧思调研系统结合起来一起工作.</p>
 					<ol>
 						<li><p>需要将你的答题程序部署到远程服务器.可以通过网址访问</p>
 						</li>
-						<li><p>需要注册到巧思调研系统,提供好以下资料,联系巧思相关工作人员.</p>
+						<li><p>需要注册到巧思调研系统，提供好以下资料，联系巧思相关工作人员.</p>
 							<ul>
-								<li>你这个程序是常规方案的,还是动态模板加载方案的.</li>
+								<li>你这个程序是常规方案的，还是动态模板加载方案的.</li>
 								<li>你这个程序想注册成什么名称:如名称叫做<code>我的答题程序</code>.如果该名字已被注册则需要换名字.</li>
 								<li>你这个程序部署在了那个地址:如地址是:<code>https://www.myclient.com</code></li>
-								<li>你在本地开发时启动的地址:如地址是:<code>http://localhost:8080</code>,这个地址是方便你本地开发调试使用的.
-								工作人员收到这些资料后,会审核你的答题程序,通过审核以后该程序会被注册到巧思调研系统,</li>
+								<li>你在本地开发时启动的地址:如地址是:<code>http://localhost:8080</code>，这个地址是方便你本地开发调试使用的.
+								工作人员收到这些资料后，会审核你的答题程序，通过审核以后该程序会被注册到巧思调研系统，</li>
 							</ul>
 						</li>
-						<li><p>如果审核注册成功,进入巧思问卷编辑器后,在主题设置中的<code>答题应用程序</code>下拉列表中,将会看到你答题程序名称,你可以选择适用你的答题程序来作为当前问卷的答题程序</p>
+						<li><p>如果审核注册成功，进入巧思问卷编辑器后，在主题设置中的<code>答题应用程序</code>下拉列表中，将会看到你答题程序名称，你可以选择适用你的答题程序来作为当前问卷的答题程序</p>
 						</li>
-						<li><p>选择好以后,点击问卷发布,点击即发布后的链接,就可以看到答题页面正式你的答题程序.结合成功!</p>
+						<li><p>选择好以后，点击问卷发布，点击即发布后的链接，就可以看到答题页面正式你的答题程序.结合成功!</p>
 						</li>
 					</ol>
-					<a href="#调试" id="调试" style="color: inherit; text-decoration: none;">
-						<h2>调试</h2>
+					<a href="#调试（仅适用于web端）" id="调试（仅适用于web端）" style="color: inherit; text-decoration: none;">
+						<h2>调试（仅适用于web端）</h2>
 					</a>
 					<ul>
-						<li><p>如果你在本地开发时有已经在自己机器上有本地开发版的问卷编辑器,并且你准备用这个本地开发编辑器连接你的答题UI程序进项开发调试,则你什么操作也不需要做,他就会自动连通你本地的<code>http://localhost:8080</code>上的答题程序,记得要注意你本地启动的端口必须和上面准备资料中的端口一致哦.</p>
+						<li><p>如果你在本地开发时有已经在自己机器上有本地开发版的问卷编辑器，并且你准备用这个本地开发编辑器连接你的答题UI程序进项开发调试，则你什么操作也不需要做，他就会自动连通你本地的<code>http://localhost:8080</code>上的答题程序，记得要注意你本地启动的端口必须和上面准备资料中的端口一致哦.</p>
 						</li>
-						<li><p>在本地的设计端配置<code>config/local.ts</code>中可以添加多个本地临时实验的答题端程序配置,如果你的设计端代码仓库中还没有这个文件,则启动设计端后就会出现,如果该文件报错,则删除掉该文件,重新启动一下设计端.</p>
+						<li><p>在本地的设计端配置<code>config/local.ts</code>中可以添加多个本地临时实验的答题端程序配置，如果你的设计端代码仓库中还没有这个文件，则启动设计端后就会出现，如果该文件报错，则删除掉该文件，重新启动一下设计端.</p>
 							<pre><code class="language-typescript">localClient: [
   {
-    dynamic: <span class="hljs-literal">false</span>,
-    id: <span class="hljs-string">'My Client Demo'</span>,
-    value: <span class="hljs-string">'My Client Demo'</span>,
-    host: <span class="hljs-string">'http://localhost:4402'</span>,
+    dynamic: <span class="hljs-literal">false</span>，
+    id: <span class="hljs-string">'My Client Demo'</span>，
+    value: <span class="hljs-string">'My Client Demo'</span>，
+    host: <span class="hljs-string">'http://localhost:4402'</span>，
     prod: <span class="hljs-literal">false</span>
   }
-],</code></pre>
+]，</code></pre>
 							<p>这样这个程序只会在你本地的设计端中出现.不会再发布后的设计端中出现</p>
 						</li>
-						<li><p>如果你使用非本地的问卷编辑器想连接本地的答题UI程序进行开发,则需要做以下操作才能连通.</p>
+						<li><p>如果你使用非本地的问卷编辑器想连接本地的答题UI程序进行开发，则需要做以下操作才能连通.</p>
 							<ul>
-								<li><p>默认情况下服务器上的问卷编辑器会连接服务骑上的答题程序,以上面提供的资料为例就是连通<code>https://www.myclient.com</code></p>
+								<li><p>默认情况下服务器上的问卷编辑器会连接服务骑上的答题程序，以上面提供的资料为例就是连通<code>https://www.myclient.com</code></p>
 								</li>
-								<li><p>我们在打开问卷编辑器的地址中附加额外参数<code>use_local_client</code>,这时候编辑器不再使用<code>https://www.myclient.com</code>上的答题程序,而是转为使用你本地的<code>http://localhost:8080</code>上启动的答题程序,记得要注意你本地启动的端口必须和上面准备资料中的端口一致哦.</p>
+								<li><p>我们在打开问卷编辑器的地址中附加额外参数<code>use_local_client</code>，这时候编辑器不再使用<code>https://www.myclient.com</code>上的答题程序，而是转为使用你本地的<code>http://localhost:8080</code>上启动的答题程序，记得要注意你本地启动的端口必须和上面准备资料中的端口一致哦.</p>
 								</li>
 							</ul>
 						</li>
@@ -526,16 +539,15 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfcore.html" class="tsd-kind-icon">CFCore</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfdropdownquestion.html" class="tsd-kind-icon">CFDropdown<wbr>Question</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfendpage.html" class="tsd-kind-icon">CFEnd<wbr>Page</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvapp.html" class="tsd-kind-icon">CFEnv<wbr>App</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvauth.html" class="tsd-kind-icon">CFEnv<wbr>Auth</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvbasic.html" class="tsd-kind-icon">CFEnv<wbr>Basic</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvdoc.html" class="tsd-kind-icon">CFEnv<wbr>Doc</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvdev.html" class="tsd-kind-icon">CFEnv<wbr>Dev</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvhook.html" class="tsd-kind-icon">CFEnv<wbr>Hook</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvload.html" class="tsd-kind-icon">CFEnv<wbr>Load</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvnetwork.html" class="tsd-kind-icon">CFEnv<wbr>Net<wbr>Work</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvoptions.html" class="tsd-kind-icon">CFEnv<wbr>Options</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvsocket.html" class="tsd-kind-icon">CFEnv<wbr>Socket</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvstorage.html" class="tsd-kind-icon">CFEnv<wbr>Storage</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvstyle.html" class="tsd-kind-icon">CFEnv<wbr>Style</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvurl.html" class="tsd-kind-icon">CFEnv<wbr>Url</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvsystem.html" class="tsd-kind-icon">CFEnv<wbr>System</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfenvui.html" class="tsd-kind-icon">CFEnv<wbr>Ui</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfeventhub.html" class="tsd-kind-icon">CFEvent<wbr>Hub</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfeventparam.html" class="tsd-kind-icon">CFEvent<wbr>Param</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cffakeserver.html" class="tsd-kind-icon">CFFake<wbr>Server</a></li>
@@ -608,6 +620,7 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuieventhandler.html" class="tsd-kind-icon">CFUIEvent<wbr>Handler</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuicomgroups.html" class="tsd-kind-icon">CFUi<wbr>Com<wbr>Groups</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuicomponent.html" class="tsd-kind-icon">CFUi<wbr>Component</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuploadconfig.html" class="tsd-kind-icon">CFUpload<wbr>Config</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuserinfo.html" class="tsd-kind-icon">CFUser<wbr>Info</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidatedata.html" class="tsd-kind-icon">CFValidate<wbr>Data</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfvalidateopt.html" class="tsd-kind-icon">CFValidate<wbr>Opt</a></li>
@@ -643,13 +656,14 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfoptalignvalue" class="tsd-kind-icon">CFOpt<wbr>Align<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfoptinputtype" class="tsd-kind-icon">CFOpt<wbr>Input<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfoptioninputdata" class="tsd-kind-icon">CFOption<wbr>Input<wbr>Data</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfparamnames" class="tsd-kind-icon">CFParam<wbr>Names</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfpinyinrule" class="tsd-kind-icon">CFPinyin<wbr>Rule</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfpropsetfn" class="tsd-kind-icon">CFProp<wbr>Set<wbr>Fn</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfquerykeys" class="tsd-kind-icon">CFQuery<wbr>Keys</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfquestypevalue" class="tsd-kind-icon">CFQues<wbr>Type<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfquestioninputdata" class="tsd-kind-icon">CFQuestion<wbr>Input<wbr>Data</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfrewardtype" class="tsd-kind-icon">CFReward<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#icfdatatransferkey" class="tsd-kind-icon">ICFData<wbr>Transfer<wbr>Key</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#icfrequestfn" class="tsd-kind-icon">ICFRequest<wbr>Fn</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#icfstretchtype" class="tsd-kind-icon">ICFStretch<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#imatrixdisplaytype" class="tsd-kind-icon">IMatrix<wbr>Display<wbr>Type</a></li>
 							</ul>
@@ -665,9 +679,14 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFApi<wbr>Req<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"GET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"POST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PUT"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1014">index.d.ts:1014</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L643">index.d.ts:643</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>请求类型</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="cfassistpropkeys" class="tsd-anchor"></a>
@@ -675,7 +694,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFAssist<wbr>Prop<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFAssistProps</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L5480">index.d.ts:5480</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L5597">index.d.ts:5597</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -687,10 +706,10 @@ class MyOption extends React.Component {
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="cfenvname" class="tsd-anchor"></a>
 					<h3>CFEnv<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">CFEnv<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"node"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"web"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"wechat"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"wechat_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ali_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"toutiao_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"other"</span></div>
+					<div class="tsd-signature tsd-kind-icon">CFEnv<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"node"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"web"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"wechat"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"native_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"wechat_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ali_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"toutiao_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"other"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L2046">index.d.ts:2046</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L843">index.d.ts:843</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -705,7 +724,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1828">index.d.ts:1828</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1935">index.d.ts:1935</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -754,7 +773,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"SAMPLER_TRANSFER"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"REALTIME_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ANSWER_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LANG_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NEXT_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PREV_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NEXT_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"STRETCH_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ERROR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHECK_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHECK_SUBMIT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"QUOTA_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FULL_SUBMIT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END_REQ"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"UPDATE_THEME"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ERROR_ABORT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SET_PROPS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SWITCH_NODE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"START_MEMORY"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END_MEMORY"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1858">index.d.ts:1858</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1965">index.d.ts:1965</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -789,7 +808,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFFont<wbr>Weight<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"normal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"bold"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1975">index.d.ts:1975</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L2088">index.d.ts:2088</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -808,7 +827,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFInfer<wbr>Event<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"CHECK_END"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TIMEOUT"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1887">index.d.ts:1887</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1994">index.d.ts:1994</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -828,7 +847,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFLink<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"realtime_preview"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"preview"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"formal"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6228">index.d.ts:6228</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L6351">index.d.ts:6351</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -843,7 +862,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AllKeyToType</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_d_.cfassistprops.html" class="tsd-signature-type">CFAssistProps</a><span class="tsd-signature-symbol">, </span><a href="_index_d_.html#cfmappingvalue" class="tsd-signature-type">CFMappingValue</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L8070">index.d.ts:8070</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L8193">index.d.ts:8193</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -858,7 +877,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfimageinnode.html" class="tsd-signature-type">CFImageInNode</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L8065">index.d.ts:8065</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L8188">index.d.ts:8188</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -873,7 +892,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOpt<wbr>Align<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"vertical"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"horizontal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"column"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"auto"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L1968">index.d.ts:1968</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L2081">index.d.ts:2081</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -894,7 +913,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOpt<wbr>Input<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"select"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"input"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select-input"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L5488">index.d.ts:5488</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L5605">index.d.ts:5605</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -914,7 +933,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOption<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ICFUploadResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L606">index.d.ts:606</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1139">index.d.ts:1139</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -924,12 +943,27 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="cfparamnames" class="tsd-anchor"></a>
+					<h3>CFParam<wbr>Names</h3>
+					<div class="tsd-signature tsd-kind-icon">CFParam<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFQueryParams</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1499">index.d.ts:1499</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>标准参数名称列举</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="cfpinyinrule" class="tsd-anchor"></a>
 					<h3>CFPinyin<wbr>Rule</h3>
 					<div class="tsd-signature tsd-kind-icon">CFPinyin<wbr>Rule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"partial"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"start"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"full"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L446">index.d.ts:446</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L956">index.d.ts:956</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -944,7 +978,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFProp<wbr>Set<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L577">index.d.ts:577</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1555">index.d.ts:1555</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -997,27 +1031,12 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="cfquerykeys" class="tsd-anchor"></a>
-					<h3>CFQuery<wbr>Keys</h3>
-					<div class="tsd-signature tsd-kind-icon">CFQuery<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFQueryParams</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L943">index.d.ts:943</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>标准查询参数列举</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="cfquestypevalue" class="tsd-anchor"></a>
 					<h3>CFQues<wbr>Type<wbr>Value</h3>
 					<div class="tsd-signature tsd-kind-icon">CFQues<wbr>Type<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"choice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"region"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"intro-page"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"end-page"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"short-text"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"reward"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"icon"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"location"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"lottery"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"rating"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"range"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"dropdown"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"picture-choice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ranking"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"file-upload"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"verification"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"weight"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cascade"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hot-spot"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"slide-rate"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"no-view"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L4164">index.d.ts:4164</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L4281">index.d.ts:4281</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1055,7 +1074,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFQuestion<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfvalidatedata.html" class="tsd-signature-type">CFValidateData</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfmaplocation.html" class="tsd-signature-type">CFMapLocation</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L601">index.d.ts:601</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L1134">index.d.ts:1134</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1070,7 +1089,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFReward<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"wechat"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"custom"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L4306">index.d.ts:4306</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L4423">index.d.ts:4423</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1089,7 +1108,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">ICFData<wbr>Transfer<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof ICFDataTransfer</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L7671">index.d.ts:7671</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L7794">index.d.ts:7794</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1099,12 +1118,52 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="icfrequestfn" class="tsd-anchor"></a>
+					<h3>ICFRequest<wbr>Fn</h3>
+					<div class="tsd-signature tsd-kind-icon">ICFRequest<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L6303">index.d.ts:6303</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="../interfaces/_index_d_.cfrequestbodydata.html" class="tsd-signature-type">CFRequestBodyData</a>, node<span class="tsd-signature-symbol">: </span><a href="../interfaces/_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a>, core<span class="tsd-signature-symbol">: </span><a href="../interfaces/_index_d_.cfcore.html" class="tsd-signature-type">CFCore</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ICFRequestResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ICFRequestResult</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>data: <a href="../interfaces/_index_d_.cfrequestbodydata.html" class="tsd-signature-type">CFRequestBodyData</a></h5>
+											</li>
+											<li>
+												<h5>node: <a href="../interfaces/_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a></h5>
+											</li>
+											<li>
+												<h5>core: <a href="../interfaces/_index_d_.cfcore.html" class="tsd-signature-type">CFCore</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ICFRequestResult</span>
+											<span class="tsd-signature-symbol"> | </span>
+											<span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ICFRequestResult</span><span class="tsd-signature-symbol">&gt;</span>
+										</h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="icfstretchtype" class="tsd-anchor"></a>
 					<h3>ICFStretch<wbr>Type</h3>
 					<div class="tsd-signature tsd-kind-icon">ICFStretch<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"page-inner-refresh"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"page-next"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L6825">index.d.ts:6825</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L6948">index.d.ts:6948</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1114,7 +1173,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">IMatrix<wbr>Display<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"auto"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stretch"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/4bc0fb0/index.d.ts#L2725">index.d.ts:2725</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L2801">index.d.ts:2801</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1192,34 +1251,31 @@ class MyOption extends React.Component {
 						<a href="../interfaces/_index_d_.cfendpage.html" class="tsd-kind-icon">CFEnd<wbr>Page</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfenvapp.html" class="tsd-kind-icon">CFEnv<wbr>App</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfenvauth.html" class="tsd-kind-icon">CFEnv<wbr>Auth</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/_index_d_.cfenvbasic.html" class="tsd-kind-icon">CFEnv<wbr>Basic</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/_index_d_.cfenvdoc.html" class="tsd-kind-icon">CFEnv<wbr>Doc</a>
+						<a href="../interfaces/_index_d_.cfenvdev.html" class="tsd-kind-icon">CFEnv<wbr>Dev</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfenvhook.html" class="tsd-kind-icon">CFEnv<wbr>Hook</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/_index_d_.cfenvload.html" class="tsd-kind-icon">CFEnv<wbr>Load</a>
+						<a href="../interfaces/_index_d_.cfenvnetwork.html" class="tsd-kind-icon">CFEnv<wbr>Net<wbr>Work</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfenvoptions.html" class="tsd-kind-icon">CFEnv<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/_index_d_.cfenvsocket.html" class="tsd-kind-icon">CFEnv<wbr>Socket</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfenvstorage.html" class="tsd-kind-icon">CFEnv<wbr>Storage</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/_index_d_.cfenvstyle.html" class="tsd-kind-icon">CFEnv<wbr>Style</a>
+						<a href="../interfaces/_index_d_.cfenvsystem.html" class="tsd-kind-icon">CFEnv<wbr>System</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../interfaces/_index_d_.cfenvurl.html" class="tsd-kind-icon">CFEnv<wbr>Url</a>
+						<a href="../interfaces/_index_d_.cfenvui.html" class="tsd-kind-icon">CFEnv<wbr>Ui</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfeventhub.html" class="tsd-kind-icon">CFEvent<wbr>Hub</a>
@@ -1438,6 +1494,9 @@ class MyOption extends React.Component {
 						<a href="../interfaces/_index_d_.cfuicomponent.html" class="tsd-kind-icon">CFUi<wbr>Component</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfuploadconfig.html" class="tsd-kind-icon">CFUpload<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfuserinfo.html" class="tsd-kind-icon">CFUser<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -1528,13 +1587,13 @@ class MyOption extends React.Component {
 						<a href="_index_d_.html#cfoptioninputdata" class="tsd-kind-icon">CFOption<wbr>Input<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#cfparamnames" class="tsd-kind-icon">CFParam<wbr>Names</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cfpinyinrule" class="tsd-kind-icon">CFPinyin<wbr>Rule</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cfpropsetfn" class="tsd-kind-icon">CFProp<wbr>Set<wbr>Fn</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.html#cfquerykeys" class="tsd-kind-icon">CFQuery<wbr>Keys</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cfquestypevalue" class="tsd-kind-icon">CFQues<wbr>Type<wbr>Value</a>
@@ -1547,6 +1606,9 @@ class MyOption extends React.Component {
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#icfdatatransferkey" class="tsd-kind-icon">ICFData<wbr>Transfer<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#icfrequestfn" class="tsd-kind-icon">ICFRequest<wbr>Fn</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#icfstretchtype" class="tsd-kind-icon">ICFStretch<wbr>Type</a>

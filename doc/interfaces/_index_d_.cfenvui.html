@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFEnvHook | @choiceform/os-client-core - v2.1.3</title>
+	<title>CFEnvUi | @choiceform/os-client-core - v2.1.3</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfenvhook.html">CFEnvHook</a>
+					<a href="_index_d_.cfenvui.html">CFEnvUi</a>
 				</li>
 			</ul>
-			<h1>Interface CFEnvHook</h1>
+			<h1>Interface CFEnvUi</h1>
 		</div>
 	</div>
 </header>
@@ -70,8 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>环境配置钩子，配置对应的钩子可以在对应的时机执行一些自定义的行为。
-						如果没有特别的自定义行为需要执行，则无需配置</p>
+						<p>动态UI功能支持的配置</p>
 					</div>
 				</div>
 			</section>
@@ -79,7 +78,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFEnvHook</span>
+						<span class="target">CFEnvUi</span>
 					</li>
 				</ul>
 			</section>
@@ -90,15 +89,13 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvhook.html#afterfetchreward" class="tsd-kind-icon">after<wbr>Fetch<wbr>Reward</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvhook.html#afterfetchstart" class="tsd-kind-icon">after<wbr>Fetch<wbr>Start</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvhook.html#afterfetchsurvey" class="tsd-kind-icon">after<wbr>Fetch<wbr>Survey</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvhook.html#aftersetup" class="tsd-kind-icon">after<wbr>Setup</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvhook.html#beforeforceleave" class="tsd-kind-icon">before<wbr>Force<wbr>Leave</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvhook.html#beforesetupend" class="tsd-kind-icon">before<wbr>Setup<wbr>End</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvhook.html#onlangchange" class="tsd-kind-icon">on<wbr>Lang<wbr>Change</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvhook.html#onswitchpage" class="tsd-kind-icon">on<wbr>Switch<wbr>Page</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvhook.html#ontitlechange" class="tsd-kind-icon">on<wbr>Title<wbr>Change</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#getimagesize" class="tsd-kind-icon">get<wbr>Image<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#getolduiplugin" class="tsd-kind-icon">get<wbr>Old<wbr>UiPlugin</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#initnodetemplate" class="tsd-kind-icon">init<wbr>Node<wbr>Template</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#loadolduiplugin" class="tsd-kind-icon">load<wbr>Old<wbr>UiPlugin</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#loaduitemplates" class="tsd-kind-icon">load<wbr>UiTemplates</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#setglobalstyle" class="tsd-kind-icon">set<wbr>Global<wbr>Style</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#setvarstyle" class="tsd-kind-icon">set<wbr>Var<wbr>Style</a></li>
 							</ul>
 						</section>
 					</div>
@@ -107,29 +104,153 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="afterfetchreward" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> after<wbr>Fetch<wbr>Reward</h3>
+					<a name="getimagesize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> get<wbr>Image<wbr>Size</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">after<wbr>Fetch<wbr>Reward<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfrewardstate.html" class="tsd-signature-type">CFRewardState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Image<wbr>Size<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_index_d_.cfimagesize.html" class="tsd-signature-type">CFImageSize</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L819">index.d.ts:819</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L605">index.d.ts:605</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>成功获取奖励页数据后的钩子</p>
+									<p>获取某个url地址的图片的高宽信息的方法，有些答题端需要对图片进行布局控制，
+										需要事先知道图片的尺寸，核心在生成图片对象的时候会尝试调用这个方法添加尺寸信息。
+										无此需要的终端可以不配置这个方法。
+									如果不配置则使用默认值:无论什么图片都返回固定大小100*100</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>这个方法目前只有老UI在使用，只为兼容性暂时保留，不建议使用，后续将移除，
+										这个信息应该由UI自主获取并使用，无需核心包插手</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>图片地址</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_index_d_.cfimagesize.html" class="tsd-signature-type">CFImageSize</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="getolduiplugin" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> get<wbr>Old<wbr>UiPlugin</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Old<wbr>UiPlugin<span class="tsd-signature-symbol">(</span>question<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a>, id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ICFOldUiPlugin</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L630">index.d.ts:630</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>获取老式插件信息方法，即将废弃
+										不要理会这个配置，只有web端的老UI还在适应，为兼容暂时保留</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>question: <a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a></h5>
+								</li>
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ICFOldUiPlugin</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="initnodetemplate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> init<wbr>Node<wbr>Template</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Node<wbr>Template<span class="tsd-signature-symbol">(</span>template<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfnodetemplate.html" class="tsd-signature-type">CFNodeTemplate</a>, state<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a>, loop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ICFLoop</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_index_d_.cfnodetemplate.html" class="tsd-signature-type">CFNodeTemplate</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L614">index.d.ts:614</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>初始化一个节点动态模板的方法，该方法去动态获取设计端指定的自定义组件模板来渲染节点。
+										只有实现了动态模板机制的答题端需要配置这个方法
+									如果不配置则什么都不做</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>data: <a href="_index_d_.cfrewardstate.html" class="tsd-signature-type">CFRewardState</a></h5>
+									<h5>template: <a href="_index_d_.cfnodetemplate.html" class="tsd-signature-type">CFNodeTemplate</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>奖励数据</p>
+										<p>模板名称</p>
+									</div>
+								</li>
+								<li>
+									<h5>state: <a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>答题状态</p>
+									</div>
+								</li>
+								<li>
+									<h5>loop: <span class="tsd-signature-type">ICFLoop</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>循环信心</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_index_d_.cfnodetemplate.html" class="tsd-signature-type">CFNodeTemplate</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="loadolduiplugin" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> load<wbr>Old<wbr>UiPlugin</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Old<wbr>UiPlugin<span class="tsd-signature-symbol">(</span>list<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ICFUiPluginBase</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L637">index.d.ts:637</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd><p>加载老式插件信息方法，即将废弃
+										不要理会这个配置，只有web端的老UI还在适应，为兼容暂时保留</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>list: <span class="tsd-signature-type">ICFUiPluginBase</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>插件列表</p>
 									</div>
 								</li>
 							</ul>
@@ -138,29 +259,37 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="afterfetchstart" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> after<wbr>Fetch<wbr>Start</h3>
+					<a name="loaduitemplates" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> load<wbr>UiTemplates</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">after<wbr>Fetch<wbr>Start<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfstartstate.html" class="tsd-signature-type">CFStartState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">load<wbr>UiTemplates<span class="tsd-signature-symbol">(</span>theme<span class="tsd-signature-symbol">: </span><a href="_index_d_.cftheme.html" class="tsd-signature-type">CFTheme</a>, templates<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L809">index.d.ts:809</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L622">index.d.ts:622</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>成功获取首页数据后的钩子</p>
+									<p>加载当前问卷所有使用到的额UI动态插件的方法
+										只有实现了动态模板机制的答题端需要配置这个方法
+									如果不配置则什么都不做</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>data: <a href="_index_d_.cfstartstate.html" class="tsd-signature-type">CFStartState</a></h5>
+									<h5>theme: <a href="_index_d_.cftheme.html" class="tsd-signature-type">CFTheme</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>首页数据</p>
+										<p>主题</p>
+									</div>
+								</li>
+								<li>
+									<h5>templates: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>模板列表</p>
 									</div>
 								</li>
 							</ul>
@@ -169,197 +298,69 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="afterfetchsurvey" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> after<wbr>Fetch<wbr>Survey</h3>
+					<a name="setglobalstyle" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> set<wbr>Global<wbr>Style</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">after<wbr>Fetch<wbr>Survey<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Global<wbr>Style<span class="tsd-signature-symbol">(</span>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L814">index.d.ts:814</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L587">index.d.ts:587</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>成功获取答题页数据后的钩子</p>
+									<p>设置全局样式的方法，会尝试调用该方法将HTML全局变量的样式应用上去产生效果。
+									如果不配置则不应用全局样式。</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>data: <a href="_index_d_.cfsurveystate.html" class="tsd-signature-type">CFSurveyState</a></h5>
+									<h5>style: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>答题数据</p>
+										<p>样式：css字符形式</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="aftersetup" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> after<wbr>Setup</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">after<wbr>Setup<span class="tsd-signature-symbol">(</span>core<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfcore.html" class="tsd-signature-type">CFCore</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L804">index.d.ts:804</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>初始化完成后的钩子</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>core: <a href="_index_d_.cfcore.html" class="tsd-signature-type">CFCore</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>核心对象</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="beforeforceleave" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> before<wbr>Force<wbr>Leave</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">before<wbr>Force<wbr>Leave<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L823">index.d.ts:823</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>强行离开应用前的回调，在这时候可以做一些善后处理</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="beforesetupend" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> before<wbr>Setup<wbr>End</h3>
+					<a name="setvarstyle" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> set<wbr>Var<wbr>Style</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">before<wbr>Setup<wbr>End<span class="tsd-signature-symbol">(</span>core<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfcore.html" class="tsd-signature-type">CFCore</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Var<wbr>Style<span class="tsd-signature-symbol">(</span>style<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, styleGroup<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfvarstylegroup.html" class="tsd-signature-type">CFVarStyleGroup</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L799">index.d.ts:799</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L595">index.d.ts:595</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>初始化即将完成前要执行的钩子</p>
+									<p>设置变量自定义样式方法，对于每一种变量，问卷总都可以指定他们的通用样式
+										会尝试调用调用该方法运用样式得到各个变量标签。
+									如果不配置则不应用变量标签样式</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>core: <a href="_index_d_.cfcore.html" class="tsd-signature-type">CFCore</a></h5>
+									<h5>style: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>核心对象</p>
+										<p>样式：css字符形式</p>
 									</div>
 								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="onlangchange" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Lang<wbr>Change</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Lang<wbr>Change<span class="tsd-signature-symbol">(</span>lang<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L828">index.d.ts:828</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>当语言发生变化时的回调</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
 								<li>
-									<h5>lang: <span class="tsd-signature-type">string</span></h5>
+									<h5>styleGroup: <a href="_index_d_.cfvarstylegroup.html" class="tsd-signature-type">CFVarStyleGroup</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>语言代号：zh_cn/en_us/ja_jp格式</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="onswitchpage" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Switch<wbr>Page</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Switch<wbr>Page<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L832">index.d.ts:832</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>当进行上一题/下一题切换题目时的回调</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="ontitlechange" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Title<wbr>Change</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Title<wbr>Change<span class="tsd-signature-symbol">(</span>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/0e2d11d/index.d.ts#L837">index.d.ts:837</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>当标题发生变更时的回调</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>title: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>标题内容</p>
+										<p>样式信息：JSON形式</p>
 									</div>
 								</li>
 							</ul>
@@ -385,34 +386,28 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfenvhook.html" class="tsd-kind-icon">CFEnv<wbr>Hook</a>
+						<a href="_index_d_.cfenvui.html" class="tsd-kind-icon">CFEnv<wbr>Ui</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvhook.html#afterfetchreward" class="tsd-kind-icon">after<wbr>Fetch<wbr>Reward</a>
+								<a href="_index_d_.cfenvui.html#getimagesize" class="tsd-kind-icon">get<wbr>Image<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvhook.html#afterfetchstart" class="tsd-kind-icon">after<wbr>Fetch<wbr>Start</a>
+								<a href="_index_d_.cfenvui.html#getolduiplugin" class="tsd-kind-icon">get<wbr>Old<wbr>UiPlugin</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvhook.html#afterfetchsurvey" class="tsd-kind-icon">after<wbr>Fetch<wbr>Survey</a>
+								<a href="_index_d_.cfenvui.html#initnodetemplate" class="tsd-kind-icon">init<wbr>Node<wbr>Template</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvhook.html#aftersetup" class="tsd-kind-icon">after<wbr>Setup</a>
+								<a href="_index_d_.cfenvui.html#loadolduiplugin" class="tsd-kind-icon">load<wbr>Old<wbr>UiPlugin</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvhook.html#beforeforceleave" class="tsd-kind-icon">before<wbr>Force<wbr>Leave</a>
+								<a href="_index_d_.cfenvui.html#loaduitemplates" class="tsd-kind-icon">load<wbr>UiTemplates</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvhook.html#beforesetupend" class="tsd-kind-icon">before<wbr>Setup<wbr>End</a>
+								<a href="_index_d_.cfenvui.html#setglobalstyle" class="tsd-kind-icon">set<wbr>Global<wbr>Style</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvhook.html#onlangchange" class="tsd-kind-icon">on<wbr>Lang<wbr>Change</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvhook.html#onswitchpage" class="tsd-kind-icon">on<wbr>Switch<wbr>Page</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvhook.html#ontitlechange" class="tsd-kind-icon">on<wbr>Title<wbr>Change</a>
+								<a href="_index_d_.cfenvui.html#setvarstyle" class="tsd-kind-icon">set<wbr>Var<wbr>Style</a>
 							</li>
 						</ul>
 					</li>
