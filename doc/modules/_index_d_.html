@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;index.d&quot; | @choiceform/os-client-core - v2.1.8</title>
+	<title>&quot;index.d&quot; | @choiceform/os-client-core - v2.1.13</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.8</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.13</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -83,14 +83,19 @@
 						</li>
 					</ol>
 					<p>如果你想构建基于web的答题客户端，建议直接使用web适配包，免去环境适配的工作，如果你要构建非web端（如小程序，原生app）的答题客户端，则只能使用纯纯核心包，然后自行按规则配置好环境运行规则，再继续。</p>
-					<p>安装纯核心包：</p>
-					<pre><code class="language-shell">npm install @choiceform/os-client-mini-core</code></pre>
-					<p>或</p>
-					<pre><code class="language-shell">yarn add @choiceform/os-client-mini-core</code></pre>
-					<p>安装web适配包:</p>
-					<pre><code class="language-shell">npm install @choiceform/os-client-core</code></pre>
-					<p>或</p>
-					<pre><code class="language-shell">yarn add @choiceform/os-client-core</code></pre>
+					<p>安装核心包：</p>
+					<pre><code class="language-shell">npm install @choiceform/os-client-core/
+<span class="hljs-meta">#</span><span class="bash"> 或者</span>
+yarn add @choiceform/os-client-core</code></pre>
+					<p>安装好以后再node_modules/@choiceform/os-client-core/package.json的exports属性中指定了三个导出规则分别对应dist会包含三个文件，可以分别按下面几个方式使用：</p>
+					<pre><code class="language-typescript"><span class="hljs-comment">// 纯核心包和web适配核心包同时只用一个，自动提示包则按需使用</span>
+<span class="hljs-comment">// 使用纯核心包</span>
+<span class="hljs-keyword">import</span> {Core} <span class="hljs-keyword">from</span> <span class="hljs-string">'@choiceform/os-client-core/mini-core'</span>;
+<span class="hljs-comment">// 使用web环境适配核心包</span>
+<span class="hljs-keyword">import</span> {Core} <span class="hljs-keyword">from</span> <span class="hljs-string">'@choiceform/os-client-core'</span>;
+<span class="hljs-comment">// 如果你的答题端需要支持填空题自动提示功能，需要额外使用自动提示搜索模块</span>
+<span class="hljs-comment">// 不支持的不要使用</span>
+<span class="hljs-keyword">import</span> {getAutoCompleteData} <span class="hljs-keyword">from</span> <span class="hljs-string">'@choiceform/os-client-core/atcp'</span>;</code></pre>
 					<a href="#运行环境适配" id="运行环境适配" style="color: inherit; text-decoration: none;">
 						<h2>运行环境适配</h2>
 					</a>
@@ -518,7 +523,8 @@ class MyOption extends React.Component {
 							<h3>Modules</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.__choiceform_os_client_core_.html" class="tsd-kind-icon">&quot;@choiceform/os-<wbr>client-<wbr>core&quot;</a></li>
-								<li class="tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_._atcp_.html" class="tsd-kind-icon">&quot;atcp&quot;</a></li>
+								<li class="tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.__choiceform_os_client_core_atcp_.html" class="tsd-kind-icon">&quot;@choiceform/os-<wbr>client-<wbr>core/atcp&quot;</a></li>
+								<li class="tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.__choiceform_os_client_core_mini_core_.html" class="tsd-kind-icon">&quot;@choiceform/os-<wbr>client-<wbr>core/mini-<wbr>core&quot;</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
@@ -603,6 +609,7 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfregiondict.html" class="tsd-kind-icon">CFRegion<wbr>Dict</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfregionprovince.html" class="tsd-kind-icon">CFRegion<wbr>Province</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfregionquestion.html" class="tsd-kind-icon">CFRegion<wbr>Question</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfrequestbodybase.html" class="tsd-kind-icon">CFRequest<wbr>Body<wbr>Base</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfrequestbodydata.html" class="tsd-kind-icon">CFRequest<wbr>Body<wbr>Data</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfrewardstate.html" class="tsd-kind-icon">CFReward<wbr>State</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfrichtextnode.html" class="tsd-kind-icon">CFRich<wbr>Text<wbr>Node</a></li>
@@ -650,6 +657,7 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfeventhubcb" class="tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfeventnames" class="tsd-kind-icon">CFEvent<wbr>Names</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cffontweightvalue" class="tsd-kind-icon">CFFont<wbr>Weight<wbr>Value</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfgifttype" class="tsd-kind-icon">CFGift<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfinfereventnames" class="tsd-kind-icon">CFInfer<wbr>Event<wbr>Names</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cflinktype" class="tsd-kind-icon">CFLink<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfmappingprops" class="tsd-kind-icon">CFMapping<wbr>Props</a></li>
@@ -662,22 +670,23 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfpropsetfn" class="tsd-kind-icon">CFProp<wbr>Set<wbr>Fn</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfquestypevalue" class="tsd-kind-icon">CFQues<wbr>Type<wbr>Value</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfquestioninputdata" class="tsd-kind-icon">CFQuestion<wbr>Input<wbr>Data</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#cfrewardtype" class="tsd-kind-icon">CFReward<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#icfdatatransferkey" class="tsd-kind-icon">ICFData<wbr>Transfer<wbr>Key</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#icfrequestfn" class="tsd-kind-icon">ICFRequest<wbr>Fn</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#icfstretchtype" class="tsd-kind-icon">ICFStretch<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#ilogictype" class="tsd-kind-icon">ILogic<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#imatrixdisplaytype" class="tsd-kind-icon">IMatrix<wbr>Display<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#imatrixmultitype" class="tsd-kind-icon">IMatrix<wbr>Multi<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#inodemode" class="tsd-kind-icon">INode<wbr>Mode</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#inodetype" class="tsd-kind-icon">INode<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#ioptiontype" class="tsd-kind-icon">IOption<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#ipluginreqtype" class="tsd-kind-icon">IPlugin<wbr>Req<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#iregionrange" class="tsd-kind-icon">IRegion<wbr>Range</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#iselecttype" class="tsd-kind-icon">ISelect<wbr>Type</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#matrix_multi_type" class="tsd-kind-icon">MATRIX_<wbr>MULTI_<wbr>TYPE</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#node_mode" class="tsd-kind-icon">NODE_<wbr>MODE</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#node_type" class="tsd-kind-icon">NODE_<wbr>TYPE</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#option_type" class="tsd-kind-icon">OPTION_<wbr>TYPE</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#iskipreason" class="tsd-kind-icon">ISkip<wbr>Reason</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#ivartype" class="tsd-kind-icon">IVar<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#iverifytype" class="tsd-kind-icon">IVerify<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#pic_fit_type" class="tsd-kind-icon">PIC_<wbr>FIT_<wbr>TYPE</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#region_range" class="tsd-kind-icon">REGION_<wbr>RANGE</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#upload_limit" class="tsd-kind-icon">UPLOAD_<wbr>LIMIT</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_d_.html#validate_type" class="tsd-kind-icon">VALIDATE_<wbr>TYPE</a></li>
 							</ul>
 						</section>
 					</div>
@@ -691,7 +700,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFApi<wbr>Req<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"GET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"POST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PUT"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L655">index.d.ts:655</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L674">index.d.ts:674</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -706,7 +715,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFAssist<wbr>Prop<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFAssistProps</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L5720">index.d.ts:5720</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L5705">index.d.ts:5705</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -721,7 +730,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFEnv<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"node"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"web"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"wechat"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"native_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"wechat_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ali_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"toutiao_app"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"other"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L859">index.d.ts:859</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L882">index.d.ts:882</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -736,7 +745,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L2009">index.d.ts:2009</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L1999">index.d.ts:1999</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -785,7 +794,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"SAMPLER_TRANSFER"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"REALTIME_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ANSWER_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LANG_CHANGE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NEXT_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PREV_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"NEXT_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"STRETCH_OK"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ERROR"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHECK_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"CHECK_SUBMIT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"QUOTA_FAIL"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"FULL_SUBMIT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END_REQ"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"UPDATE_THEME"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ERROR_ABORT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SET_PROPS"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"SWITCH_NODE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"START_MEMORY"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END_MEMORY"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L2039">index.d.ts:2039</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L2029">index.d.ts:2029</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -820,7 +829,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFFont<wbr>Weight<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"normal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"bold"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L2162">index.d.ts:2162</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L2152">index.d.ts:2152</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -834,12 +843,27 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="cfgifttype" class="tsd-anchor"></a>
+					<h3>CFGift<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">CFGift<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"red_envelope"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"custom"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L3737">index.d.ts:3737</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>奖励类型</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="cfinfereventnames" class="tsd-anchor"></a>
 					<h3>CFInfer<wbr>Event<wbr>Names</h3>
 					<div class="tsd-signature tsd-kind-icon">CFInfer<wbr>Event<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"CHECK_END"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"END"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"TIMEOUT"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L2068">index.d.ts:2068</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L2058">index.d.ts:2058</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -859,7 +883,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFLink<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"realtime_preview"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"preview"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"formal"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L6508">index.d.ts:6508</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L6493">index.d.ts:6493</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -874,7 +898,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AllKeyToType</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_d_.cfassistprops.html" class="tsd-signature-type">CFAssistProps</a><span class="tsd-signature-symbol">, </span><a href="_index_d_.html#cfmappingvalue" class="tsd-signature-type">CFMappingValue</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L8354">index.d.ts:8354</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L8318">index.d.ts:8318</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -889,7 +913,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfimageinnode.html" class="tsd-signature-type">CFImageInNode</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L8349">index.d.ts:8349</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L8313">index.d.ts:8313</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -904,7 +928,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOpt<wbr>Align<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"vertical"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"horizontal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"column"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"auto"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L2155">index.d.ts:2155</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L2145">index.d.ts:2145</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -925,7 +949,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOpt<wbr>Input<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"select"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"input"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select-input"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L5728">index.d.ts:5728</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L5713">index.d.ts:5713</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -945,7 +969,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOption<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ICFUploadResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L1169">index.d.ts:1169</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L1184">index.d.ts:1184</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -960,7 +984,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFParam<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFQueryParams</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L1569">index.d.ts:1569</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L1564">index.d.ts:1564</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -975,7 +999,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFPinyin<wbr>Rule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"partial"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"start"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"full"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L982">index.d.ts:982</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L1005">index.d.ts:1005</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -990,7 +1014,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFProp<wbr>Set<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L1625">index.d.ts:1625</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L1615">index.d.ts:1615</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1048,7 +1072,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFQues<wbr>Type<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"choice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"region"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"intro-page"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"end-page"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"short-text"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"reward"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"icon"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"location"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"lottery"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"rating"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"range"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"dropdown"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"picture-choice"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ranking"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"file-upload"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"verification"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"weight"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cascade"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hot-spot"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"slide-rate"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"no-view"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L4398">index.d.ts:4398</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L4392">index.d.ts:4392</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1086,7 +1110,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFQuestion<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfvalidatedata.html" class="tsd-signature-type">CFValidateData</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfmaplocation.html" class="tsd-signature-type">CFMapLocation</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L1164">index.d.ts:1164</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L1179">index.d.ts:1179</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1096,31 +1120,12 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="cfrewardtype" class="tsd-anchor"></a>
-					<h3>CFReward<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">CFReward<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"wechat"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"custom"</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L4561">index.d.ts:4561</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>奖励类型</p>
-							<ul>
-								<li>wechat 微信红包奖励</li>
-								<li>custom 自定义奖励</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="icfdatatransferkey" class="tsd-anchor"></a>
 					<h3>ICFData<wbr>Transfer<wbr>Key</h3>
 					<div class="tsd-signature tsd-kind-icon">ICFData<wbr>Transfer<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof ICFDataTransfer</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L7959">index.d.ts:7959</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L7932">index.d.ts:7932</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1135,7 +1140,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">ICFRequest<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L6458">index.d.ts:6458</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L6443">index.d.ts:6443</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1169,10 +1174,10 @@ class MyOption extends React.Component {
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="icfstretchtype" class="tsd-anchor"></a>
 					<h3>ICFStretch<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">ICFStretch<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"page-inner-refresh"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"page-next"</span></div>
+					<div class="tsd-signature tsd-kind-icon">ICFStretch<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"page_inner"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"page_next"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L7105">index.d.ts:7105</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L7095">index.d.ts:7095</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1182,7 +1187,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">ILogic<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"and"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"or"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L7328">index.d.ts:7328</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L7314">index.d.ts:7314</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1192,7 +1197,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">IMatrix<wbr>Display<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"auto"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"stretch"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L2918">index.d.ts:2918</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L2918">index.d.ts:2918</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1207,37 +1212,12 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="ipluginreqtype" class="tsd-anchor"></a>
-					<h3>IPlugin<wbr>Req<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">IPlugin<wbr>Req<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"get"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"post"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"fake"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"embed"</span></div>
+					<a name="imatrixmultitype" class="tsd-anchor"></a>
+					<h3>IMatrix<wbr>Multi<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">IMatrix<wbr>Multi<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"all"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"row"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"col"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L7299">index.d.ts:7299</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="iselecttype" class="tsd-anchor"></a>
-					<h3>ISelect<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">ISelect<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"radio"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"checkbox"</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L3106">index.d.ts:3106</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>选择类型</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="matrix_multi_type" class="tsd-anchor"></a>
-					<h3>MATRIX_<wbr>MULTI_<wbr>TYPE</h3>
-					<div class="tsd-signature tsd-kind-icon">MATRIX_<wbr>MULTI_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"all"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"row"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"col"</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L2923">index.d.ts:2923</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L2923">index.d.ts:2923</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1247,12 +1227,12 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="node_mode" class="tsd-anchor"></a>
-					<h3>NODE_<wbr>MODE</h3>
-					<div class="tsd-signature tsd-kind-icon">NODE_<wbr>MODE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"check"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"normal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"all"</span></div>
+					<a name="inodemode" class="tsd-anchor"></a>
+					<h3>INode<wbr>Mode</h3>
+					<div class="tsd-signature tsd-kind-icon">INode<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"check"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"normal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"all"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L2393">index.d.ts:2393</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L2383">index.d.ts:2383</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1262,12 +1242,12 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="node_type" class="tsd-anchor"></a>
-					<h3>NODE_<wbr>TYPE</h3>
-					<div class="tsd-signature tsd-kind-icon">NODE_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"empty"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"break_point"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"icon_mark"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"sequence"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"fill"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"start"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"logic"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"loop"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"check"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"end"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"random"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"region"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select_image"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"describe"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"verify"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"lottery"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"gift"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"location"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"upload"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menu"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"area"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select_icon"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"weight"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cascade"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hot_spot"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"data"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"slide_rate"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"value_mark"</span></div>
+					<a name="inodetype" class="tsd-anchor"></a>
+					<h3>INode<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">INode<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"break_point"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"icon_mark"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"sequence"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"fill"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"matrix"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"start"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"logic"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"loop"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"check"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"end"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"random"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"region"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select_image"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"describe"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"verify"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"lottery"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"gift"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"location"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"upload"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"menu"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"area"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"select_icon"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"weight"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cascade"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hot_spot"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"data"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"slide_rate"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"value_mark"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L2398">index.d.ts:2398</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L2399">index.d.ts:2399</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1277,42 +1257,37 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="option_type" class="tsd-anchor"></a>
-					<h3>OPTION_<wbr>TYPE</h3>
-					<div class="tsd-signature tsd-kind-icon">OPTION_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"option"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"comment"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"option_comment"</span></div>
+					<a name="ioptiontype" class="tsd-anchor"></a>
+					<h3>IOption<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">IOption<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"option"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"comment"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"option_comment"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L5733">index.d.ts:5733</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L5718">index.d.ts:5718</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>其他选项类型</p>
+							<p>选项类型</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="pic_fit_type" class="tsd-anchor"></a>
-					<h3>PIC_<wbr>FIT_<wbr>TYPE</h3>
-					<div class="tsd-signature tsd-kind-icon">PIC_<wbr>FIT_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"none"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"grid_full"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"all"</span></div>
+					<a name="ipluginreqtype" class="tsd-anchor"></a>
+					<h3>IPlugin<wbr>Req<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">IPlugin<wbr>Req<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"get"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"post"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"fake"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"embed"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L4313">index.d.ts:4313</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L7285">index.d.ts:7285</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>图片适应规则枚举</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="region_range" class="tsd-anchor"></a>
-					<h3>REGION_<wbr>RANGE</h3>
-					<div class="tsd-signature tsd-kind-icon">REGION_<wbr>RANGE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"province"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"city"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"county"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"street"</span></div>
+					<a name="iregionrange" class="tsd-anchor"></a>
+					<h3>IRegion<wbr>Range</h3>
+					<div class="tsd-signature tsd-kind-icon">IRegion<wbr>Range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"province"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"city"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"county"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"street"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L4205">index.d.ts:4205</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L4199">index.d.ts:4199</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1322,32 +1297,92 @@ class MyOption extends React.Component {
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="upload_limit" class="tsd-anchor"></a>
-					<h3>UPLOAD_<wbr>LIMIT</h3>
-					<div class="tsd-signature tsd-kind-icon">UPLOAD_<wbr>LIMIT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"image"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"audio"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"video"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"doc"</span></div>
+					<a name="iselecttype" class="tsd-anchor"></a>
+					<h3>ISelect<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">ISelect<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"radio"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"checkbox"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L5646">index.d.ts:5646</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L3106">index.d.ts:3106</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>上传限制枚举</p>
+							<p>选择类型</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="validate_type" class="tsd-anchor"></a>
-					<h3>VALIDATE_<wbr>TYPE</h3>
-					<div class="tsd-signature tsd-kind-icon">VALIDATE_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"sms"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"password"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"image"</span></div>
+					<a name="iskipreason" class="tsd-anchor"></a>
+					<h3>ISkip<wbr>Reason</h3>
+					<div class="tsd-signature tsd-kind-icon">ISkip<wbr>Reason<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"single_ref_select_opt"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"data_hidden"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"setting"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"random_group"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"no_options"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/2f2a422/index.d.ts#L3188">index.d.ts:3188</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L2388">index.d.ts:2388</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>跳过节点的原因</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="ivartype" class="tsd-anchor"></a>
+					<h3>IVar<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">IVar<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"var-string"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"var-expression"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"var-media"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"var-loop"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"var-bool"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"var-request"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"var-html"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L8422">index.d.ts:8422</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>变量类型</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="iverifytype" class="tsd-anchor"></a>
+					<h3>IVerify<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">IVerify<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"sms"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"password"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"image"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L3182">index.d.ts:3182</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>验证类型枚举</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="pic_fit_type" class="tsd-anchor"></a>
+					<h3>PIC_<wbr>FIT_<wbr>TYPE</h3>
+					<div class="tsd-signature tsd-kind-icon">PIC_<wbr>FIT_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"none"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"grid_full"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"all"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L4307">index.d.ts:4307</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>图片适应规则枚举</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="upload_limit" class="tsd-anchor"></a>
+					<h3>UPLOAD_<wbr>LIMIT</h3>
+					<div class="tsd-signature tsd-kind-icon">UPLOAD_<wbr>LIMIT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"image"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"audio"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"video"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"doc"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d26d3ec/index.d.ts#L5631">index.d.ts:5631</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>上传限制枚举</p>
 						</div>
 					</div>
 				</section>
@@ -1604,6 +1639,9 @@ class MyOption extends React.Component {
 						<a href="../interfaces/_index_d_.cfregionquestion.html" class="tsd-kind-icon">CFRegion<wbr>Question</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfrequestbodybase.html" class="tsd-kind-icon">CFRequest<wbr>Body<wbr>Base</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfrequestbodydata.html" class="tsd-kind-icon">CFRequest<wbr>Body<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -1730,6 +1768,9 @@ class MyOption extends React.Component {
 						<a href="_index_d_.html#cffontweightvalue" class="tsd-kind-icon">CFFont<wbr>Weight<wbr>Value</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#cfgifttype" class="tsd-kind-icon">CFGift<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#cfinfereventnames" class="tsd-kind-icon">CFInfer<wbr>Event<wbr>Names</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
@@ -1766,9 +1807,6 @@ class MyOption extends React.Component {
 						<a href="_index_d_.html#cfquestioninputdata" class="tsd-kind-icon">CFQuestion<wbr>Input<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.html#cfrewardtype" class="tsd-kind-icon">CFReward<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#icfdatatransferkey" class="tsd-kind-icon">ICFData<wbr>Transfer<wbr>Key</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
@@ -1784,34 +1822,40 @@ class MyOption extends React.Component {
 						<a href="_index_d_.html#imatrixdisplaytype" class="tsd-kind-icon">IMatrix<wbr>Display<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#imatrixmultitype" class="tsd-kind-icon">IMatrix<wbr>Multi<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#inodemode" class="tsd-kind-icon">INode<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#inodetype" class="tsd-kind-icon">INode<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#ioptiontype" class="tsd-kind-icon">IOption<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#ipluginreqtype" class="tsd-kind-icon">IPlugin<wbr>Req<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.html#iregionrange" class="tsd-kind-icon">IRegion<wbr>Range</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#iselecttype" class="tsd-kind-icon">ISelect<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.html#matrix_multi_type" class="tsd-kind-icon">MATRIX_<wbr>MULTI_<wbr>TYPE</a>
+						<a href="_index_d_.html#iskipreason" class="tsd-kind-icon">ISkip<wbr>Reason</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.html#node_mode" class="tsd-kind-icon">NODE_<wbr>MODE</a>
+						<a href="_index_d_.html#ivartype" class="tsd-kind-icon">IVar<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.html#node_type" class="tsd-kind-icon">NODE_<wbr>TYPE</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.html#option_type" class="tsd-kind-icon">OPTION_<wbr>TYPE</a>
+						<a href="_index_d_.html#iverifytype" class="tsd-kind-icon">IVerify<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#pic_fit_type" class="tsd-kind-icon">PIC_<wbr>FIT_<wbr>TYPE</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.html#region_range" class="tsd-kind-icon">REGION_<wbr>RANGE</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.html#upload_limit" class="tsd-kind-icon">UPLOAD_<wbr>LIMIT</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.html#validate_type" class="tsd-kind-icon">VALIDATE_<wbr>TYPE</a>
 					</li>
 				</ul>
 			</nav>
