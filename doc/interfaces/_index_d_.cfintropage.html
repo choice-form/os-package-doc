@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFRankingQuestion | @choiceform/os-client-core - v2.1.21</title>
+	<title>CFIntroPage | @choiceform/os-client-core - v2.1.21</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfrankingquestion.html">CFRankingQuestion</a>
+					<a href="_index_d_.cfintropage.html">CFIntroPage</a>
 				</li>
 			</ul>
-			<h1>Interface CFRankingQuestion</h1>
+			<h1>Interface CFIntroPage</h1>
 		</div>
 	</div>
 </header>
@@ -70,24 +70,22 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>排序题
-						基本内容请参考选择题<a href="_index_d_.cfchoicequestion.html">CFChoiceQuestion</a></p>
+						<p>描述节点</p>
 					</div>
-					<p>特殊点:排序题的选项不是选择类型,也不是输入类型,是用于排序的.
-						排序题的普通排序选项,渲染出来以后,应该能让答题者改变选项的顺序来进行排序.
-					排序选项时<a href="_index_d_.cfrankingoption.html">CFRankingOption</a>类型,<a href="_index_d_.cfrankingoption.html#sortno">CFRankingOption.sortNo</a>代表排序后的位置.</p>
-					<p>选项排序发生变化后需要调用<a href="_index_d_.cfuieventhandler.html#handleoptiondrop">CFUIEventHandler.handleOptionDrop</a>方法</p>
-					<p>其他选项渲染方式和选择题一样</p>
+					<p>没有选项，其他方面同选择题<a href="_index_d_.cfchoicequestion.html">CFChoiceQuestion</a></p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="_index_d_.cfsubjectquestion.html" class="tsd-signature-type">CFSubjectQuestion</a>
+						<a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a>
+					</li>
+					<li>
+						<a href="_index_d_.cfmedianodemixin.html" class="tsd-signature-type">CFMediaNodeMixin</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">CFRankingQuestion</span>
+								<span class="target">CFIntroPage</span>
 							</li>
 						</ul>
 					</li>
@@ -97,48 +95,46 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section tsd-is-inherited tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#asterisks" class="tsd-kind-icon">asterisks</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#description" class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#endtime" class="tsd-kind-icon">end<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#images" class="tsd-kind-icon">images</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#layout" class="tsd-kind-icon">layout</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#next" class="tsd-kind-icon">next</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#noview" class="tsd-kind-icon">no<wbr>View</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#number" class="tsd-kind-icon">number</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#options" class="tsd-kind-icon">options</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#otheroptions" class="tsd-kind-icon">other<wbr>Options</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#parent" class="tsd-kind-icon">parent</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#prev" class="tsd-kind-icon">prev</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#readonly" class="tsd-kind-icon">readonly</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#template" class="tsd-kind-icon">template</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#title" class="tsd-kind-icon">title</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#value" class="tsd-kind-icon">value</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrankingquestion.html#video" class="tsd-kind-icon">video</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#asterisks" class="tsd-kind-icon">asterisks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#endtime" class="tsd-kind-icon">end<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#images" class="tsd-kind-icon">images</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#layout" class="tsd-kind-icon">layout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#next" class="tsd-kind-icon">next</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#noview" class="tsd-kind-icon">no<wbr>View</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#number" class="tsd-kind-icon">number</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#pageend" class="tsd-kind-icon">page<wbr>End</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#parent" class="tsd-kind-icon">parent</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#prev" class="tsd-kind-icon">prev</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#questype" class="tsd-kind-icon">ques<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#readonly" class="tsd-kind-icon">readonly</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#renderid" class="tsd-kind-icon">render<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#starttime" class="tsd-kind-icon">start<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#template" class="tsd-kind-icon">template</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#typename" class="tsd-kind-icon">type<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#value" class="tsd-kind-icon">value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfintropage.html#video" class="tsd-kind-icon">video</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="asterisks" class="tsd-anchor"></a>
@@ -229,12 +225,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="forceskipreason" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> force<wbr>Skip<wbr>Reason</h3>
 					<div class="tsd-signature tsd-kind-icon">force<wbr>Skip<wbr>Reason<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#iskipreason" class="tsd-signature-type">ISkipReason</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.forceSkipReason</p>
+						<p>Overrides ICFNode.forceSkipReason</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L2587">index.d.ts:2587</a></li>
 						</ul>
@@ -245,12 +242,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="groupsingle" class="tsd-anchor"></a>
 					<h3>group<wbr>Single</h3>
 					<div class="tsd-signature tsd-kind-icon">group<wbr>Single<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.groupSingle</p>
+						<p>Overrides ICFNode.groupSingle</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L2628">index.d.ts:2628</a></li>
 						</ul>
@@ -313,12 +311,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="layout" class="tsd-anchor"></a>
 					<h3>layout</h3>
 					<div class="tsd-signature tsd-kind-icon">layout<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfnodelayout.html" class="tsd-signature-type">CFNodeLayout</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.layout</p>
+						<p>Overrides ICFNode.layout</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L2566">index.d.ts:2566</a></li>
 						</ul>
@@ -347,12 +346,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="noview" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> no<wbr>View</h3>
 					<div class="tsd-signature tsd-kind-icon">no<wbr>View<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.noView</p>
+						<p>Overrides ICFNode.noView</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L2619">index.d.ts:2619</a></li>
 						</ul>
@@ -363,12 +363,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="nodename" class="tsd-anchor"></a>
 					<h3>node<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.nodeName</p>
+						<p>Overrides ICFNode.nodeName</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L2640">index.d.ts:2640</a></li>
 						</ul>
@@ -396,44 +397,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported">
-					<a name="options" class="tsd-anchor"></a>
-					<h3>options</h3>
-					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfrankingoption.html" class="tsd-signature-type">CFRankingOption</a><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<p>Overrides ICFOptNodeMixin.options</p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L3227">index.d.ts:3227</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>排序选项列表</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="otheroptions" class="tsd-anchor"></a>
-					<h3>other<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">other<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfoption.html" class="tsd-signature-type">CFOption</a><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from ICFOptNodeMixin.otherOptions</p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L2435">index.d.ts:2435</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>其他选项列表</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="pageend" class="tsd-anchor"></a>
 					<h3>page<wbr>End</h3>
 					<div class="tsd-signature tsd-kind-icon">page<wbr>End<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.pageEnd</p>
+						<p>Overrides ICFNode.pageEnd</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L2636">index.d.ts:2636</a></li>
 						</ul>
@@ -444,12 +414,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="pagestart" class="tsd-anchor"></a>
 					<h3>page<wbr>Start</h3>
 					<div class="tsd-signature tsd-kind-icon">page<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.pageStart</p>
+						<p>Overrides ICFNode.pageStart</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L2632">index.d.ts:2632</a></li>
 						</ul>
@@ -511,12 +482,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="readonly" class="tsd-anchor"></a>
 					<h3>readonly</h3>
 					<div class="tsd-signature tsd-kind-icon">readonly<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.readonly</p>
+						<p>Overrides ICFNode.readonly</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L2600">index.d.ts:2600</a></li>
 						</ul>
@@ -597,12 +569,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="template" class="tsd-anchor"></a>
 					<h3>template</h3>
 					<div class="tsd-signature tsd-kind-icon">template<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfnodetemplate.html" class="tsd-signature-type">CFNodeTemplate</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.template</p>
+						<p>Overrides ICFNode.template</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/46f7af1/index.d.ts#L2572">index.d.ts:2572</a></li>
 						</ul>
@@ -720,106 +693,100 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfrankingquestion.html" class="tsd-kind-icon">CFRanking<wbr>Question</a>
+						<a href="_index_d_.cfintropage.html" class="tsd-kind-icon">CFIntro<wbr>Page</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#asterisks" class="tsd-kind-icon">asterisks</a>
+								<a href="_index_d_.cfintropage.html#asterisks" class="tsd-kind-icon">asterisks</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a>
+								<a href="_index_d_.cfintropage.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#description" class="tsd-kind-icon">description</a>
+								<a href="_index_d_.cfintropage.html#description" class="tsd-kind-icon">description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#endtime" class="tsd-kind-icon">end<wbr>Time</a>
+								<a href="_index_d_.cfintropage.html#endtime" class="tsd-kind-icon">end<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a>
+								<a href="_index_d_.cfintropage.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfintropage.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfintropage.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a>
+								<a href="_index_d_.cfintropage.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a>
+								<a href="_index_d_.cfintropage.html#images" class="tsd-kind-icon">images</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a>
+								<a href="_index_d_.cfintropage.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfintropage.html#layout" class="tsd-kind-icon">layout</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#images" class="tsd-kind-icon">images</a>
+								<a href="_index_d_.cfintropage.html#next" class="tsd-kind-icon">next</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfintropage.html#noview" class="tsd-kind-icon">no<wbr>View</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfintropage.html#nodename" class="tsd-kind-icon">node<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a>
+								<a href="_index_d_.cfintropage.html#number" class="tsd-kind-icon">number</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfintropage.html#pageend" class="tsd-kind-icon">page<wbr>End</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfintropage.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#layout" class="tsd-kind-icon">layout</a>
+								<a href="_index_d_.cfintropage.html#parent" class="tsd-kind-icon">parent</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#next" class="tsd-kind-icon">next</a>
+								<a href="_index_d_.cfintropage.html#prev" class="tsd-kind-icon">prev</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#noview" class="tsd-kind-icon">no<wbr>View</a>
+								<a href="_index_d_.cfintropage.html#questype" class="tsd-kind-icon">ques<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfintropage.html#readonly" class="tsd-kind-icon">readonly</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a>
+								<a href="_index_d_.cfintropage.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#number" class="tsd-kind-icon">number</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#options" class="tsd-kind-icon">options</a>
+								<a href="_index_d_.cfintropage.html#renderid" class="tsd-kind-icon">render<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#otheroptions" class="tsd-kind-icon">other<wbr>Options</a>
+								<a href="_index_d_.cfintropage.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a>
+								<a href="_index_d_.cfintropage.html#starttime" class="tsd-kind-icon">start<wbr>Time</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfintropage.html#template" class="tsd-kind-icon">template</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a>
+								<a href="_index_d_.cfintropage.html#title" class="tsd-kind-icon">title</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#parent" class="tsd-kind-icon">parent</a>
+								<a href="_index_d_.cfintropage.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#prev" class="tsd-kind-icon">prev</a>
+								<a href="_index_d_.cfintropage.html#typename" class="tsd-kind-icon">type<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a>
+								<a href="_index_d_.cfintropage.html#value" class="tsd-kind-icon">value</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#readonly" class="tsd-kind-icon">readonly</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#template" class="tsd-kind-icon">template</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#title" class="tsd-kind-icon">title</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#value" class="tsd-kind-icon">value</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrankingquestion.html#video" class="tsd-kind-icon">video</a>
+								<a href="_index_d_.cfintropage.html#video" class="tsd-kind-icon">video</a>
 							</li>
 						</ul>
 					</li>
