@@ -1,3 +1,4 @@
-os-client-doc
+## 包文档列表
 
-具体的使用文档请查看[git pages](https://choice-form.github.io/os-client-doc/doc/modules/_index_d_.html)
++ [os-client-core](https://choice-form.github.io/os-package-doc/client-core/index.html)
++ [os-editor-mini-parser](https://choice-form.github.io/os-package-doc/editor-mini-parser/index.html)

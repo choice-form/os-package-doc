@@ -1,0 +1,225 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@choiceform/os-editor-mini-parser</title>
+	<meta name="description" content="Documentation for @choiceform/os-editor-mini-parser">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@choiceform/os-editor-mini-parser</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>@choiceform/os-editor-mini-parser</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<p>这里是为简化版编辑器抽取出来的类型规范和一个数据兼容模块</p>
+				<p>设计变化：</p>
+				<p>一开始设计的时候，我们把简易版的数据结构设计成专业版的子集，后来经尝试发现，这样做仍然会让简易版中需要过多地组织和自己无关的数据结构，所以决定把简易版的数据在简化一下，同时命名属性也可以不同，命名称适应于简易版的名称，易于理解。</p>
+				<p>除了节点的UUID和选项的UUID是必须的，和简易版无关的其他属性都可以不出现在简易版的数据结构中，</p>
+				<p>这个包主要提供两个作用：</p>
+				<ol>
+					<li>提供简易版问卷payload的类型规范，方便写代码的时候参考，保证导出的payload数据格式的正确。</li>
+					<li>提供一个简易版payload与完整版payload的相互转化的处理模块，因为简易版编辑器的功能是完整版的一个极小的子集，它关心的功能很少，所以简易版payload和完整版的payload相比，缺少一些必须的内容，这些内容与简易版毫无关系，不应该由简易版负责补足，所以提供一对封装好的方法去处理两个版本之间的数据补足或剔除<ul>
+							<li>简易版中保存问卷前调用补足方法得到完整版数据再保存。</li>
+							<li>简易版中加载问卷后调用剔除方法得到精简版数据再使用。</li>
+						</ul>
+					</li>
+				</ol>
+				<p>关于上述的考虑，之前有两个想法，此处留作笔记：</p>
+				<ol>
+					<li>可以让答题端和后台都去将这些属性读取过程都进行判断保护，但是两方都要改很多属性；</li>
+					<li>还有一个方法就是提交前进行填补处理，把确实的属性默认值都填补上去，而需要填补什么东西对于简易版编辑的开发者来说是无需知道的，是完整编辑器和抽出简易版类型规范的开发者的责任，所以同时在这个包里面发布一个填补包，简易编辑器开发者使用这个包的方法处理一下payload再保存即可。
+					综合考虑，我门选择了第二种方式。</li>
+				</ol>
+				<a href="#安装" id="安装" style="color: inherit; text-decoration: none;">
+					<h2>安装</h2>
+				</a>
+				<pre><code class="language-shell"><span style="color: #000000">yarn add @choiceform/os-editor-mini-parser</span>
+<span style="color: #008000"># 或者</span>
+<span style="color: #000000">npm install @choiceform/os-editor-mini-parser</span>
+</code></pre>
+				<a href="#使用" id="使用" style="color: inherit; text-decoration: none;">
+					<h2>使用</h2>
+				</a>
+				<p>使用兼容填补方法：</p>
+				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span><span style="color: #001080">patch</span><span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@choiceform/os-editor-mini-parser&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// 以下的exportSurveyJson、gzip、base64和savePayload都是用于举例的虚拟方法，真实场合换成自己的真实方法。</span>
+
+<span style="color: #008000">// 简易版中使用自己的方法导出的问卷数据json对象,exportSurveyJson</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">surveyJson</span><span style="color: #000000"> = </span><span style="color: #795E26">exportSurveyJson</span><span style="color: #000000">();</span>
+
+<span style="color: #008000">// 由于这是个简化版的,我们兼容填补一下，具体原因请看上面的说明</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">compatSurveyJson</span><span style="color: #000000"> = </span><span style="color: #795E26">patch</span><span style="color: #000000">(</span><span style="color: #001080">surveyJson</span><span style="color: #000000">);</span>
+<span style="color: #008000">// 压缩处理</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">gzipped</span><span style="color: #000000"> = </span><span style="color: #795E26">gzip</span><span style="color: #000000">(</span><span style="color: #267F99">JSON</span><span style="color: #000000">.</span><span style="color: #795E26">stringify</span><span style="color: #000000">(</span><span style="color: #001080">compatSurveyJson</span><span style="color: #000000">));</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">base64Encoded</span><span style="color: #000000"> = </span><span style="color: #795E26">base64</span><span style="color: #000000">(</span><span style="color: #001080">gzipped</span><span style="color: #000000">);</span>
+<span style="color: #008000">// 调用保存方法保存到后台</span>
+<span style="color: #795E26">savePayload</span><span style="color: #000000">(</span><span style="color: #001080">base64Encoded</span><span style="color: #000000">);</span>
+
+</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="modules/__choiceform_os_editor_mini_parser_.html">&quot;@choiceform/os-<wbr>editor-<wbr>mini-<wbr>parser&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/cfeditorminiparser.html" class="tsd-kind-icon">CFEditor<wbr>Mini<wbr>Parser</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminibasenodejson.html" class="tsd-kind-icon">IMini<wbr>Base<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminidescribenodejson.html" class="tsd-kind-icon">IMini<wbr>Describe<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminiendnodejson.html" class="tsd-kind-icon">IMini<wbr>End<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminifillnodejson.html" class="tsd-kind-icon">IMini<wbr>Fill<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminifilloptjson.html" class="tsd-kind-icon">IMini<wbr>Fill<wbr>Opt<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminigraphmarknodejson.html" class="tsd-kind-icon">IMini<wbr>Graph<wbr>Mark<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminiinputnodemixin.html" class="tsd-kind-icon">IMini<wbr>Input<wbr>Node<wbr>Mixin</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminioptionjson.html" class="tsd-kind-icon">IMini<wbr>Option<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminioutputjson.html" class="tsd-kind-icon">IMini<wbr>Output<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminioutputnodemixin.html" class="tsd-kind-icon">IMini<wbr>Output<wbr>Node<wbr>Mixin</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminiportjson.html" class="tsd-kind-icon">IMini<wbr>Port<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminiquesnodemixin.html" class="tsd-kind-icon">IMini<wbr>Ques<wbr>Node<wbr>Mixin</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminiregionnodejson.html" class="tsd-kind-icon">IMini<wbr>Region<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminiselectnodejson.html" class="tsd-kind-icon">IMini<wbr>Select<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminislideratenodejson.html" class="tsd-kind-icon">IMini<wbr>Slide<wbr>Rate<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iministartnodejson.html" class="tsd-kind-icon">IMini<wbr>Start<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminisubjectbasejson.html" class="tsd-kind-icon">IMini<wbr>Subject<wbr>Base<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminisurveyjson.html" class="tsd-kind-icon">IMini<wbr>Survey<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iminivalidatenodejson.html" class="tsd-kind-icon">IMini<wbr>Validate<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/irateitemjson.html" class="tsd-kind-icon">IRate<wbr>Item<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#imenunodejson" class="tsd-kind-icon">IMenu<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#iminiinputjson" class="tsd-kind-icon">IMini<wbr>Input<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#iminilocatenodejson" class="tsd-kind-icon">IMini<wbr>Locate<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#iminisequencenodejson" class="tsd-kind-icon">IMini<wbr>Sequence<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#iminiuploadnodejson" class="tsd-kind-icon">IMini<wbr>Upload<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#mini_node_type" class="tsd-kind-icon">MINI_<wbr>NODE_<wbr>TYPE</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
