@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IMiniOptionJson | @choiceform/os-editor-mini-parser</title>
+	<title>IMiniTheme | @choiceform/os-editor-mini-parser</title>
 	<meta name="description" content="Documentation for @choiceform/os-editor-mini-parser">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">@choiceform/os-editor-mini-parser</a>
 				</li>
 				<li>
-					<a href="iminioptionjson.html">IMiniOptionJson</a>
+					<a href="iminitheme.html">IMiniTheme</a>
 				</li>
 			</ul>
-			<h1>Interface IMiniOptionJson</h1>
+			<h1>Interface IMiniTheme</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>简易版选项文字</p>
+						<p>简易版样式</p>
 					</div>
 				</div>
 			</section>
@@ -76,20 +76,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="iminioutputjson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniOutputJson</a>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">IMiniOptionJson</span>
-								<ul class="tsd-hierarchy">
-									<li>
-										<a href="iminifilloptjson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniFillOptJson</a>
-									</li>
-									<li>
-										<a href="iminiuploadoptjson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniUploadOptJson</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
+						<span class="target">IMiniTheme</span>
 					</li>
 				</ul>
 			</section>
@@ -100,10 +87,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminioptionjson.html#destuuid" class="tsd-kind-icon">dest<wbr>Uuid</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminioptionjson.html#isotheropt" class="tsd-kind-icon">is<wbr>Other<wbr>Opt</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminioptionjson.html#text" class="tsd-kind-icon">text</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminioptionjson.html#uuid" class="tsd-kind-icon">uuid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminitheme.html#background" class="tsd-kind-icon">background</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminitheme.html#btnfontsize" class="tsd-kind-icon">btn<wbr>Font<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminitheme.html#button" class="tsd-kind-icon">button</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminitheme.html#fontsize" class="tsd-kind-icon">font<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminitheme.html#optfontsize" class="tsd-kind-icon">opt<wbr>Font<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminitheme.html#primary" class="tsd-kind-icon">primary</a></li>
 							</ul>
 						</section>
 					</div>
@@ -111,66 +100,93 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="destuuid" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> dest<wbr>Uuid</h3>
-					<div class="tsd-signature tsd-kind-icon">dest<wbr>Uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="background" class="tsd-anchor"></a>
+					<h3>background</h3>
+					<div class="tsd-signature tsd-kind-icon">background<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="iminioutputjson.html">IMiniOutputJson</a>.<a href="iminioutputjson.html#destuuid">destUuid</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/421300ac0/mini-parser/index.d.ts#L66">index.d.ts:66</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/421300ac0/mini-parser/index.d.ts#L533">index.d.ts:533</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>目标输入口id，暂时保留，暂时不用，
-							等简易版支持自定义逻辑跳转的时候才启用</p>
+							<p>背景颜色</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="isotheropt" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Other<wbr>Opt</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Other<wbr>Opt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="btnfontsize" class="tsd-anchor"></a>
+					<h3>btn<wbr>Font<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">btn<wbr>Font<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/421300ac0/mini-parser/index.d.ts#L80">index.d.ts:80</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/421300ac0/mini-parser/index.d.ts#L545">index.d.ts:545</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>是否为其他选项</p>
+							<p>按钮文字字体大小</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="text" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> text</h3>
-					<div class="tsd-signature tsd-kind-icon">text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="button" class="tsd-anchor"></a>
+					<h3>button</h3>
+					<div class="tsd-signature tsd-kind-icon">button<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/421300ac0/mini-parser/index.d.ts#L76">index.d.ts:76</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/421300ac0/mini-parser/index.d.ts#L529">index.d.ts:529</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>选项文字</p>
+							<p>按钮颜色</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="uuid" class="tsd-anchor"></a>
-					<h3>uuid</h3>
-					<div class="tsd-signature tsd-kind-icon">uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="fontsize" class="tsd-anchor"></a>
+					<h3>font<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">font<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="iminioutputjson.html">IMiniOutputJson</a>.<a href="iminioutputjson.html#uuid">uuid</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/421300ac0/mini-parser/index.d.ts#L50">index.d.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/421300ac0/mini-parser/index.d.ts#L537">index.d.ts:537</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>端口id</p>
+							<p>问题文字字体大小</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="optfontsize" class="tsd-anchor"></a>
+					<h3>opt<wbr>Font<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">opt<wbr>Font<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/421300ac0/mini-parser/index.d.ts#L541">index.d.ts:541</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>选项文字字体大小</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="primary" class="tsd-anchor"></a>
+					<h3>primary</h3>
+					<div class="tsd-signature tsd-kind-icon">primary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/421300ac0/mini-parser/index.d.ts#L525">index.d.ts:525</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>字体颜色</p>
 						</div>
 					</div>
 				</section>
@@ -216,27 +232,9 @@
 					<li class=" tsd-kind-interface">
 						<a href="imininodelayout.html" class="tsd-kind-icon">IMini<wbr>Node<wbr>Layout</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
+					<li class=" tsd-kind-interface">
 						<a href="iminioptionjson.html" class="tsd-kind-icon">IMini<wbr>Option<wbr>Json</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iminioptionjson.html#destuuid" class="tsd-kind-icon">dest<wbr>Uuid</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iminioptionjson.html#isotheropt" class="tsd-kind-icon">is<wbr>Other<wbr>Opt</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iminioptionjson.html#text" class="tsd-kind-icon">text</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iminioptionjson.html#uuid" class="tsd-kind-icon">uuid</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="iminioutputjson.html" class="tsd-kind-icon">IMini<wbr>Output<wbr>Json</a>
 					</li>
@@ -267,9 +265,33 @@
 					<li class=" tsd-kind-interface">
 						<a href="iminisurveyjson.html" class="tsd-kind-icon">IMini<wbr>Survey<wbr>Json</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="iminitheme.html" class="tsd-kind-icon">IMini<wbr>Theme</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iminitheme.html#background" class="tsd-kind-icon">background</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iminitheme.html#btnfontsize" class="tsd-kind-icon">btn<wbr>Font<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iminitheme.html#button" class="tsd-kind-icon">button</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iminitheme.html#fontsize" class="tsd-kind-icon">font<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iminitheme.html#optfontsize" class="tsd-kind-icon">opt<wbr>Font<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iminitheme.html#primary" class="tsd-kind-icon">primary</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="iminithemewrap.html" class="tsd-kind-icon">IMini<wbr>Theme<wbr>Wrap</a>
 					</li>
