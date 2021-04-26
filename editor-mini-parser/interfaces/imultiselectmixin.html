@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IMiniInputNodeMixin | @choiceform/os-editor-mini-parser</title>
+	<title>IMultiSelectMixin | @choiceform/os-editor-mini-parser</title>
 	<meta name="description" content="Documentation for @choiceform/os-editor-mini-parser">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,31 +55,27 @@
 					<a href="../modules.html">@choiceform/os-editor-mini-parser</a>
 				</li>
 				<li>
-					<a href="iminiinputnodemixin.html">IMiniInputNodeMixin</a>
+					<a href="imultiselectmixin.html">IMultiSelectMixin</a>
 				</li>
 			</ul>
-			<h1>Interface IMiniInputNodeMixin</h1>
+			<h1>Interface IMultiSelectMixin</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>输入口节点混入</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IMiniInputNodeMixin</span>
+						<span class="target">IMultiSelectMixin</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<a href="iminidescribenodejson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniDescribeNodeJson</a>
+								<a href="iminiselectnodejson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniSelectNodeJson</a>
+							</li>
+							<li>
+								<a href="imenunodejson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMenuNodeJson</a>
 							</li>
 						</ul>
 					</li>
@@ -92,7 +88,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminiinputnodemixin.html#input" class="tsd-kind-icon">input</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imultiselectmixin.html#multimax" class="tsd-kind-icon">multi<wbr>Max</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imultiselectmixin.html#multimin" class="tsd-kind-icon">multi<wbr>Min</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="imultiselectmixin.html#multiselect" class="tsd-kind-icon">multi<wbr>Select</a></li>
 							</ul>
 						</section>
 					</div>
@@ -101,17 +99,47 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="input" class="tsd-anchor"></a>
-					<h3>input</h3>
-					<div class="tsd-signature tsd-kind-icon">input<span class="tsd-signature-symbol">:</span> <a href="iminiportjson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniPortJson</a></div>
+					<a name="multimax" class="tsd-anchor"></a>
+					<h3>multi<wbr>Max</h3>
+					<div class="tsd-signature tsd-kind-icon">multi<wbr>Max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L90">index.d.ts:90</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L348">index.d.ts:348</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>输入口</p>
+							<p>多选最大数</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="multimin" class="tsd-anchor"></a>
+					<h3>multi<wbr>Min</h3>
+					<div class="tsd-signature tsd-kind-icon">multi<wbr>Min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L344">index.d.ts:344</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>多选最小数</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="multiselect" class="tsd-anchor"></a>
+					<h3>multi<wbr>Select</h3>
+					<div class="tsd-signature tsd-kind-icon">multi<wbr>Select<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L340">index.d.ts:340</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否多选</p>
 						</div>
 					</div>
 				</section>
@@ -151,18 +179,9 @@
 					<li class=" tsd-kind-interface">
 						<a href="iminigraphmarknodejson.html" class="tsd-kind-icon">IMini<wbr>Graph<wbr>Mark<wbr>Node<wbr>Json</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
+					<li class=" tsd-kind-interface">
 						<a href="iminiinputnodemixin.html" class="tsd-kind-icon">IMini<wbr>Input<wbr>Node<wbr>Mixin</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iminiinputnodemixin.html#input" class="tsd-kind-icon">input</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="imininodelayout.html" class="tsd-kind-icon">IMini<wbr>Node<wbr>Layout</a>
 					</li>
@@ -214,9 +233,24 @@
 					<li class=" tsd-kind-interface">
 						<a href="iminiweightnodejson.html" class="tsd-kind-icon">IMini<wbr>Weight<wbr>Node<wbr>Json</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="imultiselectmixin.html" class="tsd-kind-icon">IMulti<wbr>Select<wbr>Mixin</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imultiselectmixin.html#multimax" class="tsd-kind-icon">multi<wbr>Max</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imultiselectmixin.html#multimin" class="tsd-kind-icon">multi<wbr>Min</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="imultiselectmixin.html#multiselect" class="tsd-kind-icon">multi<wbr>Select</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="irateitemjson.html" class="tsd-kind-icon">IRate<wbr>Item<wbr>Json</a>
 					</li>

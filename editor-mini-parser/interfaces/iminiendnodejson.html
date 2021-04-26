@@ -77,6 +77,9 @@
 				<ul class="tsd-hierarchy">
 					<li>
 						<a href="iminibasenodejson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniBaseNodeJson</a>
+					</li>
+					<li>
+						<a href="iminiquesnodemixin.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniQuesNodeMixin</a>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">IMiniEndNodeJson</span>
@@ -92,11 +95,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminiendnodejson.html#endbtntext" class="tsd-kind-icon">end<wbr>Btn<wbr>Text</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminiendnodejson.html#describe" class="tsd-kind-icon">describe</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminiendnodejson.html#input" class="tsd-kind-icon">input</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminiendnodejson.html#joinprev" class="tsd-kind-icon">join<wbr>Prev</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminiendnodejson.html#linkurl" class="tsd-kind-icon">link<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminiendnodejson.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminiendnodejson.html#nodeuuid" class="tsd-kind-icon">node<wbr>Uuid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminiendnodejson.html#questiontext" class="tsd-kind-icon">question<wbr>Text</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminiendnodejson.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
@@ -105,18 +110,19 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="endbtntext" class="tsd-anchor"></a>
-					<h3>end<wbr>Btn<wbr>Text</h3>
-					<div class="tsd-signature tsd-kind-icon">end<wbr>Btn<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="describe" class="tsd-anchor"></a>
+					<h3>describe</h3>
+					<div class="tsd-signature tsd-kind-icon">describe<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="iminiquesnodemixin.html">IMiniQuesNodeMixin</a>.<a href="iminiquesnodemixin.html#describe">describe</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L336">index.d.ts:336</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L100">index.d.ts:100</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>结束按钮文字</p>
+							<p>描述内容</p>
 						</div>
 					</div>
 				</section>
@@ -126,12 +132,28 @@
 					<div class="tsd-signature tsd-kind-icon">input<span class="tsd-signature-symbol">:</span> <a href="iminiportjson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniPortJson</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L344">index.d.ts:344</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L501">index.d.ts:501</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>输入口</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="joinprev" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> join<wbr>Prev</h3>
+					<div class="tsd-signature tsd-kind-icon">join<wbr>Prev<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iminibasenodejson.html">IMiniBaseNodeJson</a>.<a href="iminibasenodejson.html#joinprev">joinPrev</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L189">index.d.ts:189</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否与前一题同页显示，不适用于结束节点，开始节点和第一题。</p>
 						</div>
 					</div>
 				</section>
@@ -141,7 +163,7 @@
 					<div class="tsd-signature tsd-kind-icon">link<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L340">index.d.ts:340</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L497">index.d.ts:497</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,7 +179,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminibasenodejson.html">IMiniBaseNodeJson</a>.<a href="iminibasenodejson.html#nodename">nodeName</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L187">index.d.ts:187</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L177">index.d.ts:177</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -173,12 +195,28 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminibasenodejson.html">IMiniBaseNodeJson</a>.<a href="iminibasenodejson.html#nodeuuid">nodeUuid</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L191">index.d.ts:191</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L181">index.d.ts:181</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>节点id，需要前端添加节点的时候自行生成一个version4的UUID。</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="questiontext" class="tsd-anchor"></a>
+					<h3>question<wbr>Text</h3>
+					<div class="tsd-signature tsd-kind-icon">question<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iminiquesnodemixin.html">IMiniQuesNodeMixin</a>.<a href="iminiquesnodemixin.html#questiontext">questionText</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L104">index.d.ts:104</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>问题内容，不可为空</p>
 						</div>
 					</div>
 				</section>
@@ -189,7 +227,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminibasenodejson.html">IMiniBaseNodeJson</a>.<a href="iminibasenodejson.html#type">type</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L195">index.d.ts:195</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L185">index.d.ts:185</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -214,6 +252,9 @@
 						<a href="cfeditorminiparser.html" class="tsd-kind-icon">CFEditor<wbr>Mini<wbr>Parser</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="imenunodejson.html" class="tsd-kind-icon">IMenu<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="iminibasenodejson.html" class="tsd-kind-icon">IMini<wbr>Base<wbr>Node<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -224,11 +265,14 @@
 					<li class="current tsd-kind-interface">
 						<a href="iminiendnodejson.html" class="tsd-kind-icon">IMini<wbr>End<wbr>Node<wbr>Json</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iminiendnodejson.html#endbtntext" class="tsd-kind-icon">end<wbr>Btn<wbr>Text</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iminiendnodejson.html#describe" class="tsd-kind-icon">describe</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iminiendnodejson.html#input" class="tsd-kind-icon">input</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iminiendnodejson.html#joinprev" class="tsd-kind-icon">join<wbr>Prev</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iminiendnodejson.html#linkurl" class="tsd-kind-icon">link<wbr>Url</a>
@@ -238,6 +282,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iminiendnodejson.html#nodeuuid" class="tsd-kind-icon">node<wbr>Uuid</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iminiendnodejson.html#questiontext" class="tsd-kind-icon">question<wbr>Text</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iminiendnodejson.html#type" class="tsd-kind-icon">type</a>
@@ -257,6 +304,9 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="iminiinputnodemixin.html" class="tsd-kind-icon">IMini<wbr>Input<wbr>Node<wbr>Mixin</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="imininodelayout.html" class="tsd-kind-icon">IMini<wbr>Node<wbr>Layout</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="iminioptionjson.html" class="tsd-kind-icon">IMini<wbr>Option<wbr>Json</a>
@@ -292,13 +342,25 @@
 						<a href="iminisurveyjson.html" class="tsd-kind-icon">IMini<wbr>Survey<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="iminiuploadnodejson.html" class="tsd-kind-icon">IMini<wbr>Upload<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="iminiuploadoptjson.html" class="tsd-kind-icon">IMini<wbr>Upload<wbr>Opt<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="iminivalidatenodejson.html" class="tsd-kind-icon">IMini<wbr>Validate<wbr>Node<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="irateitemjson.html" class="tsd-kind-icon">IRate<wbr>Item<wbr>Json</a>
+						<a href="iminivaluemarknodejson.html" class="tsd-kind-icon">IMini<wbr>Value<wbr>Mark<wbr>Node<wbr>Json</a>
 					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#imenunodejson" class="tsd-kind-icon">IMenu<wbr>Node<wbr>Json</a>
+					<li class=" tsd-kind-interface">
+						<a href="iminiweightnodejson.html" class="tsd-kind-icon">IMini<wbr>Weight<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="imultiselectmixin.html" class="tsd-kind-icon">IMulti<wbr>Select<wbr>Mixin</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="irateitemjson.html" class="tsd-kind-icon">IRate<wbr>Item<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#iminiinputjson" class="tsd-kind-icon">IMini<wbr>Input<wbr>Json</a>
@@ -308,9 +370,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#iminisequencenodejson" class="tsd-kind-icon">IMini<wbr>Sequence<wbr>Node<wbr>Json</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#iminiuploadnodejson" class="tsd-kind-icon">IMini<wbr>Upload<wbr>Node<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#mini_node_type" class="tsd-kind-icon">MINI_<wbr>NODE_<wbr>TYPE</a>

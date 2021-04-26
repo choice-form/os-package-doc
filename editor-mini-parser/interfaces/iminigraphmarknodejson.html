@@ -95,6 +95,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminigraphmarknodejson.html#answerrequired" class="tsd-kind-icon">answer<wbr>Required</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminigraphmarknodejson.html#describe" class="tsd-kind-icon">describe</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminigraphmarknodejson.html#input" class="tsd-kind-icon">input</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminigraphmarknodejson.html#joinprev" class="tsd-kind-icon">join<wbr>Prev</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminigraphmarknodejson.html#layout" class="tsd-kind-icon">layout</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminigraphmarknodejson.html#markimgcount" class="tsd-kind-icon">mark<wbr>Img<wbr>Count</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminigraphmarknodejson.html#markimgname" class="tsd-kind-icon">mark<wbr>Img<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminigraphmarknodejson.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
@@ -119,7 +121,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#answerrequired">answerRequired</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L222">index.d.ts:222</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L261">index.d.ts:261</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -135,12 +137,12 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#describe">describe</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L102">index.d.ts:102</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L100">index.d.ts:100</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>问题附加描述内容</p>
+							<p>描述内容</p>
 						</div>
 					</div>
 				</section>
@@ -151,12 +153,44 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#input">input</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L92">index.d.ts:92</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L90">index.d.ts:90</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>输入口</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="joinprev" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> join<wbr>Prev</h3>
+					<div class="tsd-signature tsd-kind-icon">join<wbr>Prev<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#joinprev">joinPrev</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L189">index.d.ts:189</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否与前一题同页显示，不适用于结束节点，开始节点和第一题。</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="layout" class="tsd-anchor"></a>
+					<h3>layout</h3>
+					<div class="tsd-signature tsd-kind-icon">layout<span class="tsd-signature-symbol">:</span> <a href="imininodelayout.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniNodeLayout</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L310">index.d.ts:310</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>布局设置，选择题用到了<a href="imininodelayout.html#optalign">IMiniNodeLayout.optAlign</a>
+							和<a href="imininodelayout.html#optmark">IMiniNodeLayout.optMark</a>这两个属性</p>
 						</div>
 					</div>
 				</section>
@@ -166,7 +200,7 @@
 					<div class="tsd-signature tsd-kind-icon">mark<wbr>Img<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L251">index.d.ts:251</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L294">index.d.ts:294</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -178,15 +212,21 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="markimgname" class="tsd-anchor"></a>
 					<h3>mark<wbr>Img<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">mark<wbr>Img<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;rating-star&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">mark<wbr>Img<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;rating-love&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;rating-star&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;rating-thumbs-up&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;rating-thumbs-down&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;rating-number&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L255">index.d.ts:255</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L304">index.d.ts:304</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>图形打分题图片名称，简化版使用默认值：rating-star</p>
+							<p>图形打分题图片名称
+								支持从5个固定的值中选取
+								rating-love 爱心
+								rating-star 星星
+								rating-thumbs-up 拇指向上
+								rating-thumbs-down 拇指向下
+							rating-number 数值</p>
 						</div>
 					</div>
 				</section>
@@ -197,7 +237,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#nodename">nodeName</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L187">index.d.ts:187</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L177">index.d.ts:177</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -213,7 +253,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#nodeuuid">nodeUuid</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L191">index.d.ts:191</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L181">index.d.ts:181</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -229,7 +269,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#options">options</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L226">index.d.ts:226</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L265">index.d.ts:265</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -245,7 +285,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#otheroptions">otherOptions</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L230">index.d.ts:230</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L269">index.d.ts:269</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -261,7 +301,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#output">output</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L116">index.d.ts:116</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L114">index.d.ts:114</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -277,7 +317,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#questiontext">questionText</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L106">index.d.ts:106</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L104">index.d.ts:104</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -293,7 +333,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#randomoptiony">randomOptionY</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L234">index.d.ts:234</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L273">index.d.ts:273</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -309,7 +349,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="iminisubjectbasejson.html">IMiniSubjectBaseJson</a>.<a href="iminisubjectbasejson.html#type">type</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/51311cc16/mini-parser/index.d.ts#L195">index.d.ts:195</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/5a01c7ceb/mini-parser/index.d.ts#L185">index.d.ts:185</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -332,6 +372,9 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-interface">
 						<a href="cfeditorminiparser.html" class="tsd-kind-icon">CFEditor<wbr>Mini<wbr>Parser</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="imenunodejson.html" class="tsd-kind-icon">IMenu<wbr>Node<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="iminibasenodejson.html" class="tsd-kind-icon">IMini<wbr>Base<wbr>Node<wbr>Json</a>
@@ -361,6 +404,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="iminigraphmarknodejson.html#input" class="tsd-kind-icon">input</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iminigraphmarknodejson.html#joinprev" class="tsd-kind-icon">join<wbr>Prev</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iminigraphmarknodejson.html#layout" class="tsd-kind-icon">layout</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iminigraphmarknodejson.html#markimgcount" class="tsd-kind-icon">mark<wbr>Img<wbr>Count</a>
@@ -400,6 +449,9 @@
 						<a href="iminiinputnodemixin.html" class="tsd-kind-icon">IMini<wbr>Input<wbr>Node<wbr>Mixin</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="imininodelayout.html" class="tsd-kind-icon">IMini<wbr>Node<wbr>Layout</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="iminioptionjson.html" class="tsd-kind-icon">IMini<wbr>Option<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -433,13 +485,25 @@
 						<a href="iminisurveyjson.html" class="tsd-kind-icon">IMini<wbr>Survey<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="iminiuploadnodejson.html" class="tsd-kind-icon">IMini<wbr>Upload<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="iminiuploadoptjson.html" class="tsd-kind-icon">IMini<wbr>Upload<wbr>Opt<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="iminivalidatenodejson.html" class="tsd-kind-icon">IMini<wbr>Validate<wbr>Node<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="irateitemjson.html" class="tsd-kind-icon">IRate<wbr>Item<wbr>Json</a>
+						<a href="iminivaluemarknodejson.html" class="tsd-kind-icon">IMini<wbr>Value<wbr>Mark<wbr>Node<wbr>Json</a>
 					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#imenunodejson" class="tsd-kind-icon">IMenu<wbr>Node<wbr>Json</a>
+					<li class=" tsd-kind-interface">
+						<a href="iminiweightnodejson.html" class="tsd-kind-icon">IMini<wbr>Weight<wbr>Node<wbr>Json</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="imultiselectmixin.html" class="tsd-kind-icon">IMulti<wbr>Select<wbr>Mixin</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="irateitemjson.html" class="tsd-kind-icon">IRate<wbr>Item<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#iminiinputjson" class="tsd-kind-icon">IMini<wbr>Input<wbr>Json</a>
@@ -449,9 +513,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#iminisequencenodejson" class="tsd-kind-icon">IMini<wbr>Sequence<wbr>Node<wbr>Json</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#iminiuploadnodejson" class="tsd-kind-icon">IMini<wbr>Upload<wbr>Node<wbr>Json</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../modules.html#mini_node_type" class="tsd-kind-icon">MINI_<wbr>NODE_<wbr>TYPE</a>
