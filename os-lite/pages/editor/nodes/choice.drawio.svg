@@ -1,0 +1,643 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="641px" height="851px" viewBox="-0.5 -0.5 641 851" content="&lt;mxfile&gt;&lt;diagram id=&quot;UEUJgjEIkqyVpYMse2gc&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="190" y="0" width="320" height="850" fill="#e6e6e6" stroke="#000000" pointer-events="all"/>
+        <rect x="190" y="0" width="320" height="30" fill="#ff9933" stroke="#ff9933" pointer-events="all"/>
+        <rect x="315.13" y="5" width="69.75" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 15px; margin-left: 316px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                选择题
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="350" y="20" fill="#1A1A1A" font-family="Helvetica" font-size="16px" text-anchor="middle" font-weight="bold">
+                    选择题
+                </text>
+            </switch>
+        </g>
+        <rect x="190" y="5" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 15px; margin-left: 191px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                取消
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="210" y="19" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    取消
+                </text>
+            </switch>
+        </g>
+        <rect x="470" y="5" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 15px; margin-left: 471px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                保存
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="490" y="19" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    保存
+                </text>
+            </switch>
+        </g>
+        <rect x="190" y="30" width="320" height="260" fill="#ffffff" stroke="#f0f0f0" pointer-events="all"/>
+        <rect x="200" y="30" width="230" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 228px; height: 1px; padding-top: 37px; margin-left: 202px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                你上次购买的汽车是哪个品牌？
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="202" y="53" fill="#1A1A1A" font-family="Helvetica" font-size="16px">
+                    你上次购买的汽车是哪个品牌？
+                </text>
+            </switch>
+        </g>
+        <path d="M 190 68.33 L 510 68" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 190 110.33 L 510 110" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="200" y="80" width="50" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 48px; height: 1px; padding-top: 90px; margin-left: 201px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                宝马
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="225" y="94" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    宝马
+                </text>
+            </switch>
+        </g>
+        <image x="479.5" y="81.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDczODcxMTg5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyNjkyOSIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTYwOCA3NjhjLTE3LjY5NiAwLTMyLTE0LjMwNC0zMi0zMlYzODRjMC0xNy42OTYgMTQuMzA0LTMyIDMyLTMyczMyIDE0LjMwNCAzMiAzMnYzNTJjMCAxNy42OTYtMTQuMzA0IDMyLTMyIDMyek00MTYgNzY4Yy0xNy42OTYgMC0zMi0xNC4zMDQtMzItMzJWMzg0YzAtMTcuNjk2IDE0LjMwNC0zMiAzMi0zMnMzMiAxNC4zMDQgMzIgMzJ2MzUyYzAgMTcuNjk2LTE0LjMwNCAzMi0zMiAzMnpNOTI4IDIyNEg3Njh2LTY0YzAtNTIuOTI4LTQyLjcyLTk2LTk1LjI2NC05NkgzNTJjLTUyLjkyOCAwLTk2IDQzLjA3Mi05NiA5NnY2NEg5NmMtMTcuNjk2IDAtMzIgMTQuMzA0LTMyIDMyczE0LjMwNCAzMiAzMiAzMmg4MzJjMTcuNjk2IDAgMzItMTQuMzA0IDMyLTMycy0xNC4zMDQtMzItMzItMzJ6IG0tNjA4LTY0YzAtMTcuNjMyIDE0LjM2OC0zMiAzMi0zMmgzMjAuNzM2QzY5MC4yNzIgMTI4IDcwNCAxNDIuMDQ4IDcwNCAxNjB2NjRIMzIwdi02NHoiIHAtaWQ9IjI2OTMwIi8+PHBhdGggZD0iTTczNi4xMjggOTYwSDI4OC4wNjRjLTUyLjkyOCAwLTk2LTQzLjA3Mi05Ni05NlYzODMuNTJjMC0xNy42NjQgMTQuMzM2LTMyIDMyLTMyczMyIDE0LjMzNiAzMiAzMlY4NjRjMCAxNy42NjQgMTQuMzY4IDMyIDMyIDMyaDQ0OC4wNjRjMTcuNjY0IDAgMzItMTQuMzM2IDMyLTMyVjM4NC44MzJjMC0xNy42NjQgMTQuMzA0LTMyIDMyLTMyczMyIDE0LjMzNiAzMiAzMlY4NjRjMCA1Mi45MjgtNDMuMDcyIDk2LTk2IDk2eiIgcC1pZD0iMjY5MzEiLz48L3N2Zz4=" preserveAspectRatio="none"/>
+        <path d="M 190 150.33 L 510 150" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="200" y="120" width="50" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 48px; height: 1px; padding-top: 130px; margin-left: 201px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                奥迪
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="225" y="134" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    奥迪
+                </text>
+            </switch>
+        </g>
+        <image x="479.5" y="121.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDczODcxMTg5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyNjkyOSIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTYwOCA3NjhjLTE3LjY5NiAwLTMyLTE0LjMwNC0zMi0zMlYzODRjMC0xNy42OTYgMTQuMzA0LTMyIDMyLTMyczMyIDE0LjMwNCAzMiAzMnYzNTJjMCAxNy42OTYtMTQuMzA0IDMyLTMyIDMyek00MTYgNzY4Yy0xNy42OTYgMC0zMi0xNC4zMDQtMzItMzJWMzg0YzAtMTcuNjk2IDE0LjMwNC0zMiAzMi0zMnMzMiAxNC4zMDQgMzIgMzJ2MzUyYzAgMTcuNjk2LTE0LjMwNCAzMi0zMiAzMnpNOTI4IDIyNEg3Njh2LTY0YzAtNTIuOTI4LTQyLjcyLTk2LTk1LjI2NC05NkgzNTJjLTUyLjkyOCAwLTk2IDQzLjA3Mi05NiA5NnY2NEg5NmMtMTcuNjk2IDAtMzIgMTQuMzA0LTMyIDMyczE0LjMwNCAzMiAzMiAzMmg4MzJjMTcuNjk2IDAgMzItMTQuMzA0IDMyLTMycy0xNC4zMDQtMzItMzItMzJ6IG0tNjA4LTY0YzAtMTcuNjMyIDE0LjM2OC0zMiAzMi0zMmgzMjAuNzM2QzY5MC4yNzIgMTI4IDcwNCAxNDIuMDQ4IDcwNCAxNjB2NjRIMzIwdi02NHoiIHAtaWQ9IjI2OTMwIi8+PHBhdGggZD0iTTczNi4xMjggOTYwSDI4OC4wNjRjLTUyLjkyOCAwLTk2LTQzLjA3Mi05Ni05NlYzODMuNTJjMC0xNy42NjQgMTQuMzM2LTMyIDMyLTMyczMyIDE0LjMzNiAzMiAzMlY4NjRjMCAxNy42NjQgMTQuMzY4IDMyIDMyIDMyaDQ0OC4wNjRjMTcuNjY0IDAgMzItMTQuMzM2IDMyLTMyVjM4NC44MzJjMC0xNy42NjQgMTQuMzA0LTMyIDMyLTMyczMyIDE0LjMzNiAzMiAzMlY4NjRjMCA1Mi45MjgtNDMuMDcyIDk2LTk2IDk2eiIgcC1pZD0iMjY5MzEiLz48L3N2Zz4=" preserveAspectRatio="none"/>
+        <path d="M 190 190.33 L 510 190" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="200" y="160" width="50" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 48px; height: 1px; padding-top: 170px; margin-left: 201px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                奔驰
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="225" y="174" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    奔驰
+                </text>
+            </switch>
+        </g>
+        <image x="479.5" y="161.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDczODcxMTg5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyNjkyOSIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTYwOCA3NjhjLTE3LjY5NiAwLTMyLTE0LjMwNC0zMi0zMlYzODRjMC0xNy42OTYgMTQuMzA0LTMyIDMyLTMyczMyIDE0LjMwNCAzMiAzMnYzNTJjMCAxNy42OTYtMTQuMzA0IDMyLTMyIDMyek00MTYgNzY4Yy0xNy42OTYgMC0zMi0xNC4zMDQtMzItMzJWMzg0YzAtMTcuNjk2IDE0LjMwNC0zMiAzMi0zMnMzMiAxNC4zMDQgMzIgMzJ2MzUyYzAgMTcuNjk2LTE0LjMwNCAzMi0zMiAzMnpNOTI4IDIyNEg3Njh2LTY0YzAtNTIuOTI4LTQyLjcyLTk2LTk1LjI2NC05NkgzNTJjLTUyLjkyOCAwLTk2IDQzLjA3Mi05NiA5NnY2NEg5NmMtMTcuNjk2IDAtMzIgMTQuMzA0LTMyIDMyczE0LjMwNCAzMiAzMiAzMmg4MzJjMTcuNjk2IDAgMzItMTQuMzA0IDMyLTMycy0xNC4zMDQtMzItMzItMzJ6IG0tNjA4LTY0YzAtMTcuNjMyIDE0LjM2OC0zMiAzMi0zMmgzMjAuNzM2QzY5MC4yNzIgMTI4IDcwNCAxNDIuMDQ4IDcwNCAxNjB2NjRIMzIwdi02NHoiIHAtaWQ9IjI2OTMwIi8+PHBhdGggZD0iTTczNi4xMjggOTYwSDI4OC4wNjRjLTUyLjkyOCAwLTk2LTQzLjA3Mi05Ni05NlYzODMuNTJjMC0xNy42NjQgMTQuMzM2LTMyIDMyLTMyczMyIDE0LjMzNiAzMiAzMlY4NjRjMCAxNy42NjQgMTQuMzY4IDMyIDMyIDMyaDQ0OC4wNjRjMTcuNjY0IDAgMzItMTQuMzM2IDMyLTMyVjM4NC44MzJjMC0xNy42NjQgMTQuMzA0LTMyIDMyLTMyczMyIDE0LjMzNiAzMiAzMlY4NjRjMCA1Mi45MjgtNDMuMDcyIDk2LTk2IDk2eiIgcC1pZD0iMjY5MzEiLz48L3N2Zz4=" preserveAspectRatio="none"/>
+        <path d="M 190 230.33 L 510 230" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="200" y="200" width="50" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 48px; height: 1px; padding-top: 210px; margin-left: 201px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                其他
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="225" y="214" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    其他
+                </text>
+            </switch>
+        </g>
+        <image x="479.5" y="201.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDczODcxMTg5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyNjkyOSIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTYwOCA3NjhjLTE3LjY5NiAwLTMyLTE0LjMwNC0zMi0zMlYzODRjMC0xNy42OTYgMTQuMzA0LTMyIDMyLTMyczMyIDE0LjMwNCAzMiAzMnYzNTJjMCAxNy42OTYtMTQuMzA0IDMyLTMyIDMyek00MTYgNzY4Yy0xNy42OTYgMC0zMi0xNC4zMDQtMzItMzJWMzg0YzAtMTcuNjk2IDE0LjMwNC0zMiAzMi0zMnMzMiAxNC4zMDQgMzIgMzJ2MzUyYzAgMTcuNjk2LTE0LjMwNCAzMi0zMiAzMnpNOTI4IDIyNEg3Njh2LTY0YzAtNTIuOTI4LTQyLjcyLTk2LTk1LjI2NC05NkgzNTJjLTUyLjkyOCAwLTk2IDQzLjA3Mi05NiA5NnY2NEg5NmMtMTcuNjk2IDAtMzIgMTQuMzA0LTMyIDMyczE0LjMwNCAzMiAzMiAzMmg4MzJjMTcuNjk2IDAgMzItMTQuMzA0IDMyLTMycy0xNC4zMDQtMzItMzItMzJ6IG0tNjA4LTY0YzAtMTcuNjMyIDE0LjM2OC0zMiAzMi0zMmgzMjAuNzM2QzY5MC4yNzIgMTI4IDcwNCAxNDIuMDQ4IDcwNCAxNjB2NjRIMzIwdi02NHoiIHAtaWQ9IjI2OTMwIi8+PHBhdGggZD0iTTczNi4xMjggOTYwSDI4OC4wNjRjLTUyLjkyOCAwLTk2LTQzLjA3Mi05Ni05NlYzODMuNTJjMC0xNy42NjQgMTQuMzM2LTMyIDMyLTMyczMyIDE0LjMzNiAzMiAzMlY4NjRjMCAxNy42NjQgMTQuMzY4IDMyIDMyIDMyaDQ0OC4wNjRjMTcuNjY0IDAgMzItMTQuMzM2IDMyLTMyVjM4NC44MzJjMC0xNy42NjQgMTQuMzA0LTMyIDMyLTMyczMyIDE0LjMzNiAzMiAzMlY4NjRjMCA1Mi45MjgtNDMuMDcyIDk2LTk2IDk2eiIgcC1pZD0iMjY5MzEiLz48L3N2Zz4=" preserveAspectRatio="none"/>
+        <rect x="247" y="195" width="133" height="30" fill="#ffffff" stroke="#cccccc" pointer-events="all"/>
+        <image x="199.5" y="249.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDYzMjMyMTEyIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIxNTc2IiBkYXRhLWRhcmtyZWFkZXItaW5saW5lLWZpbGw9IiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPltkYXRhLWRhcmtyZWFkZXItaW5saW5lLWZpbGxdIHsgZmlsbDogdmFyKC0tZGFya3JlYWRlci1pbmxpbmUtZmlsbCkgICFpbXBvcnRhbnQ7IH0mI3hhOzwvc3R5bGU+PC9kZWZzPjxwYXRoIGQ9Ik01OTAuNzcgNTcxLjA3N2gzMjQuOTIyYzE1Ljc1NCAwIDI5LjUzOS0xMy43ODUgMjkuNTM5LTI5LjUzOXYtNTkuMDc2YzAtMTUuNzU0LTEzLjc4NS0yOS41MzktMjkuNTM5LTI5LjUzOUg1OTAuNzdjLTExLjgxNSAwLTE5LjY5Mi03Ljg3Ny0xOS42OTItMTkuNjkyVjEwOC4zMDhjMC0xNS43NTQtMTMuNzg1LTI5LjUzOS0yOS41MzktMjkuNTM5aC01OS4wNzZjLTE1Ljc1NCAwLTI5LjUzOSAxMy43ODUtMjkuNTM5IDI5LjUzOVY0MzMuMjNjMCAxMS44MTUtNy44NzcgMTkuNjkyLTE5LjY5MiAxOS42OTJIMTA4LjMwOGMtMTUuNzU0IDAtMjkuNTM5IDEzLjc4NS0yOS41MzkgMjkuNTM5djU5LjA3NmMwIDE1Ljc1NCAxMy43ODUgMjkuNTM5IDI5LjUzOSAyOS41MzlINDMzLjIzYzExLjgxNSAwIDE5LjY5MiA3Ljg3NyAxOS42OTIgMTkuNjkydjMyNC45MjNjMCAxNS43NTQgMTMuNzg1IDI5LjUzOSAyOS41MzkgMjkuNTM5aDU5LjA3NmMxNS43NTQgMCAyOS41MzktMTMuNzg1IDI5LjUzOS0yOS41MzlWNTkwLjc3YzAtMTEuODE1IDcuODc3LTE5LjY5MiAxOS42OTItMTkuNjkyeiIgcC1pZD0iMTU3NyIgZmlsbD0iIzAwMDAwMCIgZGF0YS1kYXJrcmVhZGVyLWlubGluZS1maWxsPSIiIHN0eWxlPSItLWRhcmtyZWFkZXItaW5saW5lLWZpbGw6IzAwMDAwMDsiLz48L3N2Zz4=" preserveAspectRatio="none"/>
+        <rect x="216" y="248" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 258px; margin-left: 217px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                选项
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="236" y="262" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    选项
+                </text>
+            </switch>
+        </g>
+        <image x="277" y="249.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDc4MjY5MTg2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyODc4NSIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTc2MS41IDc2MS40djE2NS41SDU5Ni4xVjc2MS40SDQzMC42VjU5NS45aDE2NS41VjQzMC41aDE2NS40VjU5Nkg5Mjd2MTY1LjVINzYxLjV6TTk5LjYgOTkuNUg5MjdWMjY1SDk5LjZWOTkuNXogbTIwNi45IDQ5Ni40SDk5LjZWNDMwLjVoMjA2Ljl2MTY1LjR6IG0wIDMzMC45SDk5LjZWNzYxLjRoMjA2Ljl2MTY1LjR6IiBmaWxsPSIjMDAwMDAwIiBwLWlkPSIyODc4NiIvPjwvc3ZnPg==" preserveAspectRatio="none"/>
+        <rect x="293.5" y="248" width="66.5" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 65px; height: 1px; padding-top: 258px; margin-left: 295px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                批量编辑
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="327" y="262" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    批量编辑
+                </text>
+            </switch>
+        </g>
+        <image x="379.5" y="251.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDYzNjIxNTg3IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSI5MDQxIiBkYXRhLWRhcmtyZWFkZXItaW5saW5lLWZpbGw9IiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPltkYXRhLWRhcmtyZWFkZXItaW5saW5lLWZpbGxdIHsgZmlsbDogdmFyKC0tZGFya3JlYWRlci1pbmxpbmUtZmlsbCkgICFpbXBvcnRhbnQ7IH0mI3hhOzwvc3R5bGU+PC9kZWZzPjxwYXRoIGQ9Ik01MTIgMzg0Yy03MiAwLTEyOCA1Ni0xMjggMTI4czU2IDEyOCAxMjggMTI4IDEyOC01NiAxMjgtMTI4LTU2LTEyOC0xMjgtMTI4eiBtMCAxNzEuMmMtMjUuNiAwLTQzLjItMTcuNi00My4yLTQzLjJzMTcuNi00My4yIDQzLjItNDMuMiA0My4yIDE3LjYgNDMuMiA0My4yLTE3LjYgNDMuMi00My4yIDQzLjJ6TTg5NiAzODRjLTcyIDAtMTI4IDU2LTEyOCAxMjhzNTYgMTI4IDEyOCAxMjggMTI4LTU2IDEyOC0xMjgtNTYtMTI4LTEyOC0xMjh6IG0wIDE3MS4yYy0yNS42IDAtNDMuMi0xNy42LTQzLjItNDMuMnMxNy42LTQzLjIgNDMuMi00My4yIDQzLjIgMTcuNiA0My4yIDQzLjItMTcuNiA0My4yLTQzLjIgNDMuMnpNMTI4IDM4NGMtNzIgMC0xMjggNTYtMTI4IDEyOHM1NiAxMjggMTI4IDEyOCAxMjgtNTYgMTI4LTEyOC01Ni0xMjgtMTI4LTEyOHogbTAgMTcxLjJjLTI1LjYgMC00My4yLTE3LjYtNDMuMi00My4yczE3LjYtNDMuMiA0My4yLTQzLjIgNDMuMiAxNy42IDQzLjIgNDMuMi0xNy42IDQzLjItNDMuMiA0My4yeiIgcC1pZD0iOTA0MiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1kYXJrcmVhZGVyLWlubGluZS1maWxsPSIiIHN0eWxlPSItLWRhcmtyZWFkZXItaW5saW5lLWZpbGw6IzAwMDAwMDsiLz48L3N2Zz4=" preserveAspectRatio="none"/>
+        <rect x="400" y="248" width="66.5" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 65px; height: 1px; padding-top: 258px; margin-left: 401px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                其他选项
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="433" y="262" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    其他选项
+                </text>
+            </switch>
+        </g>
+        <rect x="200" y="300" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 310px; margin-left: 201px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                设置
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="220" y="315" fill="#1A1A1A" font-family="Helvetica" font-size="16px" text-anchor="middle">
+                    设置
+                </text>
+            </switch>
+        </g>
+        <rect x="190" y="330" width="320" height="180" fill="#ffffff" stroke="#cccccc" pointer-events="all"/>
+        <rect x="200" y="340" width="60" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 350px; margin-left: 201px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                必答题
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="230" y="354" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    必答题
+                </text>
+            </switch>
+        </g>
+        <image x="466" y="334.5" width="30" height="30" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDY0MTI2ODYyIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyMTI0OCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTc2NCAyNTJIMjYwQzExNi40IDI1MiAwIDM2OC40IDAgNTEyczExNi40IDI2MCAyNjAgMjYwaDUwNGMxNDMuNiAwIDI2MC0xMTYuNCAyNjAtMjYwUzkwNy42IDI1MiA3NjQgMjUyeiBtMCA0ODRjLTEyMy43IDAtMjI0LTEwMC4zLTIyNC0yMjRzMTAwLjMtMjI0IDIyNC0yMjQgMjI0IDEwMC4zIDIyNCAyMjQtMTAwLjMgMjI0LTIyNCAyMjR6IiBwLWlkPSIyMTI0OSIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg==" preserveAspectRatio="none"/>
+        <path d="M 190 370.33 L 510 370" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 220 410 L 510 410" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="200" y="380" width="60" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 390px; margin-left: 201px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                多选题
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="230" y="394" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    多选题
+                </text>
+            </switch>
+        </g>
+        <image x="466" y="374.5" width="30" height="30" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDY0MTI2ODYyIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyMTI0OCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTc2NCAyNTJIMjYwQzExNi40IDI1MiAwIDM2OC40IDAgNTEyczExNi40IDI2MCAyNjAgMjYwaDUwNGMxNDMuNiAwIDI2MC0xMTYuNCAyNjAtMjYwUzkwNy42IDI1MiA3NjQgMjUyeiBtMCA0ODRjLTEyMy43IDAtMjI0LTEwMC4zLTIyNC0yMjRzMTAwLjMtMjI0IDIyNC0yMjQgMjI0IDEwMC4zIDIyNCAyMjQtMTAwLjMgMjI0LTIyNCAyMjR6IiBwLWlkPSIyMTI0OSIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg==" preserveAspectRatio="none"/>
+        <path d="M 220 440 L 510 440" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="216" y="420" width="74" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 72px; height: 1px; padding-top: 430px; margin-left: 217px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                最少选择
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="253" y="434" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    最少选择
+                </text>
+            </switch>
+        </g>
+        <rect x="216" y="449" width="74" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 72px; height: 1px; padding-top: 459px; margin-left: 217px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                最多选择
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="253" y="463" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    最多选择
+                </text>
+            </switch>
+        </g>
+        <image x="480" y="419.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDY1Mjc5MzY5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyMjg3NyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTgxNi42NTMwOTMgNDY5LjU0NDA0OWMtMS40OTUwNS0xLjQ5NTA1LTMuMDYwNzA5LTIuODc0NDY3LTQuNjc2NTA5LTQuMTU5NzRMNDI4LjQ3NTE5IDc5Ljg5NTY1NWMtMjEuMzUxMjg0LTIxLjM1MDI2MS01NS45Njc2ODYtMjEuMzUwMjYxLTc3LjMxNzk0NiAwLTIxLjM1MDI2MSAyMS4zNTEyODQtMjEuMzUwMjYxIDU1Ljk2NjY2MyAwIDc3LjMxNzk0NmwzNDkuMjU5NTIyIDM1MS4yNDc4MDZMMzQzLjY1NjQwOSA4NjQuODgzMDQ5Yy0yMS4zNTAyNjEgMjEuMzUxMjg0LTIxLjM1MDI2MSA1NS45NjY2NjMgMCA3Ny4zMTg5NyAyMS4zNTAyNjEgMjEuMzUwMjYxIDU1Ljk2NjY2MyAyMS4zNTAyNjEgNzcuMzE3OTQ2IDBsMzkwLjk5ODEzNS0zOTAuNjYxNDY4YzEuNjE2ODI0LTEuMjg2Mjk2IDMuMTgzNTA2LTIuNjY0Njg5IDQuNjc5NTc5LTQuMTYwNzYzIDEwLjc0MDYyMi0xMC43NDA2MjIgMTYuMDczMDctMjQuODM5NzM1IDE2LjAwNjU1Ni0zOC45MTczNThDODMyLjcyNjE2NCA0OTQuMzgyNzYgODI3LjM5MzcxNSA0ODAuMjg0NjcxIDgxNi42NTMwOTMgNDY5LjU0NDA0OXoiIHAtaWQ9IjIyODc4IiBmaWxsPSIjMDAwMDAwIi8+PC9zdmc+" preserveAspectRatio="none"/>
+        <image x="480" y="448.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDY1Mjc5MzY5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyMjg3NyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTgxNi42NTMwOTMgNDY5LjU0NDA0OWMtMS40OTUwNS0xLjQ5NTA1LTMuMDYwNzA5LTIuODc0NDY3LTQuNjc2NTA5LTQuMTU5NzRMNDI4LjQ3NTE5IDc5Ljg5NTY1NWMtMjEuMzUxMjg0LTIxLjM1MDI2MS01NS45Njc2ODYtMjEuMzUwMjYxLTc3LjMxNzk0NiAwLTIxLjM1MDI2MSAyMS4zNTEyODQtMjEuMzUwMjYxIDU1Ljk2NjY2MyAwIDc3LjMxNzk0NmwzNDkuMjU5NTIyIDM1MS4yNDc4MDZMMzQzLjY1NjQwOSA4NjQuODgzMDQ5Yy0yMS4zNTAyNjEgMjEuMzUxMjg0LTIxLjM1MDI2MSA1NS45NjY2NjMgMCA3Ny4zMTg5NyAyMS4zNTAyNjEgMjEuMzUwMjYxIDU1Ljk2NjY2MyAyMS4zNTAyNjEgNzcuMzE3OTQ2IDBsMzkwLjk5ODEzNS0zOTAuNjYxNDY4YzEuNjE2ODI0LTEuMjg2Mjk2IDMuMTgzNTA2LTIuNjY0Njg5IDQuNjc5NTc5LTQuMTYwNzYzIDEwLjc0MDYyMi0xMC43NDA2MjIgMTYuMDczMDctMjQuODM5NzM1IDE2LjAwNjU1Ni0zOC45MTczNThDODMyLjcyNjE2NCA0OTQuMzgyNzYgODI3LjM5MzcxNSA0ODAuMjg0NjcxIDgxNi42NTMwOTMgNDY5LjU0NDA0OXoiIHAtaWQ9IjIyODc4IiBmaWxsPSIjMDAwMDAwIi8+PC9zdmc+" preserveAspectRatio="none"/>
+        <rect x="460" y="418" width="21" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 19px; height: 1px; padding-top: 428px; margin-left: 461px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                2
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="471" y="432" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    2
+                </text>
+            </switch>
+        </g>
+        <rect x="440" y="447" width="41" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 39px; height: 1px; padding-top: 457px; margin-left: 441px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                不限
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="461" y="461" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    不限
+                </text>
+            </switch>
+        </g>
+        <rect x="196" y="480" width="94" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 92px; height: 1px; padding-top: 490px; margin-left: 197px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                选项顺序随机
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="243" y="494" fill="#1A1A1A" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    选项顺序随机
+                </text>
+            </switch>
+        </g>
+        <image x="466" y="474.5" width="30" height="30" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDY0MTI2ODYyIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyMTI0OCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTc2NCAyNTJIMjYwQzExNi40IDI1MiAwIDM2OC40IDAgNTEyczExNi40IDI2MCAyNjAgMjYwaDUwNGMxNDMuNiAwIDI2MC0xMTYuNCAyNjAtMjYwUzkwNy42IDI1MiA3NjQgMjUyeiBtMCA0ODRjLTEyMy43IDAtMjI0LTEwMC4zLTIyNC0yMjRzMTAwLjMtMjI0IDIyNC0yMjQgMjI0IDEwMC4zIDIyNCAyMjQtMTAwLjMgMjI0LTIyNCAyMjR6IiBwLWlkPSIyMTI0OSIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg==" preserveAspectRatio="none"/>
+        <path d="M 190 469.33 L 510 469" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="534" y="315" width="106" height="175" fill="#4d4d4d" stroke="#000000" pointer-events="all"/>
+        <rect x="562" y="358" width="50" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 48px; height: 1px; padding-top: 368px; margin-left: 563px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="587" y="373" fill="#000000" font-family="Helvetica" font-size="16px" text-anchor="middle" font-weight="bold">
+                    1
+                </text>
+            </switch>
+        </g>
+        <rect x="562" y="388" width="50" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 48px; height: 1px; padding-top: 398px; margin-left: 563px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                2
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="587" y="403" fill="#000000" font-family="Helvetica" font-size="16px" text-anchor="middle" font-weight="bold">
+                    2
+                </text>
+            </switch>
+        </g>
+        <rect x="562" y="420.5" width="50" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 48px; height: 1px; padding-top: 431px; margin-left: 563px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                3
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="587" y="435" fill="#000000" font-family="Helvetica" font-size="16px" text-anchor="middle" font-weight="bold">
+                    3
+                </text>
+            </switch>
+        </g>
+        <rect x="562" y="455" width="50" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 48px; height: 1px; padding-top: 465px; margin-left: 563px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                4
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="587" y="470" fill="#000000" font-family="Helvetica" font-size="16px" text-anchor="middle" font-weight="bold">
+                    4
+                </text>
+            </switch>
+        </g>
+        <rect x="567" y="330" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 340px; margin-left: 568px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                不限
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="587" y="345" fill="#000000" font-family="Helvetica" font-size="16px" text-anchor="middle">
+                    不限
+                </text>
+            </switch>
+        </g>
+        <rect x="200" y="525" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 535px; margin-left: 201px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                布局
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="220" y="540" fill="#1A1A1A" font-family="Helvetica" font-size="16px" text-anchor="middle">
+                    布局
+                </text>
+            </switch>
+        </g>
+        <rect x="190" y="550" width="320" height="80" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+        <rect x="198" y="560" width="110" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 108px; height: 1px; padding-top: 570px; margin-left: 200px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                选项排列方式
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="200" y="574" fill="#333333" font-family="Helvetica" font-size="14px">
+                    选项排列方式
+                </text>
+            </switch>
+        </g>
+        <image x="480" y="561.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDY1Mjc5MzY5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyMjg3NyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTgxNi42NTMwOTMgNDY5LjU0NDA0OWMtMS40OTUwNS0xLjQ5NTA1LTMuMDYwNzA5LTIuODc0NDY3LTQuNjc2NTA5LTQuMTU5NzRMNDI4LjQ3NTE5IDc5Ljg5NTY1NWMtMjEuMzUxMjg0LTIxLjM1MDI2MS01NS45Njc2ODYtMjEuMzUwMjYxLTc3LjMxNzk0NiAwLTIxLjM1MDI2MSAyMS4zNTEyODQtMjEuMzUwMjYxIDU1Ljk2NjY2MyAwIDc3LjMxNzk0NmwzNDkuMjU5NTIyIDM1MS4yNDc4MDZMMzQzLjY1NjQwOSA4NjQuODgzMDQ5Yy0yMS4zNTAyNjEgMjEuMzUxMjg0LTIxLjM1MDI2MSA1NS45NjY2NjMgMCA3Ny4zMTg5NyAyMS4zNTAyNjEgMjEuMzUwMjYxIDU1Ljk2NjY2MyAyMS4zNTAyNjEgNzcuMzE3OTQ2IDBsMzkwLjk5ODEzNS0zOTAuNjYxNDY4YzEuNjE2ODI0LTEuMjg2Mjk2IDMuMTgzNTA2LTIuNjY0Njg5IDQuNjc5NTc5LTQuMTYwNzYzIDEwLjc0MDYyMi0xMC43NDA2MjIgMTYuMDczMDctMjQuODM5NzM1IDE2LjAwNjU1Ni0zOC45MTczNThDODMyLjcyNjE2NCA0OTQuMzgyNzYgODI3LjM5MzcxNSA0ODAuMjg0NjcxIDgxNi42NTMwOTMgNDY5LjU0NDA0OXoiIHAtaWQ9IjIyODc4IiBmaWxsPSIjMDAwMDAwIi8+PC9zdmc+" preserveAspectRatio="none"/>
+        <rect x="420" y="560" width="60" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 570px; margin-left: 421px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                垂直排布
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="450" y="574" fill="#333333" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    垂直排布
+                </text>
+            </switch>
+        </g>
+        <path d="M 190 590.33 L 510 590" fill="none" stroke="#b3b3b3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="196" y="600" width="110" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 108px; height: 1px; padding-top: 610px; margin-left: 198px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                选项选择方式
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="198" y="614" fill="#333333" font-family="Helvetica" font-size="14px">
+                    选项选择方式
+                </text>
+            </switch>
+        </g>
+        <rect x="428" y="598" width="50" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 48px; height: 1px; padding-top: 608px; margin-left: 429px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                勾选
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="453" y="612" fill="#333333" font-family="Helvetica" font-size="14px" text-anchor="middle">
+                    勾选
+                </text>
+            </switch>
+        </g>
+        <image x="478.5" y="599.5" width="16" height="16" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB0PSIxNjE5MDY1Mjc5MzY5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiBwLWlkPSIyMjg3NyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiLz48L2RlZnM+PHBhdGggZD0iTTgxNi42NTMwOTMgNDY5LjU0NDA0OWMtMS40OTUwNS0xLjQ5NTA1LTMuMDYwNzA5LTIuODc0NDY3LTQuNjc2NTA5LTQuMTU5NzRMNDI4LjQ3NTE5IDc5Ljg5NTY1NWMtMjEuMzUxMjg0LTIxLjM1MDI2MS01NS45Njc2ODYtMjEuMzUwMjYxLTc3LjMxNzk0NiAwLTIxLjM1MDI2MSAyMS4zNTEyODQtMjEuMzUwMjYxIDU1Ljk2NjY2MyAwIDc3LjMxNzk0NmwzNDkuMjU5NTIyIDM1MS4yNDc4MDZMMzQzLjY1NjQwOSA4NjQuODgzMDQ5Yy0yMS4zNTAyNjEgMjEuMzUxMjg0LTIxLjM1MDI2MSA1NS45NjY2NjMgMCA3Ny4zMTg5NyAyMS4zNTAyNjEgMjEuMzUwMjYxIDU1Ljk2NjY2MyAyMS4zNTAyNjEgNzcuMzE3OTQ2IDBsMzkwLjk5ODEzNS0zOTAuNjYxNDY4YzEuNjE2ODI0LTEuMjg2Mjk2IDMuMTgzNTA2LTIuNjY0Njg5IDQuNjc5NTc5LTQuMTYwNzYzIDEwLjc0MDYyMi0xMC43NDA2MjIgMTYuMDczMDctMjQuODM5NzM1IDE2LjAwNjU1Ni0zOC45MTczNThDODMyLjcyNjE2NCA0OTQuMzgyNzYgODI3LjM5MzcxNSA0ODAuMjg0NjcxIDgxNi42NTMwOTMgNDY5LjU0NDA0OXoiIHAtaWQ9IjIyODc4IiBmaWxsPSIjMDAwMDAwIi8+PC9zdmc+" preserveAspectRatio="none"/>
+        <rect x="534" y="520" width="106" height="80" fill="#4d4d4d" stroke="#000000" pointer-events="all"/>
+        <rect x="545.5" y="530" width="83" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 81px; height: 1px; padding-top: 540px; margin-left: 547px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                垂直排布
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="587" y="545" fill="#000000" font-family="Helvetica" font-size="16px" text-anchor="middle">
+                    垂直排布
+                </text>
+            </switch>
+        </g>
+        <rect x="545.5" y="565" width="83" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 81px; height: 1px; padding-top: 575px; margin-left: 547px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                自动适应
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="587" y="580" fill="#000000" font-family="Helvetica" font-size="16px" text-anchor="middle">
+                    自动适应
+                </text>
+            </switch>
+        </g>
+        <rect x="534" y="620" width="106" height="80" fill="#4d4d4d" stroke="#000000" pointer-events="all"/>
+        <rect x="545.5" y="640" width="83" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 81px; height: 1px; padding-top: 650px; margin-left: 547px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                勾选
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="587" y="655" fill="#000000" font-family="Helvetica" font-size="16px" text-anchor="middle">
+                    勾选
+                </text>
+            </switch>
+        </g>
+        <rect x="545.5" y="670" width="83" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 81px; height: 1px; padding-top: 680px; margin-left: 547px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 16px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                选择块
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="587" y="685" fill="#000000" font-family="Helvetica" font-size="16px" text-anchor="middle">
+                    选择块
+                </text>
+            </switch>
+        </g>
+        <path d="M 180 70.16 L 175 70.16 Q 170 70.16 170 80.16 L 170 120.16 Q 170 130.16 165 130.16 L 162.5 130.16 Q 160 130.16 165 130.16 L 167.5 130.16 Q 170 130.16 170 140.16 L 170 180.16 Q 170 190.16 175 190.16 L 180 190.16" fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="30" y="115.16" width="120" height="30" fill="#cccccc" stroke="#000000" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 130px; margin-left: 31px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                node.options
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="90" y="134" fill="#1A1A1A" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    node.options
+                </text>
+            </switch>
+        </g>
+        <path d="M 140.5 352.5 L 140.5 342.5 L 160.5 342.5 L 160.5 332 L 179.5 347.5 L 160.5 363 L 160.5 352.5 Z" fill="#cccccc" stroke="#e6e6e6" stroke-linejoin="round" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="0" y="330" width="130" height="30" fill="#cccccc" stroke="#000000" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 128px; height: 1px; padding-top: 345px; margin-left: 1px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                node.answerRequired
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="65" y="349" fill="#1A1A1A" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    node.answerRequired
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>

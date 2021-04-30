@@ -1,0 +1,82 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="321px" height="571px" viewBox="-0.5 -0.5 321 571" content="&lt;mxfile&gt;&lt;diagram id=&quot;pnZ22HDdMctFPoyyMPAj&quot; name=&quot;Page-1&quot;&gt;zZZBk5owFMc/zbuTZJFwBBfaS08eeqYSIdNAnBir9tP3RYKCYHc7qzsFZwj/vIS8/y8PAbZsjl9Msa2/6VIooEF5BPYKlBIWcbw45dQrNOyUysjSa1dhJX8LLwZe3ctS7EaBVmtl5XYsrnXbirUdaYUx+jAO22g1fuq2qMREWK0LNVW/y9LWncppdNW/ClnV/ZPJIu56mqIP9pns6qLUh4HEMmBLo7XtWs1xKZRzr/elG5ff6b0szIjWvmcA7Qb8KtTe5+bXZU99spXR+60PE8aK45zFxY8+PJgugVwSwy0hdCOsOWGInyj0I07j28PVWNZPWg9MDSMvFh5mdZn5mi82fMrz6bO308fs21K4+ABYeqilFattsXa9B9zeqNW2wflfCTY3UqmlVtqcx7L8fKB+176hTXTepk8x4mVqRMYhzSBmkIXAQ0hCyGJIEuBL15XkwAlkESSBa9y6hnnasTU7a/RP0ZvT6lbc+OWlQsmqxVslNm4G55nEyku83MiydA+ZJTFmtdGtHcCgsTu97t8ptI9b+aWTj5DyA+ibG5rMcWQPwBjOYLwPDcGmEaT0TDiHmLhg3ndx5I9Lwl/KF3glKNCA88Hl/4cen48PVuA8Vz7levmDGnKlD+C6+CeuT3mFjVEOrb2BNygvwqZEeODOv0F+PCpCZljxJ9VgNMuKR8BfB4UWQZxDgsoLpNggn/tyXaOPwjy00vKcB0HwHHxhOMEXP6bS8Pb6sXXuG3yzsuwP&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="0" y="0" width="320" height="570" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+        <rect x="20" y="50" width="120" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 118px; height: 1px; padding-top: 65px; margin-left: 22px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 20px; font-family: Helvetica; color: #292929; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                输入验证码
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="22" y="71" fill="#292929" font-family="Helvetica" font-size="20px" font-weight="bold">
+                    输入验证码
+                </text>
+            </switch>
+        </g>
+        <rect x="20" y="80" width="210" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 208px; height: 1px; padding-top: 90px; margin-left: 22px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #999999; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                验证码已发送到 +86 188 8888 8888
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="22" y="94" fill="#999999" font-family="Helvetica" font-size="12px">
+                    验证码已发送到 +86 188 8888 8888
+                </text>
+            </switch>
+        </g>
+        <rect x="20" y="110" width="280" height="30" fill="#ffffff" stroke="#999999" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 278px; height: 1px; padding-top: 125px; margin-left: 22px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 13px; font-family: Helvetica; color: #808080; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                验证码
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="22" y="129" fill="#808080" font-family="Helvetica" font-size="13px">
+                    验证码
+                </text>
+            </switch>
+        </g>
+        <rect x="20" y="155" width="90" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 165px; margin-left: 21px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #FF8000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                重发短信验证码
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="65" y="169" fill="#FF8000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    重发短信验证码
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>
