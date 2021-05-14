@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFRangeQuestion | @choiceform/os-client-core - v2.1.38</title>
+	<title>CFHeatMapQuestion | @choiceform/os-client-core - v2.1.38</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfrangequestion.html">CFRangeQuestion</a>
+					<a href="_index_d_.cfheatmapquestion.html">CFHeatMapQuestion</a>
 				</li>
 			</ul>
-			<h1>Interface CFRangeQuestion</h1>
+			<h1>Interface CFHeatMapQuestion</h1>
 		</div>
 	</div>
 </header>
@@ -70,27 +70,30 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>分值打分题
-						基本内容请参考选择题<a href="_index_d_.cfchoicequestion.html">CFChoiceQuestion</a></p>
+						<p>图片热力题</p>
 					</div>
-					<p>特殊点:分值打分题的每个选项是用于评分的,一般渲染一个滑杆让答题者拖动滑杆评分
-						选项是<a href="_index_d_.cfrangeoption.html">CFRangeOption</a>类型,其中定义了最大分支,最小分值限制,每次拖动滑杆时的分值步进
-						还有最大分值描述,和最小分值描述,这些内容可以选择性的渲染.
-					答题者给选项评分后需要回调<a href="_index_d_.cfuieventhandler.html#handleoptioninput">CFUIEventHandler.handleOptionInput</a>方法</p>
-					<p>其他选项的渲染方式和选择题一样</p>
+					<p>基本内容请参考选择题<a href="_index_d_.cfchoicequestion.html">CFChoiceQuestion</a></p>
+					<p>特殊点,图片热热力题的选项的选项是<a href="_index_d_.cfheatmapoption.html">CFHeatMapOption</a>,UI上关注<a href="_index_d_.cfheatmapoption.html#point">CFHeatMapOption.point</a>，如果有值，则需要在图片上渲染出这个point。</p>
+					<p>当选项有值的时候，需要参照<a href="_index_d_.cfheatmapquestion.html#pointcolor">CFHeatMapQuestion.pointColor</a>和<a href="_index_d_.cfheatmapquestion.html#pointradius">CFHeatMapQuestion.pointRadius</a>将该选项以点的方式渲染在图片上</p>
+					<p>需要<a href="_index_d_.cfheatmapquestion.html#mapimage">CFHeatMapQuestion.mapImage</a>渲染出底图，允许答题者随意点击图片的任何地方。</p>
+					<p>每次图片被点击后，需要参考<a href="_index_d_.cfheatmapquestion.html#mapimgheight">CFHeatMapQuestion.mapImgHeight</a>和<a href="_index_d_.cfheatmapquestion.html#mapimgwidth">CFHeatMapQuestion.mapImgWidth</a>属性和渲染之后的图片的真实大小
+					得出比例,需要按这个比例得出被点击地方的真实坐标，然后调用<a href="_index_d_.cfuieventhandler.html#handlequestioninput">CFUIEventHandler.handleQuestionInput</a>方法,</p>
+					<p>传入的data就是代表真实坐标的<a href="_index_d_.icoords.html">ICoords</a>，随后核心包总会把这个坐标分配给某个选项的<a href="_index_d_.cfheatmapoption.html#point">CFHeatMapOption.point</a></p>
+					<p>分配规则：有M个选项，第N次点击产生的值会分配给第<code>N%M</code>个选项。</p>
+					<p>其他选项的渲染方式和选择题一样，</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">ICFRangeNode</span>
+						<span class="tsd-signature-type">ICFHeatMapNode</span>
 					</li>
 					<li>
 						<a href="_index_d_.cfsubjectquestion.html" class="tsd-signature-type">CFSubjectQuestion</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">CFRangeQuestion</span>
+								<span class="target">CFHeatMapQuestion</span>
 							</li>
 						</ul>
 					</li>
@@ -103,40 +106,44 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#asterisks" class="tsd-kind-icon">asterisks</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#description" class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#endtime" class="tsd-kind-icon">end<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#images" class="tsd-kind-icon">images</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#layout" class="tsd-kind-icon">layout</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#next" class="tsd-kind-icon">next</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#noview" class="tsd-kind-icon">no<wbr>View</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#number" class="tsd-kind-icon">number</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#options" class="tsd-kind-icon">options</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#otheroptions" class="tsd-kind-icon">other<wbr>Options</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#parent" class="tsd-kind-icon">parent</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#prev" class="tsd-kind-icon">prev</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#readonly" class="tsd-kind-icon">readonly</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#showinput" class="tsd-kind-icon">show<wbr>Input</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#template" class="tsd-kind-icon">template</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#title" class="tsd-kind-icon">title</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#value" class="tsd-kind-icon">value</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrangequestion.html#video" class="tsd-kind-icon">video</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#asterisks" class="tsd-kind-icon">asterisks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#endtime" class="tsd-kind-icon">end<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#images" class="tsd-kind-icon">images</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#layout" class="tsd-kind-icon">layout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#mapimage" class="tsd-kind-icon">map<wbr>Image</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#mapimgheight" class="tsd-kind-icon">map<wbr>Img<wbr>Height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#mapimgwidth" class="tsd-kind-icon">map<wbr>Img<wbr>Width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#next" class="tsd-kind-icon">next</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#noview" class="tsd-kind-icon">no<wbr>View</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#number" class="tsd-kind-icon">number</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#options" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#otheroptions" class="tsd-kind-icon">other<wbr>Options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#parent" class="tsd-kind-icon">parent</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#pointcolor" class="tsd-kind-icon">point<wbr>Color</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#pointradius" class="tsd-kind-icon">point<wbr>Radius</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#prev" class="tsd-kind-icon">prev</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#readonly" class="tsd-kind-icon">readonly</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#template" class="tsd-kind-icon">template</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#value" class="tsd-kind-icon">value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfheatmapquestion.html#video" class="tsd-kind-icon">video</a></li>
 							</ul>
 						</section>
 					</div>
@@ -340,6 +347,54 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="mapimage" class="tsd-anchor"></a>
+					<h3>map<wbr>Image</h3>
+					<div class="tsd-signature tsd-kind-icon">map<wbr>Image<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfimageinnode.html" class="tsd-signature-type">CFImageInNode</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.icfimagemapbase.html">ICFImageMapBase</a>.<a href="_index_d_.icfimagemapbase.html#mapimage">mapImage</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3557">index.d.ts:3557</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>热点图片信息</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="mapimgheight" class="tsd-anchor"></a>
+					<h3>map<wbr>Img<wbr>Height</h3>
+					<div class="tsd-signature tsd-kind-icon">map<wbr>Img<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.icfimagemapbase.html">ICFImageMapBase</a>.<a href="_index_d_.icfimagemapbase.html#mapimgheight">mapImgHeight</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3561">index.d.ts:3561</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>热点图片计算比例时的基准高度</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="mapimgwidth" class="tsd-anchor"></a>
+					<h3>map<wbr>Img<wbr>Width</h3>
+					<div class="tsd-signature tsd-kind-icon">map<wbr>Img<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.icfimagemapbase.html">ICFImageMapBase</a>.<a href="_index_d_.icfimagemapbase.html#mapimgwidth">mapImgWidth</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3565">index.d.ts:3565</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>热点图片计算比例时的基准宽度</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="next" class="tsd-anchor"></a>
 					<h3>next</h3>
 					<div class="tsd-signature tsd-kind-icon">next<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a></div>
@@ -409,16 +464,16 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported">
 					<a name="options" class="tsd-anchor"></a>
 					<h3>options</h3>
-					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfrangeoption.html" class="tsd-signature-type">CFRangeOption</a><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfheatmapoption.html" class="tsd-signature-type">CFHeatMapOption</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<p>Overrides ICFOptNodeMixin.options</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3770">index.d.ts:3770</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3652">index.d.ts:3652</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>分值打分选项</p>
+							<p>热力图选项</p>
 						</div>
 					</div>
 				</section>
@@ -487,6 +542,38 @@
 						<div class="lead">
 							<p>总状态引用
 							通过该属性可以访问到上一层数据</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="pointcolor" class="tsd-anchor"></a>
+					<h3>point<wbr>Color</h3>
+					<div class="tsd-signature tsd-kind-icon">point<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ICFHeatMapNode.pointColor</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3591">index.d.ts:3591</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>做答点颜色</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="pointradius" class="tsd-anchor"></a>
+					<h3>point<wbr>Radius</h3>
+					<div class="tsd-signature tsd-kind-icon">point<wbr>Radius<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ICFHeatMapNode.pointRadius</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3595">index.d.ts:3595</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>做答点半径</p>
 						</div>
 					</div>
 				</section>
@@ -592,22 +679,6 @@
 								对于选择类型的题目有效,用于确定这是单选模式和多选模式
 								对于选择类型的题目,UI需要根据此属性渲染成单选或多选的样子
 							对于非选择类型的题目可以无视该属性.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="showinput" class="tsd-anchor"></a>
-					<h3>show<wbr>Input</h3>
-					<div class="tsd-signature tsd-kind-icon">show<wbr>Input<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from ICFRangeNode.showInput</p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L4222">index.d.ts:4222</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>是否显示输入框,如果值为true</p>
 						</div>
 					</div>
 				</section>
@@ -752,109 +823,121 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfrangequestion.html" class="tsd-kind-icon">CFRange<wbr>Question</a>
+						<a href="_index_d_.cfheatmapquestion.html" class="tsd-kind-icon">CFHeat<wbr>Map<wbr>Question</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#asterisks" class="tsd-kind-icon">asterisks</a>
+								<a href="_index_d_.cfheatmapquestion.html#asterisks" class="tsd-kind-icon">asterisks</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a>
+								<a href="_index_d_.cfheatmapquestion.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#description" class="tsd-kind-icon">description</a>
+								<a href="_index_d_.cfheatmapquestion.html#description" class="tsd-kind-icon">description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#endtime" class="tsd-kind-icon">end<wbr>Time</a>
+								<a href="_index_d_.cfheatmapquestion.html#endtime" class="tsd-kind-icon">end<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a>
+								<a href="_index_d_.cfheatmapquestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a>
+								<a href="_index_d_.cfheatmapquestion.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a>
+								<a href="_index_d_.cfheatmapquestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a>
+								<a href="_index_d_.cfheatmapquestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#images" class="tsd-kind-icon">images</a>
+								<a href="_index_d_.cfheatmapquestion.html#images" class="tsd-kind-icon">images</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a>
+								<a href="_index_d_.cfheatmapquestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#layout" class="tsd-kind-icon">layout</a>
+								<a href="_index_d_.cfheatmapquestion.html#layout" class="tsd-kind-icon">layout</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#next" class="tsd-kind-icon">next</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#noview" class="tsd-kind-icon">no<wbr>View</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a>
+								<a href="_index_d_.cfheatmapquestion.html#mapimage" class="tsd-kind-icon">map<wbr>Image</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#number" class="tsd-kind-icon">number</a>
+								<a href="_index_d_.cfheatmapquestion.html#mapimgheight" class="tsd-kind-icon">map<wbr>Img<wbr>Height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfheatmapquestion.html#mapimgwidth" class="tsd-kind-icon">map<wbr>Img<wbr>Width</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfheatmapquestion.html#next" class="tsd-kind-icon">next</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfheatmapquestion.html#noview" class="tsd-kind-icon">no<wbr>View</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfheatmapquestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfheatmapquestion.html#number" class="tsd-kind-icon">number</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#options" class="tsd-kind-icon">options</a>
+								<a href="_index_d_.cfheatmapquestion.html#options" class="tsd-kind-icon">options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#otheroptions" class="tsd-kind-icon">other<wbr>Options</a>
+								<a href="_index_d_.cfheatmapquestion.html#otheroptions" class="tsd-kind-icon">other<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a>
+								<a href="_index_d_.cfheatmapquestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a>
+								<a href="_index_d_.cfheatmapquestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#parent" class="tsd-kind-icon">parent</a>
+								<a href="_index_d_.cfheatmapquestion.html#parent" class="tsd-kind-icon">parent</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#prev" class="tsd-kind-icon">prev</a>
+								<a href="_index_d_.cfheatmapquestion.html#pointcolor" class="tsd-kind-icon">point<wbr>Color</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a>
+								<a href="_index_d_.cfheatmapquestion.html#pointradius" class="tsd-kind-icon">point<wbr>Radius</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfheatmapquestion.html#prev" class="tsd-kind-icon">prev</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfheatmapquestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#readonly" class="tsd-kind-icon">readonly</a>
+								<a href="_index_d_.cfheatmapquestion.html#readonly" class="tsd-kind-icon">readonly</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a>
+								<a href="_index_d_.cfheatmapquestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a>
+								<a href="_index_d_.cfheatmapquestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a>
+								<a href="_index_d_.cfheatmapquestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#showinput" class="tsd-kind-icon">show<wbr>Input</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a>
+								<a href="_index_d_.cfheatmapquestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#template" class="tsd-kind-icon">template</a>
+								<a href="_index_d_.cfheatmapquestion.html#template" class="tsd-kind-icon">template</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#title" class="tsd-kind-icon">title</a>
+								<a href="_index_d_.cfheatmapquestion.html#title" class="tsd-kind-icon">title</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a>
+								<a href="_index_d_.cfheatmapquestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a>
+								<a href="_index_d_.cfheatmapquestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#value" class="tsd-kind-icon">value</a>
+								<a href="_index_d_.cfheatmapquestion.html#value" class="tsd-kind-icon">value</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfrangequestion.html#video" class="tsd-kind-icon">video</a>
+								<a href="_index_d_.cfheatmapquestion.html#video" class="tsd-kind-icon">video</a>
 							</li>
 						</ul>
 					</li>
