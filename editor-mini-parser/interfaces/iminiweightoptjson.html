@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFEditorMiniParser | @choiceform/os-editor-mini-parser</title>
+	<title>IMiniWeightOptJson | @choiceform/os-editor-mini-parser</title>
 	<meta name="description" content="Documentation for @choiceform/os-editor-mini-parser">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">@choiceform/os-editor-mini-parser</a>
 				</li>
 				<li>
-					<a href="cfeditorminiparser.html">CFEditorMiniParser</a>
+					<a href="iminiweightoptjson.html">IMiniWeightOptJson</a>
 				</li>
 			</ul>
-			<h1>Interface CFEditorMiniParser</h1>
+			<h1>Interface IMiniWeightOptJson</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFEditorMiniParser</span>
+						<a href="iminioptionjson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniOptionJson</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IMiniWeightOptJson</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -78,69 +83,99 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="cfeditorminiparser.html#patch" class="tsd-kind-icon">patch</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="cfeditorminiparser.html#uuid" class="tsd-kind-icon">uuid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iminiweightoptjson.html#color" class="tsd-kind-icon">color</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminiweightoptjson.html#destuuid" class="tsd-kind-icon">dest<wbr>Uuid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminiweightoptjson.html#isotheropt" class="tsd-kind-icon">is<wbr>Other<wbr>Opt</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminiweightoptjson.html#text" class="tsd-kind-icon">text</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iminiweightoptjson.html#uuid" class="tsd-kind-icon">uuid</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="patch" class="tsd-anchor"></a>
-					<h3>patch</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">patch<span class="tsd-signature-symbol">(</span>mini<span class="tsd-signature-symbol">: </span><a href="iminisurveyjson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniSurveyJson</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="iminisurveyjson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniSurveyJson</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/8753d3cd9/mini-parser/index.d.ts#L10">index.d.ts:10</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>给简易版问卷数据打补丁，使其能够适应专业版，返回打好补丁的数据。</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>mini: <a href="iminisurveyjson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniSurveyJson</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>简易版数据</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="iminisurveyjson.html" class="tsd-signature-type" data-tsd-kind="Interface">IMiniSurveyJson</a></h4>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="color" class="tsd-anchor"></a>
+					<h3>color</h3>
+					<div class="tsd-signature tsd-kind-icon">color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/8753d3cd9/mini-parser/index.d.ts#L430">index.d.ts:430</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>颜色</p>
+						</div>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="destuuid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> dest<wbr>Uuid</h3>
+					<div class="tsd-signature tsd-kind-icon">dest<wbr>Uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iminioptionjson.html">IMiniOptionJson</a>.<a href="iminioptionjson.html#destuuid">destUuid</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/8753d3cd9/mini-parser/index.d.ts#L66">index.d.ts:66</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>目标输入口id，暂时保留，暂时不用，
+							等简易版支持自定义逻辑跳转的时候才启用</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="isotheropt" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Other<wbr>Opt</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Other<wbr>Opt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iminioptionjson.html">IMiniOptionJson</a>.<a href="iminioptionjson.html#isotheropt">isOtherOpt</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/8753d3cd9/mini-parser/index.d.ts#L80">index.d.ts:80</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>是否为其他选项</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="text" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> text</h3>
+					<div class="tsd-signature tsd-kind-icon">text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iminioptionjson.html">IMiniOptionJson</a>.<a href="iminioptionjson.html#text">text</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/8753d3cd9/mini-parser/index.d.ts#L76">index.d.ts:76</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>选项文字</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="uuid" class="tsd-anchor"></a>
 					<h3>uuid</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">uuid<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/8753d3cd9/mini-parser/index.d.ts#L5">index.d.ts:5</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>生成一个第4版本的uuid</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
+					<div class="tsd-signature tsd-kind-icon">uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="iminioptionjson.html">IMiniOptionJson</a>.<a href="iminioptionjson.html#uuid">uuid</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-editor/blob/8753d3cd9/mini-parser/index.d.ts#L50">index.d.ts:50</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>端口id</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -154,21 +189,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
+					<li class=" tsd-kind-interface">
 						<a href="cfeditorminiparser.html" class="tsd-kind-icon">CFEditor<wbr>Mini<wbr>Parser</a>
-						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="cfeditorminiparser.html#patch" class="tsd-kind-icon">patch</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="cfeditorminiparser.html#uuid" class="tsd-kind-icon">uuid</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="imenunodejson.html" class="tsd-kind-icon">IMenu<wbr>Node<wbr>Json</a>
 					</li>
@@ -250,9 +273,30 @@
 					<li class=" tsd-kind-interface">
 						<a href="iminiweightnodejson.html" class="tsd-kind-icon">IMini<wbr>Weight<wbr>Node<wbr>Json</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="iminiweightoptjson.html" class="tsd-kind-icon">IMini<wbr>Weight<wbr>Opt<wbr>Json</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iminiweightoptjson.html#color" class="tsd-kind-icon">color</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iminiweightoptjson.html#destuuid" class="tsd-kind-icon">dest<wbr>Uuid</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iminiweightoptjson.html#isotheropt" class="tsd-kind-icon">is<wbr>Other<wbr>Opt</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iminiweightoptjson.html#text" class="tsd-kind-icon">text</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="iminiweightoptjson.html#uuid" class="tsd-kind-icon">uuid</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="imultiselectmixin.html" class="tsd-kind-icon">IMulti<wbr>Select<wbr>Mixin</a>
 					</li>
