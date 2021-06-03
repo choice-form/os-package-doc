@@ -73,9 +73,9 @@
 						<p>演示评价题
 						基本内容请参考选择题<a href="_index_d_.cfchoicequestion.html">CFChoiceQuestion</a></p>
 					</div>
-					<p>特殊点:演示评价题通过<a href="_index_d_.cfslideratequestion.html#ratetype">CFSlideRateQuestion.rateType</a>有两种评分方式的UI：</p>
+					<p>特殊点:演示评价题通过<a href="_index_d_.cfslideratequestion.html#ratetype">CFSlideRateQuestion.rateType</a>属性区分有两种评分方式的UI：</p>
 					<ol>
-						<li>演示评价</li>
+						<li>slide-演示评价</li>
 					</ol>
 					<p>它的普通选项不是直接以列表的方式展示出来,而是逐一展示出来的.
 						它的选项是<a href="_index_d_.cfsliderateoption.html">CFSlideRateOption</a>类型的数组
@@ -86,11 +86,12 @@
 						当一个选项被评分以后,则再次重复上面的方法渲染下一个选项和该选项的打分图形
 					直到所有选项都能被评分完成.</p>
 					<ol start="2">
-						<li>表格评价</li>
+						<li>table-表格评价</li>
 					</ol>
 					<p>使用<a href="_index_d_.cfslideratequestion.html#options">CFSlideRateQuestion.options</a>与<a href="_index_d_.cfslideratequestion.html#rateoptions">CFSlideRateQuestion.rateOptions</a>组成生成表格
 					<a href="_index_d_.cfslideratequestion.html#options">CFSlideRateQuestion.options</a>当行，<a href="_index_d_.cfslideratequestion.html#rateoptions">CFSlideRateQuestion.rateOptions</a>当列。</p>
-					<p>比如下面的水果是选项，喜欢不喜欢是评价项</p>
+					<p>比如下面的水果是选项，喜欢不喜欢是评价项，
+					这UI看起来和矩阵题的行列单选简直一模一样，但其实是个打分题，提交数据的结构和矩阵题是不一样的。</p>
 					<table>
 						<thead>
 							<tr>
@@ -143,7 +144,7 @@
 								<td align="center">⊙</td>
 							</tr>
 					</tbody></table>
-					<p>默认表头会显示两行第一行是评价项的文字，第二行是评价项的分值
+					<p>默认表头会显示两行，第一行是评价项的文字，第二行是评价项的分值
 					参照<a href="_index_d_.cfslideratequestion.html#tablehead">CFSlideRateQuestion.tableHead</a>的值来控制表头的展示方式，有以下可能：</p>
 					<ul>
 						<li>none: 不显示表头</li>
@@ -153,9 +154,10 @@
 					</ul>
 					<p>点击某个网格时调用<a href="_index_d_.cfuieventhandler.html#handleoptioninput">CFUIEventHandler.handleOptionInput</a>方法
 					传入的分值就是该网格所在列对应的评价项的分值，传入的选项就是该网格所在的行所对应的选项。</p>
+					<p>渲染网格时检查网格所在行的选项的分值是否和网格所在列的评价项的分值一致，如果一致，则这个网格要被选中。</p>
 					<p>如果相邻的评价项是一样的（包含都是空字符串的情况）则相邻的的文字表头网格需要合并</p>
 					<p>如：五个评价项的文字分别是 讨厌-无感-无感-无感-喜欢，则中间三个无感要合并成一个单元格</p>
-					<p>分值表头则则不需要合并</p>
+					<p>分值表头则不需要合并</p>
 					<p>表格评价模式下表头和选项的文字中可能有富文本，需要能支持。</p>
 					<p>表格评价模式下选项的图片和评价项的图标无视掉，无需支持。</p>
 					<p>这个情况一般是在较大屏上使用，简单起见对小屏的是适配暂无要求
@@ -239,7 +241,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#asterisks">asterisks</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3019">index.d.ts:3019</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3019">index.d.ts:3019</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -256,7 +258,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#customdata">customData</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2978">index.d.ts:2978</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2978">index.d.ts:2978</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -275,7 +277,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#description">description</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3029">index.d.ts:3029</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3029">index.d.ts:3029</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -292,7 +294,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#endtime">endTime</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3092">index.d.ts:3092</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3092">index.d.ts:3092</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -308,7 +310,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#errormessage">errorMessage</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3110">index.d.ts:3110</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3110">index.d.ts:3110</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -328,7 +330,7 @@
 						<p>Inherited from ICFNode.forceSkipReason</p>
 						<p>Overrides ICFNode.forceSkipReason</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2662">index.d.ts:2662</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2662">index.d.ts:2662</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -345,7 +347,7 @@
 						<p>Inherited from ICFNode.groupSingle</p>
 						<p>Overrides ICFNode.groupSingle</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2703">index.d.ts:2703</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2703">index.d.ts:2703</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -361,7 +363,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#hasanswer">hasAnswer</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2992">index.d.ts:2992</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2992">index.d.ts:2992</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -378,7 +380,7 @@
 						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#images">images</a></p>
 						<p>Overrides <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#images">images</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2550">index.d.ts:2550</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2550">index.d.ts:2550</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -396,7 +398,7 @@
 						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgposition">imgPosition</a></p>
 						<p>Overrides <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgposition">imgPosition</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2557">index.d.ts:2557</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2557">index.d.ts:2557</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -416,7 +418,7 @@
 						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgtranstime">imgTransTime</a></p>
 						<p>Overrides <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgtranstime">imgTransTime</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2561">index.d.ts:2561</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2561">index.d.ts:2561</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -433,7 +435,7 @@
 						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgtranstype">imgTransType</a></p>
 						<p>Overrides <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgtranstype">imgTransType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2565">index.d.ts:2565</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2565">index.d.ts:2565</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -450,7 +452,7 @@
 						<p>Inherited from ICFNode.layout</p>
 						<p>Overrides ICFNode.layout</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2641">index.d.ts:2641</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2641">index.d.ts:2641</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -468,7 +470,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#next">next</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3068">index.d.ts:3068</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3068">index.d.ts:3068</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -485,7 +487,7 @@
 						<p>Inherited from ICFNode.noView</p>
 						<p>Overrides ICFNode.noView</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2694">index.d.ts:2694</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2694">index.d.ts:2694</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -502,7 +504,7 @@
 						<p>Inherited from ICFNode.nodeName</p>
 						<p>Overrides ICFNode.nodeName</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2715">index.d.ts:2715</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2715">index.d.ts:2715</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -518,7 +520,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#number">number</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3073">index.d.ts:3073</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3073">index.d.ts:3073</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -535,7 +537,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides ICFOptNodeMixin.options</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3786">index.d.ts:3786</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3789">index.d.ts:3789</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -552,7 +554,7 @@
 						<p>Inherited from ICFOptNodeMixin.otherOptions</p>
 						<p>Overrides ICFOptNodeMixin.otherOptions</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2501">index.d.ts:2501</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2501">index.d.ts:2501</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -569,7 +571,7 @@
 						<p>Inherited from ICFNode.pageEnd</p>
 						<p>Overrides ICFNode.pageEnd</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2711">index.d.ts:2711</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2711">index.d.ts:2711</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -586,7 +588,7 @@
 						<p>Inherited from ICFNode.pageStart</p>
 						<p>Overrides ICFNode.pageStart</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2707">index.d.ts:2707</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2707">index.d.ts:2707</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -602,7 +604,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#parent">parent</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3034">index.d.ts:3034</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3034">index.d.ts:3034</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -619,7 +621,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#prev">prev</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3064">index.d.ts:3064</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3064">index.d.ts:3064</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -635,7 +637,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#questype">quesType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3007">index.d.ts:3007</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3007">index.d.ts:3007</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -653,7 +655,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFSlideRateNode.rateOptions</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L4096">index.d.ts:4096</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L4099">index.d.ts:4099</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -670,7 +672,7 @@
 					<div class="tsd-signature tsd-kind-icon">rate<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"slide"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"table"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3792">index.d.ts:3792</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3795">index.d.ts:3795</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -691,7 +693,7 @@
 						<p>Inherited from ICFNode.readonly</p>
 						<p>Overrides ICFNode.readonly</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2675">index.d.ts:2675</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2675">index.d.ts:2675</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -708,7 +710,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#realtimepreview">realtimePreview</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2996">index.d.ts:2996</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2996">index.d.ts:2996</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -724,7 +726,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#renderid">renderId</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3060">index.d.ts:3060</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3060">index.d.ts:3060</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -742,7 +744,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#selecttype">selectType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3014">index.d.ts:3014</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3014">index.d.ts:3014</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -761,7 +763,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#starttime">startTime</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3088">index.d.ts:3088</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3088">index.d.ts:3088</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -776,7 +778,7 @@
 					<div class="tsd-signature tsd-kind-icon">table<wbr>Head<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"none"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"text"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"value"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"text_value"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3800">index.d.ts:3800</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3803">index.d.ts:3803</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -799,7 +801,7 @@
 						<p>Inherited from ICFNode.template</p>
 						<p>Overrides ICFNode.template</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2647">index.d.ts:2647</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2647">index.d.ts:2647</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -817,7 +819,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#title">title</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3024">index.d.ts:3024</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3024">index.d.ts:3024</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -834,7 +836,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFTypeInfo.typeDescription</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L4791">index.d.ts:4791</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L4794">index.d.ts:4794</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -851,7 +853,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFTypeInfo.typeName</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L4786">index.d.ts:4786</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L4789">index.d.ts:4789</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -868,7 +870,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#value">value</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3079">index.d.ts:3079</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3079">index.d.ts:3079</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -887,7 +889,7 @@
 						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#video">video</a></p>
 						<p>Overrides <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#video">video</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2540">index.d.ts:2540</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2540">index.d.ts:2540</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
