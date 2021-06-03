@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFSlideRateQuestion | @choiceform/os-client-core - v2.1.38</title>
+	<title>CFSlideRateQuestion | @choiceform/os-client-core - v2.1.42</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.38</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.42</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -73,14 +73,94 @@
 						<p>演示评价题
 						基本内容请参考选择题<a href="_index_d_.cfchoicequestion.html">CFChoiceQuestion</a></p>
 					</div>
-					<p>特殊点:演示评价题的的普通选项不是直接以列表的方式展示出来,而是逐一展示出来的.
+					<p>特殊点:演示评价题通过<a href="_index_d_.cfslideratequestion.html#ratetype">CFSlideRateQuestion.rateType</a>有两种评分方式的UI：</p>
+					<ol>
+						<li>演示评价</li>
+					</ol>
+					<p>它的普通选项不是直接以列表的方式展示出来,而是逐一展示出来的.
 						它的选项是<a href="_index_d_.cfsliderateoption.html">CFSlideRateOption</a>类型的数组
-						每次只渲染一个选项,选项中有文字和图片需要渲染
-						同时关注<a href="_index_d_.cfslideratequestion.html#rateoptions">CFSlideRateQuestion.rateOptions</a>属性,为该选项渲染出几个打分图形.
-						每个图形代表不同的分值,当答题者点击这些图形的时候就是为该选项评分
+						每次只渲染一个选项,选项中如有有文字和图片需要渲染
+						同时关注<a href="_index_d_.cfslideratequestion.html#rateoptions">CFSlideRateQuestion.rateOptions</a>属性,为该选项渲染出几个打分图形和打分文字.
+						每个图形和文字代表不同的分值,当答题者点击这些图形的时候就是为该选项评分
 						评分后需要调用<a href="_index_d_.cfuieventhandler.html#handleoptioninput">CFUIEventHandler.handleOptionInput</a>方法
 						当一个选项被评分以后,则再次重复上面的方法渲染下一个选项和该选项的打分图形
 					直到所有选项都能被评分完成.</p>
+					<ol start="2">
+						<li>表格评价</li>
+					</ol>
+					<p>使用<a href="_index_d_.cfslideratequestion.html#options">CFSlideRateQuestion.options</a>与<a href="_index_d_.cfslideratequestion.html#rateoptions">CFSlideRateQuestion.rateOptions</a>组成生成表格
+					<a href="_index_d_.cfslideratequestion.html#options">CFSlideRateQuestion.options</a>当行，<a href="_index_d_.cfslideratequestion.html#rateoptions">CFSlideRateQuestion.rateOptions</a>当列。</p>
+					<p>比如下面的水果是选项，喜欢不喜欢是评价项</p>
+					<table>
+						<thead>
+							<tr>
+								<th align="center"></th>
+								<th align="center">非常不喜欢</th>
+								<th align="center">比较不喜欢</th>
+								<th align="center">一般</th>
+								<th align="center">比较喜欢</th>
+								<th align="center">非常喜欢</th>
+							</tr>
+						</thead>
+						<tbody><tr>
+								<td align="center"></td>
+								<td align="center">1</td>
+								<td align="center">2</td>
+								<td align="center">3</td>
+								<td align="center">4</td>
+								<td align="center">5</td>
+							</tr>
+							<tr>
+								<td align="center">苹果</td>
+								<td align="center">○</td>
+								<td align="center">⊙</td>
+								<td align="center">○</td>
+								<td align="center">○</td>
+								<td align="center">○</td>
+							</tr>
+							<tr>
+								<td align="center">香蕉</td>
+								<td align="center">○</td>
+								<td align="center">○</td>
+								<td align="center">○</td>
+								<td align="center">○</td>
+								<td align="center">⊙</td>
+							</tr>
+							<tr>
+								<td align="center">雪梨</td>
+								<td align="center">○</td>
+								<td align="center">○</td>
+								<td align="center">○</td>
+								<td align="center">⊙</td>
+								<td align="center">○</td>
+							</tr>
+							<tr>
+								<td align="center">菠萝</td>
+								<td align="center">○</td>
+								<td align="center">○</td>
+								<td align="center">○</td>
+								<td align="center">○</td>
+								<td align="center">⊙</td>
+							</tr>
+					</tbody></table>
+					<p>默认表头会显示两行第一行是评价项的文字，第二行是评价项的分值
+					参照<a href="_index_d_.cfslideratequestion.html#tablehead">CFSlideRateQuestion.tableHead</a>的值来控制表头的展示方式，有以下可能：</p>
+					<ul>
+						<li>none: 不显示表头</li>
+						<li>text: 仅显示文字表头</li>
+						<li>value: 仅显示分值表头</li>
+						<li>text_value 同时显示文字表头和分值表头，文字表头在上。</li>
+					</ul>
+					<p>点击某个网格时调用<a href="_index_d_.cfuieventhandler.html#handleoptioninput">CFUIEventHandler.handleOptionInput</a>方法
+					传入的分值就是该网格所在列对应的评价项的分值，传入的选项就是该网格所在的行所对应的选项。</p>
+					<p>如果相邻的评价项是一样的（包含都是空字符串的情况）则相邻的的文字表头网格需要合并</p>
+					<p>如：五个评价项的文字分别是 讨厌-无感-无感-无感-喜欢，则中间三个无感要合并成一个单元格</p>
+					<p>分值表头则则不需要合并</p>
+					<p>表格评价模式下表头和选项的文字中可能有富文本，需要能支持。</p>
+					<p>表格评价模式下选项的图片和评价项的图标无视掉，无需支持。</p>
+					<p>这个情况一般是在较大屏上使用，简单起见对小屏的是适配暂无要求
+						如果在手机上存在评价项较多即使尽量挤压也在水平方向上显示不下的情况，
+					这时候让它自动超出屏幕触发系统滚动条也是可以的。</p>
 					<p>其他选项的渲染方式和选择题一样</p>
 				</div>
 			</section>
@@ -117,6 +197,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#images" class="tsd-kind-icon">images</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#imgtranstime" class="tsd-kind-icon">img<wbr>Trans<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#imgtranstype" class="tsd-kind-icon">img<wbr>Trans<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#layout" class="tsd-kind-icon">layout</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#next" class="tsd-kind-icon">next</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#noview" class="tsd-kind-icon">no<wbr>View</a></li>
@@ -130,11 +212,13 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#prev" class="tsd-kind-icon">prev</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#rateoptions" class="tsd-kind-icon">rate<wbr>Options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#ratetype" class="tsd-kind-icon">rate<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#readonly" class="tsd-kind-icon">readonly</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#tablehead" class="tsd-kind-icon">table<wbr>Head</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#template" class="tsd-kind-icon">template</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#title" class="tsd-kind-icon">title</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfslideratequestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a></li>
@@ -155,7 +239,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#asterisks">asterisks</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2988">index.d.ts:2988</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3019">index.d.ts:3019</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -172,7 +256,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#customdata">customData</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2947">index.d.ts:2947</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2978">index.d.ts:2978</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -191,7 +275,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#description">description</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2998">index.d.ts:2998</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3029">index.d.ts:3029</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -208,7 +292,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#endtime">endTime</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3061">index.d.ts:3061</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3092">index.d.ts:3092</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -224,7 +308,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#errormessage">errorMessage</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3079">index.d.ts:3079</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3110">index.d.ts:3110</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -244,7 +328,7 @@
 						<p>Inherited from ICFNode.forceSkipReason</p>
 						<p>Overrides ICFNode.forceSkipReason</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2639">index.d.ts:2639</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2662">index.d.ts:2662</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -261,7 +345,7 @@
 						<p>Inherited from ICFNode.groupSingle</p>
 						<p>Overrides ICFNode.groupSingle</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2680">index.d.ts:2680</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2703">index.d.ts:2703</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -277,7 +361,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#hasanswer">hasAnswer</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2961">index.d.ts:2961</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2992">index.d.ts:2992</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -294,7 +378,7 @@
 						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#images">images</a></p>
 						<p>Overrides <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#images">images</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2535">index.d.ts:2535</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2550">index.d.ts:2550</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -312,7 +396,7 @@
 						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgposition">imgPosition</a></p>
 						<p>Overrides <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgposition">imgPosition</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2542">index.d.ts:2542</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2557">index.d.ts:2557</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -325,6 +409,40 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+					<a name="imgtranstime" class="tsd-anchor"></a>
+					<h3>img<wbr>Trans<wbr>Time</h3>
+					<div class="tsd-signature tsd-kind-icon">img<wbr>Trans<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">2000</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgtranstime">imgTransTime</a></p>
+						<p>Overrides <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgtranstime">imgTransTime</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2561">index.d.ts:2561</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>图片过渡时间</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+					<a name="imgtranstype" class="tsd-anchor"></a>
+					<h3>img<wbr>Trans<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">img<wbr>Trans<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgtranstype">imgTransType</a></p>
+						<p>Overrides <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgtranstype">imgTransType</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2565">index.d.ts:2565</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>图片过渡方式</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="layout" class="tsd-anchor"></a>
 					<h3>layout</h3>
 					<div class="tsd-signature tsd-kind-icon">layout<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfnodelayout.html" class="tsd-signature-type">CFNodeLayout</a></div>
@@ -332,7 +450,7 @@
 						<p>Inherited from ICFNode.layout</p>
 						<p>Overrides ICFNode.layout</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2618">index.d.ts:2618</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2641">index.d.ts:2641</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -350,7 +468,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#next">next</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3037">index.d.ts:3037</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3068">index.d.ts:3068</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -367,7 +485,7 @@
 						<p>Inherited from ICFNode.noView</p>
 						<p>Overrides ICFNode.noView</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2671">index.d.ts:2671</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2694">index.d.ts:2694</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -384,7 +502,7 @@
 						<p>Inherited from ICFNode.nodeName</p>
 						<p>Overrides ICFNode.nodeName</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2692">index.d.ts:2692</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2715">index.d.ts:2715</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -400,7 +518,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#number">number</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3042">index.d.ts:3042</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3073">index.d.ts:3073</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -417,7 +535,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides ICFOptNodeMixin.options</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3707">index.d.ts:3707</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3786">index.d.ts:3786</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -434,7 +552,7 @@
 						<p>Inherited from ICFOptNodeMixin.otherOptions</p>
 						<p>Overrides ICFOptNodeMixin.otherOptions</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2486">index.d.ts:2486</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2501">index.d.ts:2501</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -451,7 +569,7 @@
 						<p>Inherited from ICFNode.pageEnd</p>
 						<p>Overrides ICFNode.pageEnd</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2688">index.d.ts:2688</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2711">index.d.ts:2711</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -468,7 +586,7 @@
 						<p>Inherited from ICFNode.pageStart</p>
 						<p>Overrides ICFNode.pageStart</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2684">index.d.ts:2684</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2707">index.d.ts:2707</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -484,7 +602,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#parent">parent</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3003">index.d.ts:3003</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3034">index.d.ts:3034</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -501,7 +619,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#prev">prev</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3033">index.d.ts:3033</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3064">index.d.ts:3064</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -517,7 +635,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#questype">quesType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2976">index.d.ts:2976</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3007">index.d.ts:3007</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -535,7 +653,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFSlideRateNode.rateOptions</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L4003">index.d.ts:4003</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L4096">index.d.ts:4096</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -543,6 +661,25 @@
 							<p>评价项列表
 								UI需要为每个普通选项渲染出这个列表
 							点击某个项目后就当成该给该选项进行了该项所对应评价权值的的评价</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="ratetype" class="tsd-anchor"></a>
+					<h3>rate<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">rate<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"slide"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"table"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3792">index.d.ts:3792</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>评价UI展示方式</p>
+							<ul>
+								<li>slide 演示评价</li>
+								<li>table 表格评价</li>
+							</ul>
 						</div>
 					</div>
 				</section>
@@ -554,7 +691,7 @@
 						<p>Inherited from ICFNode.readonly</p>
 						<p>Overrides ICFNode.readonly</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2652">index.d.ts:2652</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2675">index.d.ts:2675</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -571,7 +708,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#realtimepreview">realtimePreview</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2965">index.d.ts:2965</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2996">index.d.ts:2996</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -587,7 +724,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#renderid">renderId</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3029">index.d.ts:3029</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3060">index.d.ts:3060</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -605,7 +742,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#selecttype">selectType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2983">index.d.ts:2983</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3014">index.d.ts:3014</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -624,12 +761,33 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#starttime">startTime</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3057">index.d.ts:3057</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3088">index.d.ts:3088</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>开始回答本题的时间</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="tablehead" class="tsd-anchor"></a>
+					<h3>table<wbr>Head</h3>
+					<div class="tsd-signature tsd-kind-icon">table<wbr>Head<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"none"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"text"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"value"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"text_value"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3800">index.d.ts:3800</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>表格评价时的表头展示方式</p>
+							<ul>
+								<li>none: 不显示表头</li>
+								<li>text: 仅显示文字表头</li>
+								<li>value: 仅显示分值表头</li>
+								<li>text_value 同时显示文字表头和分值表头，文字表头在上。</li>
+							</ul>
 						</div>
 					</div>
 				</section>
@@ -641,7 +799,7 @@
 						<p>Inherited from ICFNode.template</p>
 						<p>Overrides ICFNode.template</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2624">index.d.ts:2624</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2647">index.d.ts:2647</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -659,7 +817,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#title">title</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2993">index.d.ts:2993</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3024">index.d.ts:3024</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -676,7 +834,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFTypeInfo.typeDescription</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L4698">index.d.ts:4698</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L4791">index.d.ts:4791</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -693,7 +851,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFTypeInfo.typeName</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L4693">index.d.ts:4693</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L4786">index.d.ts:4786</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -710,7 +868,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#value">value</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L3048">index.d.ts:3048</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L3079">index.d.ts:3079</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -729,7 +887,7 @@
 						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#video">video</a></p>
 						<p>Overrides <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#video">video</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/ef5916f/index.d.ts#L2525">index.d.ts:2525</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b9c1bd7/index.d.ts#L2540">index.d.ts:2540</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -791,6 +949,12 @@
 								<a href="_index_d_.cfslideratequestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfslideratequestion.html#imgtranstime" class="tsd-kind-icon">img<wbr>Trans<wbr>Time</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfslideratequestion.html#imgtranstype" class="tsd-kind-icon">img<wbr>Trans<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfslideratequestion.html#layout" class="tsd-kind-icon">layout</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
@@ -829,6 +993,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfslideratequestion.html#rateoptions" class="tsd-kind-icon">rate<wbr>Options</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfslideratequestion.html#ratetype" class="tsd-kind-icon">rate<wbr>Type</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfslideratequestion.html#readonly" class="tsd-kind-icon">readonly</a>
 							</li>
@@ -843,6 +1010,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfslideratequestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfslideratequestion.html#tablehead" class="tsd-kind-icon">table<wbr>Head</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfslideratequestion.html#template" class="tsd-kind-icon">template</a>
