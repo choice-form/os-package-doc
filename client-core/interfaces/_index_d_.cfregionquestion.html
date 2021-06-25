@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFRegionQuestion | @choiceform/os-client-core - v2.1.42</title>
+	<title>CFRegionQuestion | @choiceform/os-client-core - v2.1.46</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.42</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.46</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -72,7 +72,7 @@
 					<div class="lead">
 						<p>手动定位题</p>
 					</div>
-					<p>基本内容请参考选择题<a href="_index_d_.cfchoicequestion.html">CFChoiceQuestion</a></p>
+					<p>基本内容请参考选择题<a href="_index_d_.cfselectquestion.html">CFSelectQuestion</a></p>
 					<p>特殊点:手动定位题的选项和其他选项都不要渲染出来</p>
 					<p>而是,渲染出<a href="_index_d_.cfregionquestion.html#regions">CFRegionQuestion.regions</a>中的省市县下拉列表,让答题者选择省市区.</p>
 					<p>要考虑<a href="_index_d_.cfregionquestion.html#grade">CFRegionQuestion.grade</a>属性,它决定询问地区的级别,则只渲染到该级别的列表.</p>
@@ -89,7 +89,7 @@
 								<span class="target">CFRegionQuestion</span>
 								<ul class="tsd-hierarchy">
 									<li>
-										<a href="_index_d_.cflocatequestion.html" class="tsd-signature-type">CFLocateQuestion</a>
+										<a href="_index_d_.cflocationquestion.html" class="tsd-signature-type">CFLocationQuestion</a>
 									</li>
 								</ul>
 							</li>
@@ -140,6 +140,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfregionquestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfregionquestion.html#template" class="tsd-kind-icon">template</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfregionquestion.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfregionquestion.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfregionquestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfregionquestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfregionquestion.html#value" class="tsd-kind-icon">value</a></li>
@@ -158,7 +159,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#asterisks">asterisks</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3019">index.d.ts:3019</a></li>
+							<li>Defined in index.d.ts:5937</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -175,7 +176,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#customdata">customData</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2978">index.d.ts:2978</a></li>
+							<li>Defined in index.d.ts:5895</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -194,7 +195,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#description">description</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3029">index.d.ts:3029</a></li>
+							<li>Defined in index.d.ts:5947</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -211,7 +212,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#endtime">endTime</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3092">index.d.ts:3092</a></li>
+							<li>Defined in index.d.ts:6010</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -227,7 +228,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#errormessage">errorMessage</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3110">index.d.ts:3110</a></li>
+							<li>Defined in index.d.ts:6028</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -242,11 +243,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="forceskipreason" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> force<wbr>Skip<wbr>Reason</h3>
-					<div class="tsd-signature tsd-kind-icon">force<wbr>Skip<wbr>Reason<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#iskipreason" class="tsd-signature-type">ISkipReason</a></div>
+					<div class="tsd-signature tsd-kind-icon">force<wbr>Skip<wbr>Reason<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.skip_reason.html" class="tsd-signature-type">SKIP_REASON</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.forceSkipReason</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2662">index.d.ts:2662</a></li>
+							<li>Defined in index.d.ts:3908</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -261,7 +262,7 @@
 					<div class="tsd-signature tsd-kind-icon">grade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L4657">index.d.ts:4657</a></li>
+							<li>Defined in index.d.ts:6833</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -273,7 +274,7 @@
 						</div>
 						<dl class="tsd-comment-tags">
 							<dt>deprecated</dt>
-							<dd><p>老UI兼容保留，新版使用infoRange</p>
+							<dd><p>不要使用，老UI兼容保留，新版使用infoRange</p>
 							</dd>
 						</dl>
 					</div>
@@ -285,7 +286,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.groupSingle</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2703">index.d.ts:2703</a></li>
+							<li>Defined in index.d.ts:3949</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -301,7 +302,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#hasanswer">hasAnswer</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2992">index.d.ts:2992</a></li>
+							<li>Defined in index.d.ts:5909</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -315,9 +316,9 @@
 					<h3>images</h3>
 					<div class="tsd-signature tsd-kind-icon">images<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfimageinnode.html" class="tsd-signature-type">CFImageInNode</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#images">images</a></p>
+						<p>Inherited from CFMediaNodeMixin.images</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2550">index.d.ts:2550</a></li>
+							<li>Defined in index.d.ts:4144</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -330,11 +331,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="imgposition" class="tsd-anchor"></a>
 					<h3>img<wbr>Position</h3>
-					<div class="tsd-signature tsd-kind-icon">img<wbr>Position<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"before"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"after"</span></div>
+					<div class="tsd-signature tsd-kind-icon">img<wbr>Position<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.img_position.html" class="tsd-signature-type">IMG_POSITION</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgposition">imgPosition</a></p>
+						<p>Inherited from CFMediaNodeMixin.imgPosition</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2557">index.d.ts:2557</a></li>
+							<li>Defined in index.d.ts:4151</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -351,9 +352,9 @@
 					<h3>img<wbr>Trans<wbr>Time</h3>
 					<div class="tsd-signature tsd-kind-icon">img<wbr>Trans<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">2000</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgtranstime">imgTransTime</a></p>
+						<p>Inherited from CFMediaNodeMixin.imgTransTime</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2561">index.d.ts:2561</a></li>
+							<li>Defined in index.d.ts:4155</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -365,11 +366,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="imgtranstype" class="tsd-anchor"></a>
 					<h3>img<wbr>Trans<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">img<wbr>Trans<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">img<wbr>Trans<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.img_transition.html" class="tsd-signature-type">IMG_TRANSITION</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#imgtranstype">imgTransType</a></p>
+						<p>Inherited from CFMediaNodeMixin.imgTransType</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2565">index.d.ts:2565</a></li>
+							<li>Defined in index.d.ts:4159</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -384,7 +385,7 @@
 					<div class="tsd-signature tsd-kind-icon">indexes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L4666">index.d.ts:4666</a></li>
+							<li>Defined in index.d.ts:6842</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -396,10 +397,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="inforange" class="tsd-anchor"></a>
 					<h3>info<wbr>Range</h3>
-					<div class="tsd-signature tsd-kind-icon">info<wbr>Range<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#iregionrange" class="tsd-signature-type">IRegionRange</a></div>
+					<div class="tsd-signature tsd-kind-icon">info<wbr>Range<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.region_range.html" class="tsd-signature-type">REGION_RANGE</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L4670">index.d.ts:4670</a></li>
+							<li>Defined in index.d.ts:6846</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -415,7 +416,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.layout</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2641">index.d.ts:2641</a></li>
+							<li>Defined in index.d.ts:3887</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -433,7 +434,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#next">next</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3068">index.d.ts:3068</a></li>
+							<li>Defined in index.d.ts:5986</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -449,7 +450,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.noView</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2694">index.d.ts:2694</a></li>
+							<li>Defined in index.d.ts:3940</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -465,7 +466,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.nodeName</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2715">index.d.ts:2715</a></li>
+							<li>Defined in index.d.ts:3961</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -481,7 +482,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#number">number</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3073">index.d.ts:3073</a></li>
+							<li>Defined in index.d.ts:5991</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -498,7 +499,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFOptNodeMixin.options</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2497">index.d.ts:2497</a></li>
+							<li>Defined in index.d.ts:4090</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -514,7 +515,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFOptNodeMixin.otherOptions</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2501">index.d.ts:2501</a></li>
+							<li>Defined in index.d.ts:4094</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -530,7 +531,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.pageEnd</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2711">index.d.ts:2711</a></li>
+							<li>Defined in index.d.ts:3957</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -546,7 +547,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.pageStart</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2707">index.d.ts:2707</a></li>
+							<li>Defined in index.d.ts:3953</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -562,7 +563,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#parent">parent</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3034">index.d.ts:3034</a></li>
+							<li>Defined in index.d.ts:5952</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -578,7 +579,7 @@
 					<div class="tsd-signature tsd-kind-icon">placeholder<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L4645">index.d.ts:4645</a></li>
+							<li>Defined in index.d.ts:6821</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -594,7 +595,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#prev">prev</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3064">index.d.ts:3064</a></li>
+							<li>Defined in index.d.ts:5982</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -606,11 +607,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="questype" class="tsd-anchor"></a>
 					<h3>ques<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">ques<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#cfquestypevalue" class="tsd-signature-type">CFQuesTypeValue</a></div>
+					<div class="tsd-signature tsd-kind-icon">ques<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.ques_type.html" class="tsd-signature-type">QUES_TYPE</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#questype">quesType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3007">index.d.ts:3007</a></li>
+							<li>Defined in index.d.ts:5925</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -619,6 +620,11 @@
 								你可以根据这个属性来决定渲染不同题目的模板
 							如choice的时候渲染选择题,short-text的时候渲染成填空题</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>即将移除，仅为老UI暂时存在，不要使用</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
@@ -628,7 +634,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.readonly</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2675">index.d.ts:2675</a></li>
+							<li>Defined in index.d.ts:3921</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -645,7 +651,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#realtimepreview">realtimePreview</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2996">index.d.ts:2996</a></li>
+							<li>Defined in index.d.ts:5913</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -660,7 +666,7 @@
 					<div class="tsd-signature tsd-kind-icon">regions<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfregionprovince.html" class="tsd-signature-type">CFRegionProvince</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L4649">index.d.ts:4649</a></li>
+							<li>Defined in index.d.ts:6825</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -676,7 +682,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#renderid">renderId</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3060">index.d.ts:3060</a></li>
+							<li>Defined in index.d.ts:5978</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -690,11 +696,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="selecttype" class="tsd-anchor"></a>
 					<h3>select<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">select<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../modules/_index_d_.html#iselecttype" class="tsd-signature-type">ISelectType</a></div>
+					<div class="tsd-signature tsd-kind-icon">select<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.select_type.html" class="tsd-signature-type">SELECT_TYPE</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#selecttype">selectType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3014">index.d.ts:3014</a></li>
+							<li>Defined in index.d.ts:5932</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -713,7 +719,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#starttime">startTime</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3088">index.d.ts:3088</a></li>
+							<li>Defined in index.d.ts:6006</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -729,7 +735,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.template</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2647">index.d.ts:2647</a></li>
+							<li>Defined in index.d.ts:3893</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -747,7 +753,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#title">title</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3024">index.d.ts:3024</a></li>
+							<li>Defined in index.d.ts:5942</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -758,13 +764,29 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="type" class="tsd-anchor"></a>
+					<h3>type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.node_type.html" class="tsd-signature-type">NODE_TYPE</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ICFNode.type</p>
+						<ul>
+							<li>Defined in index.d.ts:3969</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>节点类型</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="typedescription" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> type<wbr>Description</h3>
 					<div class="tsd-signature tsd-kind-icon">type<wbr>Description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFTypeInfo.typeDescription</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L4794">index.d.ts:4794</a></li>
+							<li>Defined in index.d.ts:5882</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -781,7 +803,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFTypeInfo.typeName</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L4789">index.d.ts:4789</a></li>
+							<li>Defined in index.d.ts:5877</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -798,7 +820,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfquestion.html">CFQuestion</a>.<a href="_index_d_.cfquestion.html#value">value</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L3079">index.d.ts:3079</a></li>
+							<li>Defined in index.d.ts:5997</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -814,9 +836,9 @@
 					<h3>video</h3>
 					<div class="tsd-signature tsd-kind-icon">video<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfvideo.html" class="tsd-signature-type">CFVideo</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfmedianodemixin.html">CFMediaNodeMixin</a>.<a href="_index_d_.cfmedianodemixin.html#video">video</a></p>
+						<p>Inherited from CFMediaNodeMixin.video</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2540">index.d.ts:2540</a></li>
+							<li>Defined in index.d.ts:4134</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -954,6 +976,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfregionquestion.html#title" class="tsd-kind-icon">title</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfregionquestion.html#type" class="tsd-kind-icon">type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfregionquestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFEventHub | @choiceform/os-client-core - v2.1.42</title>
+	<title>CFEventHub | @choiceform/os-client-core - v2.1.46</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.42</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.46</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -104,13 +104,13 @@
 					<a name="off" class="tsd-anchor"></a>
 					<h3>off</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">off<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">?: </span><a href="../modules/_index_d_.html#cfeventnames" class="tsd-signature-type">CFEventNames</a>, cb<span class="tsd-signature-symbol">?: </span><a href="../modules/_index_d_.html#cfeventhubcb" class="tsd-signature-type">CFEventHubCb</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">off<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">?: </span><a href="../enums/_index_d_.event_name.html" class="tsd-signature-type">EVENT_NAME</a>, cb<span class="tsd-signature-symbol">?: </span><a href="../modules/_index_d_.html#cfeventhubcb" class="tsd-signature-type">CFEventHubCb</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2276">index.d.ts:2276</a></li>
+									<li>Defined in index.d.ts:8333</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -121,7 +121,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <a href="../modules/_index_d_.html#cfeventnames" class="tsd-signature-type">CFEventNames</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <a href="../enums/_index_d_.event_name.html" class="tsd-signature-type">EVENT_NAME</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>事件名，如果不提供，则解除所有事件监听，否则直接该事件名相关的监听。</p>
 									</div>
@@ -141,13 +141,13 @@
 					<a name="on" class="tsd-anchor"></a>
 					<h3>on</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><a href="../modules/_index_d_.html#cfeventnames" class="tsd-signature-type">CFEventNames</a>, cb<span class="tsd-signature-symbol">: </span><a href="../modules/_index_d_.html#cfeventhubcb" class="tsd-signature-type">CFEventHubCb</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><a href="../enums/_index_d_.event_name.html" class="tsd-signature-type">EVENT_NAME</a>, cb<span class="tsd-signature-symbol">: </span><a href="../modules/_index_d_.html#cfeventhubcb" class="tsd-signature-type">CFEventHubCb</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2270">index.d.ts:2270</a></li>
+									<li>Defined in index.d.ts:8327</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -158,7 +158,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>name: <a href="../modules/_index_d_.html#cfeventnames" class="tsd-signature-type">CFEventNames</a></h5>
+									<h5>name: <a href="../enums/_index_d_.event_name.html" class="tsd-signature-type">EVENT_NAME</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>事件名</p>
 									</div>
@@ -178,13 +178,13 @@
 					<a name="one" class="tsd-anchor"></a>
 					<h3>one</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><a href="../modules/_index_d_.html#cfeventnames" class="tsd-signature-type">CFEventNames</a>, cb<span class="tsd-signature-symbol">: </span><a href="../modules/_index_d_.html#cfeventhubcb" class="tsd-signature-type">CFEventHubCb</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">one<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><a href="../enums/_index_d_.event_name.html" class="tsd-signature-type">EVENT_NAME</a>, cb<span class="tsd-signature-symbol">: </span><a href="../modules/_index_d_.html#cfeventhubcb" class="tsd-signature-type">CFEventHubCb</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2282">index.d.ts:2282</a></li>
+									<li>Defined in index.d.ts:8339</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -195,7 +195,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>name: <a href="../modules/_index_d_.html#cfeventnames" class="tsd-signature-type">CFEventNames</a></h5>
+									<h5>name: <a href="../enums/_index_d_.event_name.html" class="tsd-signature-type">EVENT_NAME</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>事件名</p>
 									</div>
@@ -215,13 +215,13 @@
 					<a name="trigger" class="tsd-anchor"></a>
 					<h3>trigger</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">trigger<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><a href="../modules/_index_d_.html#cfeventnames" class="tsd-signature-type">CFEventNames</a>, data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">trigger<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><a href="../enums/_index_d_.event_name.html" class="tsd-signature-type">EVENT_NAME</a>, data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L2288">index.d.ts:2288</a></li>
+									<li>Defined in index.d.ts:8345</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -232,7 +232,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>name: <a href="../modules/_index_d_.html#cfeventnames" class="tsd-signature-type">CFEventNames</a></h5>
+									<h5>name: <a href="../enums/_index_d_.event_name.html" class="tsd-signature-type">EVENT_NAME</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>事件名</p>
 									</div>

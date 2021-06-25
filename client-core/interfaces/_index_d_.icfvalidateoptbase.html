@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ICFValidateOptBase | @choiceform/os-client-core - v2.1.42</title>
+	<title>ICFValidateOptBase | @choiceform/os-client-core - v2.1.46</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.42</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.46</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -95,6 +95,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.icfvalidateoptbase.html#completegroups" class="tsd-kind-icon">complete<wbr>Groups</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.icfvalidateoptbase.html#filltype" class="tsd-kind-icon">fill<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.icfvalidateoptbase.html#grade" class="tsd-kind-icon">grade</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.icfvalidateoptbase.html#itemsmax" class="tsd-kind-icon">items<wbr>Max</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.icfvalidateoptbase.html#itemsmin" class="tsd-kind-icon">items<wbr>Min</a></li>
@@ -117,7 +118,7 @@
 					<div class="tsd-signature tsd-kind-icon">complete<wbr>Groups<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfautocpltdata.html" class="tsd-signature-type">CFAutoCpltData</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L6632">index.d.ts:6632</a></li>
+							<li>Defined in index.d.ts:5158</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -134,12 +135,30 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="filltype" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fill<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">fill<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.fill_type.html" class="tsd-signature-type">FILL_TYPE</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in index.d.ts:5170</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>验证类型
+								填空选项的输入规则,有些输入方式需要提供输入控件支持
+								有些则只需要提供普通输入框
+							所有方式都可以根据类型显示对应的提示(图标?,文字? UI自己决定)</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="grade" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> grade</h3>
 					<div class="tsd-signature tsd-kind-icon">grade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L6547">index.d.ts:6547</a></li>
+							<li>Defined in index.d.ts:5073</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,7 +176,7 @@
 					<div class="tsd-signature tsd-kind-icon">items<wbr>Max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L6560">index.d.ts:6560</a></li>
+							<li>Defined in index.d.ts:5086</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -172,7 +191,7 @@
 					<div class="tsd-signature tsd-kind-icon">items<wbr>Min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L6564">index.d.ts:6564</a></li>
+							<li>Defined in index.d.ts:5090</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -187,7 +206,7 @@
 					<div class="tsd-signature tsd-kind-icon">prev<wbr>Cplt<wbr>Lang<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L6579">index.d.ts:6579</a></li>
+							<li>Defined in index.d.ts:5105</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -208,7 +227,7 @@
 					<div class="tsd-signature tsd-kind-icon">select<wbr>List<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L6601">index.d.ts:6601</a></li>
+							<li>Defined in index.d.ts:5127</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -227,7 +246,7 @@
 					<div class="tsd-signature tsd-kind-icon">simple<wbr>Cplt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L6618">index.d.ts:6618</a></li>
+							<li>Defined in index.d.ts:5144</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -242,7 +261,7 @@
 					<div class="tsd-signature tsd-kind-icon">time<wbr>Grade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L6593">index.d.ts:6593</a></li>
+							<li>Defined in index.d.ts:5119</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -263,7 +282,7 @@
 					<div class="tsd-signature tsd-kind-icon">validate<wbr>Max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L6605">index.d.ts:6605</a></li>
+							<li>Defined in index.d.ts:5131</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -278,7 +297,7 @@
 					<div class="tsd-signature tsd-kind-icon">validate<wbr>Min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/cb1cbdd/index.d.ts#L6609">index.d.ts:6609</a></li>
+							<li>Defined in index.d.ts:5135</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -309,6 +328,9 @@
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.icfvalidateoptbase.html#completegroups" class="tsd-kind-icon">complete<wbr>Groups</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.icfvalidateoptbase.html#filltype" class="tsd-kind-icon">fill<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.icfvalidateoptbase.html#grade" class="tsd-kind-icon">grade</a>
