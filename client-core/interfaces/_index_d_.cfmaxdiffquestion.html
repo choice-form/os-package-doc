@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFSelectImageQuestion | @choiceform/os-client-core - v2.1.50</title>
+	<title>CFMaxDiffQuestion | @choiceform/os-client-core - v2.1.50</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfselectimagequestion.html">CFSelectImageQuestion</a>
+					<a href="_index_d_.cfmaxdiffquestion.html">CFMaxDiffQuestion</a>
 				</li>
 			</ul>
-			<h1>Interface CFSelectImageQuestion</h1>
+			<h1>Interface CFMaxDiffQuestion</h1>
 		</div>
 	</div>
 </header>
@@ -70,20 +70,75 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>图片选择题目</p>
+						<p>最大差分题
+						基本内容请参考选择题<a href="_index_d_.cfselectquestion.html">CFSelectQuestion</a></p>
 					</div>
-					<p>使用选择题<a href="_index_d_.cfselectquestion.html">CFSelectQuestion</a>一样的方式渲染
-					特殊点:选项中包含图片,需要额外渲染</p>
+					<p>特殊点：</p>
+					<p>最大差分题不直接渲染选项，而是渲染任务<a href="_index_d_.cfmaxdiffquestion.html#tasks">CFMaxDiffQuestion.tasks</a>，像演示评价题一样一次只显示一个任务卡片。</p>
+					<p>卡片展示成下面这样：</p>
+					<table>
+						<thead>
+							<tr>
+								<th align="center">最喜欢</th>
+								<th align="center"></th>
+								<th align="center">最不喜欢</th>
+							</tr>
+						</thead>
+						<tbody><tr>
+								<td align="center">○</td>
+								<td align="center">宝马</td>
+								<td align="center">○</td>
+							</tr>
+							<tr>
+								<td align="center">○</td>
+								<td align="center">雪佛兰</td>
+								<td align="center">○</td>
+							</tr>
+							<tr>
+								<td align="center">○</td>
+								<td align="center">奔驰</td>
+								<td align="center">○</td>
+							</tr>
+							<tr>
+								<td align="center">○</td>
+								<td align="center">凯迪拉克</td>
+								<td align="center">○</td>
+							</tr>
+					</tbody></table>
+					<p>其中头部是正向和反向评价说明文字，分别使用<a href="_index_d_.cfmaxdiffquestion.html#positivedesc">CFMaxDiffQuestion.positiveDesc</a>和<a href="_index_d_.cfmaxdiffquestion.html#negativedesc">CFMaxDiffQuestion.negativeDesc</a>渲染</p>
+					<p>中间是项目文字，使用[[CFMaxDiffTaskItem.option.text]]渲染，如果有[[CFMaxDiffTaskItem.option.image]]，则图片也许渲染</p>
+					<p>同时关注<a href="_index_d_.cfmaxdiffquestion.html#itemposition">CFMaxDiffQuestion.itemPosition</a>来决定项目文字是显示在左边、中间或者右边。</p>
+					<p>当在这个任务卡片上进行作答时，回到<a href="_index_d_.cfuieventhandler.html#handlemaxdiffinput">CFUIEventHandler.handleMaxDiffInput</a>方法，当选择左侧的checkbox是传1作为值，
+					选择右侧的checkbox时传-1作为值。</p>
+					<p>渲染的时候也是当<a href="_index_d_.cfmaxdifftaskitem.html#value">CFMaxDiffTaskItem.value</a>为1时，左侧checkbox被选中，如果为-1时，右侧checkbox被选中。</p>
+					<p>由于一个最大差分题包含多一个任务页，所以需要提供切换任务的功能，可以有两种方案：</p>
+					<ol>
+						<li><p>自动切页方式：每次调用输入回调(返回Promise)后，UI中检查当前渲染的任务的<a href="_index_d_.cfmaxdifftask.html#done">CFMaxDiffTask.done</a>是否为true，如果是，则自动像演示评价题一样翻到下一页。</p>
+						</li>
+						<li><p>主动切页方式：渲染两个额外的按钮，点击后分别能切换到上一个任务和下一个任务，这种情况下可以不管<a href="_index_d_.cfmaxdifftask.html#done">CFMaxDiffTask.done</a>属性，做到自由切换前后任务。</p>
+						</li>
+					</ol>
+					<p>无论那种都做下面的处理：</p>
+					<ol>
+						<li><p>每次做答后，检查<a href="_index_d_.cfmaxdiffquestion.html#tasks">CFMaxDiffQuestion.tasks</a>中所有项目的<a href="_index_d_.cfmaxdifftask.html#done">CFMaxDiffTask.done</a>，如果都为true，则项演示评价题一样提示<code>请进入下一题</code>的消息</p>
+						</li>
+						<li><p>同时像演示评价题一样显示当前是几分之几项如：1/6，每次切任务后更新进度。</p>
+						</li>
+					</ol>
+					<p>可参照[这个例子](<a href="https://seregpie.github.io/MaxDiff/%EF%BC%89%E3%80%82">https://seregpie.github.io/MaxDiff/）。</a></p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="_index_d_.cfselectquestion.html" class="tsd-signature-type">CFSelectQuestion</a>
+						<a href="_index_d_.cfsubjectquestion.html" class="tsd-signature-type">CFSubjectQuestion</a>
+					</li>
+					<li>
+						<span class="tsd-signature-type">ICFMaxDiffNode</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">CFSelectImageQuestion</span>
+								<span class="target">CFMaxDiffQuestion</span>
 							</li>
 						</ul>
 					</li>
@@ -96,45 +151,46 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#asterisks" class="tsd-kind-icon">asterisks</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#description" class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#endtime" class="tsd-kind-icon">end<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#images" class="tsd-kind-icon">images</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#imgtranstime" class="tsd-kind-icon">img<wbr>Trans<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#imgtranstype" class="tsd-kind-icon">img<wbr>Trans<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#layout" class="tsd-kind-icon">layout</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#max" class="tsd-kind-icon">max</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#min" class="tsd-kind-icon">min</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#next" class="tsd-kind-icon">next</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#noview" class="tsd-kind-icon">no<wbr>View</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#number" class="tsd-kind-icon">number</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#options" class="tsd-kind-icon">options</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#otheroptions" class="tsd-kind-icon">other<wbr>Options</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#parent" class="tsd-kind-icon">parent</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#picfittype" class="tsd-kind-icon">pic<wbr>Fit<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#prev" class="tsd-kind-icon">prev</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#readonly" class="tsd-kind-icon">readonly</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#template" class="tsd-kind-icon">template</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#title" class="tsd-kind-icon">title</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#type" class="tsd-kind-icon">type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#value" class="tsd-kind-icon">value</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfselectimagequestion.html#video" class="tsd-kind-icon">video</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#asterisks" class="tsd-kind-icon">asterisks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#endtime" class="tsd-kind-icon">end<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#images" class="tsd-kind-icon">images</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#imgtranstime" class="tsd-kind-icon">img<wbr>Trans<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#imgtranstype" class="tsd-kind-icon">img<wbr>Trans<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#itemposition" class="tsd-kind-icon">item<wbr>Position</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#layout" class="tsd-kind-icon">layout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#negativedesc" class="tsd-kind-icon">negative<wbr>Desc</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#next" class="tsd-kind-icon">next</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#noview" class="tsd-kind-icon">no<wbr>View</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#number" class="tsd-kind-icon">number</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#options" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#otheroptions" class="tsd-kind-icon">other<wbr>Options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#parent" class="tsd-kind-icon">parent</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#positivedesc" class="tsd-kind-icon">positive<wbr>Desc</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#prev" class="tsd-kind-icon">prev</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#readonly" class="tsd-kind-icon">readonly</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#tasks" class="tsd-kind-icon">tasks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#template" class="tsd-kind-icon">template</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#title" class="tsd-kind-icon">title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#value" class="tsd-kind-icon">value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfmaxdiffquestion.html#video" class="tsd-kind-icon">video</a></li>
 							</ul>
 						</section>
 					</div>
@@ -230,12 +286,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="forceskipreason" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> force<wbr>Skip<wbr>Reason</h3>
 					<div class="tsd-signature tsd-kind-icon">force<wbr>Skip<wbr>Reason<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.skip_reason.html" class="tsd-signature-type">SKIP_REASON</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.forceSkipReason</p>
+						<p>Overrides ICFNode.forceSkipReason</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3913">index.d.ts:3913</a></li>
 						</ul>
@@ -246,12 +303,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="groupsingle" class="tsd-anchor"></a>
 					<h3>group<wbr>Single</h3>
 					<div class="tsd-signature tsd-kind-icon">group<wbr>Single<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.groupSingle</p>
+						<p>Overrides ICFNode.groupSingle</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3954">index.d.ts:3954</a></li>
 						</ul>
@@ -278,12 +336,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="images" class="tsd-anchor"></a>
 					<h3>images</h3>
 					<div class="tsd-signature tsd-kind-icon">images<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfimageinnode.html" class="tsd-signature-type">CFImageInNode</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from CFMediaNodeMixin.images</p>
+						<p>Overrides CFMediaNodeMixin.images</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4149">index.d.ts:4149</a></li>
 						</ul>
@@ -295,12 +354,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="imgposition" class="tsd-anchor"></a>
 					<h3>img<wbr>Position</h3>
 					<div class="tsd-signature tsd-kind-icon">img<wbr>Position<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.img_position.html" class="tsd-signature-type">IMG_POSITION</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from CFMediaNodeMixin.imgPosition</p>
+						<p>Overrides CFMediaNodeMixin.imgPosition</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4156">index.d.ts:4156</a></li>
 						</ul>
@@ -314,12 +374,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="imgtranstime" class="tsd-anchor"></a>
 					<h3>img<wbr>Trans<wbr>Time</h3>
 					<div class="tsd-signature tsd-kind-icon">img<wbr>Trans<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">2000</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from CFMediaNodeMixin.imgTransTime</p>
+						<p>Overrides CFMediaNodeMixin.imgTransTime</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4160">index.d.ts:4160</a></li>
 						</ul>
@@ -330,12 +391,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="imgtranstype" class="tsd-anchor"></a>
 					<h3>img<wbr>Trans<wbr>Type</h3>
 					<div class="tsd-signature tsd-kind-icon">img<wbr>Trans<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.img_transition.html" class="tsd-signature-type">IMG_TRANSITION</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from CFMediaNodeMixin.imgTransType</p>
+						<p>Overrides CFMediaNodeMixin.imgTransType</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4164">index.d.ts:4164</a></li>
 						</ul>
@@ -347,11 +409,28 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="itemposition" class="tsd-anchor"></a>
+					<h3>item<wbr>Position</h3>
+					<div class="tsd-signature tsd-kind-icon">item<wbr>Position<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"left"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"center"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"right"</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from ICFMaxDiffNode.itemPosition</p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4892">index.d.ts:4892</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>项目位置</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="layout" class="tsd-anchor"></a>
 					<h3>layout</h3>
 					<div class="tsd-signature tsd-kind-icon">layout<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfnodelayout.html" class="tsd-signature-type">CFNodeLayout</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.layout</p>
+						<p>Overrides ICFNode.layout</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3892">index.d.ts:3892</a></li>
 						</ul>
@@ -365,34 +444,18 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="max" class="tsd-anchor"></a>
-					<h3>max</h3>
-					<div class="tsd-signature tsd-kind-icon">max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="negativedesc" class="tsd-anchor"></a>
+					<h3>negative<wbr>Desc</h3>
+					<div class="tsd-signature tsd-kind-icon">negative<wbr>Desc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from ICFMultiSelectNodeMixin.max</p>
+						<p>Inherited from ICFMaxDiffNode.negativeDesc</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4448">index.d.ts:4448</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4900">index.d.ts:4900</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>最多允许选择的数量</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="min" class="tsd-anchor"></a>
-					<h3>min</h3>
-					<div class="tsd-signature tsd-kind-icon">min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from ICFMultiSelectNodeMixin.min</p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4444">index.d.ts:4444</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>最小需要选择的数量</p>
+							<p>消极描述文字</p>
 						</div>
 					</div>
 				</section>
@@ -412,12 +475,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="noview" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> no<wbr>View</h3>
 					<div class="tsd-signature tsd-kind-icon">no<wbr>View<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.noView</p>
+						<p>Overrides ICFNode.noView</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3945">index.d.ts:3945</a></li>
 						</ul>
@@ -428,12 +492,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="nodename" class="tsd-anchor"></a>
 					<h3>node<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.nodeName</p>
+						<p>Overrides ICFNode.nodeName</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3966">index.d.ts:3966</a></li>
 						</ul>
@@ -464,25 +529,21 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported">
 					<a name="options" class="tsd-anchor"></a>
 					<h3>options</h3>
-					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfselectimageoption.html" class="tsd-signature-type">CFSelectImageOption</a><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfmaxdiffoption.html" class="tsd-signature-type">CFMaxDiffOption</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<p>Overrides ICFOptNodeMixin.options</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L6974">index.d.ts:6974</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L7100">index.d.ts:7100</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>图片选择选项列表,包含其他选项</p>
-						</div>
-					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="otheroptions" class="tsd-anchor"></a>
 					<h3>other<wbr>Options</h3>
 					<div class="tsd-signature tsd-kind-icon">other<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfoption.html" class="tsd-signature-type">CFOption</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFOptNodeMixin.otherOptions</p>
+						<p>Overrides ICFOptNodeMixin.otherOptions</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4099">index.d.ts:4099</a></li>
 						</ul>
@@ -493,12 +554,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="pageend" class="tsd-anchor"></a>
 					<h3>page<wbr>End</h3>
 					<div class="tsd-signature tsd-kind-icon">page<wbr>End<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.pageEnd</p>
+						<p>Overrides ICFNode.pageEnd</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3962">index.d.ts:3962</a></li>
 						</ul>
@@ -509,12 +571,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="pagestart" class="tsd-anchor"></a>
 					<h3>page<wbr>Start</h3>
 					<div class="tsd-signature tsd-kind-icon">page<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.pageStart</p>
+						<p>Overrides ICFNode.pageStart</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3958">index.d.ts:3958</a></li>
 						</ul>
@@ -542,18 +605,19 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="picfittype" class="tsd-anchor"></a>
-					<h3>pic<wbr>Fit<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">pic<wbr>Fit<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.pic_fit_type.html" class="tsd-signature-type">PIC_FIT_TYPE</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="positivedesc" class="tsd-anchor"></a>
+					<h3>positive<wbr>Desc</h3>
+					<div class="tsd-signature tsd-kind-icon">positive<wbr>Desc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from ICFMaxDiffNode.positiveDesc</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L6978">index.d.ts:6978</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4896">index.d.ts:4896</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>图片适应方式</p>
+							<p>积极描述文字</p>
 						</div>
 					</div>
 				</section>
@@ -596,12 +660,13 @@
 						</dl>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="readonly" class="tsd-anchor"></a>
 					<h3>readonly</h3>
 					<div class="tsd-signature tsd-kind-icon">readonly<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.readonly</p>
+						<p>Overrides ICFNode.readonly</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3926">index.d.ts:3926</a></li>
 						</ul>
@@ -682,12 +747,28 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="tasks" class="tsd-anchor"></a>
+					<h3>tasks</h3>
+					<div class="tsd-signature tsd-kind-icon">tasks<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfmaxdifftask.html" class="tsd-signature-type">CFMaxDiffTask</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L7099">index.d.ts:7099</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>要展示的最大差分任务列表</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="template" class="tsd-anchor"></a>
 					<h3>template</h3>
 					<div class="tsd-signature tsd-kind-icon">template<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfnodetemplate.html" class="tsd-signature-type">CFNodeTemplate</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.template</p>
+						<p>Overrides ICFNode.template</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3898">index.d.ts:3898</a></li>
 						</ul>
@@ -717,12 +798,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.node_type.html" class="tsd-signature-type">NODE_TYPE</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from ICFNode.type</p>
+						<p>Overrides ICFNode.type</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3974">index.d.ts:3974</a></li>
 						</ul>
@@ -783,12 +865,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
 					<a name="video" class="tsd-anchor"></a>
 					<h3>video</h3>
 					<div class="tsd-signature tsd-kind-icon">video<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfvideo.html" class="tsd-signature-type">CFVideo</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from CFMediaNodeMixin.video</p>
+						<p>Overrides CFMediaNodeMixin.video</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L4139">index.d.ts:4139</a></li>
 						</ul>
@@ -819,124 +902,127 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfselectimagequestion.html" class="tsd-kind-icon">CFSelect<wbr>Image<wbr>Question</a>
+						<a href="_index_d_.cfmaxdiffquestion.html" class="tsd-kind-icon">CFMax<wbr>Diff<wbr>Question</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#asterisks" class="tsd-kind-icon">asterisks</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#asterisks" class="tsd-kind-icon">asterisks</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#description" class="tsd-kind-icon">description</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#description" class="tsd-kind-icon">description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#endtime" class="tsd-kind-icon">end<wbr>Time</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#endtime" class="tsd-kind-icon">end<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#forceskipreason" class="tsd-kind-icon">force<wbr>Skip<wbr>Reason</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#images" class="tsd-kind-icon">images</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#imgtranstime" class="tsd-kind-icon">img<wbr>Trans<wbr>Time</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#imgtranstype" class="tsd-kind-icon">img<wbr>Trans<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#groupsingle" class="tsd-kind-icon">group<wbr>Single</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#itemposition" class="tsd-kind-icon">item<wbr>Position</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#layout" class="tsd-kind-icon">layout</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#hasanswer" class="tsd-kind-icon">has<wbr>Answer</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#negativedesc" class="tsd-kind-icon">negative<wbr>Desc</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#images" class="tsd-kind-icon">images</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#next" class="tsd-kind-icon">next</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#noview" class="tsd-kind-icon">no<wbr>View</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#imgposition" class="tsd-kind-icon">img<wbr>Position</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#imgtranstime" class="tsd-kind-icon">img<wbr>Trans<wbr>Time</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#imgtranstype" class="tsd-kind-icon">img<wbr>Trans<wbr>Type</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#layout" class="tsd-kind-icon">layout</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#max" class="tsd-kind-icon">max</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#min" class="tsd-kind-icon">min</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#next" class="tsd-kind-icon">next</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#noview" class="tsd-kind-icon">no<wbr>View</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#nodename" class="tsd-kind-icon">node<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#number" class="tsd-kind-icon">number</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#number" class="tsd-kind-icon">number</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#options" class="tsd-kind-icon">options</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#options" class="tsd-kind-icon">options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#otheroptions" class="tsd-kind-icon">other<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#otheroptions" class="tsd-kind-icon">other<wbr>Options</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#parent" class="tsd-kind-icon">parent</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#pageend" class="tsd-kind-icon">page<wbr>End</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#positivedesc" class="tsd-kind-icon">positive<wbr>Desc</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#pagestart" class="tsd-kind-icon">page<wbr>Start</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#prev" class="tsd-kind-icon">prev</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#parent" class="tsd-kind-icon">parent</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#readonly" class="tsd-kind-icon">readonly</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#picfittype" class="tsd-kind-icon">pic<wbr>Fit<wbr>Type</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#tasks" class="tsd-kind-icon">tasks</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#template" class="tsd-kind-icon">template</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#prev" class="tsd-kind-icon">prev</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#title" class="tsd-kind-icon">title</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#type" class="tsd-kind-icon">type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#questype" class="tsd-kind-icon">ques<wbr>Type</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#readonly" class="tsd-kind-icon">readonly</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#realtimepreview" class="tsd-kind-icon">realtime<wbr>Preview</a>
+								<a href="_index_d_.cfmaxdiffquestion.html#value" class="tsd-kind-icon">value</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#renderid" class="tsd-kind-icon">render<wbr>Id</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#selecttype" class="tsd-kind-icon">select<wbr>Type</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#starttime" class="tsd-kind-icon">start<wbr>Time</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#template" class="tsd-kind-icon">template</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#title" class="tsd-kind-icon">title</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#type" class="tsd-kind-icon">type</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#typedescription" class="tsd-kind-icon">type<wbr>Description</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#typename" class="tsd-kind-icon">type<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#value" class="tsd-kind-icon">value</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfselectimagequestion.html#video" class="tsd-kind-icon">video</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfmaxdiffquestion.html#video" class="tsd-kind-icon">video</a>
 							</li>
 						</ul>
 					</li>
