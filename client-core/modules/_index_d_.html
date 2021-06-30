@@ -394,12 +394,12 @@ class MyOption extends React.Component {
 								<p>为什么不让 UI 修改数据源:核心包中的逻辑是非常复杂的，就是为了让 UI 层能够专注于 UI 的开发，不参与答题流程的逻辑，我们才抽出的核心逻辑包，所以 UI 中对答题流程是一无所知的，就以上面选项选中的行为为例，简单想来，点击后不就是切换<code>option.selected</code>属性是<code>false</code>或<code>true</code>吗，但是真实场合下，如果是单选题，你这个选项被选中后，之前另外被选中的某个选项应该被取消选中，如果是多选题，因为选中数量已经达到多选最大限制数量，再去点击某个未选中的选项，其实是不能把该选项变为选中状态的，其他的还有选项排他，选项互斥的各种复杂逻辑，所以 UI 层即使想改，也是无法正确更改数据源上的内容的，如要正确更改，就必须把所有逻辑都考虑进来，一丝不漏，这样就把逻辑和 UI 混在一起了，就偏离了我们 UI 层和逻辑层分离的初衷.</p>
 							</blockquote>
 							<blockquote>
-								<p>抽出逻辑层以后，才能方便我们对同样的逻辑(只要导入核心包即可)建立不限个 UI 项目，定制各种各种风格的答题程序.</p>
+								<p>抽出逻辑层以后，才能方便我们对同样的逻辑(只要导入核心包即可)建立不同平台上不限个 UI 项目，定制各种各种风格的答题程序.</p>
 							</blockquote>
 						</li>
 						<li><p>怎样让 UI 层知道核心逻辑改动了数据源?</p>
 							<ul>
-								<li><p>在前面我们强调了 UI 不直接更改数据源的规则，以及 UI 和逻辑分离的原因，但是当 UI 和逻辑分离以后，UI 发生操作后委托逻辑层的的回调函数中对数据源进行更改以后，UI 是不知道的，导致数据源中数据虽然发生了变化，但是 UI 页面没有被更新</p>
+								<li><p>在前面我们强调了 UI 不直接更改数据源的规则，以及 UI 和逻辑分离的原因，但是当 UI 和逻辑分离以后，UI 发生操作后委托逻辑层的的回调函数中对数据源进行更改以后，UI 是不知道的，导致数据源中数据虽然发生了变化， UI 页面却没有被更新</p>
 								</li>
 								<li><p>为了解决这个问题，核心包中在更改任何可能影响 UI 渲染的数据时，都会在<a href="../interfaces/_index_d_.cfeventhub.html">CFEventHub</a>发出一个<code>SET_PROPS</code>事件，监听<a href="../interfaces/_index_d_.cfeventhub.html">CFEventHub</a>中的<code>SET_PROPS</code>事件，然后再驱动 UI 页面更新。</p>
 								</li>
@@ -412,6 +412,8 @@ class MyOption extends React.Component {
 						<li><p>如果你对核心包的工作流程的理解达到炉火纯青的地步，其实你也是可以在 UI 中偶尔改一下数据源的内容，因为你知道这个改动不会影响到整个答题答题流程，这个在定制 UI 中临时解决一些特殊需求时非常有用。</p>
 						</li>
 						<li><p>建议使用 typescript 构建答题客户端，这时候核心包中的类型提示说明能帮助你快速了解各个属性的用途，同时大部分不可变更的属性都加了 readonly 修饰，可以很大程度上防止你在 UI 中修改数据源上的属性</p>
+						</li>
+						<li><p>UI中调用<a href="../interfaces/_index_d_.cfuieventhandler.html">CFUIEventHandler</a>的回调函数中传入的选项，题目等对象型参数，必须是数据源中的原始对象，不能是经UI中拷贝后的副本。</p>
 						</li>
 					</ul>
 					<a href="#关于多语言翻译" id="关于多语言翻译" style="color: inherit; text-decoration: none;">
@@ -430,16 +432,22 @@ class MyOption extends React.Component {
 					<ul>
 						<li><a href="https://github.com/choice-form/os-client-taro">os-client-taro</a></li>
 					</ul>
+					<a href="#原生应用" id="原生应用" style="color: inherit; text-decoration: none;">
+						<h3>原生应用</h3>
+					</a>
+					<ul>
+						<li><a href="https://github.com/choice-form/os-client-offline">os-client-offline</a></li>
+					</ul>
 					<a href="#web-端（仅适用于-web-端）" id="web-端（仅适用于-web-端）" style="color: inherit; text-decoration: none;">
 						<h3>web 端（仅适用于 web 端）</h3>
 					</a>
 					<p>UI 答题程序可以做成一下两种方式:各自的方式和优缺点在下面列出来.</p>
 					<ul>
-						<li><p>常规的前端程序，一个常规的前端项目，自由编程.</p>
+						<li><p>常规的前端程序，一个常规的前端项目，自由编程。案列<a href="https://github.com/choice-form/q.cform.io">q.cform.io</a>结合<a href="https://github.com/choice-form/os-client-ui">os-client-ui</a></p>
 						</li>
-						<li><p>动态模板加载的组件，常规的前端项目+模板插件程序，必须按照规定的方式编程.在下面的动态模板案例中都有编程规则的说明</p>
+						<li><p>动态模板加载的组件，常规的前端项目+模板插件程序，必须按照规定的方式编程。案例：<a href="https://github.com/choice-form/os-client-live">os-client-live</a>，在下面的动态模板案例中都有编程规则的说明。</p>
 						</li>
-						<li><p>比较:</p>
+						<li><p>两者比较:</p>
 						</li>
 					</ul>
 					<table>
@@ -481,25 +489,8 @@ class MyOption extends React.Component {
 								<td>需要，参照后面的动态模板加载方案</td>
 							</tr>
 					</tbody></table>
-					<p>下面是放到 github 上的模板仓库，在这些仓库中，已经做好了基本的项目轮廓，你只需要修改其中的组件代码即可，这样可以节省很多初始的配置和架构流程.</p>
-					<p>如果你想基于某个模板仓库创建自己的新仓库，可以进入到模板仓库页面，点击<code>Use this template</code>按钮可以基于此仓库新建一个仓库，这个新建的仓库会包含和源仓库一模一样的内容，但是不会包含源仓库的提交信息.具体请参考<a href="https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template">github 的模板仓库说明</a></p>
-					<p>常规方案案例:</p>
-					<blockquote>
-						<p>各种框架或库都适合创建常会案列</p>
-					</blockquote>
-					<ul>
-						<li><a href="">基于 vue 的案例</a> 正在准备...</li>
-						<li><a href="">基于 react 的案例</a> 正在准备...</li>
-						<li><a href="https://github.com/choice-form/os-client-demo-angular">基于 angular 的案例</a></li>
-					</ul>
-					<p>动态模板方案案例:</p>
-					<blockquote>
-						<p>因为动态模板方案需要完全自行编写构建流程所以<code>angular</code>这种默认集成的大型框架不适合编写动态模板方案，而<code>react</code>，<code>vue</code>这种适合零散组装功能的库则非常适合</p>
-					</blockquote>
-					<ul>
-						<li><a href="https://github.com/choice-form/os-client-demo-react-dynamic">基于 react 的案例</a></li>
-						<li><a href="">基于 vue 的案例</a> 正在准备...</li>
-					</ul>
+					<p>因为动态模板方案需要完全自行编写构建流程所以<code>angular</code>这种默认集成的大型框架不适合编写动态模板方案，而<code>react</code>，<code>vue</code>这种适合零散组装功能的库则非常适合，如无特殊原因，我们用<code>react</code></p>
+					<p>具体的动态模板项目的需求分析和工作原理请查看<a href="https://github.com/choice-form/os-client-live">os-client-live</a>中的文档</p>
 					<a href="#项目部署和注册（仅适用于-web-端）" id="项目部署和注册（仅适用于-web-端）" style="color: inherit; text-decoration: none;">
 						<h2>项目部署和注册（仅适用于 web 端）</h2>
 					</a>
@@ -521,7 +512,7 @@ class MyOption extends React.Component {
 						<h2>调试（仅适用于 web 端）</h2>
 					</a>
 					<ul>
-						<li><p>如果你在本地开发时有已经在自己机器上有本地开发版的问卷编辑器，并且你准备用这个本地开发编辑器连接你的答题 UI 程序进项开发调试，则你什么操作也不需要做，他就会自动连通你本地的<code>http://localhost:8080</code>上的答题程序，记得要注意你本地启动的端口必须和上面准备资料中的端口一致哦.</p>
+						<li><p>如果你在本地开发时已经在自己机器上有本地开发版的问卷编辑器，并且你准备用这个本地开发编辑器连接你的答题 UI 程序进项开发调试，则你什么操作也不需要做，他就会自动连通你本地的<code>http://localhost:8080</code>上的答题程序，记得要注意你本地启动的端口必须和上面准备资料中的端口一致哦.</p>
 						</li>
 						<li><p>在本地的设计端配置<code>config/local.ts</code>中可以添加多个本地临时实验的答题端程序配置，如果你的设计端代码仓库中还没有这个文件，则启动设计端后就会出现，如果该文件报错，则删除掉该文件，重新启动一下设计端.</p>
 						</li>
@@ -782,7 +773,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFAssist<wbr>Prop<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFAssistProps</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L5922">index.d.ts:5922</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L5917">index.d.ts:5917</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -797,7 +788,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L8440">index.d.ts:8440</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L8435">index.d.ts:8435</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -846,7 +837,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AllKeyToType</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_d_.cfassistprops.html" class="tsd-signature-type">CFAssistProps</a><span class="tsd-signature-symbol">, </span><a href="_index_d_.html#cfmappingvalue" class="tsd-signature-type">CFMappingValue</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L5917">index.d.ts:5917</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L5912">index.d.ts:5912</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -861,7 +852,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfimageinnode.html" class="tsd-signature-type">CFImageInNode</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L5912">index.d.ts:5912</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L5907">index.d.ts:5907</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -876,7 +867,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOption<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ICFUploadResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L9574">index.d.ts:9574</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L9569">index.d.ts:9569</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -891,7 +882,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFParam<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFQueryParams</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L9361">index.d.ts:9361</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L9356">index.d.ts:9356</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -906,7 +897,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFProp<wbr>Set<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L1001">index.d.ts:1001</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L994">index.d.ts:994</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -964,7 +955,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFQuestion<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfvalidatedata.html" class="tsd-signature-type">CFValidateData</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfmaplocation.html" class="tsd-signature-type">CFMapLocation</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.icoords.html" class="tsd-signature-type">ICoords</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L9569">index.d.ts:9569</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L9564">index.d.ts:9564</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -979,7 +970,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">ICFRequest<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L7435">index.d.ts:7435</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L7430">index.d.ts:7430</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1016,7 +1007,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">IOption<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.icoords.html" class="tsd-signature-type">ICoords</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfmaxdiffpoint.html" class="tsd-signature-type">CFMaxDiffPoint</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L3133">index.d.ts:3133</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L3126">index.d.ts:3126</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1026,7 +1017,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">NODE_<wbr>ANSWER_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.node_type.html" class="tsd-signature-type">NODE_TYPE</a><span class="tsd-signature-symbol"> | </span><a href="../enums/_index_d_.node_answer_special_type.html" class="tsd-signature-type">NODE_ANSWER_SPECIAL_TYPE</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L2958">index.d.ts:2958</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L2951">index.d.ts:2951</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1041,7 +1032,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">OPT_<wbr>ANSWER_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.option_type.html" class="tsd-signature-type">OPTION_TYPE</a><span class="tsd-signature-symbol"> | </span><a href="../enums/_index_d_.node_type.html" class="tsd-signature-type">NODE_TYPE</a><span class="tsd-signature-symbol"> | </span><a href="../enums/_index_d_.opt_answer_special_type.html" class="tsd-signature-type">OPT_ANSWER_SPECIAL_TYPE</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/d09da84/index.d.ts#L2963">index.d.ts:2963</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/dbdfaa3/index.d.ts#L2956">index.d.ts:2956</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
