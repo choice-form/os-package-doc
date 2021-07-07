@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PIC_FIT_TYPE | @choiceform/os-client-core - v2.1.51</title>
+	<title>BG_IMG_LAYOUT | @choiceform/os-client-core - v2.1.51</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.pic_fit_type.html">PIC_FIT_TYPE</a>
+					<a href="_index_d_.bg_img_layout.html">BG_IMG_LAYOUT</a>
 				</li>
 			</ul>
-			<h1>Enumeration PIC_FIT_TYPE</h1>
+			<h1>Enumeration BG_IMG_LAYOUT</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>图片适应规则枚举</p>
+						<p>背景图片布局方式</p>
 					</div>
 				</div>
 			</section>
@@ -81,9 +81,9 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.pic_fit_type.html#all" class="tsd-kind-icon">ALL</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.pic_fit_type.html#grid_full" class="tsd-kind-icon">GRID_<wbr>FULL</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.pic_fit_type.html#none" class="tsd-kind-icon">NONE</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.bg_img_layout.html#cover" class="tsd-kind-icon">COVER</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.bg_img_layout.html#no_repeat" class="tsd-kind-icon">NO_<wbr>REPEAT</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.bg_img_layout.html#repeat" class="tsd-kind-icon">REPEAT</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,47 +92,47 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="all" class="tsd-anchor"></a>
-					<h3>ALL</h3>
-					<div class="tsd-signature tsd-kind-icon">ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;contain&quot;</span></div>
+					<a name="cover" class="tsd-anchor"></a>
+					<h3>COVER</h3>
+					<div class="tsd-signature tsd-kind-icon">COVER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;cover&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2473">index.d.ts:2473</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2087">index.d.ts:2087</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>网格包含</p>
+							<p>覆盖，同css的cover模式，不考虑大小</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="grid_full" class="tsd-anchor"></a>
-					<h3>GRID_<wbr>FULL</h3>
-					<div class="tsd-signature tsd-kind-icon">GRID_<wbr>FULL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;cover&quot;</span></div>
+					<a name="no_repeat" class="tsd-anchor"></a>
+					<h3>NO_<wbr>REPEAT</h3>
+					<div class="tsd-signature tsd-kind-icon">NO_<wbr>REPEAT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;no-repeat&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2469">index.d.ts:2469</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2095">index.d.ts:2095</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>网格撑满</p>
+							<p>不重复展示，需要考虑指定的背景图片大小</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="none" class="tsd-anchor"></a>
-					<h3>NONE</h3>
-					<div class="tsd-signature tsd-kind-icon">NONE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;&quot;</span></div>
+					<a name="repeat" class="tsd-anchor"></a>
+					<h3>REPEAT</h3>
+					<div class="tsd-signature tsd-kind-icon">REPEAT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;repeat&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2465">index.d.ts:2465</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2091">index.d.ts:2091</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>保持比例</p>
+							<p>重复展示，需要考虑指定的背景图片大小</p>
 						</div>
 					</div>
 				</section>
@@ -154,16 +154,16 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.pic_fit_type.html" class="tsd-kind-icon">PIC_<wbr>FIT_<wbr>TYPE</a>
+						<a href="_index_d_.bg_img_layout.html" class="tsd-kind-icon">BG_<wbr>IMG_<wbr>LAYOUT</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="_index_d_.pic_fit_type.html#all" class="tsd-kind-icon">ALL</a>
+								<a href="_index_d_.bg_img_layout.html#cover" class="tsd-kind-icon">COVER</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="_index_d_.pic_fit_type.html#grid_full" class="tsd-kind-icon">GRID_<wbr>FULL</a>
+								<a href="_index_d_.bg_img_layout.html#no_repeat" class="tsd-kind-icon">NO_<wbr>REPEAT</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="_index_d_.pic_fit_type.html#none" class="tsd-kind-icon">NONE</a>
+								<a href="_index_d_.bg_img_layout.html#repeat" class="tsd-kind-icon">REPEAT</a>
 							</li>
 						</ul>
 					</li>

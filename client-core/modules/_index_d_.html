@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;index.d&quot; | @choiceform/os-client-core - v2.1.50</title>
+	<title>&quot;index.d&quot; | @choiceform/os-client-core - v2.1.51</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.50</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.51</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -348,6 +348,18 @@ yarn add @choiceform/os-client-core</code></pre>
 					</ul>
 					<p>当<code>langTable</code>中包含两个或两个以上语言是就渲染语言选择列表，没有<code>langTable</code>属性，或<code>langTable</code>中包含的语言只有一个则不要渲染语言选择列表.</p>
 					<p>当答题者点击预览列表切换语言时，需要回调<a href="../interfaces/_index_d_.cfuieventhandler.html#handlelangchange">CFUIEventHandler.handleLangChange</a>方法.</p>
+					<a href="#样式与主题" id="样式与主题" style="color: inherit; text-decoration: none;">
+						<h3>样式与主题</h3>
+					</a>
+					<p>设计端中可以为问卷设置全局样式，分别通过以下方式访问到：</p>
+					<ul>
+						<li>开始页面:<a href="../interfaces/_index_d_.cfstartstate.html#theme">CFStartState.theme</a></li>
+						<li>答题页面:<a href="../interfaces/_index_d_.cfsurveystate.html#theme">CFSurveyState.theme</a></li>
+						<li>实时预览页面:<a href="../interfaces/_index_d_.cfrealtimestate.html#theme">CFRealtimeState.theme</a></li>
+						<li>领奖页面:<a href="../interfaces/_index_d_.cfrewardstate.html#theme">CFRewardState.theme</a></li>
+					</ul>
+					<p>为每个节点也能设计一些布局信息，参照<a href="../interfaces/_index_d_.cfquestion.html#layout">CFQuestion.layout</a>。</p>
+					<p>需要使用这些信息渲染页面</p>
 					<a href="#ui-与核心交互回调函数" id="ui-与核心交互回调函数" style="color: inherit; text-decoration: none;">
 						<h3>UI 与核心交互回调函数</h3>
 					</a>
@@ -519,6 +531,7 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.action_type.html" class="tsd-kind-icon">ACTION_<wbr>TYPE</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.api_req_type.html" class="tsd-kind-icon">API_<wbr>REQ_<wbr>TYPE</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.app_run_type.html" class="tsd-kind-icon">APP_<wbr>RUN_<wbr>TYPE</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.bg_img_layout.html" class="tsd-kind-icon">BG_<wbr>IMG_<wbr>LAYOUT</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.char_type.html" class="tsd-kind-icon">CHAR_<wbr>TYPE</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.data_transfer_name.html" class="tsd-kind-icon">DATA_<wbr>TRANSFER_<wbr>NAME</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.device_type.html" class="tsd-kind-icon">DEVICE_<wbr>TYPE</a></li>
@@ -545,7 +558,9 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.opt_act_type.html" class="tsd-kind-icon">OPT_<wbr>ACT_<wbr>TYPE</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.opt_align.html" class="tsd-kind-icon">OPT_<wbr>ALIGN</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.opt_answer_special_type.html" class="tsd-kind-icon">OPT_<wbr>ANSWER_<wbr>SPECIAL_<wbr>TYPE</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.opt_effect.html" class="tsd-kind-icon">OPT_<wbr>EFFECT</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.opt_map_type.html" class="tsd-kind-icon">OPT_<wbr>MAP_<wbr>TYPE</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.opt_mark.html" class="tsd-kind-icon">OPT_<wbr>MARK</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.pic_fit_type.html" class="tsd-kind-icon">PIC_<wbr>FIT_<wbr>TYPE</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.pinyin_match.html" class="tsd-kind-icon">PINYIN_<wbr>MATCH</a></li>
 								<li class="tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported"><a href="../enums/_index_d_.plugin_req.html" class="tsd-kind-icon">PLUGIN_<wbr>REQ</a></li>
@@ -676,6 +691,7 @@ class MyOption extends React.Component {
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cftasknode.html" class="tsd-kind-icon">CFTask<wbr>Node</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cftaskoption.html" class="tsd-kind-icon">CFTask<wbr>Option</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cftheme.html" class="tsd-kind-icon">CFTheme</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfthemebase.html" class="tsd-kind-icon">CFTheme<wbr>Base</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuieventhandler.html" class="tsd-kind-icon">CFUIEvent<wbr>Handler</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuicomgroups.html" class="tsd-kind-icon">CFUi<wbr>Com<wbr>Groups</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_index_d_.cfuicomponent.html" class="tsd-kind-icon">CFUi<wbr>Component</a></li>
@@ -731,7 +747,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFAssist<wbr>Prop<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFAssistProps</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L5905">index.d.ts:5905</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L5945">index.d.ts:5945</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -746,7 +762,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L8423">index.d.ts:8423</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L8454">index.d.ts:8454</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -795,7 +811,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AllKeyToType</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_d_.cfassistprops.html" class="tsd-signature-type">CFAssistProps</a><span class="tsd-signature-symbol">, </span><a href="_index_d_.html#cfmappingvalue" class="tsd-signature-type">CFMappingValue</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L5900">index.d.ts:5900</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L5940">index.d.ts:5940</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -810,7 +826,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfimageinnode.html" class="tsd-signature-type">CFImageInNode</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L5895">index.d.ts:5895</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L5935">index.d.ts:5935</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -825,7 +841,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOption<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ICFUploadResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L9557">index.d.ts:9557</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9582">index.d.ts:9582</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -840,7 +856,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFParam<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFQueryParams</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L9344">index.d.ts:9344</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9369">index.d.ts:9369</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -855,7 +871,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFProp<wbr>Set<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L982">index.d.ts:982</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L978">index.d.ts:978</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -913,7 +929,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFQuestion<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfvalidatedata.html" class="tsd-signature-type">CFValidateData</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfmaplocation.html" class="tsd-signature-type">CFMapLocation</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.icoords.html" class="tsd-signature-type">ICoords</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L9552">index.d.ts:9552</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9577">index.d.ts:9577</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -928,7 +944,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">ICFRequest<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L7418">index.d.ts:7418</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L7459">index.d.ts:7459</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -965,7 +981,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">IOption<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.icoords.html" class="tsd-signature-type">ICoords</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfmaxdiffpoint.html" class="tsd-signature-type">CFMaxDiffPoint</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L3114">index.d.ts:3114</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L3178">index.d.ts:3178</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -975,7 +991,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">NODE_<wbr>ANSWER_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.node_type.html" class="tsd-signature-type">NODE_TYPE</a><span class="tsd-signature-symbol"> | </span><a href="../enums/_index_d_.node_answer_special_type.html" class="tsd-signature-type">NODE_ANSWER_SPECIAL_TYPE</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L2939">index.d.ts:2939</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L3003">index.d.ts:3003</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -990,7 +1006,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">OPT_<wbr>ANSWER_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.option_type.html" class="tsd-signature-type">OPTION_TYPE</a><span class="tsd-signature-symbol"> | </span><a href="../enums/_index_d_.node_type.html" class="tsd-signature-type">NODE_TYPE</a><span class="tsd-signature-symbol"> | </span><a href="../enums/_index_d_.opt_answer_special_type.html" class="tsd-signature-type">OPT_ANSWER_SPECIAL_TYPE</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L2944">index.d.ts:2944</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L3008">index.d.ts:3008</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1025,6 +1041,9 @@ class MyOption extends React.Component {
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../enums/_index_d_.app_run_type.html" class="tsd-kind-icon">APP_<wbr>RUN_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../enums/_index_d_.bg_img_layout.html" class="tsd-kind-icon">BG_<wbr>IMG_<wbr>LAYOUT</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../enums/_index_d_.char_type.html" class="tsd-kind-icon">CHAR_<wbr>TYPE</a>
@@ -1105,7 +1124,13 @@ class MyOption extends React.Component {
 						<a href="../enums/_index_d_.opt_answer_special_type.html" class="tsd-kind-icon">OPT_<wbr>ANSWER_<wbr>SPECIAL_<wbr>TYPE</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../enums/_index_d_.opt_effect.html" class="tsd-kind-icon">OPT_<wbr>EFFECT</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../enums/_index_d_.opt_map_type.html" class="tsd-kind-icon">OPT_<wbr>MAP_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../enums/_index_d_.opt_mark.html" class="tsd-kind-icon">OPT_<wbr>MARK</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../enums/_index_d_.pic_fit_type.html" class="tsd-kind-icon">PIC_<wbr>FIT_<wbr>TYPE</a>
@@ -1481,6 +1506,9 @@ class MyOption extends React.Component {
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cftheme.html" class="tsd-kind-icon">CFTheme</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_index_d_.cfthemebase.html" class="tsd-kind-icon">CFTheme<wbr>Base</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_index_d_.cfuieventhandler.html" class="tsd-kind-icon">CFUIEvent<wbr>Handler</a>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PIC_FIT_TYPE | @choiceform/os-client-core - v2.1.51</title>
+	<title>OPT_MARK | @choiceform/os-client-core - v2.1.51</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.pic_fit_type.html">PIC_FIT_TYPE</a>
+					<a href="_index_d_.opt_mark.html">OPT_MARK</a>
 				</li>
 			</ul>
-			<h1>Enumeration PIC_FIT_TYPE</h1>
+			<h1>Enumeration OPT_MARK</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>图片适应规则枚举</p>
+						<p>选项展示方式</p>
 					</div>
 				</div>
 			</section>
@@ -81,9 +81,11 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.pic_fit_type.html#all" class="tsd-kind-icon">ALL</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.pic_fit_type.html#grid_full" class="tsd-kind-icon">GRID_<wbr>FULL</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.pic_fit_type.html#none" class="tsd-kind-icon">NONE</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.opt_mark.html#block" class="tsd-kind-icon">BLOCK</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.opt_mark.html#dropdown" class="tsd-kind-icon">DROPDOWN</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.opt_mark.html#normal" class="tsd-kind-icon">NORMAL</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.opt_mark.html#stretch" class="tsd-kind-icon">STRETCH</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.opt_mark.html#tabs" class="tsd-kind-icon">TABS</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,47 +94,79 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="all" class="tsd-anchor"></a>
-					<h3>ALL</h3>
-					<div class="tsd-signature tsd-kind-icon">ALL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;contain&quot;</span></div>
+					<a name="block" class="tsd-anchor"></a>
+					<h3>BLOCK</h3>
+					<div class="tsd-signature tsd-kind-icon">BLOCK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;block&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2473">index.d.ts:2473</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2049">index.d.ts:2049</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>网格包含</p>
+							<p>块状选项</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="grid_full" class="tsd-anchor"></a>
-					<h3>GRID_<wbr>FULL</h3>
-					<div class="tsd-signature tsd-kind-icon">GRID_<wbr>FULL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;cover&quot;</span></div>
+					<a name="dropdown" class="tsd-anchor"></a>
+					<h3>DROPDOWN</h3>
+					<div class="tsd-signature tsd-kind-icon">DROPDOWN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;dropdown&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2469">index.d.ts:2469</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2058">index.d.ts:2058</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>网格撑满</p>
+							<p>只有级联题使用，
+							展示成下拉列表嵌套选择</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-					<a name="none" class="tsd-anchor"></a>
-					<h3>NONE</h3>
-					<div class="tsd-signature tsd-kind-icon">NONE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;&quot;</span></div>
+					<a name="normal" class="tsd-anchor"></a>
+					<h3>NORMAL</h3>
+					<div class="tsd-signature tsd-kind-icon">NORMAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;normal&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2465">index.d.ts:2465</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2045">index.d.ts:2045</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>保持比例</p>
+							<p>常规方式展现</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+					<a name="stretch" class="tsd-anchor"></a>
+					<h3>STRETCH</h3>
+					<div class="tsd-signature tsd-kind-icon">STRETCH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;stretch&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2063">index.d.ts:2063</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>只有级联题使用
+							展示成普通选项嵌套选择</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+					<a name="tabs" class="tsd-anchor"></a>
+					<h3>TABS</h3>
+					<div class="tsd-signature tsd-kind-icon">TABS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;tabs&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L2053">index.d.ts:2053</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>只有级联题使用，展示成tab嵌套选择</p>
 						</div>
 					</div>
 				</section>
@@ -154,16 +188,22 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.pic_fit_type.html" class="tsd-kind-icon">PIC_<wbr>FIT_<wbr>TYPE</a>
+						<a href="_index_d_.opt_mark.html" class="tsd-kind-icon">OPT_<wbr>MARK</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="_index_d_.pic_fit_type.html#all" class="tsd-kind-icon">ALL</a>
+								<a href="_index_d_.opt_mark.html#block" class="tsd-kind-icon">BLOCK</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="_index_d_.pic_fit_type.html#grid_full" class="tsd-kind-icon">GRID_<wbr>FULL</a>
+								<a href="_index_d_.opt_mark.html#dropdown" class="tsd-kind-icon">DROPDOWN</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
-								<a href="_index_d_.pic_fit_type.html#none" class="tsd-kind-icon">NONE</a>
+								<a href="_index_d_.opt_mark.html#normal" class="tsd-kind-icon">NORMAL</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+								<a href="_index_d_.opt_mark.html#stretch" class="tsd-kind-icon">STRETCH</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+								<a href="_index_d_.opt_mark.html#tabs" class="tsd-kind-icon">TABS</a>
 							</li>
 						</ul>
 					</li>

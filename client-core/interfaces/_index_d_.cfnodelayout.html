@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFNodeLayout | @choiceform/os-client-core - v2.1.50</title>
+	<title>CFNodeLayout | @choiceform/os-client-core - v2.1.51</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.50</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.51</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -70,15 +70,25 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>节点布局数据结构</p>
+						<p>每个节点自有布局与主题信息数据结构</p>
 					</div>
+					<p>其中来自于<a href="_index_d_.cfthemebase.html">CFThemeBase</a>中的属性是和<a href="_index_d_.cftheme.html">CFTheme</a>是一样的。</p>
+					<p>关于这些属性：</p>
+					<p>可以看成是对<a href="_index_d_.cftheme.html">CFTheme</a>全属性的一个覆盖，
+						当自己没有指定属性时，就是用全局的属性，
+					当自己有指定属性时，就使用自己的属性</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFNodeLayout</span>
+						<a href="_index_d_.cfthemebase.html" class="tsd-signature-type">CFThemeBase</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">CFNodeLayout</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -89,19 +99,26 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#bgimageheight" class="tsd-kind-icon">bg<wbr>Image<wbr>Height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#bgimageurl" class="tsd-kind-icon">bg<wbr>Image<wbr>Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#bgimagewidth" class="tsd-kind-icon">bg<wbr>Image<wbr>Width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#bglayout" class="tsd-kind-icon">bg<wbr>Layout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#bgopacity" class="tsd-kind-icon">bg<wbr>Opacity</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#bgsize" class="tsd-kind-icon">bg<wbr>Size</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#columns" class="tsd-kind-icon">columns</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#descfontsize" class="tsd-kind-icon">desc<wbr>Font<wbr>Size</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#descfontweight" class="tsd-kind-icon">desc<wbr>Font<wbr>Weight</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#descfontsize" class="tsd-kind-icon">desc<wbr>Font<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#descfontweight" class="tsd-kind-icon">desc<wbr>Font<wbr>Weight</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#desktopcolumns" class="tsd-kind-icon">desktop<wbr>Columns</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#fontsize" class="tsd-kind-icon">font<wbr>Size</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#fontweight" class="tsd-kind-icon">font<wbr>Weight</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#fontsize" class="tsd-kind-icon">font<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#fontweight" class="tsd-kind-icon">font<wbr>Weight</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#horizontalalign" class="tsd-kind-icon">horizontal<wbr>Align</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#iconfontsize" class="tsd-kind-icon">icon<wbr>Font<wbr>Size</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#mobilecolumns" class="tsd-kind-icon">mobile<wbr>Columns</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#optalign" class="tsd-kind-icon">opt<wbr>Align</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#optfontsize" class="tsd-kind-icon">opt<wbr>Font<wbr>Size</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#optfontweight" class="tsd-kind-icon">opt<wbr>Font<wbr>Weight</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#optfontsize" class="tsd-kind-icon">opt<wbr>Font<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#optfontweight" class="tsd-kind-icon">opt<wbr>Font<wbr>Weight</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#optmark" class="tsd-kind-icon">opt<wbr>Mark</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#optmarkold" class="tsd-kind-icon">opt<wbr>Mark<wbr>Old</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#responsivecolumn" class="tsd-kind-icon">responsive<wbr>Column</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfnodelayout.html#verticalalign" class="tsd-kind-icon">vertical<wbr>Align</a></li>
 							</ul>
@@ -111,13 +128,111 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="bgimageheight" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Image<wbr>Height</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Image<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#bgimageheight">bgImageHeight</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9988">index.d.ts:9988</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>背景图片原始高度</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="bgimageurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Image<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Image<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#bgimageurl">bgImageUrl</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9984">index.d.ts:9984</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>背景图片地址</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="bgimagewidth" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Image<wbr>Width</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Image<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#bgimagewidth">bgImageWidth</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9992">index.d.ts:9992</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>背景图片原始宽度</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="bglayout" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Layout</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Layout<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.bg_img_layout.html" class="tsd-signature-type">BG_IMG_LAYOUT</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#bglayout">bgLayout</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9970">index.d.ts:9970</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>背景图片展示方式</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="bgopacity" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Opacity</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Opacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#bgopacity">bgOpacity</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9980">index.d.ts:9980</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>背景图片透明度</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="bgsize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#bgsize">bgSize</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9976">index.d.ts:9976</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>背景图片大小
+								如果<a href="_index_d_.cfthemebase.html#bglayout">CFThemeBase.bgLayout</a>是cover的时候，这个值将会是cover，因为cover模式下是无视大小的，
+							其他时候，是以百分比的或者px为单位的尺寸大小</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="columns" class="tsd-anchor"></a>
 					<h3>columns</h3>
 					<div class="tsd-signature tsd-kind-icon">columns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4929">index.d.ts:4929</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L4960">index.d.ts:4960</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -126,13 +241,14 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="descfontsize" class="tsd-anchor"></a>
 					<h3>desc<wbr>Font<wbr>Size</h3>
 					<div class="tsd-signature tsd-kind-icon">desc<wbr>Font<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#descfontsize">descFontSize</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4909">index.d.ts:4909</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L10004">index.d.ts:10004</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -141,13 +257,14 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="descfontweight" class="tsd-anchor"></a>
 					<h3>desc<wbr>Font<wbr>Weight</h3>
 					<div class="tsd-signature tsd-kind-icon">desc<wbr>Font<wbr>Weight<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.font_weight.html" class="tsd-signature-type">FONT_WEIGHT</a></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#descfontweight">descFontWeight</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4913">index.d.ts:4913</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L10008">index.d.ts:10008</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -162,22 +279,25 @@
 					<div class="tsd-signature tsd-kind-icon">desktop<wbr>Columns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4953">index.d.ts:4953</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L4993">index.d.ts:4993</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>自适应控制列数时桌面设备上的列数</p>
+							<p>自适应控制列数时桌面设备上的列数，
+								如果有该属性，则PC端上优先使用该属性决定列数，
+							如果没有则使用<a href="_index_d_.cfnodelayout.html#columns">CFNodeLayout.columns</a>决定列数</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="fontsize" class="tsd-anchor"></a>
 					<h3>font<wbr>Size</h3>
 					<div class="tsd-signature tsd-kind-icon">font<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#fontsize">fontSize</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4901">index.d.ts:4901</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9996">index.d.ts:9996</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,13 +306,14 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="fontweight" class="tsd-anchor"></a>
 					<h3>font<wbr>Weight</h3>
 					<div class="tsd-signature tsd-kind-icon">font<wbr>Weight<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.font_weight.html" class="tsd-signature-type">FONT_WEIGHT</a></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#fontweight">fontWeight</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4905">index.d.ts:4905</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L10000">index.d.ts:10000</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -207,7 +328,7 @@
 					<div class="tsd-signature tsd-kind-icon">horizontal<wbr>Align<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.horizontal_align.html" class="tsd-signature-type">HORIZONTAL_ALIGN</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4941">index.d.ts:4941</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L4977">index.d.ts:4977</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -222,7 +343,7 @@
 					<div class="tsd-signature tsd-kind-icon">icon<wbr>Font<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4957">index.d.ts:4957</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L4997">index.d.ts:4997</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -237,12 +358,14 @@
 					<div class="tsd-signature tsd-kind-icon">mobile<wbr>Columns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4949">index.d.ts:4949</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L4987">index.d.ts:4987</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>自适应控制列数时移动设备上的列数</p>
+							<p>自适应控制列数时移动设备上的列数，
+								如果有该属性，则移动端上优先使用该属性决定列数，
+							如果没有则使用<a href="_index_d_.cfnodelayout.html#columns">CFNodeLayout.columns</a>决定列数</p>
 						</div>
 					</div>
 				</section>
@@ -252,7 +375,7 @@
 					<div class="tsd-signature tsd-kind-icon">opt<wbr>Align<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.opt_align.html" class="tsd-signature-type">OPT_ALIGN</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4925">index.d.ts:4925</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L4956">index.d.ts:4956</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -261,13 +384,14 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="optfontsize" class="tsd-anchor"></a>
 					<h3>opt<wbr>Font<wbr>Size</h3>
 					<div class="tsd-signature tsd-kind-icon">opt<wbr>Font<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#optfontsize">optFontSize</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4917">index.d.ts:4917</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L10012">index.d.ts:10012</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -276,13 +400,14 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="optfontweight" class="tsd-anchor"></a>
 					<h3>opt<wbr>Font<wbr>Weight</h3>
 					<div class="tsd-signature tsd-kind-icon">opt<wbr>Font<wbr>Weight<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.font_weight.html" class="tsd-signature-type">FONT_WEIGHT</a></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfthemebase.html">CFThemeBase</a>.<a href="_index_d_.cfthemebase.html#optfontweight">optFontWeight</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4921">index.d.ts:4921</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L10016">index.d.ts:10016</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -294,16 +419,36 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="optmark" class="tsd-anchor"></a>
 					<h3>opt<wbr>Mark</h3>
-					<div class="tsd-signature tsd-kind-icon">opt<wbr>Mark<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">opt<wbr>Mark<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.opt_mark.html" class="tsd-signature-type">OPT_MARK</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4933">index.d.ts:4933</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L4964">index.d.ts:4964</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>选项标记方式</p>
+							<p>选项标记与展示方式</p>
 						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="optmarkold" class="tsd-anchor"></a>
+					<h3>opt<wbr>Mark<wbr>Old</h3>
+					<div class="tsd-signature tsd-kind-icon">opt<wbr>Mark<wbr>Old<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L4969">index.d.ts:4969</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>选项标记与展示方式</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>为老UI准备的别名，不要使用</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
@@ -312,7 +457,7 @@
 					<div class="tsd-signature tsd-kind-icon">responsive<wbr>Column<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4945">index.d.ts:4945</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L4981">index.d.ts:4981</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -327,7 +472,7 @@
 					<div class="tsd-signature tsd-kind-icon">vertical<wbr>Align<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.vertical_align.html" class="tsd-signature-type">VERTICAL_ALIGN</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/1c3919a/index.d.ts#L4937">index.d.ts:4937</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L4973">index.d.ts:4973</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -356,22 +501,40 @@
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.cfnodelayout.html" class="tsd-kind-icon">CFNode<wbr>Layout</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfnodelayout.html#bgimageheight" class="tsd-kind-icon">bg<wbr>Image<wbr>Height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfnodelayout.html#bgimageurl" class="tsd-kind-icon">bg<wbr>Image<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfnodelayout.html#bgimagewidth" class="tsd-kind-icon">bg<wbr>Image<wbr>Width</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfnodelayout.html#bglayout" class="tsd-kind-icon">bg<wbr>Layout</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfnodelayout.html#bgopacity" class="tsd-kind-icon">bg<wbr>Opacity</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfnodelayout.html#bgsize" class="tsd-kind-icon">bg<wbr>Size</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#columns" class="tsd-kind-icon">columns</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#descfontsize" class="tsd-kind-icon">desc<wbr>Font<wbr>Size</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#descfontweight" class="tsd-kind-icon">desc<wbr>Font<wbr>Weight</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#desktopcolumns" class="tsd-kind-icon">desktop<wbr>Columns</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#fontsize" class="tsd-kind-icon">font<wbr>Size</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#fontweight" class="tsd-kind-icon">font<wbr>Weight</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
@@ -386,14 +549,17 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#optalign" class="tsd-kind-icon">opt<wbr>Align</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#optfontsize" class="tsd-kind-icon">opt<wbr>Font<wbr>Size</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#optfontweight" class="tsd-kind-icon">opt<wbr>Font<wbr>Weight</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#optmark" class="tsd-kind-icon">opt<wbr>Mark</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfnodelayout.html#optmarkold" class="tsd-kind-icon">opt<wbr>Mark<wbr>Old</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfnodelayout.html#responsivecolumn" class="tsd-kind-icon">responsive<wbr>Column</a>

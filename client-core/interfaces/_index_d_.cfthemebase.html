@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFEnvOptions | @choiceform/os-client-core - v2.1.51</title>
+	<title>CFThemeBase | @choiceform/os-client-core - v2.1.51</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfenvoptions.html">CFEnvOptions</a>
+					<a href="_index_d_.cfthemebase.html">CFThemeBase</a>
 				</li>
 			</ul>
-			<h1>Interface CFEnvOptions</h1>
+			<h1>Interface CFThemeBase</h1>
 		</div>
 	</div>
 </header>
@@ -70,10 +70,11 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>客户端初始化环境相关配置
-							由于纯核心包可以运行在不同的平台，而不同的平台对于数据请求，缓存控制，文件上传等操作的处理是不同的
-							纯核心包不会准备这些模块，但是核心包需要调用这些模块，所以不同平台中使用该核心包时。
-						需要提供给核心包自己平台的相关处理方法</p>
+						<p>全局主题<a href="_index_d_.cftheme.html">CFTheme</a>和节点自有主题信息<a href="_index_d_.cfnodelayout.html">CFNodeLayout</a>共通继承的数据基础，
+							其中关于背景图片相关的属性，如果全局有背景图片，
+							但是某个节点没有设置背景图片，
+							则这个节点也使用全局的背景图片，如果这个节点设置了背景图片。
+						则这个节点使用自己的背景图片。</p>
 					</div>
 				</div>
 			</section>
@@ -81,7 +82,15 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFEnvOptions</span>
+						<span class="target">CFThemeBase</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="_index_d_.cfnodelayout.html" class="tsd-signature-type">CFNodeLayout</a>
+							</li>
+							<li>
+								<a href="_index_d_.cftheme.html" class="tsd-signature-type">CFTheme</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -92,15 +101,18 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvoptions.html#app" class="tsd-kind-icon">app</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvoptions.html#auth" class="tsd-kind-icon">auth</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvoptions.html#dev" class="tsd-kind-icon">dev</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvoptions.html#hook" class="tsd-kind-icon">hook</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvoptions.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvoptions.html#network" class="tsd-kind-icon">network</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvoptions.html#storage" class="tsd-kind-icon">storage</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvoptions.html#system" class="tsd-kind-icon">system</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvoptions.html#ui" class="tsd-kind-icon">ui</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#bgimageheight" class="tsd-kind-icon">bg<wbr>Image<wbr>Height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#bgimageurl" class="tsd-kind-icon">bg<wbr>Image<wbr>Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#bgimagewidth" class="tsd-kind-icon">bg<wbr>Image<wbr>Width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#bglayout" class="tsd-kind-icon">bg<wbr>Layout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#bgopacity" class="tsd-kind-icon">bg<wbr>Opacity</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#bgsize" class="tsd-kind-icon">bg<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#descfontsize" class="tsd-kind-icon">desc<wbr>Font<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#descfontweight" class="tsd-kind-icon">desc<wbr>Font<wbr>Weight</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#fontsize" class="tsd-kind-icon">font<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#fontweight" class="tsd-kind-icon">font<wbr>Weight</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#optfontsize" class="tsd-kind-icon">opt<wbr>Font<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfthemebase.html#optfontweight" class="tsd-kind-icon">opt<wbr>Font<wbr>Weight</a></li>
 							</ul>
 						</section>
 					</div>
@@ -109,148 +121,184 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="app" class="tsd-anchor"></a>
-					<h3>app</h3>
-					<div class="tsd-signature tsd-kind-icon">app<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfenvapp.html" class="tsd-signature-type">CFEnvApp</a></div>
+					<a name="bgimageheight" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Image<wbr>Height</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Image<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L892">index.d.ts:892</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9988">index.d.ts:9988</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>访问地址相关环境信息，详情请看子属性说明</p>
+							<p>背景图片原始高度</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="auth" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> auth</h3>
-					<div class="tsd-signature tsd-kind-icon">auth<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfenvauth.html" class="tsd-signature-type">CFEnvAuth</a></div>
+					<a name="bgimageurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Image<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Image<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L908">index.d.ts:908</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9984">index.d.ts:9984</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>授权相关的配置，不同的运行平台有不同的账户系统，所以授权方式也不一样。
-								如果你构建的答题端有用户系统需要授权则这这个规则进行配置。
-								如果无账户系统，也不需授权则无需配置这个规则
-							详情请看子属性说明</p>
+							<p>背景图片地址</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="dev" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> dev</h3>
-					<div class="tsd-signature tsd-kind-icon">dev<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfenvdev.html" class="tsd-signature-type">CFEnvDev</a></div>
+					<a name="bgimagewidth" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Image<wbr>Width</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Image<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L888">index.d.ts:888</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9992">index.d.ts:9992</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>开发测试辅助配置，一般无需配置，
-							详情请看子属性说明</p>
+							<p>背景图片原始宽度</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="hook" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hook</h3>
-					<div class="tsd-signature tsd-kind-icon">hook<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfenvhook.html" class="tsd-signature-type">CFEnvHook</a></div>
+					<a name="bglayout" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Layout</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Layout<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.bg_img_layout.html" class="tsd-signature-type">BG_IMG_LAYOUT</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L919">index.d.ts:919</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9970">index.d.ts:9970</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>答题流程中的钩子
-							你可以按需实现这些钩子达到在流程中的对应时机添加自定义的处理，详情请看子属性说明</p>
+							<p>背景图片展示方式</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="name" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.env_name.html" class="tsd-signature-type">ENV_NAME</a></div>
+					<a name="bgopacity" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Opacity</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Opacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L883">index.d.ts:883</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9980">index.d.ts:9980</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>环境名称
-								根据你的客户端性质从规定的环境名称中<a href="../enums/_index_d_.env_name.html">ENV_NAME</a>选一个，
-								无法确定就用默认值other
-							默认：other</p>
+							<p>背景图片透明度</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="network" class="tsd-anchor"></a>
-					<h3>network</h3>
-					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfenvnetwork.html" class="tsd-signature-type">CFEnvNetWork</a></div>
+					<a name="bgsize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bg<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">bg<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L901">index.d.ts:901</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9976">index.d.ts:9976</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>网络连接和数据加载相关信息
-							这个配置项很关键，其中部分内容必须配置，详情请见子属性的说明</p>
+							<p>背景图片大小
+								如果<a href="_index_d_.cfthemebase.html#bglayout">CFThemeBase.bgLayout</a>是cover的时候，这个值将会是cover，因为cover模式下是无视大小的，
+							其他时候，是以百分比的或者px为单位的尺寸大小</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="storage" class="tsd-anchor"></a>
-					<h3>storage</h3>
-					<div class="tsd-signature tsd-kind-icon">storage<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfenvstorage.html" class="tsd-signature-type">CFEnvStorage</a></div>
+					<a name="descfontsize" class="tsd-anchor"></a>
+					<h3>desc<wbr>Font<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">desc<wbr>Font<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L914">index.d.ts:914</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L10004">index.d.ts:10004</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>缓存支持，告诉核心包如果在你的平台上操作缓存数据，
-							相当于浏览器中的localstorage功能，详情请看子属性说明</p>
+							<p>描述字体大小</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="system" class="tsd-anchor"></a>
-					<h3>system</h3>
-					<div class="tsd-signature tsd-kind-icon">system<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfenvsystem.html" class="tsd-signature-type">CFEnvSystem</a></div>
+					<a name="descfontweight" class="tsd-anchor"></a>
+					<h3>desc<wbr>Font<wbr>Weight</h3>
+					<div class="tsd-signature tsd-kind-icon">desc<wbr>Font<wbr>Weight<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.font_weight.html" class="tsd-signature-type">FONT_WEIGHT</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L896">index.d.ts:896</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L10008">index.d.ts:10008</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>运行相关信息，详情请见子属性的说明</p>
+							<p>描述字体粗细</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="ui" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ui</h3>
-					<div class="tsd-signature tsd-kind-icon">ui<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfenvui.html" class="tsd-signature-type">CFEnvUi</a></div>
+					<a name="fontsize" class="tsd-anchor"></a>
+					<h3>font<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">font<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L924">index.d.ts:924</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9996">index.d.ts:9996</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>支持动态UI相关的配置
-							如果你构建的答题端不支持动态UI则可不指定这个配置，详情请看子属性说明</p>
+							<p>问题字体大小</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="fontweight" class="tsd-anchor"></a>
+					<h3>font<wbr>Weight</h3>
+					<div class="tsd-signature tsd-kind-icon">font<wbr>Weight<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.font_weight.html" class="tsd-signature-type">FONT_WEIGHT</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L10000">index.d.ts:10000</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>问题字体粗细</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="optfontsize" class="tsd-anchor"></a>
+					<h3>opt<wbr>Font<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">opt<wbr>Font<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L10012">index.d.ts:10012</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>选项字体大小</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="optfontweight" class="tsd-anchor"></a>
+					<h3>opt<wbr>Font<wbr>Weight</h3>
+					<div class="tsd-signature tsd-kind-icon">opt<wbr>Font<wbr>Weight<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.font_weight.html" class="tsd-signature-type">FONT_WEIGHT</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L10016">index.d.ts:10016</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>选项字体粗细</p>
 						</div>
 					</div>
 				</section>
@@ -272,34 +320,43 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfenvoptions.html" class="tsd-kind-icon">CFEnv<wbr>Options</a>
+						<a href="_index_d_.cfthemebase.html" class="tsd-kind-icon">CFTheme<wbr>Base</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvoptions.html#app" class="tsd-kind-icon">app</a>
+								<a href="_index_d_.cfthemebase.html#bgimageheight" class="tsd-kind-icon">bg<wbr>Image<wbr>Height</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvoptions.html#auth" class="tsd-kind-icon">auth</a>
+								<a href="_index_d_.cfthemebase.html#bgimageurl" class="tsd-kind-icon">bg<wbr>Image<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvoptions.html#dev" class="tsd-kind-icon">dev</a>
+								<a href="_index_d_.cfthemebase.html#bgimagewidth" class="tsd-kind-icon">bg<wbr>Image<wbr>Width</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvoptions.html#hook" class="tsd-kind-icon">hook</a>
+								<a href="_index_d_.cfthemebase.html#bglayout" class="tsd-kind-icon">bg<wbr>Layout</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvoptions.html#name" class="tsd-kind-icon">name</a>
+								<a href="_index_d_.cfthemebase.html#bgopacity" class="tsd-kind-icon">bg<wbr>Opacity</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvoptions.html#network" class="tsd-kind-icon">network</a>
+								<a href="_index_d_.cfthemebase.html#bgsize" class="tsd-kind-icon">bg<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvoptions.html#storage" class="tsd-kind-icon">storage</a>
+								<a href="_index_d_.cfthemebase.html#descfontsize" class="tsd-kind-icon">desc<wbr>Font<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvoptions.html#system" class="tsd-kind-icon">system</a>
+								<a href="_index_d_.cfthemebase.html#descfontweight" class="tsd-kind-icon">desc<wbr>Font<wbr>Weight</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvoptions.html#ui" class="tsd-kind-icon">ui</a>
+								<a href="_index_d_.cfthemebase.html#fontsize" class="tsd-kind-icon">font<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfthemebase.html#fontweight" class="tsd-kind-icon">font<wbr>Weight</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfthemebase.html#optfontsize" class="tsd-kind-icon">opt<wbr>Font<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfthemebase.html#optfontweight" class="tsd-kind-icon">opt<wbr>Font<wbr>Weight</a>
 							</li>
 						</ul>
 					</li>
