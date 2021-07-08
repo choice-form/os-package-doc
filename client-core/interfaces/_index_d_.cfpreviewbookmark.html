@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFPreviewHistory | @choiceform/os-client-core - v2.1.51</title>
+	<title>CFPreviewBookmark | @choiceform/os-client-core - v2.1.52</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.51</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.52</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfpreviewhistory.html">CFPreviewHistory</a>
+					<a href="_index_d_.cfpreviewbookmark.html">CFPreviewBookmark</a>
 				</li>
 			</ul>
-			<h1>Interface CFPreviewHistory</h1>
+			<h1>Interface CFPreviewBookmark</h1>
 		</div>
 	</div>
 </header>
@@ -73,16 +73,18 @@
 						<p>预览历史工具</p>
 					</div>
 					<p>该工具可以用来恢复之前的预览书签,快速跳回到之前预览过的某道题.</p>
-					<p><a href="_index_d_.cfpreviewhistory.html#histories">CFPreviewHistory.histories</a>中包含了之前保存的所有预览书签
+					<p><a href="_index_d_.cfpreviewbookmark.html#bookmarks">CFPreviewBookmark.bookmarks</a>中包含了之前保存的所有预览书签
 						需要使用一个列表将这些书签渲染出来,每个列表项中显示书签名称,一个删除按钮,一个导入按钮
-						点击删除按钮后调用<a href="_index_d_.cfpreviewhistory.html#handledeletehistory">CFPreviewHistory.handleDeleteHistory</a>方法,可以删除该书签
-					点击导入按钮后调用<a href="_index_d_.cfpreviewhistory.html#handleimporthistory">CFPreviewHistory.handleImportHistory</a>方法,可以导入该书签,导入书签后会恢复到该书签最后预览的地方</p>
-					<p>导入书签需要一定的时间,在该时间内<a href="_index_d_.cfpreviewhistory.html#loading">CFPreviewHistory.loading</a>属性会变成true,同时<a href="_index_d_.cfpreviewhistory.html#progress">CFPreviewHistory.progress</a>会是一个一直
+						点击删除按钮后调用<a href="_index_d_.cfpreviewbookmark.html#deletebookmark">CFPreviewBookmark.deleteBookmark</a>方法,可以删除该书签
+					点击导入按钮后调用<a href="_index_d_.cfpreviewbookmark.html#applybookmark">CFPreviewBookmark.applyBookmark</a>方法,可以加载该书签,加载书签后会恢复到该书签最后预览的地方</p>
+					<p>导入书签需要一定的时间,在该时间内<a href="_index_d_.cfpreviewbookmark.html#loading">CFPreviewBookmark.loading</a>属性会变成true,同时<a href="_index_d_.cfpreviewbookmark.html#progress">CFPreviewBookmark.progress</a>会是一个一直
 					变化的导入进度,导入的时候,可以渲染这个导入中的状态以及导入进度.</p>
 					<p>需要渲染一个输入框一个保存按钮,允许用户输入一个书签命并且点击保存书签
-					点击保存后,需要调用<a href="_index_d_.cfpreviewhistory.html#handlesavehistories">CFPreviewHistory.handleSaveHistories</a>方法,会将当前的预览进度保存为一个书签,以供后续使用.</p>
-					<p>在<a href="_index_d_.cfpreviewhistory.html#nodelist">CFPreviewHistory.nodeList</a>保存了当前所有预览过的题目,需要将这些题目渲染成一个列表.
-						列表中的每一项显示题目的编号和一个调转按钮,点击改跳转按钮后调用<a href="_index_d_.cfpreviewhistory.html#handlepicknode">CFPreviewHistory.handlePickNode</a>方法
+					点击保存后,需要调用<a href="_index_d_.cfpreviewbookmark.html#savebookmarks">CFPreviewBookmark.saveBookmarks</a>方法,会将当前的预览进度保存为一个书签,以供后续使用.</p>
+					<p><a href="_index_d_.cfpreviewbookmark.html#uploadbookmark">CFPreviewBookmark.uploadBookmark</a>用来从某个书签文件导入书签</p>
+					<p><a href="_index_d_.cfpreviewbookmark.html#downloadbookmark">CFPreviewBookmark.downloadBookmark</a>用来将某个书签导出为文件</p>
+					<p>在<a href="_index_d_.cfpreviewbookmark.html#nodelist">CFPreviewBookmark.nodeList</a>保存了当前所有预览过的题目,需要将这些题目渲染成一个列表.
+						列表中的每一项显示题目的编号和一个调转按钮,点击改跳转按钮后调用<a href="_index_d_.cfpreviewbookmark.html#jumptonode">CFPreviewBookmark.jumpToNode</a>方法
 					之后将会调转到该题.</p>
 				</div>
 			</section>
@@ -90,7 +92,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFPreviewHistory</span>
+						<span class="target">CFPreviewBookmark</span>
 					</li>
 				</ul>
 			</section>
@@ -101,19 +103,21 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewhistory.html#histories" class="tsd-kind-icon">histories</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewhistory.html#loading" class="tsd-kind-icon">loading</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewhistory.html#nodelist" class="tsd-kind-icon">node<wbr>List</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewhistory.html#progress" class="tsd-kind-icon">progress</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewbookmark.html#bookmarks" class="tsd-kind-icon">bookmarks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewbookmark.html#loading" class="tsd-kind-icon">loading</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewbookmark.html#nodelist" class="tsd-kind-icon">node<wbr>List</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewbookmark.html#progress" class="tsd-kind-icon">progress</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewhistory.html#handledeletehistory" class="tsd-kind-icon">handle<wbr>Delete<wbr>History</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewhistory.html#handleimporthistory" class="tsd-kind-icon">handle<wbr>Import<wbr>History</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewhistory.html#handlepicknode" class="tsd-kind-icon">handle<wbr>Pick<wbr>Node</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewhistory.html#handlesavehistories" class="tsd-kind-icon">handle<wbr>Save<wbr>Histories</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewbookmark.html#applybookmark" class="tsd-kind-icon">apply<wbr>Bookmark</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewbookmark.html#deletebookmark" class="tsd-kind-icon">delete<wbr>Bookmark</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewbookmark.html#downloadbookmark" class="tsd-kind-icon">download<wbr>Bookmark</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewbookmark.html#jumptonode" class="tsd-kind-icon">jump<wbr>ToNode</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewbookmark.html#savebookmarks" class="tsd-kind-icon">save<wbr>Bookmarks</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfpreviewbookmark.html#uploadbookmark" class="tsd-kind-icon">upload<wbr>Bookmark</a></li>
 							</ul>
 						</section>
 					</div>
@@ -122,12 +126,12 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="histories" class="tsd-anchor"></a>
-					<h3>histories</h3>
-					<div class="tsd-signature tsd-kind-icon">histories<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfpreviewhistorydata.html" class="tsd-signature-type">CFPreviewHistoryData</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="bookmarks" class="tsd-anchor"></a>
+					<h3>bookmarks</h3>
+					<div class="tsd-signature tsd-kind-icon">bookmarks<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfpreviewbookmarkdata.html" class="tsd-signature-type">CFPreviewBookmarkData</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9009">index.d.ts:9009</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L9008">index.d.ts:9008</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -142,7 +146,7 @@
 					<div class="tsd-signature tsd-kind-icon">loading<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L8997">index.d.ts:8997</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L8996">index.d.ts:8996</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,7 +161,7 @@
 					<div class="tsd-signature tsd-kind-icon">node<wbr>List<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9005">index.d.ts:9005</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L9004">index.d.ts:9004</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -172,7 +176,7 @@
 					<div class="tsd-signature tsd-kind-icon">progress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9001">index.d.ts:9001</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L9000">index.d.ts:9000</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -185,58 +189,27 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="handledeletehistory" class="tsd-anchor"></a>
-					<h3>handle<wbr>Delete<wbr>History</h3>
+					<a name="applybookmark" class="tsd-anchor"></a>
+					<h3>apply<wbr>Bookmark</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Delete<wbr>History<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfpreviewhistorydata.html" class="tsd-signature-type">CFPreviewHistoryData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">apply<wbr>Bookmark<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfpreviewbookmarkdata.html" class="tsd-signature-type">CFPreviewBookmarkData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9026">index.d.ts:9026</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L9019">index.d.ts:9019</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>点击删除某个预览历史项时的回调</p>
+									<p>取到某个书签</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>item: <a href="_index_d_.cfpreviewhistorydata.html" class="tsd-signature-type">CFPreviewHistoryData</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>预览历史项</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="handleimporthistory" class="tsd-anchor"></a>
-					<h3>handle<wbr>Import<wbr>History</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Import<wbr>History<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfpreviewhistorydata.html" class="tsd-signature-type">CFPreviewHistoryData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9020">index.d.ts:9020</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>点击加载某个预览历史项时的回调</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>item: <a href="_index_d_.cfpreviewhistorydata.html" class="tsd-signature-type">CFPreviewHistoryData</a></h5>
+									<h5>item: <a href="_index_d_.cfpreviewbookmarkdata.html" class="tsd-signature-type">CFPreviewBookmarkData</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>预览历史项</p>
 									</div>
@@ -247,21 +220,80 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="handlepicknode" class="tsd-anchor"></a>
-					<h3>handle<wbr>Pick<wbr>Node</h3>
+					<a name="deletebookmark" class="tsd-anchor"></a>
+					<h3>delete<wbr>Bookmark</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Pick<wbr>Node<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Bookmark<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfpreviewbookmarkdata.html" class="tsd-signature-type">CFPreviewBookmarkData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9015">index.d.ts:9015</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L9025">index.d.ts:9025</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>点击当前预览进度中某个节点时的回调
+									<p>删除某个预览历史书签</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <a href="_index_d_.cfpreviewbookmarkdata.html" class="tsd-signature-type">CFPreviewBookmarkData</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>预览历史项</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="downloadbookmark" class="tsd-anchor"></a>
+					<h3>download<wbr>Bookmark</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">download<wbr>Bookmark<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfpreviewbookmarkdata.html" class="tsd-signature-type">CFPreviewBookmarkData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L9038">index.d.ts:9038</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>导出某个书签下载到为文件系统</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <a href="_index_d_.cfpreviewbookmarkdata.html" class="tsd-signature-type">CFPreviewBookmarkData</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="jumptonode" class="tsd-anchor"></a>
+					<h3>jump<wbr>ToNode</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">jump<wbr>ToNode<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfquestion.html" class="tsd-signature-type">CFQuestion</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L9014">index.d.ts:9014</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>跳转当前预览进度中某个节点时
 									可以回到该节点</p>
 								</div>
 							</div>
@@ -279,16 +311,16 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="handlesavehistories" class="tsd-anchor"></a>
-					<h3>handle<wbr>Save<wbr>Histories</h3>
+					<a name="savebookmarks" class="tsd-anchor"></a>
+					<h3>save<wbr>Bookmarks</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Save<wbr>Histories<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">save<wbr>Bookmarks<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/9c7d091/index.d.ts#L9031">index.d.ts:9031</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L9030">index.d.ts:9030</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -306,6 +338,28 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="uploadbookmark" class="tsd-anchor"></a>
+					<h3>upload<wbr>Bookmark</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">upload<wbr>Bookmark<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L9034">index.d.ts:9034</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>选择从文件系统上传导入书签</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -327,31 +381,37 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfpreviewhistory.html" class="tsd-kind-icon">CFPreview<wbr>History</a>
+						<a href="_index_d_.cfpreviewbookmark.html" class="tsd-kind-icon">CFPreview<wbr>Bookmark</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewhistory.html#histories" class="tsd-kind-icon">histories</a>
+								<a href="_index_d_.cfpreviewbookmark.html#bookmarks" class="tsd-kind-icon">bookmarks</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewhistory.html#loading" class="tsd-kind-icon">loading</a>
+								<a href="_index_d_.cfpreviewbookmark.html#loading" class="tsd-kind-icon">loading</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewhistory.html#nodelist" class="tsd-kind-icon">node<wbr>List</a>
+								<a href="_index_d_.cfpreviewbookmark.html#nodelist" class="tsd-kind-icon">node<wbr>List</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewhistory.html#progress" class="tsd-kind-icon">progress</a>
+								<a href="_index_d_.cfpreviewbookmark.html#progress" class="tsd-kind-icon">progress</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewhistory.html#handledeletehistory" class="tsd-kind-icon">handle<wbr>Delete<wbr>History</a>
+								<a href="_index_d_.cfpreviewbookmark.html#applybookmark" class="tsd-kind-icon">apply<wbr>Bookmark</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewhistory.html#handleimporthistory" class="tsd-kind-icon">handle<wbr>Import<wbr>History</a>
+								<a href="_index_d_.cfpreviewbookmark.html#deletebookmark" class="tsd-kind-icon">delete<wbr>Bookmark</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewhistory.html#handlepicknode" class="tsd-kind-icon">handle<wbr>Pick<wbr>Node</a>
+								<a href="_index_d_.cfpreviewbookmark.html#downloadbookmark" class="tsd-kind-icon">download<wbr>Bookmark</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfpreviewhistory.html#handlesavehistories" class="tsd-kind-icon">handle<wbr>Save<wbr>Histories</a>
+								<a href="_index_d_.cfpreviewbookmark.html#jumptonode" class="tsd-kind-icon">jump<wbr>ToNode</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfpreviewbookmark.html#savebookmarks" class="tsd-kind-icon">save<wbr>Bookmarks</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_index_d_.cfpreviewbookmark.html#uploadbookmark" class="tsd-kind-icon">upload<wbr>Bookmark</a>
 							</li>
 						</ul>
 					</li>
