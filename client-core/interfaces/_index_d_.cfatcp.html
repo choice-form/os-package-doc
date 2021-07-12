@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFAtcp | @choiceform/os-client-core - v2.1.52</title>
+	<title>CFAtcp | @choiceform/os-client-core - v2.1.55</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.52</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.55</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -101,13 +101,13 @@
 					<a name="getautocompletedata" class="tsd-anchor"></a>
 					<h3>get<wbr>Auto<wbr>Complete<wbr>Data</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Auto<wbr>Complete<wbr>Data<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, existed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, source<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfautocpltdata.html" class="tsd-signature-type">CFAutoCpltData</a><span class="tsd-signature-symbol">[]</span>, rule<span class="tsd-signature-symbol">: </span><a href="../enums/_index_d_.pinyin_match.html" class="tsd-signature-type">PINYIN_MATCH</a>, isSimple<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_index_d_.cfautocptlresult.html" class="tsd-signature-type">CFAutoCptlResult</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Auto<wbr>Complete<wbr>Data<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, existed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, source<span class="tsd-signature-symbol">: </span><a href="_index_d_.cfautocpltdata.html" class="tsd-signature-type">CFAutoCpltData</a><span class="tsd-signature-symbol">[]</span>, rule<span class="tsd-signature-symbol">: </span><a href="../enums/_index_d_.pinyin_match.html" class="tsd-signature-type">PINYIN_MATCH</a>, strict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_index_d_.cfautocptlresult.html" class="tsd-signature-type">CFAutoCptlResult</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6e85d95/index.d.ts#L5062">index.d.ts:5062</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/541b802/index.d.ts#L5075">index.d.ts:5075</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -142,7 +142,10 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> isSimple: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> strict: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>是否严格匹配，严格匹配值检查是否完全相等，不进行模糊匹配和拼音推测匹配</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_index_d_.cfautocptlresult.html" class="tsd-signature-type">CFAutoCptlResult</a></h4>
