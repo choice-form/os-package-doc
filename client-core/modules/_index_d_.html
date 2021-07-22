@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;index.d&quot; | @choiceform/os-client-core - v2.1.57</title>
+	<title>&quot;index.d&quot; | @choiceform/os-client-core - v2.1.58</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.57</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.58</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -72,6 +72,10 @@
 						</a>
 					</div>
 					<p>该模块承载了巧思问卷答题客户端的核心逻辑流程，基于此模块可以单独开发自制的答题页面客户端，使用本模块以后，除了遵从一些启动配置和接口交互之外，只需专注于开发每个题型的 UI 即可，下面会详细介绍如何基于此模块创建自己的答题客户端应用。</p>
+					<p>使用了该核心包后，在控制台打印核心包的数据时，会发现里面的页面，节点，选项等对象上都有很多属性，但是你们如果要使用其中的属性来渲染页面，则切记一定要使用文档中提及到的属性，如果文档中没有提及到的属性，即使在控制台看到了它的内容好像是和设计端设置的内容一样，也不能使用，因为这些属性是核心包内部使用的，没有在文档中暴露给UI，是因为它们可能会发生变化，如果后续移除了，UI就没法正常渲染了。</p>
+					<p>已经暴露给UI的属性是不会轻易更改的，如果发生更改会升级核心包大版本。</p>
+					<p>如果你从代码编辑器中定位到这些属性的定义处，会发现它们都被@ignore标注了，说明它们不应该被UI使用。</p>
+					<p>如果发现某个属性UI要使用到却没有出现在文档中（即被@ignore了）则在os-client-core中提issue。</p>
 					<a href="#安装核心逻辑依赖包" id="安装核心逻辑依赖包" style="color: inherit; text-decoration: none;">
 						<h2>安装核心逻辑依赖包</h2>
 					</a>
@@ -761,7 +765,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFAssist<wbr>Prop<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFAssistProps</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L5983">index.d.ts:5983</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L5994">index.d.ts:5994</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -776,7 +780,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFEvent<wbr>Hub<wbr>Cb<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L8501">index.d.ts:8501</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L8510">index.d.ts:8510</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -825,7 +829,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AllKeyToType</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_d_.cfassistprops.html" class="tsd-signature-type">CFAssistProps</a><span class="tsd-signature-symbol">, </span><a href="_index_d_.html#cfmappingvalue" class="tsd-signature-type">CFMappingValue</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L5978">index.d.ts:5978</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L5989">index.d.ts:5989</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -840,7 +844,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFMapping<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfimageinnode.html" class="tsd-signature-type">CFImageInNode</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L5973">index.d.ts:5973</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L5984">index.d.ts:5984</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -855,7 +859,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFOption<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ICFUploadResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L9645">index.d.ts:9645</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L9654">index.d.ts:9654</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -870,7 +874,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFParam<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">keyof CFQueryParams</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L9432">index.d.ts:9432</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L9441">index.d.ts:9441</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -885,7 +889,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFProp<wbr>Set<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L994">index.d.ts:994</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L1002">index.d.ts:1002</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -943,7 +947,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">CFQuestion<wbr>Input<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfvalidatedata.html" class="tsd-signature-type">CFValidateData</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfmaplocation.html" class="tsd-signature-type">CFMapLocation</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.icoords.html" class="tsd-signature-type">ICoords</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L9640">index.d.ts:9640</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L9649">index.d.ts:9649</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -958,7 +962,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">ICFRequest<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L7506">index.d.ts:7506</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L7515">index.d.ts:7515</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -995,7 +999,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">IOption<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.icoords.html" class="tsd-signature-type">ICoords</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_index_d_.cfmaxdiffpoint.html" class="tsd-signature-type">CFMaxDiffPoint</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L3201">index.d.ts:3201</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L3217">index.d.ts:3217</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1005,7 +1009,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">NODE_<wbr>ANSWER_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.node_type.html" class="tsd-signature-type">NODE_TYPE</a><span class="tsd-signature-symbol"> | </span><a href="../enums/_index_d_.node_answer_special_type.html" class="tsd-signature-type">NODE_ANSWER_SPECIAL_TYPE</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L3026">index.d.ts:3026</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L3042">index.d.ts:3042</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1020,7 +1024,7 @@ class MyOption extends React.Component {
 					<div class="tsd-signature tsd-kind-icon">OPT_<wbr>ANSWER_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.option_type.html" class="tsd-signature-type">OPTION_TYPE</a><span class="tsd-signature-symbol"> | </span><a href="../enums/_index_d_.node_type.html" class="tsd-signature-type">NODE_TYPE</a><span class="tsd-signature-symbol"> | </span><a href="../enums/_index_d_.opt_answer_special_type.html" class="tsd-signature-type">OPT_ANSWER_SPECIAL_TYPE</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/161a083/index.d.ts#L3031">index.d.ts:3031</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L3047">index.d.ts:3047</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
