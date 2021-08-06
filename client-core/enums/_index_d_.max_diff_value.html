@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFMaxDiffPoint | @choiceform/os-client-core - v2.1.58</title>
+	<title>MAX_DIFF_VALUE | @choiceform/os-client-core - v2.1.58</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_index_d_.html">&quot;index.d&quot;</a>
 				</li>
 				<li>
-					<a href="_index_d_.cfmaxdiffpoint.html">CFMaxDiffPoint</a>
+					<a href="_index_d_.max_diff_value.html">MAX_DIFF_VALUE</a>
 				</li>
 			</ul>
-			<h1>Interface CFMaxDiffPoint</h1>
+			<h1>Enumeration MAX_DIFF_VALUE</h1>
 		</div>
 	</div>
 </header>
@@ -70,61 +70,69 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>最大差分评分分布</p>
+						<p>最大差分值枚举</p>
 					</div>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">CFMaxDiffPoint</span>
-					</li>
-				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Properties</h3>
+							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfmaxdiffpoint.html#negative" class="tsd-kind-icon">negative</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfmaxdiffpoint.html#positive" class="tsd-kind-icon">positive</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.max_diff_value.html#negative" class="tsd-kind-icon">NEGATIVE</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.max_diff_value.html#none" class="tsd-kind-icon">NONE</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="_index_d_.max_diff_value.html#positive" class="tsd-kind-icon">POSITIVE</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+				<h2>Enumeration members</h2>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
 					<a name="negative" class="tsd-anchor"></a>
-					<h3>negative</h3>
-					<div class="tsd-signature tsd-kind-icon">negative<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<h3>NEGATIVE</h3>
+					<div class="tsd-signature tsd-kind-icon">NEGATIVE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;-1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L5897">index.d.ts:5897</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b17810b/index.d.ts#L3064">index.d.ts:3064</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>负向评分汇总</p>
+							<p>负向评价值</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="positive" class="tsd-anchor"></a>
-					<h3>positive</h3>
-					<div class="tsd-signature tsd-kind-icon">positive<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+					<a name="none" class="tsd-anchor"></a>
+					<h3>NONE</h3>
+					<div class="tsd-signature tsd-kind-icon">NONE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/3386c70/index.d.ts#L5893">index.d.ts:5893</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b17810b/index.d.ts#L3060">index.d.ts:3060</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>正向评分汇总</p>
+							<p>未评价值</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+					<a name="positive" class="tsd-anchor"></a>
+					<h3>POSITIVE</h3>
+					<div class="tsd-signature tsd-kind-icon">POSITIVE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;1</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/b17810b/index.d.ts#L3056">index.d.ts:3056</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>正向评价值</p>
 						</div>
 					</div>
 				</section>
@@ -145,14 +153,17 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_d_.cfmaxdiffpoint.html" class="tsd-kind-icon">CFMax<wbr>Diff<wbr>Point</a>
+					<li class="current tsd-kind-enum tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_d_.max_diff_value.html" class="tsd-kind-icon">MAX_<wbr>DIFF_<wbr>VALUE</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfmaxdiffpoint.html#negative" class="tsd-kind-icon">negative</a>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+								<a href="_index_d_.max_diff_value.html#negative" class="tsd-kind-icon">NEGATIVE</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfmaxdiffpoint.html#positive" class="tsd-kind-icon">positive</a>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+								<a href="_index_d_.max_diff_value.html#none" class="tsd-kind-icon">NONE</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+								<a href="_index_d_.max_diff_value.html#positive" class="tsd-kind-icon">POSITIVE</a>
 							</li>
 						</ul>
 					</li>
