@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LANG_ZH_CN | @choiceform/os-client-core - v2.1.58</title>
+	<title>LANG_ZH_CN | @choiceform/os-client-core - v3.0.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.58</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v3.0.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -105,7 +105,7 @@
     total: <span class="hljs-string">"权重总值{total}"</span>,
     relax: <span class="hljs-string">"各项打分之和可以小于权重总值"</span>,
     strict: <span class="hljs-string">"各项打分之和必须等于权重总值"</span>,
-    totalLiminMin: <span class="hljs-string">"各项分值总和不能小于{min}分"</span>
+    totalLimitMin: <span class="hljs-string">"各项分值总和不能小于{min}分"</span>
   },
   previewBookmark: {
     existed: <span class="hljs-string">"该书签已经存在"</span>,
@@ -176,14 +176,15 @@
     valueLimit: <span class="hljs-string">"请输入{min}到{max}之间的数值"</span>,
     needEmail: <span class="hljs-string">"请输入有效的Email"</span>,
     needPhoneNumber: <span class="hljs-string">"请输入有效的手机号码"</span>,
-    needZipcode: <span class="hljs-string">"请输入有效的邮编。"</span>,
+    needZipCode: <span class="hljs-string">"请输入有效的邮编。"</span>,
     needUrl: <span class="hljs-string">"请输入有效的网址。"</span>,
     required: <span class="hljs-string">"{text}: 该项必须填写。"</span>,
     inputLimitMin: <span class="hljs-string">"至少输入{min}项。"</span>,
     onlyAllow: <span class="hljs-string">"仅限:{text}"</span>,
     <span class="hljs-built_in">number</span>: <span class="hljs-string">"数字"</span>,
     alphabet: <span class="hljs-string">"英文字母"</span>,
-    chinese: <span class="hljs-string">"中文"</span>
+    chinese: <span class="hljs-string">"中文"</span>,
+    atcpLabelOnly: <span class="hljs-string">"只能输入提示的标签"</span>
   },
   rank: {
     name: <span class="hljs-string">"排序"</span>,
@@ -223,7 +224,7 @@
   reward: {
     <span class="hljs-keyword">get</span>: <span class="hljs-string">"领取奖励"</span>,
     yuan: <span class="hljs-string">"元"</span>,
-    wechatName: <span class="hljs-string">"微信名称示例"</span>
+    weChatName: <span class="hljs-string">"微信名称示例"</span>
   },
   global: {
     upgrade: <span class="hljs-string">"数据版本发生变化，到设计端重新保存后才能继续访问。"</span>,

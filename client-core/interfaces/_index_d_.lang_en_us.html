@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LANG_EN_US | @choiceform/os-client-core - v2.1.58</title>
+	<title>LANG_EN_US | @choiceform/os-client-core - v3.0.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v2.1.58</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v3.0.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -105,7 +105,7 @@
     total: <span class="hljs-string">"Total Weight: {total}"</span>,
     relax: <span class="hljs-string">"Total score may be less than the total weight"</span>,
     strict: <span class="hljs-string">"Total score must be equal to the total weight"</span>,
-    totalLiminMin: <span class="hljs-string">"Total score should not less than {min, plural, =0 { no points} one {# point} other {# points} }"</span>
+    totalLimitMin: <span class="hljs-string">"Total score should not less than {min, plural, =0 { no points} one {# point} other {# points} }"</span>
   },
   previewBookmark: {
     existed: <span class="hljs-string">"This bookmark already exists"</span>,
@@ -132,7 +132,7 @@
   },
   cascade: {
     name: <span class="hljs-string">"Cascade Menu"</span>,
-    selectSome: <span class="hljs-string">"Please selece {amount, plural, =0 {no options} one {# option} other {# options} }"</span>,
+    selectSome: <span class="hljs-string">"Please select {amount, plural, =0 {no options} one {# option} other {# options} }"</span>,
     selectBetween: <span class="hljs-string">"Please select as least {min, plural, =0 {no options} one {# option} other {# options} } at most {max, plural, =0 {no options} one {# option} other {# options} }"</span>
   },
   menu: {
@@ -165,14 +165,15 @@
     valueLimit: <span class="hljs-string">"Please enter a number between {min} and {max}."</span>,
     needEmail: <span class="hljs-string">"Please enter a valid email address."</span>,
     needPhoneNumber: <span class="hljs-string">"Please enter a valid phone number."</span>,
-    needZipcode: <span class="hljs-string">"Please enter a valid postcode."</span>,
+    needZipCode: <span class="hljs-string">"Please enter a valid postcode."</span>,
     needUrl: <span class="hljs-string">"Please enter valid a URL address."</span>,
     required: <span class="hljs-string">"Please answer this question: {text}."</span>,
     inputLimitMin: <span class="hljs-string">"Please enter at least {min, plural, one {# item} other {# items} }"</span>,
     onlyAllow: <span class="hljs-string">"Please enter a valid {text}"</span>,
     <span class="hljs-built_in">number</span>: <span class="hljs-string">"number"</span>,
     alphabet: <span class="hljs-string">"alphabet"</span>,
-    chinese: <span class="hljs-string">"chinese character"</span>
+    chinese: <span class="hljs-string">"chinese character"</span>,
+    atcpLabelOnly: <span class="hljs-string">"Can only input popup label"</span>
   },
   rank: {
     name: <span class="hljs-string">"Ranking"</span>,
@@ -216,7 +217,7 @@
   reward: {
     <span class="hljs-keyword">get</span>: <span class="hljs-string">"Get Reward"</span>,
     yuan: <span class="hljs-string">"yuan"</span>,
-    wechatName: <span class="hljs-string">"Wechat demo name"</span>
+    weChatName: <span class="hljs-string">"WeChat demo name"</span>
   },
   preview: {
     noMessage: <span class="hljs-string">"No message service in preview mode"</span>,
@@ -230,7 +231,7 @@
     timeOver: <span class="hljs-string">"Time over"</span>,
     answerRequired: <span class="hljs-string">"This question requires an answer."</span>,
     antiAgain: <span class="hljs-string">"You have already taken this survey."</span>,
-    authFailed: <span class="hljs-string">"Wechat authorization failed"</span>,
+    authFailed: <span class="hljs-string">"WeChat authorization failed"</span>,
     downloadError: <span class="hljs-string">"Download data failed, please make sure the network is good and try again."</span>,
     start: <span class="hljs-string">"Start"</span>,
     next: <span class="hljs-string">"Next"</span>,
@@ -239,7 +240,7 @@
     done: <span class="hljs-string">"Done"</span>,
     notTarget: <span class="hljs-string">"Sorry, you do not meet the qualifications for this survey. We sincerely thank you and appreciate your time, dedication, and continued participation in our online surveys!"</span>,
     backTest: <span class="hljs-string">"Back Test"</span>,
-    invalidUrl: <span class="hljs-string">"Ivalid survey url"</span>,
+    invalidUrl: <span class="hljs-string">"Invalid survey url"</span>,
     tryAgain: <span class="hljs-string">"Operation failed,try again later."</span>,
     clientError: <span class="hljs-string">"The survey terminal specified in the questionnaire is inconsistent with this terminal. Please confirm whether your link address is correct."</span>
   },
