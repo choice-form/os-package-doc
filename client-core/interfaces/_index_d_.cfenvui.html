@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFEnvUi | @choiceform/os-client-core - v3.0.0</title>
+	<title>CFEnvUi | @choiceform/os-client-core - v3.1.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v3.0.0</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v3.1.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -89,7 +89,6 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#getimagesize" class="tsd-kind-icon">get<wbr>Image<wbr>Size</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#initnodetemplate" class="tsd-kind-icon">init<wbr>Node<wbr>Template</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#loaduitemplates" class="tsd-kind-icon">load<wbr>UiTemplates</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfenvui.html#setglobalstyle" class="tsd-kind-icon">set<wbr>Global<wbr>Style</a></li>
@@ -102,46 +101,6 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="getimagesize" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> get<wbr>Image<wbr>Size</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Image<wbr>Size<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_index_d_.cfimagesize.html" class="tsd-signature-type">CFImageSize</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L643">index.d.ts:643</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>获取某个url地址的图片的高宽信息的方法，有些答题端需要对图片进行布局控制，
-										需要事先知道图片的尺寸，核心在生成图片对象的时候会尝试调用这个方法添加尺寸信息。
-										无此需要的终端可以不配置这个方法。
-									如果不配置则使用默认值:无论什么图片都返回固定大小100*100</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>deprecated</dt>
-									<dd><p>这个方法目前只有老UI在使用，只为兼容性暂时保留，不要使用，后续将移除，
-										这个信息应该由UI自主获取并使用，无需核心包插手</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>url: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>图片地址</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_index_d_.cfimagesize.html" class="tsd-signature-type">CFImageSize</a><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="initnodetemplate" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> init<wbr>Node<wbr>Template</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
@@ -151,7 +110,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L652">index.d.ts:652</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L627">index.d.ts:627</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -196,7 +155,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L664">index.d.ts:664</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L639">index.d.ts:639</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -235,7 +194,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L625">index.d.ts:625</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L610">index.d.ts:610</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -267,7 +226,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L633">index.d.ts:633</a></li>
+									<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L618">index.d.ts:618</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -316,9 +275,6 @@
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.cfenvui.html" class="tsd-kind-icon">CFEnv<wbr>Ui</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfenvui.html#getimagesize" class="tsd-kind-icon">get<wbr>Image<wbr>Size</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfenvui.html#initnodetemplate" class="tsd-kind-icon">init<wbr>Node<wbr>Template</a>
 							</li>

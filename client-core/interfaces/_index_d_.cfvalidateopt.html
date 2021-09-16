@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFValidateOpt | @choiceform/os-client-core - v3.0.0</title>
+	<title>CFValidateOpt | @choiceform/os-client-core - v3.1.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v3.0.0</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v3.1.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -81,7 +81,7 @@
 						<a href="_index_d_.cfoption.html" class="tsd-signature-type">CFOption</a>
 					</li>
 					<li>
-						<a href="_index_d_.icfvalidateoptbase.html" class="tsd-signature-type">ICFValidateOptBase</a>
+						<a href="_index_d_.cfvalidateoptbase.html" class="tsd-signature-type">CFValidateOptBase</a>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">CFValidateOpt</span>
@@ -104,8 +104,6 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateopt.html#errormessage" class="tsd-kind-icon">error<wbr>Message</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateopt.html#filltype" class="tsd-kind-icon">fill<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateopt.html#grade" class="tsd-kind-icon">grade</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateopt.html#icon" class="tsd-kind-icon">icon</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateopt.html#inputrule" class="tsd-kind-icon">input<wbr>Rule</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateopt.html#inputtype" class="tsd-kind-icon">input<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateopt.html#isother" class="tsd-kind-icon">is<wbr>Other</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfvalidateopt.html#itemsmax" class="tsd-kind-icon">items<wbr>Max</a></li>
@@ -137,7 +135,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#assistvalue">assistValue</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5425">index.d.ts:5425</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5259">index.d.ts:5259</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -151,15 +149,15 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> complete<wbr>Groups</h3>
 					<div class="tsd-signature tsd-kind-icon">complete<wbr>Groups<span class="tsd-signature-symbol">:</span> <a href="_index_d_.cfautocpltdata.html" class="tsd-signature-type">CFAutoCpltData</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#completegroups">completeGroups</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#completegroups">completeGroups</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5308">index.d.ts:5308</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5142">index.d.ts:5142</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>自动提示数据
-								当<a href="_index_d_.cfoption.html#inputrule">CFOption.inputRule</a>是<code>autoComplete</code>需要提供一个自动提示输入控件
+								当<a href="_index_d_.cfvalidateoptbase.html#filltype">CFValidateOptBase.fillType</a>是<code>auto_complete</code>需要提供一个自动提示输入控件
 								该控件在输入任何字符内容时,这些字符并不是答案，而是搜索字符
 								需要使用从@choiceform/os-client-core/dist/support/atcp中提供的<a href="_index_d_.cfatcp.html#getautocompletedata">CFAtcp.getAutoCompleteData</a>方法
 								来搜索能匹配的提示项目，然后这些项目的name和icon属性显示为一个个标签到一个自动提示列表中供用户选择
@@ -176,7 +174,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#customdata">customData</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5416">index.d.ts:5416</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5250">index.d.ts:5250</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -195,7 +193,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#disabled">disabled</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5421">index.d.ts:5421</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5255">index.d.ts:5255</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -212,7 +210,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#errormessage">errorMessage</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5481">index.d.ts:5481</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5310">index.d.ts:5310</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -227,9 +225,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fill<wbr>Type</h3>
 					<div class="tsd-signature tsd-kind-icon">fill<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.fill_type.html" class="tsd-signature-type">FILL_TYPE</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#filltype">fillType</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#filltype">fillType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5320">index.d.ts:5320</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5154">index.d.ts:5154</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -246,9 +244,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> grade</h3>
 					<div class="tsd-signature tsd-kind-icon">grade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#grade">grade</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#grade">grade</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5223">index.d.ts:5223</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5057">index.d.ts:5057</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -261,86 +259,13 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="icon" class="tsd-anchor"></a>
-					<h3>icon</h3>
-					<div class="tsd-signature tsd-kind-icon">icon<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#icon">icon</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5430">index.d.ts:5430</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>图标，代表不同选项的形象的图标，UI中可照此渲染</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>deprecated</dt>
-							<dd><p>仅为了兼容老UI暂时保留，新UI不要使用，在新的规则中，新UI可以自己判断情况，自由渲染</p>
-							</dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-					<a name="inputrule" class="tsd-anchor"></a>
-					<h3>input<wbr>Rule</h3>
-					<div class="tsd-signature tsd-kind-icon">input<wbr>Rule<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.input_rule.html" class="tsd-signature-type">INPUT_RULE</a></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#inputrule">inputRule</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5562">index.d.ts:5562</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<dl class="tsd-comment-tags">
-							<dt>deprecated</dt>
-							<dd><p>不要使用，仅为老UI暂时保留，后续会移除, 新UI改用<a href="_index_d_.icfvalidateoptbase.html#filltype">ICFValidateOptBase.fillType</a>
-									填空选项的输入规则,有些输入方式需要提供输入控件支持
-									有些则只需要提供普通输入框
-									所有方式都可以根据类型显示对应的提示(图标?,文字? UI自己决定)
-								参照<a href="../enums/_index_d_.input_rule.html">INPUT_RULE</a>，有以下几中方式：</p>
-								<ul>
-									<li><p>输入字符,UI提供普通的输入框即可</p>
-									</li>
-									<li><p>输入日期,UI需要提供日期输入控件</p>
-									</li>
-									<li><p>输入日期范围,UI需要提供日期输入范围控件</p>
-									</li>
-									<li><p>输入邮箱地址,UI提供普通输入框即可</p>
-									</li>
-									<li><p>输入小数,UI需要提供数值输入控件</p>
-									</li>
-									<li><p>输入整数,UI需要提供数值输入控件,且仅允许输入整数</p>
-									</li>
-									<li><p>输入手机号码,UI仅需提供普通输入框</p>
-									</li>
-									<li><p>输入邮政编码,UI仅需提供普通输入框</p>
-									</li>
-									<li><p>输入时间范围,UI需要提供输入时间范围的控件</p>
-									</li>
-									<li><p>输入时间间隔,UI需要提供输入时间间隔的控件</p>
-									</li>
-									<li><p>输入网址,UI提供普通输入框即可</p>
-									</li>
-									<li><p>自动提示输入模式,UI需要提供自动提示输入控件,提示内容参照<a href="_index_d_.icfvalidateoptbase.html#completegroups">ICFValidateOptBase.completeGroups</a></p>
-									</li>
-									<li><p>下拉列表方式输入,UI需要提供一个下拉列表选择空间,列表中要展示的项目参照<a href="_index_d_.icfvalidateoptbase.html#selectlist">ICFValidateOptBase.selectList</a></p>
-									</li>
-									<li><p>无要求,UI提供简单的输入框即可</p>
-									</li>
-								</ul>
-							</dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 					<a name="inputtype" class="tsd-anchor"></a>
 					<h3>input<wbr>Type</h3>
 					<div class="tsd-signature tsd-kind-icon">input<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/_index_d_.opt_act_type.html" class="tsd-signature-type">OPT_ACT_TYPE</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#inputtype">inputType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5509">index.d.ts:5509</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5338">index.d.ts:5338</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -360,7 +285,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#isother">isOther</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5517">index.d.ts:5517</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5346">index.d.ts:5346</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -374,9 +299,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> items<wbr>Max</h3>
 					<div class="tsd-signature tsd-kind-icon">items<wbr>Max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#itemsmax">itemsMax</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#itemsmax">itemsMax</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5236">index.d.ts:5236</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5070">index.d.ts:5070</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -390,9 +315,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> items<wbr>Min</h3>
 					<div class="tsd-signature tsd-kind-icon">items<wbr>Min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#itemsmin">itemsMin</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#itemsmin">itemsMin</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5240">index.d.ts:5240</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5074">index.d.ts:5074</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -408,7 +333,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#mapping">mapping</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5442">index.d.ts:5442</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5271">index.d.ts:5271</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -424,7 +349,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#placeholder">placeholder</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5522">index.d.ts:5522</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5351">index.d.ts:5351</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -439,9 +364,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> prev<wbr>Cplt<wbr>Lang</h3>
 					<div class="tsd-signature tsd-kind-icon">prev<wbr>Cplt<wbr>Lang<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#prevcpltlang">prevCpltLang</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#prevcpltlang">prevCpltLang</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5255">index.d.ts:5255</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5089">index.d.ts:5089</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -463,7 +388,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#renderid">renderId</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5476">index.d.ts:5476</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5305">index.d.ts:5305</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -478,15 +403,15 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> select<wbr>List</h3>
 					<div class="tsd-signature tsd-kind-icon">select<wbr>List<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#selectlist">selectList</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#selectlist">selectList</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5277">index.d.ts:5277</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5111">index.d.ts:5111</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>供以选择的文字列表
-								当<a href="_index_d_.cfoption.html#inputrule">CFOption.inputRule</a>是<code>dropdown</code>需要提供一个下拉列表选择空间
+								当<a href="_index_d_.cfvalidateoptbase.html#filltype">CFValidateOptBase.fillType</a>是<code>list_select</code>需要提供一个下拉列表选择空间
 								空间中药展示的项目列表文字,就使用该属性的文字列表
 								当选中某一个项时,就将该项的文字当做输入内容
 							可以选择多项,每项之间用半角逗号分隔.</p>
@@ -500,7 +425,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#selected">selected</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5467">index.d.ts:5467</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5296">index.d.ts:5296</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -516,9 +441,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> simple<wbr>Cplt</h3>
 					<div class="tsd-signature tsd-kind-icon">simple<wbr>Cplt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#simplecplt">simpleCplt</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#simplecplt">simpleCplt</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5294">index.d.ts:5294</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5128">index.d.ts:5128</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -534,7 +459,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#text">text</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5451">index.d.ts:5451</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5280">index.d.ts:5280</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -549,9 +474,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> time<wbr>Grade</h3>
 					<div class="tsd-signature tsd-kind-icon">time<wbr>Grade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#timegrade">timeGrade</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#timegrade">timeGrade</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5269">index.d.ts:5269</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5103">index.d.ts:5103</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -573,7 +498,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from ICFPort.uuid</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5199">index.d.ts:5199</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5033">index.d.ts:5033</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -587,9 +512,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> validate<wbr>Max</h3>
 					<div class="tsd-signature tsd-kind-icon">validate<wbr>Max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#validatemax">validateMax</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#validatemax">validateMax</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5281">index.d.ts:5281</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5115">index.d.ts:5115</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -603,9 +528,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> validate<wbr>Min</h3>
 					<div class="tsd-signature tsd-kind-icon">validate<wbr>Min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_index_d_.icfvalidateoptbase.html">ICFValidateOptBase</a>.<a href="_index_d_.icfvalidateoptbase.html#validatemin">validateMin</a></p>
+						<p>Inherited from <a href="_index_d_.cfvalidateoptbase.html">CFValidateOptBase</a>.<a href="_index_d_.cfvalidateoptbase.html#validatemin">validateMin</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5285">index.d.ts:5285</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5119">index.d.ts:5119</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -621,7 +546,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_index_d_.cfoption.html">CFOption</a>.<a href="_index_d_.cfoption.html#value">value</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L5457">index.d.ts:5457</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L5286">index.d.ts:5286</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -672,12 +597,6 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfvalidateopt.html#grade" class="tsd-kind-icon">grade</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfvalidateopt.html#icon" class="tsd-kind-icon">icon</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
-								<a href="_index_d_.cfvalidateopt.html#inputrule" class="tsd-kind-icon">input<wbr>Rule</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
 								<a href="_index_d_.cfvalidateopt.html#inputtype" class="tsd-kind-icon">input<wbr>Type</a>

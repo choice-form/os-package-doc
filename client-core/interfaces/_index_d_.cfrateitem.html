@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CFRateItem | @choiceform/os-client-core - v3.0.0</title>
+	<title>CFRateItem | @choiceform/os-client-core - v3.1.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@choiceform/os-client-core - v3.0.0</a>
+					<a href="../index.html" class="title">@choiceform/os-client-core - v3.1.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -78,7 +78,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CFRateItem</span>
+						<a href="_index_d_.cfcustomiconowner.html" class="tsd-signature-type">CFCustomIconOwner</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">CFRateItem</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -89,10 +94,11 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrateitem.html#activeiconurl" class="tsd-kind-icon">active<wbr>Icon<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfrateitem.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrateitem.html#icon" class="tsd-kind-icon">icon</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported"><a href="_index_d_.cfrateitem.html#normaliconurl" class="tsd-kind-icon">normal<wbr>Icon<wbr>Url</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfrateitem.html#text" class="tsd-kind-icon">text</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfrateitem.html#url" class="tsd-kind-icon">url</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfrateitem.html#urlactive" class="tsd-kind-icon">url<wbr>Active</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfrateitem.html#uuid" class="tsd-kind-icon">uuid</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_index_d_.cfrateitem.html#value" class="tsd-kind-icon">value</a></li>
 							</ul>
@@ -102,13 +108,31 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="activeiconurl" class="tsd-anchor"></a>
+					<h3>active<wbr>Icon<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">active<wbr>Icon<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfcustomiconowner.html">CFCustomIconOwner</a>.<a href="_index_d_.cfcustomiconowner.html#activeiconurl">activeIconUrl</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L4476">index.d.ts:4476</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>解析后的被激活或者被选中时的图标url
+							未激活或者未选中时展示<a href="_index_d_.cfcustomiconowner.html#normaliconurl">CFCustomIconOwner.normalIconUrl</a></p>
+						</div>
+						<p>激活或者选中时选中时展示<a href="_index_d_.cfcustomiconowner.html#activeiconurl">CFCustomIconOwner.activeIconUrl</a></p>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="customdata" class="tsd-anchor"></a>
 					<h3>custom<wbr>Data</h3>
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Data<span class="tsd-signature-symbol">:</span> <a href="_index_d_.irateitemcustomdata.html" class="tsd-signature-type">IRateItemCustomData</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L4637">index.d.ts:4637</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L4489">index.d.ts:4489</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -120,13 +144,45 @@
 						</div>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="icon" class="tsd-anchor"></a>
+					<h3>icon</h3>
+					<div class="tsd-signature tsd-kind-icon">icon<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ICFNodeIcon</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfcustomiconowner.html">CFCustomIconOwner</a>.<a href="_index_d_.cfcustomiconowner.html#icon">icon</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L4465">index.d.ts:4465</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>自定义图标原始对象</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+					<a name="normaliconurl" class="tsd-anchor"></a>
+					<h3>normal<wbr>Icon<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">normal<wbr>Icon<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_index_d_.cfcustomiconowner.html">CFCustomIconOwner</a>.<a href="_index_d_.cfcustomiconowner.html#normaliconurl">normalIconUrl</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L4469">index.d.ts:4469</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>解析后的未激活或未选中时的图标地址</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="text" class="tsd-anchor"></a>
 					<h3>text</h3>
 					<div class="tsd-signature tsd-kind-icon">text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L4654">index.d.ts:4654</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L4493">index.d.ts:4493</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -136,42 +192,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="url" class="tsd-anchor"></a>
-					<h3>url</h3>
-					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L4641">index.d.ts:4641</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>图标地址</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="urlactive" class="tsd-anchor"></a>
-					<h3>url<wbr>Active</h3>
-					<div class="tsd-signature tsd-kind-icon">url<wbr>Active<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L4645">index.d.ts:4645</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>激活时的图标地址</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 					<a name="uuid" class="tsd-anchor"></a>
 					<h3>uuid</h3>
 					<div class="tsd-signature tsd-kind-icon">uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L4663">index.d.ts:4663</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L4502">index.d.ts:4502</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,7 +212,7 @@
 					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/c7b2553/index.d.ts#L4659">index.d.ts:4659</a></li>
+							<li>Defined in <a href="https://github.com/choice-form/os-client-core/blob/6215d34/index.d.ts#L4498">index.d.ts:4498</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -216,17 +242,20 @@
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_d_.cfrateitem.html" class="tsd-kind-icon">CFRate<wbr>Item</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfrateitem.html#activeiconurl" class="tsd-kind-icon">active<wbr>Icon<wbr>Url</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfrateitem.html#customdata" class="tsd-kind-icon">custom<wbr>Data</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfrateitem.html#icon" class="tsd-kind-icon">icon</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-not-exported">
+								<a href="_index_d_.cfrateitem.html#normaliconurl" class="tsd-kind-icon">normal<wbr>Icon<wbr>Url</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfrateitem.html#text" class="tsd-kind-icon">text</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfrateitem.html#url" class="tsd-kind-icon">url</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_index_d_.cfrateitem.html#urlactive" class="tsd-kind-icon">url<wbr>Active</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_index_d_.cfrateitem.html#uuid" class="tsd-kind-icon">uuid</a>
